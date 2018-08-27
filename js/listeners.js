@@ -1,0 +1,51 @@
+// on load
+$(window).on('load', function(){
+	// carousel
+	if($('#agency .carouselMod')){	// if there is a carousel
+		$('#agency .carouselMod').each(function(){
+			carouselInit($(this));	// initialize each carousel
+		});
+	}
+	if($('#agency [data-nav-json]')){
+		$('#agency [data-nav-json]').each(function(index){
+			if(!isEmpty($(this).attr('data-nav-json'),$(this))){
+				jsonLoad($(this).attr('data-nav-json'), buildNav, $(this), $(this).attr('data-nav-code'));
+			}
+		});
+	}
+    if($('#agency [data-cat-json]')){
+		$('#agency [data-cat-json]').each(function(index){
+			if(!isEmpty($(this).attr('data-cat-json'),$(this))){				
+                jsonLoad($(this).attr('data-cat-json'), buildCustomPrint, $(this));
+			}
+		});
+	}
+	if($('#agency .outOfStock')) {
+		console.log('outOfStock found');
+		addFlag('outOfStock');
+	}
+	if($('#agency .soldOut')){
+		console.log('soldOut found');
+		addFlag('soldOut');
+	}
+	if($('.accordionDiv')){
+		accordionSet($('.accordionDiv'));
+	}
+	disclaimerLoad();
+	mobileLayout($(window).width());
+});
+// on resize
+$(window).resize(function(){
+	// carousel
+	if($('#agency .carouselMod')){	// if there is a carousel
+		$('#agency .carouselMod').each(function(){
+			carouselResize($(this));	// resize each carousel
+		});
+	}
+	mobileLayout($(window).width());
+	removeEachAttr($('#agency [data-accordion-height-open]'), 'data-accordion-height-open');
+});
+// on carousel content click
+$('#agency .carouselMod').find('*').click(function(){	// stop carousel if any element in carousel clicked
+	carouselStop($(this).parent('#agency .carouselMod'));	// stop carousel
+});

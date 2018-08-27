@@ -1,0 +1,88 @@
+#agency {
+
+	.table {
+		table-layout: fixed;
+    }
+
+	.table, .table--card {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	.caption {
+		font-size: $px * 1.4;
+		font-weight: 400;
+		text-align: left;
+	}
+
+	.td {
+		background-color: #f2f2f2;
+		font-size: $px * 1.5;
+		font-weight: 400;
+		padding-left: $px;
+		text-align: left;
+		width: auto;
+	}
+
+  //   .td, .th--vertical {
+		
+		// @media #{$mobPortMax}{            
+  //           display: block;
+  //       }
+  //   }
+
+	.td, .th--horizontal, .th--vertical {
+		border-bottom: $px * .1 solid #fff;
+		border-right: $px * .1 solid #fff;
+		padding: $px * 1.5;
+
+		// @media #{$mobPortMax}{
+  //           text-align: left;
+		// }
+	}
+
+  //   .td:before, .th--vertical:before {
+		
+		// @media #{$mobPortMax}{            
+  //         content: attr(data-th) ": ";
+  //         font-weight: bold;
+  //         width: $pct * 50;
+  //         display: inline-block;
+		// }
+  //   }
+
+	.th {
+
+		&--horizontal {
+			background-color: #0072c6;
+			color: #fff;
+			font-size: $px * 1.5;
+			font-weight: 400;
+
+			// @media #{$mobPortMax}{
+			// 	display: none;
+			// }
+		}
+
+		&--horizontal, &--vertical {
+			text-align: center;
+		}
+
+		&--vertical {
+			background-color: #e4e4e4;
+			font-size: $px * 1.5;
+			font-weight: 600;
+			width: calc(40% - #{$px * 0.1});
+
+			// @media #{$mobPortMax}{
+			// 	background-color:#0072c6; 
+   //              color:#fff;
+   //              width:auto;
+   //          }
+		}
+	}
+
+	.tr {
+		display: table-row;
+	}
+}

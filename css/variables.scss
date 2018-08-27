@@ -1,0 +1,18 @@
+$column: 8.333333%;	// column unit
+
+$pct: 1%;	// size unit in percent
+$px: 10px;	// size unit in pixels
+$vw: 1vw;	// size unit in viewport width
+
+$mobPortMax: '(max-width: 499px)';
+$mobLandMin: '(min-width: 500px)';
+$mobLandMax: '(max-width: 765px)';
+$tabPortMin: '(min-width: 766px)';
+$tabPortMax: '(max-width: 1011px)';
+$tabLandMin: '(min-width: 1012px)';
+$tabLandMax: '(max-width: 1279px)';
+$laptopMin: '(min-width: 1280px)';
+$laptopMax: '(max-width: 1519px)';
+$desktopMin: '(min-width: 1520px)';
+
+$fontFamily: 'helvetica, arial, sans-serif';

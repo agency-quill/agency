@@ -1,0 +1,200 @@
+#agency, .agency {
+
+	ul#onPageNav {
+		height: auto !important;
+	}
+
+	.div {
+
+		&__html {
+
+			&--absolute {
+				height: 100%;
+				left: 0;
+			    position: absolute;
+				top: 0;
+			}
+
+			&--static {
+			    position: static;
+			}
+		}
+	}
+
+	.div__html--absolute, .div__html--static {
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	// #event {
+	// 	display: none;
+	// }
+	
+	.grid {
+
+		.webModImg {
+
+			&--12-5, &--25, &--33, &--50, &--66, &--75, &--100 {
+				align-self: flex-end;
+				flex-shrink: 0;
+				// height: $pct * 100;
+				position: relative;
+			}
+
+			&--12-5 {
+				width: $pct * 100;
+			}
+
+			&--25 {
+				width: $pct * 155;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 132;
+				}
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 122;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
+
+			&--33 {
+				width: $pct * 155;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 132;
+				}
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 152;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 120;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
+
+			&--50 {
+				width: $pct * 155;
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 150;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 119;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
+
+			/* &--75 {
+				width: $pct * 155;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 132;
+				}
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 151.5;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 144.25;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 115.4;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			} */
+			
+			&--100 {
+				width: $pct * 159.325;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 131.4;
+				}
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 149;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 119;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
+
+			&__webModCard {
+
+				&--12-5, &--25, &--33 {
+					align-self: flex-end;
+					flex-shrink: 0;
+					// height: $pct * 100;
+					position: relative;
+					width: $pct * 100;
+				}
+			}
+		}
+
+		.webModInner {
+			box-sizing: border-box;
+			display: flex;
+			overflow: hidden;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0;
+			position: relative;
+			width: $pct * 100;
+
+			@media #{$mobLandMax} {
+				margin-bottom: $vw * 5;
+			}
+			
+			@media #{$tabPortMin} {
+				margin-bottom: $px * 2;
+			}
+
+			.a {
+				width: $pct * 100;
+			}
+		}
+
+		.webModPicture {
+			display: flex;
+		}
+	}
+}
