@@ -29,28 +29,30 @@ After installing Git, clone the repository.
  
 ## Some commands
 
- >git status 
+`git status`
  
- git status is a command you will use often to verify the current state of your repository and the files it contains.
+git status is a command you will use often to verify the current state of your repository and the files it contains.
  
- >git add filename or git add *
+`git add filename or git add *`
  
- Add one or more files to staging (index)
+Add one or more files to staging (index)
  
- >git commit -m "commit message"
+`git commit -m "commit message"`
  
- Commit changes to head (but not yet to the remote repository)
+Commit changes to head (but not yet to the remote repository)
  
- >git push origin master
+`git push origin master`
  
- Send changes to the master branch of your remote repository (this case github repo)
+Send changes to the master branch of your remote repository (this case github repo)
  
- >git pull
+`git pull`
  
- Fetch and merge changes on the remote server (github) to your working directory
+Fetch and merge changes on the remote server (github) to your working directory
  
 ## Help
 
-[Git command cheatsheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
+[GitHub Git Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
-[Basic commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+[Basic Git Commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html)
+
+[Git Documentation](https://git-scm.com/docs)
