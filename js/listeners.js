@@ -20,12 +20,12 @@ $(window).on('load', function(){
 			}
 		});
 	}
-	if($('#agency .outOfStock')) {
-		console.log('outOfStock found');
+	if($('#agency .outOfStock').length !== 0) {
+		console.log('outOfStock: '+$('#agency .outOfStock').length);
 		addFlag('outOfStock');
 	}
-	if($('#agency .soldOut')){
-		console.log('soldOut found');
+	if($('#agency .soldOut').length !== 0){
+		console.log('soldOut: '+$('#agency .soldOut').length);
 		addFlag('soldOut');
 	}
 	if($('.accordionDiv')){

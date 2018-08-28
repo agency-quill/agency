@@ -192,7 +192,6 @@ function webModIcc(obj){
 	        obj.color = obj.iccArray[5] ? obj.iccArray[5] : '#000';
 	        obj.gift = webModPopUp(obj);
 	        obj.class = '';
-	        console.log(obj.iccArray[6]);
 	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:5%;';
 			obj.iccHtml += render(template.icc, obj);
 		}
