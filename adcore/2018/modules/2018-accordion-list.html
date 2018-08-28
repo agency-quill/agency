@@ -1,0 +1,19 @@
+<!-- 2018-accordion-list -->
+<div class="accordionDiv agency" id="$%u_ad_custom_list_anchor%$">
+	<div class="accordionList" data-accordion-height-closed="$%u_ad_accordion_height_closed%$" data-accordion-open="$%u_ad_accordion_open%$">
+		<$= CarouselDynTemplate(['$%dynamic_list_id%$','0', '$%custom_list_numb_items%$', '$%custom_list_display_type%$', '$%custom_list_numb_items_max%$', '', '$%custom_list_sort_option%$']) $>
+	</div>
+	<p class="align--center margin__bottom--50 margin__top--25" style="$%u_ad_button_p_css%$">
+		<a class="button scTrack" data-accordion-button-close="$%u_ad_button_text_close%$" data-accordion-button-open="$%u_ad_button_text_open%$" href="javascript:void(0)" onclick="accordionToggle($('#$%u_ad_custom_list_anchor%$ .accordionList'),$(this))" scType="scLink" scValue="See All:$%dynamic_list_id%$"></a>
+	</p>
+</div>
+<script>
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+        $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
+    }
+	(function(){
+		loadFiles('/content/iw/styles/agency5.min.css');
+	})();
+</script>
+
+<!-- 2018-accordion-list --><div class="accordionDiv agency" id="$%u_ad_custom_list_anchor%$"><div class="accordionList" data-accordion-height-closed="$%u_ad_accordion_height_closed%$" data-accordion-open="$%u_ad_accordion_open%$"><$= CarouselDynTemplate(['$%dynamic_list_id%$','0','$%custom_list_numb_items%$','$%custom_list_display_type%$','$%custom_list_numb_items_max%$','','$%custom_list_sort_option%$']) $></div><p class="align--center margin__bottom--50 margin__top--25" style="$%u_ad_button_p_css%$"><a class="button scTrack" data-accordion-button-close="$%u_ad_button_text_close%$" data-accordion-button-open="$%u_ad_button_text_open%$" href="javascript:void(0)" onclick="accordionToggle($('#$%u_ad_custom_list_anchor%$ .accordionList'),$(this))" scType="scLink" scValue="See All:$%dynamic_list_id%$"></a></p></div><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){$("head").append('<script src="/content/iw/scripts/agency3.min.js"><\/script>')}(function(){loadFiles("/content/iw/styles/agency5.min.css")})();</script>

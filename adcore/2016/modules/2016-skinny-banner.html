@@ -1,0 +1,39 @@
+<!-- 2016-skinny-banner -->
+<script>
+	if(typeof adIndex != "undefined") adIndex = adIndex+1;
+	else adIndex = 1;
+	document.write("<div class=\"full\" id=\"" + "webAd-" + adIndex + "\"></div>");
+</script>
+<script type="text" id="aTag"><a href="{{href}}" title="{{title}}">
+		{{imageTag}}
+	</a>
+</script>
+<script type="text" id="imageTag"><img src="{{src}}" alt="{{alt}}">
+</script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"href" : "$%u_ad_link_url%$",
+			"title" : "$%u_ad_link_title%$",
+			"src" : "$%u_ad_img_src%$",
+			"alt" : "$%u_ad_img_alt%$"
+		};
+		if(data.src){
+			data.imageTag = render($("#imageTag").html(),data);
+			if(data.href) data.htmlText = render($("#aTag").html(),data);
+			else data.htmlText = data.imageTag;
+			$("#webAd-" + adIndex).html(data.htmlText);
+		} else {
+			// if no image remove html
+			$("#webAd-" + adIndex).remove();
+		}
+	})();
+</script>
+
+<!-- 2016-skinny-banner --><script>if(typeof adIndex!="undefined"){adIndex=adIndex+1}else{adIndex=1}document.write('<div class="full" id="webAd-'+adIndex+'"></div>');</script> <script type="text" id="aTag"><a href="{{href}}" title="{{title}}">{{imageTag}}</a></script> <script type="text" id="imageTag"><img src="{{src}}" alt="{{alt}}"></script> <script>(function(){function a(d,e){for(var c in e){d=d.replace("{{"+c+"}}",e[c])}return d}var b={href:"$%u_ad_link_url%$",title:"$%u_ad_link_title%$",src:"$%u_ad_img_src%$",alt:"$%u_ad_img_alt%$"};if(b.src){b.imageTag=a($("#imageTag").html(),b);if(b.href){b.htmlText=a($("#aTag").html(),b)}else{b.htmlText=b.imageTag}$("#webAd-"+adIndex).html(b.htmlText)}else{$("#webAd-"+adIndex).remove()}})();</script>

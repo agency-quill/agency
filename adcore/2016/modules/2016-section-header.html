@@ -1,0 +1,63 @@
+<!-- 2016-section-header -->
+<style type="text/css">
+	@font-face { 
+		font-family: '55HelveticaNeueRoman'; 
+		src: url('/content/iw/fonts/helvetica-neue/hlr-webfont.eot'); 
+		src: local('x'), 
+			url('/content/iw/fonts/helvetica-neue/hlr-webfont.woff') format('woff'), 
+			url('/content/iw/fonts/helvetica-neue/hlr-webfont.ttf') format('truetype'), 
+			url('/content/iw/fonts/helvetica-neue/hlr-webfont.svg#webfontuVJGTgcF') format('svg'); 
+	}
+	.sectionHeader {
+		position: relative;
+		width: 100%;
+	}
+	.sectionHeader h2 {
+		color:#000;
+		font-family: '55HelveticaNeueRoman', helvetica, arial, sans-serif;
+		font-size: 28px;
+		font-weight: normal;
+		line-height: 28px;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	.sectionHeader .backToTop, .sectionHeader h2 a {
+		display: inline-block;
+		font-family: '55HelveticaNeueRoman' !important;
+		font-size: 16px !important;
+		line-height: 18px !important;
+		margin: 0;
+		vertical-align: bottom;}
+	.sectionHeader h2 a {
+		margin-left: 20px;
+	}
+	.sectionHeader .backToTop {
+		position: absolute;
+		right: 0;
+		top: 5px;
+	}
+	.sectionHeader .introText {
+		font: 400 12px/1.5em '55HelveticaNeueRoman', helvetica, arial, sans-serif;
+		margin-bottom: 20px;
+		padding: 0;
+	}
+</style>
+<script src="/content/iw/scripts/agency3.min.js"></script>
+<script>
+	adIndex = typeof adIndex !== "undefined" ? adIndex+1 : 1;
+	document.write('<div class="sectionHeader webAd-' + adIndex + '" id="$%u_ad_headline_anchor%$"><h2>$%u_ad_headline%$</h2></div>');
+	var backToTop = "$%u_ad_backToTop_text%$";
+	var seeAll = ["$%u_ad_seeAll_text%$","$%u_ad_seeAll_link_url%$","$%u_ad_seeAll_link_title%$"];
+	var introText = "$%u_ad_intro_text%$";
+	if(seeAll[0]) {
+		$(".webAd-" + adIndex + " h2").append("<a href=\"" + seeAll[1] + "\" title=\"" + seeAll[2] + "\">" + seeAll[0] + "</a>");
+	}
+	if(backToTop != "") {
+		$(".webAd-" + adIndex).append("<p class=\"backToTop\"><a href=\"javascript:void(0)\" onclick=\"anchorScroll($(this),$('#Body'),0)\">" + backToTop + "</a></p>");
+	}
+	if(introText != "") {
+		$(".webAd-" + adIndex).append("<p class=\"introText\">"+introText+"</p>");
+	}
+</script>
+
+<!-- 2016-section-header --><style type="text/css">@font-face{font-family:'55HelveticaNeueRoman';src:url('/content/iw/fonts/helvetica-neue/hlr-webfont.eot');src:local('x'),url('/content/iw/fonts/helvetica-neue/hlr-webfont.woff') format('woff'),url('/content/iw/fonts/helvetica-neue/hlr-webfont.ttf') format('truetype'),url('/content/iw/fonts/helvetica-neue/hlr-webfont.svg#webfontuVJGTgcF') format('svg')}.sectionHeader{position:relative;width:100%}.sectionHeader h2{color:#000;font-family:'55HelveticaNeueRoman',helvetica,arial,sans-serif;font-size:28px;font-weight:normal;line-height:28px;margin-bottom:10px;text-align:left}.sectionHeader .backToTop,.sectionHeader h2 a{display:inline-block;font-family:'55HelveticaNeueRoman'!important;font-size:16px!important;line-height:18px!important;margin:0;vertical-align:bottom}.sectionHeader h2 a{margin-left:20px}.sectionHeader .backToTop{position:absolute;right:0;top:5px}.sectionHeader .introText{font:400 12px/1.5em '55HelveticaNeueRoman',helvetica,arial,sans-serif;margin-bottom:20px;padding:0}</style> <script src="/content/iw/scripts/agency3.min.js"></script> <script>adIndex=typeof adIndex!=="undefined"?adIndex+1:1;document.write('<div class="sectionHeader webAd-'+adIndex+'" id="$%u_ad_headline_anchor%$"><h2>$%u_ad_headline%$</h2></div>');var backToTop="$%u_ad_backToTop_text%$";var seeAll=["$%u_ad_seeAll_text%$","$%u_ad_seeAll_link_url%$","$%u_ad_seeAll_link_title%$"];var introText="$%u_ad_intro_text%$";if(seeAll[0]){$(".webAd-"+adIndex+" h2").append('<a href="'+seeAll[1]+'" title="'+seeAll[2]+'">'+seeAll[0]+"</a>")}if(backToTop!=""){$(".webAd-"+adIndex).append('<p class="backToTop"><a href="javascript:void(0)" onclick="anchorScroll($(this),$(\'#Body\'),0)">'+backToTop+"</a></p>")}if(introText!=""){$(".webAd-"+adIndex).append('<p class="introText">'+introText+"</p>")};</script>

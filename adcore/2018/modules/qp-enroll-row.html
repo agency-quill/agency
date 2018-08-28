@@ -1,0 +1,16 @@
+<!-- qp-enroll-row -->
+<tr class="agency tr--qpJoin" id="webMod">
+    <td class="td--qpJoin">$%u_ad_td_1_html%$</td>
+    <td class="td--qpJoin">$%u_ad_td_2_html%$</td>
+    <td class="td--qpJoin">$%u_ad_td_3_html%$</td>
+</tr>
+<script>
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+        $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
+    }
+    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
+    $('#webMod').attr('id', 'webMod-' + modIndex);
+	initMod('/content/iw/styles/agency5.min.css', $('#webMod-' + modIndex + ' .td--qpJoin').html(), $('#webMod-' + modIndex));
+</script>
+
+<!-- qp-enroll-row --><tr class="agency tr--qpJoin" id="webMod"><td class="td--qpJoin">$%u_ad_td_1_html%$</td><td class="td--qpJoin">$%u_ad_td_2_html%$</td><td class="td--qpJoin">$%u_ad_td_3_html%$</td></tr><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length)$('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');modIndex=typeof modIndex!='undefined'?modIndex+1:1;$('#webMod').attr('id','webMod-'+modIndex);initMod('/content/iw/styles/agency5.min.css',$('#webMod-'+modIndex+' .td--qpJoin').html(),$('#webMod-'+modIndex));</script>

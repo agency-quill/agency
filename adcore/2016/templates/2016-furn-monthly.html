@@ -1,0 +1,57 @@
+<style type="text/css">
+    #monthlySpecials { margin: 0 auto 20px; overflow: hidden; width: 960px; }
+    #monthlySpecials .bannerRow { margin-bottom: 20px; }
+    #monthlySpecials .bannerRow .carouselPh .carousel, #monthlySpecials .bannerRow .carouselPh .carousel .carouselWrap, #monthlySpecials .bannerRow .carouselPh .carousel .carouselWrap .carouselInner, #monthlySpecials .itemb.panelItem.cropBoth { width: 960px !important; }
+    #monthlySpecials .carouselRow .title { padding: 5px 0 0; border: none; color: #af006e; font-weight: bold; }
+    #monthlySpecials .adRow { font-size: 0; line-height: 0; }
+    #monthlySpecials .quarter { display: inline-block; margin-bottom: 20px; margin-left: 20px; }
+    #monthlySpecials .hrFooter { margin-top: 24px !important; }
+</style>
+<div id="monthlySpecials">
+    <!-- header 960x40 -->
+    <div id="m1">$%M1%$</div> 
+    <!-- drop down navigation 960x30 -->
+    <div id="m2">$%M2%$</div>
+    <!-- breadcrumb navigation 960x30 -->
+    <div id="m3">$%M3%$</div>
+    <!-- banner 960x300 -->
+    <div class="bannerRow" id="m4">$%M4%$</div>
+    <!--  coupon header 960x40  -->
+    <div id="m5">$%M5%$</div>
+    <!--  coupons 960x300  -->
+    <div id="m6">$%M6%$</div>
+    <!-- local navigation 960x40-->
+    <div id="m7">$%M7%$</div>
+    <!-- carousel 1 & 2 960x300 -->
+    <div class="carouselRow" id="m8-9">
+        $%M8%$
+        $%M9%$
+    </div>
+    <!-- ads row 1 225x300 -->
+    <div class="adRow" id="m10-13">$%M10%$ $%M11%$ $%M12%$ $%M13%$</div>
+    <!-- carousel 3, 4 & 5 960x300 -->
+    <div class="carouselRow" id="m14-16">
+        $%M14%$
+        $%M15%$
+        $%M16%$
+    </div>
+    <!-- ads row 2 225x300 -->
+    <div class="adRow" id="m17-20">$%M17%$ $%M18%$ $%M19%$ $%M20%$</div>
+    <!-- carousel 6, 7 & 8 960x300 -->
+    <div class="carouselRow" id="m21-23">
+        $%M21%$
+        $%M22%$
+        $%M23%$
+    </div>
+    <!-- ads row 3 225x300 -->
+    <div class="adRow" id="m24-27">$%M24%$ $%M25%$ $%M26%$ $%M27%$</div>
+    <!-- contact footer 960x40 -->
+    $%M28%$
+</div>
+<script type="text/javascript">
+$("#monthlySpecials .quarter").each(function() {
+    if (($(this).position().left - $(this).parent().position().left) < 100) {
+      $(this).css("margin-left","0");
+    }
+});
+</script>

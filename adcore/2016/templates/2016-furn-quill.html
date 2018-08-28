@@ -1,0 +1,68 @@
+<style type="text/css">
+    #quillBrand { margin: 0 auto 20px; width: 960px; }
+    #quillBrand sup { font-size: .75em; line-height: .5em; font-family: arial, sans-serif; vertical-align: .25em; }
+    #quillBrand #m4  { margin-bottom: 30px; margin-top: 20px; }
+    #quillBrand #m5-11 { font-size: 0; }
+    #quillBrand .bubble { display: inline-block; font-size: 0; height: 114px; line-height: 0; margin-left: 27px; vertical-align: top; width: 114px; }
+    #quillBrand .bubble:first-child { margin-left: 0; }
+    #quillBrand #m12, #quillBrand #m15-19 .full, #quillBrand #m25-28 { margin-bottom: 30px; }
+    #quillBrand #m20 .introText { margin-bottom: 0; }
+    #quillBrand #m21-23 { margin-bottom: 40px;}
+    #quillBrand #m21-23 .half, #quillBrand #m21-23 span div.full { width: 470px; display: inline-block; vertical-align: top; }
+    #quillBrand #m21-23 .half { margin-top: 20px; }
+    #quillBrand #m21-23 span div.full { margin-left: 16px; }
+    #quillBrand #m25-28 { font-size: 0; }
+    #quillBrand .compareSave { display: inline-block; }
+    #quillBrand sup { font-size: .75em; line-height: .5em; font-family: arial, sans-serif; vertical-align: .25em; }
+</style>
+<div id="quillBrand">
+    <!-- header 960x40 -->
+    <div id="m1">$%M1%$</div> 
+    <!-- drop down navigation 960x30 -->
+    <div id="m2">$%M2%$</div>
+    <!-- breadcrumb navigation 960x30 -->
+    <div id="m3">$%M3%$</div>
+    <!-- intro paragraph 960x85 -->
+    <div id="m4">$%M4%$</div>
+    <!-- bubbles 100x100-->
+    <div id="m5-11">$%M5%$ $%M6%$ $%M7%$ $%M8%$ $%M9%$ $%M10%$ $%M11%$</div>
+    <!-- local navigation 960x30-->
+    <div id="m12">$%M12%$</div>
+    <!-- section header 960x40 -->
+    <div id="m13">$%M13%$</div>
+    <!-- coupons 960x300 -->
+    <div id="m14">$%M14%$</div>
+    <!-- carousels 960x300 -->
+    <div id="m15-19">
+        $%M15%$
+        $%M16%$
+        $%M17%$
+        $%M18%$
+        $%M19%$
+    </div>
+    <!-- section header 960x40 -->
+    <div id="m20">$%M20%$</div>
+    <!-- half mod 470x300 w/ 2-item dynamic list and 4-item dynamic list 960x300 -->
+    <div id="m21-23">
+        $%M21%$ <span>$%M22%$</span>
+        $%M23%$
+    </div>
+    <!-- section header 960x40 -->
+    <div id="m24">$%M24%$</div>
+    <!-- compare & save mods 470x300 -->
+    <div id="m25-28">
+        $%M25%$ $%M26%$
+        $%M27%$ $%M28%$
+    </div>
+</div>
+<script type="text/javascript">
+    $("#quillBrand .compareSave").each(function() {
+        if (($(this).position().left - $(this).parent().position().left) < 100) {
+          $(this).css("margin-left","0");
+        }
+    });
+    $("#quillBrand .bubble img").hover(
+        function(){$(this).animate({"opacity":"0"},400);},
+        function(){$(this).animate({"opacity":"1"},300);}
+    );
+</script>

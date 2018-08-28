@@ -1,0 +1,33 @@
+<!-- 2017-half-mod -->
+
+<!-- 
+alt: img alt text
+disclaimer: [link text], custom text | disclaimer | custom text & disclaimer[, box width][, link text css][+ link text..]
+htmlText: [into text], [intro css], [heading text], [heading css], [subheading text][, subheading css]
+icc: icc[, customer | order][, MM/DD/YY][, inline css][+icc..]
+link: url | url, mcode | url, locator, mcode | sku, effort, absolute, mcode | sku, effort, absolute, locator, mcode
+map: url | url, lctr | sku, effrt, abs | sku, effrt, abs, lctr, rect | circle | poly, title, coord1, coordX[+url..], mcode
+src: img src url
+title: anchor tag title
+-->
+
+<script src="/content/iw/scripts/mod.min.js"></script>
+<script>
+    adIndex = typeof adIndex != 'undefined' ? adIndex+1 : 1;   // assign unique web ad #
+    document.write('<div class="agency grid__unit--50 $%u_ad_class%$" id="webAd-'+adIndex+'"></div>');    // add container div
+    (function(){
+        var data = {
+            "alt" : "$%u_ad_img_alt%$",
+            "disclaimer" : "$%u_ad_disclaimer%$",
+            "htmlText" : "$%u_ad_html_text%$",
+            "icc" : "$%u_ad_icc%$",
+            "link" : "$%u_ad_link_href%$",
+            "map" : "$%u_ad_map_href%$",
+            "src" : "$%u_ad_img_src%$",
+            "title" : "$%u_ad_link_title%$"
+        };
+        webAd(adIndex,data);
+    })();
+</script>
+
+<!-- 2017-half-mod --><script src="/content/iw/scripts/mod.min.js"></script><script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency grid__unit--50 $%u_ad_class%$" id="webAd-'+adIndex+'"></div>');(function(){var a={alt:"$%u_ad_img_alt%$",disclaimer:"$%u_ad_disclaimer%$",htmlText:"$%u_ad_html_text%$",icc:"$%u_ad_icc%$",link:"$%u_ad_link_href%$",map:"$%u_ad_map_href%$",src:"$%u_ad_img_src%$",title:"$%u_ad_link_title%$"};webAd(adIndex,a)})();</script>

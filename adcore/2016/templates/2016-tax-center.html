@@ -1,0 +1,49 @@
+<style type="text/css">
+	#taxCenter { margin: 0 auto; overflow: hidden; width: 960px; }
+	#taxCenter .row { font-size: 0; margin-bottom: 20px; position: relative; }
+	#taxCenter .quarter { display: inline-block; margin-left: 20px; }
+	#taxCenter .adpt_dsclmr.link { font-size: 12px; }
+</style>
+<div id="taxCenter">
+    <!-- m1 page title 960x40 -->
+	<div id="m1" class="row">$%M1%$</div>
+    <!-- m2 banner 960x300 -->
+	<div id="m2" class="row">$%M2%$</div>
+    <!-- m3 local navigation 960x30-->
+	<div id="m3" class="row">$%M3%$</div>
+    <!-- m4 dynamic list 960x300 -->
+	<div id="m4" class="row">$%M4%$</div>
+    <!-- m5 skinny banner 1920X40 -->
+	<div id="m5" class="row">$%M5%$</div>
+    <!-- m6 dynamic list 960x300 -->
+	<div id="m6" class="row">$%M6%$</div>
+    <!-- m7-10 225x300 ads 225x300 x 4 -->
+	<div id="m7-10" class="row">$%M7%$ $%M8%$ $%M9%$ $%M10%$</div>
+    <!-- m11 dynamic list 960x300 -->
+	<div id="m11" class="row">$%M11%$</div>
+    <!-- m12 skinny banner 1920X40 -->
+	<div id="m12" class="row">$%M12%$</div>
+    <!-- m13 dynamic list 960x300 -->
+	<div id="m13" class="row">$%M13%$</div>
+    <!-- m14-17 225x300 ads 225x300 x 4 -->
+	<div id="m14-17" class="row">$%M14%$ $%M15%$ $%M16%$ $%M17%$</div>
+    <!-- m18 dynamic list 960x300 -->
+	<div id="m18" class="row">$%M18%$</div>
+    <!-- m19 skinny banner 1920X40 -->
+	<div id="m19" class="row">$%M19%$</div>
+    <!-- m20 dynamic list 960x300 -->
+	<div id="m20" class="row">$%M20%$</div>
+    <!-- m21-25 225x300 ads 225x300 x 4 -->
+	<div id="m21-24" class="row">$%M21%$ $%M22%$ $%M23%$ $%M24%$</div>
+    <!-- m26 banner 960x300 -->
+	<div id="m25" class="row">$%M25%$</div>
+	<!-- contact footer 960x40 -->
+    $%M26%$
+</div>
+<script>
+	$(".quarter").each(function() {
+		if ($(this).position().left < 100) {
+	      $(this).css("margin-left","0");
+	    }
+	});
+</script>

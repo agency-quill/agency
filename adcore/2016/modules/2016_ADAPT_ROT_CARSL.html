@@ -1,0 +1,228 @@
+<style type="text/css">
+    .carouselPh {position:relative;}
+    .carouselSupercat {padding:0;margin:auto;}
+    .carouselSupercat .scLeft, .carouselSupercat .scRight {z-index:10;top:120px}
+
+    .carouselSupercat .carouselWrap, .res1024 .adaptivePage .carouselSupercat .carouselWrap {width: 960px;} 
+    .res1280 .adaptivePage .carouselSupercat .carouselWrap {width: 1205px;} 
+    .res1450 .adaptivePage .carouselSupercat .carouselWrap {width: 1450px;} 
+    
+    .carouselSupercat li.itemb, .res1024 .adaptivePage .carouselSupercat li.itemb{width: 960px;}
+    .res1280 .adaptivePage .carouselSupercat li.itemb{width: 1205px;}
+    .res1450 .adaptivePage .carouselSupercat li.itemb{width: 1450px;}
+    .fixedImg{position:absolute;left:0;top:0;z-index:9;height:300px;}
+    .bg-image{float:right;}
+    .carouselSupercat .adpt_dsclmr{position:absolute;bottom:$%u_ad_01_view_disc_bottom%$px;left:$%u_ad_01_view_disc_left%$px;text-decoration:underline;color:$%u_ad_01_view_disc_color%$;z-index:100;}
+    .coupon-code{position:absolute;width:200px;padding:10px;text-align:left;color:#000;z-index:10;}
+	
+    .mobilePage #adaptiveCarousel .carouselWrap, .mobilePage #adaptiveCarousel li.itemb {width: auto;} 
+    .mobilePage .carouselSupercat .adpt_dsclmr {position:static;bottom:0px;right:0;text-decoration:none;color:$%u_ad_01_view_disc_color%$;z-index:100;background:#e7e7e7;padding:5px;text-align:center;display:block;line-height:1.2;}
+    #mobileItem {position:relative;}
+    #mobileCarousel .mobileImg{padding:0 0 10px 0;}
+    .mobilePage #adaptiveCarousel .carouselInner{width:auto !important}
+    .mobilePage #adaptiveCarousel{height:auto !important}
+</style>
+<script type="text/javascript">
+	if(typeof AdptIndex != "undefined")
+		AdptIndex = AdptIndex+1;
+	else
+		AdptIndex = 1;
+
+	AdptId= "CarouselPh" + AdptIndex;
+	document.write("<div class=\"carouselPh\" id=\"" + AdptId + "\"></div>")
+</script>
+
+
+<script type="text" id="baseTemplate">
+    <div class="carousel carouselSupercat" id="adaptiveCarousel" data-itemclass="itemb" data-itemtag="li" 
+    data-type="Horizontal" data-itemsperpage="1" data-showarrows="true" data-autostart="true" 
+    data-autoscroll="true" data-autostarttime="0.5" data-autoscrolltime="5" data-restart="true"	style="height:300px;">	
+	<div class="carouselWrap" style="">
+	    <ul style="width:10000px;" class="carouselInner">
+		{{html}}
+	    </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text" id="panoramicItem">
+    <li class="a itemb panelItem panoramic" style="height:300px;background:#ccc;padding:0;position:relative;">
+        {{linkStart}}
+	    <img class="fixedImg" src="{{fixedImg}}" alt="{{alt}}" height="300"/>
+	    <img class="bg-image" src="{{image}}" alt="{{alt}}" height="300">
+	{{linkEnd}}	
+    </li>
+</script>
+
+<script type="text" id="cropRightItem">
+    <li class="itemb panelItem cropRight" style="height:300px;background:#ccc;padding:0;position:relative;">
+	{{linkStart}}
+	    <img src="{{image}}" alt="{{alt}}"/>
+	{{linkEnd}}
+	{{disclaimerHTML}}
+    </li>
+</script>
+
+<script type="text" id="cropBothItem">
+    <li class="itemb panelItem cropBoth" style="height:300px;background:#ccc;padding:0;position:relative;">
+        <div class="cropped-image-size">
+	    <div class="cropped-image-center">
+		<span style="display:inline-block;">
+	            {{linkStart}}
+			<img src="{{image}}" alt="{{alt}}" height="300">
+		    {{linkEnd}}
+		</span>
+	    </div>
+	</div>
+    </li>
+</script>
+
+<script type="text" id="mobileItem">
+    <li class="itemb panelItem mobileImg" style="height:auto;position:relative;text-align:center;">
+        <a href="{{url}}" title="{{title}}">
+	    <img src="{{mobileImg}}" alt="{{alt}}" height="auto" width="100%">
+	</a>
+	{{disclaimerHTML}}
+    </li>
+</script>
+
+<script type="text" id="disclaimerText">
+    <span class="adpt_dsclmr link" onclick="$(this).Tooltip('{{disclaimerText}}',300,{hasCloseButton:true})" data-tooltips="">{{disclaimerLink}}</span>
+</script>
+
+<script type="text" id="couponTemplate">
+    <li class="itemb panelItem couponTemplate" style="height:300px;background:#ccc;padding:0;position:relative;">
+        {{linkStart}}<img src="{{image}}" alt="{{alt}}"/>{{linkEnd}}
+	<div class="coupon-code" style="top:$%u_ad_01_coupon_code_top%$px; left:$%u_ad_01_coupon_code_left%$px;">
+	    <p style="text-align:center;background:#ccc;width:190px;height:24px;padding:0;line-height:24px;">
+	        <span style=" color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; text-decoration: none;">Use Code:</span>
+		<span style="font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000000; text-decoration: none;">{{couponCode}}</span>
+	    </p>
+	    <p style="color:$%u_ad_01_coupon_usage_text_color%$;font-family:Arial, Helvetica, sans-serif;font-size:11px; line-height:12px; text-decoration:none;margin-top:5px;">{{usageText}}</p>
+	</div>
+        {{disclaimerHTML}}
+    </li>
+</script>
+
+<script type="text/javascript">
+    (function(){
+			  
+        function render(html,obj){
+	    for(var k in obj){
+	        html = html.replace("{{" + k + "}}",obj[k]);
+	    }
+	    return html;  
+	}
+
+	var data = [{
+		mode: "$%u_ad_01_img_mode%$",
+		image: "$%u_ad_01_img_src%$",
+		fixedImg: "$%u_ad_01_fixedImg_src%$",
+		largeImage: "$%u_ad_01_largeImg_src%$",
+		alt: "$%u_ad_01_img_alt%$",
+		link: {
+		    url: "$%u_ad_01_link_url%$",
+		    linkStart: "<a href='$%u_ad_01_link_url%$' title='$%u_ad_01_link_title%$'>",
+		    linkEnd: "</a>"
+		},
+		title: "$%u_ad_01_link_title%$",
+		mobileImg: "$%u_ad_01_img_mobile%$",
+		disclaimerLink: "$%u_ad_01_disc_link_text%$",
+		disclaimerText: "$%u_ad_01_disc_text%$",
+		couponCode: "$%u_ad_01_coupon_code%$",
+		usageText: "$%u_ad_01_usage_text%$"
+	},
+	{   mode: "$%u_ad_02_img_mode%$",
+	    image: "$%u_ad_02_img_src%$",
+	    fixedImg: "$%u_ad_02_fixedImg_src%$",
+	    largeImage: "$%u_ad_02_largeImg_src%$",
+	    alt: "$%u_ad_02_img_alt%$",
+	    link: {
+	    	url: "$%u_ad_02_link_url%$",
+	    	linkStart: "<a href='$%u_ad_02_link_url%$' title='$%u_ad_02_link_title%$'>",
+	    	linkEnd: "</a>"
+	    },
+	    title: "$%u_ad_02_link_title%$"
+	},
+	{   mode: "$%u_ad_03_img_mode%$",
+	    image: "$%u_ad_03_img_src%$",
+	    fixedImg: "$%u_ad_03_fixedImg_src%$",
+	    largeImage: "$%u_ad_03_largeImg_src%$",
+	    alt: "$%u_ad_03_img_alt%$",
+	    link: {
+	    	url: "$%u_ad_03_link_url%$",
+	    	linkStart: "<a href='$%u_ad_03_link_url%$' title='$%u_ad_03_link_title%$'>",
+	    	linkEnd: "</a>"
+	    },
+	    title: "$%u_ad_03_link_title%$"
+	}];
+
+	var onAdapt = [];
+
+	var html = "";
+	for(var i=0;i<data.length;i++){
+	    if(data[i].image)
+	    {	
+                if(data[i].disclaimerText){
+		    data[i].disclaimerHTML = render($("#disclaimerText").html(),data[i]);
+		}
+     		else {
+		    data[i].disclaimerHTML = "";
+		}
+
+	        if (isMobile){
+		    if(data[i].mobileImg){
+		        html += render($("#mobileItem").html(), data[i]);
+	 	    }
+		}
+		else {
+		    if(data[i].link.url){
+		        data[i].linkStart = data[i].link.linkStart;
+			data[i].linkEnd = data[i].link.linkEnd;
+		    }
+		    else{
+		        data[i].linkStart = "";
+			data[i].linkEnd = "";
+		    }
+
+		    if(data[i].mode == "couponTemplate"){
+		        html += render($("#couponTemplate").html(),data[i]);
+		    }
+		    else if(data[i].mode == "panoramic"){
+		        html += render($("#panoramicItem").html(),data[i]);
+		    }
+		    else if(data[i].mode == "cropRight" || data[i].mode != "panoramic" && data[i].mode != "cropBoth" && data[i].mode != "couponTemplate")
+		    {
+		        html += render($("#cropRightItem").html(),data[i]);                        
+
+			if(typeof Adaptive != "undefined")
+			    {
+				var func = function(size){
+				if(size == 1450 && this.largeImgSrc)                  
+				    {$(this.id).attr("src", this.largeImgSrc);}
+				 else
+				    {$(this.id).attr("src", this.imgSrc);}
+				};
+				func.id = "#" + AdptId + " li:nth-child("+(i+1)+").cropRight img";
+				func.largeImgSrc = data[i].largeImage;
+				func.imgSrc = data[i].image;
+				onAdapt.push(func);			   	   
+				}
+			    }
+			    else if(data[i].mode == "cropBoth"){
+			        html += render($("#cropBothItem").html(),data[i]);
+					}
+			    }
+		  }
+		}
+		$("#" + AdptId).html(render($("#baseTemplate").html(),{html: html}));
+		if($("#" + AdptId).Carousel){
+			$("#" + AdptId).Carousel();
+		}
+		for(var i=0; i<onAdapt.length; i++){
+		   Adaptive.OnResize(onAdapt[i]);
+		   func.call(onAdapt[i],Adaptive.Size());	
+		}
+		  
+	})();
+</script>

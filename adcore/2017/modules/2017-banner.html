@@ -1,0 +1,39 @@
+<!-- 2017-quarter-ad -->
+<!-- 
+alt: img alt text
+disclaimer: [link text], custom text | disclaimer | custom text & disclaimer[, box width][, link text css][+ link text..]
+htmlText: [into text], [intro css], [heading text], [heading css], [subheading text][, subheading css]
+icc: icc[, customer | order][, MM/DD/YY][, inline css][+icc..]
+link: url | url, mcode | url, locator, mcode | sku, effort, absolute, mcode | sku, effort, absolute, locator, mcode
+map: url | url, lctr | sku, effrt, abs | sku, effrt, abs, lctr, rect | circle | poly, title, coord1, .., coordX[+url..], mcode
+src: img src url
+title: anchor tag title
+-->
+
+<link rel="stylesheet" href="/content/iw/styles/adcore.min.css">
+<script src="/content/iw/scripts/adcore.min.js"></script>
+<script>
+    adIndex = typeof adIndex != 'undefined' ? adIndex+1 : 1;   // assign unique web ad #
+    document.write('<div class="agency quarter searchOffer" id="webAd-'+adIndex+'"></div>');
+</script>
+<script>
+    (function(){
+        var data = {
+            "alt-1" : "$%u_ad_img_alt%$",
+            "disclaimer-1" : "$%u_ad_disclaimer%$",
+            "htmlText-1" : "$%u_ad_html_text%$",
+            "icc-1" : "$%u_ad_icc%$",
+            "link-1" : "$%u_ad_link_href%$",
+            "map-1" : "$%u_ad_map_href%$",
+            "srcMobile-1" : "$%u_ad_img_mobile_src%$",
+            "srcOverlay-1" : "$%u_ad_img_overlay_src%$",
+            "src960-1" : "$%u_ad_img_960_src%$",
+            "src1205-1" : "$%u_ad_img_1205_src%$",
+            "src1450-1" : "$%u_ad_img_1450_src%$",
+            "title-1" : "$%u_ad_link_title%$"
+        };
+        webAd(adIndex,data);
+    })();
+</script>
+
+<!-- 2017-quarter-ad --><link rel="stylesheet" href="/content/iw/styles/adcore.min.css"><script src="/content/iw/scripts/adcore.min.js"></script><script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency quarter searchOffer" id="webAd-'+adIndex+'"></div>');</script><script>(function(){var a={alt:"$%u_ad_img_alt%$",disclaimer:"$%u_ad_disclaimer%$",htmlText:"$%u_ad_html_text%$",icc:"$%u_ad_icc%$",link:"$%u_ad_link_href%$",map:"$%u_ad_map_href%$",src:"$%u_ad_img_src%$",title:"$%u_ad_link_title%$"};webAd(adIndex,a)})();</script>

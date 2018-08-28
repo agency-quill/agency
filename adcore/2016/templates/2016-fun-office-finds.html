@@ -1,0 +1,39 @@
+<style type="text/css">
+    #funOffice { margin: 0 auto 20px; overflow: hidden; width: 960px; }
+    #funOffice #m4, #funOffice #m5-6, #funOffice #m7, #funOffice #m8-21 { margin-bottom: 20px; }
+    #funOffice .bannerRow .carouselPh .carousel, #funOffice .bannerRow .carouselPh .carousel .carouselWrap, #funOffice .bannerRow .carouselPh .carousel .carouselWrap .carouselInner, #funOffice .itemb.panelItem.cropBoth { width: 960px !important; }
+    #funOffice #m5-6, #funOffice #m8-21 { font-size: 0; line-height: 0; } 
+    #funOffice #m5-6 .half, #funOffice #m8-21 .half, #funOffice #m8-21 .quarter { display: inline-block; margin-left: 20px; vertical-align: top; }
+</style>
+<div id="funOffice">
+	<!-- header 960x40 -->
+    <div id="m1">$%M1%$</div> 
+    <!-- drop down navigation 960x30 -->
+    <div id="m2">$%M2%$</div>
+    <!-- breadcrumb navigation 960x30 -->
+    <div id="m3">$%M3%$</div>
+    <!-- banner 960x300 -->
+    <div id="m4">$%M4%$</div>
+    <!-- half mods 470x300 -->
+    <div id="m5-6">$%M5%$ $%M6%$</div>
+    <!-- carousel 960x300 -->
+    <div id="m7">$%M7%$</div>
+    <!-- section header 960x40 -->
+    <div id="m23">$%M23%$</div>
+    <!-- shop by category 100x100 -->
+    <div id="m8-21">
+    	$%M8%$ $%M9%$ $%M10%$
+        $%M11%$ $%M12%$ $%M13%$ $%M14%$
+        $%M15%$ $%M16%$ $%M17%$
+        $%M18%$ $%M19%$ $%M20%$ $%M21%$ 
+    </div>
+    <!-- shop by brand 960x85 -->
+    <div id="m22">$%M22%$</div>
+</div>
+<script>
+    $("#funOffice .half, #funOffice .quarter").each(function() {
+    	if (($(this).position().left - $(this).parent().position().left) < 100) {
+          $(this).css("margin-left","0");
+        }
+    });
+</script>

@@ -1,0 +1,16 @@
+<!-- qp-enroll-paper-row -->
+<tr class="agency tr--qp" id="webMod">
+    <td class="td--qp"><$=GetPLPPrice(['$%u_ad_plp_tier%$'])$>$%u_ad_td_paper_html%$</td>
+    <td class="td--qp">$%u_ad_td_2_html%$</td>
+    <td class="td--qp">$%u_ad_td_3_html%$</td>
+</tr>
+<script>
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+        $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
+    }
+    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
+    $('#webMod').attr('id', 'webMod-' + modIndex);
+	initMod('/content/iw/styles/agency5.min.css', $('#webMod-' + modIndex).html(), $('#webMod-' + modIndex));
+</script>
+
+<!-- qp-enroll-paper-row --><tr class="agency tr--qp" id="webMod"><td class="td--qp"><$=GetPLPPrice(['$%u_ad_plp_tier%$'])$>$%u_ad_td_paper_html%$</td><td class="td--qp">$%u_ad_td_2_html%$</td><td class="td--qp">$%u_ad_td_3_html%$</td></tr><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){$('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>')}modIndex=typeof modIndex!='undefined'?modIndex+1:1;$('#webMod').attr('id','webMod-'+modIndex);initMod('/content/iw/styles/agency5.min.css',$('#webMod-'+modIndex).html(),$('#webMod-'+modIndex));</script>

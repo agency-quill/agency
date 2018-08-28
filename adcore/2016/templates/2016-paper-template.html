@@ -1,0 +1,37 @@
+<!-- 2016-paper-template -->
+<style type="text/css">
+    #paper { margin: 0 auto; width: 960px; }
+    #paper #m2, #paper #m3, #paper #m6-9 { margin-bottom: 20px }
+    #paper #m3 { overflow: hidden; }
+    #paper #m6-9 { font-size: 0; position: relative; }
+    #paper #m6-9 .quarter { display: inline-block; margin-left: 20px; }
+    #paper #m6-9 .quarter:first-child { margin-left: 0; }
+    #paper #m4-5 .itemListYellow:first-child, #paper #m10-11 .itemListYellow:first-child { margin-top: 20px !important; }
+</style>
+<div id="paper">
+    <!-- header 960x40 -->
+    <div id="m1">$%M1%$</div>  
+    <!-- navigation 960x30 -->
+    <div id="m2">$%M2%$</div>
+    <!-- banner 960x300 -->
+    <div id="m3">$%M3%$</div>
+    <!-- dynamic lists 960x300 -->
+    <div id="m4-5">
+        $%M4%$
+        $%M5%$
+    </div>
+    <!-- ads 225x300 -->
+    <div id="m6-9">$%M6%$ $%M7%$ $%M8%$ $%M9%$</div>
+    <!-- dynamic lists 960x300 -->
+    <div id="m10-11">
+        $%M10%$
+        $%M11%$
+    </div>
+</div>
+<script>
+    $(".quarter").each(function() {
+        if ($(this).position().left < 100) {
+          $(this).css("margin-left","0");
+        }
+    });
+</script>

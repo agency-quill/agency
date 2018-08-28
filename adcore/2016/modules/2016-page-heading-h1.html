@@ -1,0 +1,84 @@
+<!-- 2016-page-heading-h1 -->
+<style type="text/css">
+	@font-face { font-family: '55HelveticaNeueRoman'; src: url('/content/iw/fonts/helvetica-neue/hlr-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.svg#webfontuVJGTgcF') format('svg'); }
+	#h1Header .toggleAccordion {background:none;border:0;color:#0079c1;display:block;font-size:18px;margin-bottom:10px;margin-top:-10px;padding:0;}
+	#h1Header .accordionContent { display: none; overflow: hidden; }
+	#h1Header .accordionContent p { color: #333; font-family: '55HelveticaNeueRoman'; font-size: 14px; line-height: 18px; margin-bottom: 14px; }
+	#h1Header .introText { font: 400 12px/1.5em '55HelveticaNeueRoman', helvetica, arial, sans-serif; margin-bottom: 10px; margin-top: 0; padding: 0;}
+</style>
+<script type="text" id="headingHtml">
+	<h1 class="h1 margin__bottom--25">{{heading}}</h1>
+</script>
+<script type="text" id="readMore">
+	<p class="toggleAccordion"><a href="javascript:void(0)">{{readMoreCta}}</a></p>
+	<div class="accordionContent">
+		{{readMoreText}}
+	</div>
+</script>
+<script type="text" id="introParagraph">
+	<p class="introText">{{introParagraph}}</p>
+</script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"heading" : "$%u_ad_h1_title%$",
+			"readMoreCta" : "$%u_ad_read_more_call_to_action%$",
+			"readMoreText" : "$%u_ad_read_more_text_01%$$%u_ad_read_more_text_02%$$%u_ad_read_more_text_03%$$%u_ad_read_more_text_04%$",
+			"introParagraph" : "$%u_ad_intro_text_01%$$%u_ad_intro_text_02%$$%u_ad_intro_text_03%$$%u_ad_intro_text_04%$"
+		};
+		if(data.heading) {
+			document.write("<div id=\"h1Header\" class=\"agency\"></div>");
+			$("#h1Header").html(render($("#headingHtml").html(),data));
+			if(data.readMoreCta) $("#h1Header").append(render($("#readMore").html(),data));
+			if(data.introParagraph) $("#h1Header").append(render($("#introParagraph").html(),data));
+		}
+	})();
+</script>
+
+<!-- 2016-page-heading-h1 -->
+<script src="/content/iw/scripts/agency3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/content/iw/styles/agency5.min.css">
+<script type="text" id="headingHtml">
+	<h1 class="h1 margin__bottom--25">{{heading}}</h1>
+</script>
+<script type="text" id="introParagraph">
+	<div class="margin__bottom--25" id="introP">
+		<p class="p">{{introParagraph}}</p>	
+	</div>
+</script>
+<script type="text" id="readMore">
+	<p class="p--small margin__bottom--50"><a href="javascript:void(0)" onclick="accordionToggle($('#introAccordion'), $(this))">{{readMoreCta}}</a></p>
+	<div class="accordion" id="introAccordion">
+		{{readMoreText}}
+	</div>
+</script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"heading" : "$%u_ad_h1_title%$",
+			"readMoreCta" : "$%u_ad_read_more_call_to_action%$",
+			"readMoreText" : "$%u_ad_read_more_text_01%$$%u_ad_read_more_text_02%$$%u_ad_read_more_text_03%$$%u_ad_read_more_text_04%$",
+			"introParagraph" : "$%u_ad_intro_text_01%$$%u_ad_intro_text_02%$$%u_ad_intro_text_03%$$%u_ad_intro_text_04%$"
+		};
+		if(data.heading) {
+			document.write("<div id=\"h1Header\" class=\"agency\"></div>");
+			$("#h1Header").html(render($("#headingHtml").html(),data));
+			if(data.introParagraph) $("#h1Header").append(render($("#introParagraph").html(),data));
+			if(data.readMoreCta) $("#h1Header").append(render($("#readMore").html(),data));
+		}
+	})();
+</script>
+
+<!-- 2016-page-heading-h1 --><script src="/content/iw/scripts/agency3.min.js"></script><link rel="stylesheet" type="text/css" href="/content/iw/styles/agency5.min.css"><script type="text" id="headingHtml"><h1 class="h1 margin__bottom--25">{{heading}}</h1></script><script type="text" id="introParagraph"><div class="margin__bottom--25" id="introP"><p class="p">{{introParagraph}}</p></div></script><script type="text" id="readMore"><p class="p--small margin__bottom--50"><a href="javascript:void(0)" onclick="accordionToggle($('#introAccordion'), $(this))">{{readMoreCta}}</a></p><div class="accordion" id="introAccordion">{{readMoreText}}</div></script><script>(function(){function a(d,e){for(var c in e){d=d.replace("{{"+c+"}}",e[c])}return d}var b={heading:"$%u_ad_h1_title%$",readMoreCta:"$%u_ad_read_more_call_to_action%$",readMoreText:"$%u_ad_read_more_text_01%$$%u_ad_read_more_text_02%$$%u_ad_read_more_text_03%$$%u_ad_read_more_text_04%$",introParagraph:"$%u_ad_intro_text_01%$$%u_ad_intro_text_02%$$%u_ad_intro_text_03%$$%u_ad_intro_text_04%$"};if(b.heading){document.write('<div id="h1Header" class="agency"></div>');$("#h1Header").html(a($("#headingHtml").html(),b));if(b.introParagraph){$("#h1Header").append(a($("#introParagraph").html(),b))}if(b.readMoreCta){$("#h1Header").append(a($("#readMore").html(),b))}}})();</script>

@@ -1,0 +1,48 @@
+<style type="text/css">
+	@font-face { font-family: '65HelveticaNeueMedium'; src: url('/content/iw/fonts/helvetica-neue/hlm-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hlm-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hlm-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hlm-webfont.svg#webfontaH9qjcJ2') format('svg'); }
+	.fofCategory { padding: 15px; height: 220px; }
+	.fofCategory.quarter { width: 195px; }
+	.fofCategory.half { width: 440px; }
+	.fofCategory a { color: #333; text-decoration: none; }
+	.fofCategory a:hover { text-decoration: underline; }
+	.fofCategory p { font: 400 14px/15px '65HelveticaNeueMedium', helvetica, arial, sans-serif; margin-top: 10px; padding: 0; }
+</style>
+<script>
+	if(typeof fofCat != "undefined") fofCat = fofCat+1;
+	else fofCat = 1;
+</script>
+<script type="text" id="aTag">
+	<a href="{{linkUrl}}" title="{{linkTitle}}">
+		{{imageHtml}}
+	</a>
+</script>
+<script type="text" id="imageHtml">
+	<img src="{{imgSrc}}" alt="{{imgAlt}}">
+	<p>{{pText}}</p>
+</script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"linkUrl" : "$%u_ad_link_url%$",
+			"linkTitle" : "$%u_ad_link_title%$",
+			"imgSrc" : "$%u_ad_img_src%$",
+			"imgAlt" : "$%u_ad_img_alt%$",
+			"pText" : "$%u_ad_text%$"
+		};
+		if (data.imgSrc) {
+			document.write("<div class=\"fofCategory $%u_ad_width%$\" id=\"" + "fofCat-" + fofCat + "\"></div>");
+			data.imageHtml = render($("#imageHtml").html(),data);
+			if(data.linkUrl) data.htmlText = render($("#aTag").html(),data);
+			else data.htmlText = data.imageHtml;
+			$("#fofCat-" + fofCat).html(data.htmlText);
+		} else {
+			document.write("<!-- Mod fofCat-"+fofCat+" Empty -->");
+		}
+	})();
+</script>

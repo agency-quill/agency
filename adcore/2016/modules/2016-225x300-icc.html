@@ -1,0 +1,20 @@
+<style type="text/css">
+    .quarter {position:relative;width:225px;}
+    .quarter .couponCode {bottom:60px;left:15px;position:absolute;z-index:10;}
+    .quarter .couponCode p {color:#000;font-family:arial,helvetica,sans-serif;font-size:11px;line-height:11px;margin-top:5px;padding:0;text-align:left;text-decoration:none;}
+    .quarter .couponCode .iccText {background:#ccc;height:24px;line-height:24px;padding:0 10px;width:175px;}
+    .quarter .couponCode .iccText strong {font-size:16px;}
+    .quarter .disclaimer {bottom:15px;color:#0072bc;cursor:pointer;font-size:12px;line-height:12px;position:absolute;right:15px;width:auto;z-index:11;}
+    .quarter .disclaimer:hover {color:#f69036;text-decoration:underline;}
+</style>
+
+<div class="quarter">
+    <div class="couponCode" style="bottom:$%u_ad_coupon_code_bottom%$px;">
+        <p class="iccText">Use Code: <strong>$%u_ad_coupon_code%$</strong></p>
+        <p style="color:$%u_ad_coupon_usage_text_color%$;">$%u_ad_coupon_usage_text%$</p>
+    </div>
+    <p class="disclaimer" style="bottom:$%u_ad_disclaimer_bottom%$px;color:$%u_ad_disclaimer_color%$;right:$%u_ad_disclaimer_right%$px;width:$%u_ad_disclaimer_width%$px;" onclick="$(this).Tooltip('$%u_ad_disclaimer_text_01%$$%u_ad_disclaimer_text_02%$$%u_ad_disclaimer_text_03%$$%u_ad_disclaimer_text_04%$',300,{hasCloseButton:true})">View Disclaimer</p>
+    <a href="$%u_ad_link_url%$" title="$%u_ad_link_title%$">
+        <img src="$%u_ad_img_src%$" alt="$%u_ad_img_alt%$" width="225" height="300"/>
+    </a>
+</div>

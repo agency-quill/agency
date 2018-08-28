@@ -1,0 +1,58 @@
+<!-- 2016-225x300-html -->
+<style type="text/css">
+	@font-face { font-family: '45HelveticaNeueLight'; src: url('/content/iw/fonts/helvetica-neue/hll-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hll-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hll-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hll-webfont.svg#webfont2uRkJLxm') format('svg'); }
+	.quarter { position: relative; }
+	.quarter .htmlText { left: 0; height: auto; padding: 15px; position: absolute; top: 0; width: 195px; }
+	.quarter .htmlText p { color: $%u_ad_text_heading_color%$; font: 400 18px/22px '45HelveticaNeueLight', arial, helvetica, sans-serif; margin: 0; padding: 0; }
+	.quarter .htmlText p strong { display: block; font-size: 42px; font-weight: 400; line-height: 46px; }
+	.quarter .htmlText p.adIntro { color: $%u_ad_text_intro_color%$; padding-bottom: 0; }
+	.quarter .htmlText sup { font-size: .75em; line-height: .5em; vertical-align: .25em; }
+</style>
+
+<script>
+	adIndex = typeof adIndex != 'undefined' ? adIndex+1 : 1;
+    document.write('<div class="agency quarter searchOffer" id="webAd-'+adIndex+'"></div>');
+</script>
+
+<script type="text" id="base225x300Template">
+	<a href="{{hrefUrl}}" title="{{hrefTitle}}">
+		<div class="htmlText">
+			{{htmlText}}
+		</div>
+		<img src="{{imgSrc}}" alt="{{imgAlt}}" width="225" height="300"/>
+	</a>
+</script>
+
+<script type="text" id="intro">
+    <p class="adIntro">{{intro}}</p>
+</script>
+
+<script type="text" id="heading">
+	<p><strong>{{heading}}</strong>{{subHeading}}</p>
+</script>
+
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"intro" : "$%u_ad_text_intro%$",
+			"heading" : "$%u_ad_text_heading%$",
+			"htmlText" : "",
+			"subHeading" : "$%u_ad_text_subHeading%$",
+			"hrefUrl" : "$%u_ad_link_url%$",
+			"hrefTitle" : "$%u_ad_link_title%$",
+			"imgSrc" : "$%u_ad_img_src%$",
+			"imgAlt" : "$%u_ad_img_alt%$"
+		};
+		if(data.intro) data.htmlText += render($("#intro").html(),data);
+		if(data.heading || data.subHeading) data.htmlText += render($("#heading").html(),data);
+		$("#webAd-" + adIndex).html(render($("#base225x300Template").html(),data));
+	})();
+</script>
+
+<!-- 2016-225x300-html --><style type="text/css">@font-face{font-family:'45HelveticaNeueLight';src:url('/content/iw/fonts/helvetica-neue/hll-webfont.eot');src:local('x'),url('/content/iw/fonts/helvetica-neue/hll-webfont.woff') format('woff'),url('/content/iw/fonts/helvetica-neue/hll-webfont.ttf') format('truetype'),url('/content/iw/fonts/helvetica-neue/hll-webfont.svg#webfont2uRkJLxm') format('svg')}.quarter{position:relative}.quarter .htmlText{left:0;height:auto;padding:15px;position:absolute;top:0;width:195px}.quarter .htmlText p{color:$%u_ad_text_heading_color%$;font:400 18px/22px '45HelveticaNeueLight',arial,helvetica,sans-serif;margin:0;padding:0}.quarter .htmlText p strong{display:block;font-size:42px;font-weight:400;line-height:46px}.quarter .htmlText p.adIntro{color:$%u_ad_text_intro_color%$;padding-bottom:0}.quarter .htmlText sup{font-size:.75em;line-height:.5em;vertical-align:.25em}</style> <script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency quarter" id="webAd-'+adIndex+'"></div>');</script> <script type="text" id="base225x300Template"><a href="{{hrefUrl}}" title="{{hrefTitle}}"><div class="htmlText">{{htmlText}}</div><img src="{{imgSrc}}" alt="{{imgAlt}}" width="225" height="300"/></a></script> <script type="text" id="intro"><p class="adIntro">{{intro}}</p></script> <script type="text" id="heading"><p><strong>{{heading}}</strong>{{subHeading}}</p></script> <script>(function(){function a(d,e){for(var c in e){d=d.replace("{{"+c+"}}",e[c])}return d}var b={intro:"$%u_ad_text_intro%$",heading:"$%u_ad_text_heading%$",htmlText:"",subHeading:"$%u_ad_text_subHeading%$",hrefUrl:"$%u_ad_link_url%$",hrefTitle:"$%u_ad_link_title%$",imgSrc:"$%u_ad_img_src%$",imgAlt:"$%u_ad_img_alt%$"};if(b.intro){b.htmlText+=a($("#intro").html(),b)}if(b.heading||b.subHeading){b.htmlText+=a($("#heading").html(),b)}$("#webAd-"+adIndex).html(a($("#base225x300Template").html(),b))})();</script>

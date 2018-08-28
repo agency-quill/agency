@@ -1,0 +1,28 @@
+<!-- 2018-quarter-mod -->
+<div class="agency grid__unit--25 searchOffer" id="webMod"></div>
+<script>
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+        $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
+    }
+    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
+    $('#webMod').attr('id', 'webMod-' + modIndex);
+    var modData = {
+        'align': '$%u_ad_img_align%$',
+        'alt': '$%u_ad_img_alt%$',
+        'card': '$%u_ad_card%$',
+        'class': '$%u_ad_class%$',
+        'css': '$%u_ad_css%$',
+        'div': '$%u_ad_html_text%$',
+        'icc': '$%u_ad_icc%$',
+        'id': '$%u_ad_id%$',
+        'link': '$%u_ad_link_href%$',
+        'map': '$%u_ad_map_href%$',
+        'popup': '$%u_ad_popup%$',
+        'src': '$%u_ad_img_src%$',
+        'title': '$%u_ad_link_title%$',
+        'unit': '25'
+    };
+    $('#webMod-' + modIndex).html(webMod('webMod-' + modIndex, modData));
+</script>
+
+<!-- 2018-quarter-mod --><div class="agency grid__unit--25 searchOffer" id="webMod"></div><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length)$('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');modIndex=typeof modIndex!='undefined'?modIndex+1:1;$('#webMod').attr('id','webMod-'+modIndex);var modData={align:'$%u_ad_img_align%$',alt:'$%u_ad_img_alt%$',card:'$%u_ad_card%$',class:'$%u_ad_class%$',css:'$%u_ad_css%$',div:'$%u_ad_html_text%$',icc:'$%u_ad_icc%$',id:'$%u_ad_id%$',link:'$%u_ad_link_href%$',map:'$%u_ad_map_href%$',popup:'$%u_ad_popup%$',src:'$%u_ad_img_src%$',title:'$%u_ad_link_title%$',unit:'25'};$('#webMod-'+modIndex).html(webMod('webMod-'+modIndex,modData));</script>

@@ -1,0 +1,26 @@
+<!-- 2017-accordion-list -->
+<style type="text/css">
+	.agency .accordionList {
+		height: $%u_ad_accordion_height%$;
+		overflow: hidden;
+	}
+	.agency .carouselNew .item_ph {
+		width: 220px;
+	}
+</style>
+<div class="agency" id="$%u_ad_custom_list_anchor%$">
+	<div class="accordionList" $%u_ad_accordion_attributes%$>
+		<$= CarouselDynTemplate(['$%dynamic_list_id%$','0','$%custom_list_numb_items%$','3','$%custom_list_numb_items_max%$']) $>
+	</div>
+	<p class="p accordionButton" style="$%u_ad_button_p_css%$"><a href="javascript:void(0)" onclick="accordionToggle($('#$%u_ad_custom_list_anchor%$ .accordionList'),$(this))" data-accordion-button-close="$%u_ad_button_text_open%$<img src='$%u_ad_button_img_open%$' style='$%u_ad_button_img_css%$' alt='$%u_ad_button_img_alt_open%$'>" data-accordion-button-open="$%u_ad_button_text_closed%$<img src='$%u_ad_button_img_closed%$' style='$%u_ad_button_img_css%$' alt='$%u_ad_button_img_alt_closed%$'>">
+		$%u_ad_button_text_closed%$<img src="$%u_ad_button_img_closed%$" style="$%u_ad_button_img_css%$" alt="$%u_ad_button_img_alt_closed%$">
+	</a></p>
+</div>
+<script src="/content/iw/scripts/agency3.min.js"></script>
+<script>
+	(function(){
+		initMod('/content/iw/styles/agency5.min.css',$('#$%u_ad_custom_list_anchor%$ .accordionList').html(),$('#$%u_ad_custom_list_anchor%$'));
+	})();
+</script>
+
+<!-- 2017-accordion-list --><style type="text/css">.agency .accordionList{height:$%u_ad_accordion_height%$;overflow:hidden}.agency .carouselNew .item_ph{width:220px}</style><div class="agency" id="$%u_ad_custom_list_anchor%$"><div class="accordionList" $%u_ad_accordion_attributes%$><$= CarouselDynTemplate(['$%dynamic_list_id%$','0','$%custom_list_numb_items%$','3','$%custom_list_numb_items_max%$']) $></div><p class="p accordionButton" style="$%u_ad_button_p_css%$"><a href="javascript:void(0)" onclick="accordionToggle($('#$%u_ad_custom_list_anchor%$ .accordionList'),$(this))" data-accordion-button-close="$%u_ad_button_text_open%$<img src='$%u_ad_button_img_open%$' style='$%u_ad_button_img_css%$' alt='$%u_ad_button_img_alt_open%$'>" data-accordion-button-open="$%u_ad_button_text_closed%$<img src='$%u_ad_button_img_closed%$' style='$%u_ad_button_img_css%$' alt='$%u_ad_button_img_alt_closed%$'>">$%u_ad_button_text_closed%$<img src="$%u_ad_button_img_closed%$" style="$%u_ad_button_img_css%$" alt="$%u_ad_button_img_alt_closed%$"></a></p></div><script src="/content/iw/scripts/agency3.min.js"></script><script>(function(){initMod("/content/iw/styles/agency5.min.css",$("#$%u_ad_custom_list_anchor%$ .accordionList").html(),$("#$%u_ad_custom_list_anchor%$"))})();</script>

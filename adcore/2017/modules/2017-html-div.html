@@ -1,0 +1,14 @@
+<!-- 2017-html-div -->
+<div id="webMod" class="agency $%u_ad_div_class%$">
+	$%u_ad_div_content_01%$$%u_ad_div_content_02%$$%u_ad_div_content_03%$$%u_ad_div_content_04%$$%u_ad_div_content_05%$
+</div>
+<script>
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+        $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
+    }
+    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
+    $('#webMod').attr('id', 'webMod-' + modIndex);
+	initMod('/content/iw/styles/agency5.min.css', $('#webMod-' + modIndex).html(), $('#webMod-' + modIndex));
+</script>
+
+<!-- 2017-html-div --><div id="webMod" class="agency $%u_ad_div_class%$">$%u_ad_div_content_01%$$%u_ad_div_content_02%$$%u_ad_div_content_03%$$%u_ad_div_content_04%$$%u_ad_div_content_05%$</div><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){$("head").append('<script src="/content/iw/scripts/agency3.min.js"><\/script>')}modIndex=typeof modIndex!="undefined"?modIndex+1:1;$("#webMod").attr("id","webMod-"+modIndex);initMod("/content/iw/styles/agency5.min.css",$("#webMod-"+modIndex).html(),$("#webMod-"+modIndex));</script>

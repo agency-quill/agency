@@ -1,0 +1,95 @@
+<!-- 2016-icc-banner -->
+<style type="text/css">
+.iccBanner { position: relative; }
+.iccBanner .iccCode { color: #000; position: absolute; text-align: left; width: 190px; z-index: 2; }
+.iccBanner .iccCode p { margin-bottom: 0; padding: 0; font-size: 11px; line-height: 14px; }
+.iccBanner p.iccText { margin-bottom: 6px; width: 190px; height: 18px; background-color: #ccc; padding-bottom: 0; padding-top: 4px; font-size: 12px; line-height: 16px; text-align: center; color: #000; }
+.iccBanner .iccText strong { font-weight: 800; font-size: 16px; font-family: helvetica, arial, sans-serif; }
+.iccBanner .iccDisclaimer { cursor: pointer; position: absolute; text-align: left; text-decoration: underline; z-index: 1; }
+.iccBanner .iccDisclaimer:hover { text-decoration: none; }
+</style>
+<script>
+	adIndex = typeof adIndex !== "undefined" ? adIndex+1 : 1;
+	document.write('<div class="full iccBanner" id="webAd-' + adIndex + '"></div>');
+</script>
+<script type="text" id="iccDiv">
+	<div class="iccCode" style="left: {{iccLeft}}px; top: {{iccTop}}px;">
+       <p class="iccText">Use Code <strong>{{iccCode}}</strong></p>
+       {{iccUsageExpiry}}
+	</div>
+</script>
+<script type="text" id="iccUsage">
+	<p style="color: {{usageExpiryColor}}">One-time use per {{iccUsage}}.</p>
+</script>
+<script type="text" id="iccExpiry">
+	<p style="color: {{usageExpiryColor}}">Good through {{iccExpiry}}.</p>
+</script>
+<script type="text" id="iccDisclaimer">
+	<p class="iccDisclaimer" onclick="$(this).Tooltip('{{disclaimerText}}',400,{hasCloseButton:true})" style="color: {{disclaimerColor}}; left: {{disclaimerLeft}}px; top: {{disclaimerTop}}px;">View Disclaimer</p>
+</script>
+<script type="text" id="iccImg">
+	<img src="{{iccSrc}}" alt="{{iccAlt}}">
+</script>
+<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"i" : "1",
+			"iccCode-1" : [$%u_ad_icc_01_code%$],
+			"iccDisclaimer-1" : [$%u_ad_icc_01_disclaimer%$],
+			"iccCode-2" : [$%u_ad_icc_02_code%$],
+			"iccDisclaimer-2" : [$%u_ad_icc_02_disclaimer%$],
+			"iccCode-3" : [$%u_ad_icc_03_code%$],
+			"iccDisclaimer-3" : [$%u_ad_icc_03_disclaimer%$],
+			"iccCode-4" : [$%u_ad_icc_04_code%$],
+			"iccDisclaimer-4" : [$%u_ad_icc_04_disclaimer%$],
+			"iccCode-5" : [$%u_ad_icc_05_code%$],
+			"iccDisclaimer-5" : [$%u_ad_icc_05_disclaimer%$],
+			"iccCode-6" : [$%u_ad_icc_06_code%$],
+			"iccDisclaimer-6" : [$%u_ad_icc_06_disclaimer%$],
+			"iccSrc" : "$%u_ad_img_src%$",
+			"iccAlt" : "$%u_ad_img_alt%$"
+		};
+		for(data.i; data.i <= 6; data.i++) {
+			if(data["iccCode-"+data.i][0]){
+				data.iccCode = data["iccCode-"+data.i][0];
+				data.iccLeft = data["iccCode-"+data.i][1];
+				data.iccTop = data["iccCode-"+data.i][2];
+				data.iccUsageExpiry = "";
+				if(data["iccCode-"+data.i][5]) {
+					data.usageExpiryColor = data["iccCode-"+data.i][5];
+				} else {
+					data.usageExpiryColor = "#000";
+				}
+				if(data["iccCode-"+data.i][3]) {
+					data.iccUsage = data["iccCode-"+data.i][3];
+					data.iccUsageExpiry += render($("#iccUsage").html(),data);
+				}
+				if(data["iccCode-"+data.i][4]) {
+					data.iccExpiry = data["iccCode-"+data.i][4];
+					data.iccUsageExpiry += render($("#iccExpiry").html(),data);
+				}
+				data.iccHtml = render($("#iccDiv").html(),data);
+				$("#webAd-" + adIndex).append(data.iccHtml);
+				if(data["iccDisclaimer-"+data.i][0]) {
+					data.iccDisclaimer = data["iccDisclaimer-"+data.i][0];
+					data.disclaimerText = disclaimerText[data.iccDisclaimer];
+					data.disclaimerLeft = data["iccDisclaimer-"+data.i][1];
+					data.disclaimerTop = data["iccDisclaimer-"+data.i][2];
+					data.disclaimerColor = data["iccDisclaimer-"+data.i][3];
+					data.disclaimerHtml = render($("#iccDisclaimer").html(),data);
+					$("#webAd-" + adIndex).append(data.disclaimerHtml);
+				}
+			} else {
+				break;
+			}
+		}
+		$("#webAd-" + adIndex).append(render($("#iccImg").html(),data));
+	})();
+</script>

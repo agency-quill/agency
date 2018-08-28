@@ -1,0 +1,51 @@
+<!-- 2016-healthcare -->
+<style type="text/css">
+    #healthCare { margin-bottom: 20px; }
+    #healthCare #m2 { margin-bottom: 30px }
+    #healthCare #m4-27 { font-size: 0; }
+    #healthCare .featuredCategory { display: inline-block; height: auto; margin: 0 0 40px 20px; vertical-align: top; width: 225px; }
+</style>
+<div id="healthCare">
+    <!-- header 960x40 -->
+    <div id="m1">$%M1%$</div> 
+    <!-- banner 960x300 -->
+    <div id="m2">$%M2%$</div>
+    <!-- section header 960x40 -->
+    <div id="m3">$%M3%$</div>
+    <!-- category mods 200x200 -->
+    <div id="m4-27">
+        <div class="featuredCategory">$%M4%$</div>
+        <div class="featuredCategory">$%M5%$</div>
+        <div class="featuredCategory">$%M6%$</div>
+        <div class="featuredCategory">$%M7%$</div>
+        <div class="featuredCategory">$%M8%$</div>
+        <div class="featuredCategory">$%M9%$</div>
+        <div class="featuredCategory">$%M10%$</div>
+        <div class="featuredCategory">$%M11%$</div>
+        <div class="featuredCategory">$%M12%$</div>
+        <div class="featuredCategory">$%M13%$</div>
+        <div class="featuredCategory">$%M14%$</div>
+        <div class="featuredCategory">$%M15%$</div>
+        <div class="featuredCategory">$%M16%$</div>
+        <div class="featuredCategory">$%M17%$</div>
+        <div class="featuredCategory">$%M18%$</div>
+        <div class="featuredCategory">$%M19%$</div>
+        <div class="featuredCategory">$%M20%$</div>
+        <div class="featuredCategory">$%M21%$</div>
+        <div class="featuredCategory">$%M22%$</div>
+        <div class="featuredCategory">$%M23%$</div>
+        <div class="featuredCategory">$%M24%$</div>
+        <div class="featuredCategory">$%M25%$</div>
+        <div class="featuredCategory">$%M26%$</div>
+        <div class="featuredCategory">$%M27%$</div>
+    </div>
+    <!-- contact footer 960x40 -->
+    $%M18%$
+</div>
+<script>
+    $("#healthCare .featuredCategory").each(function() {
+        if (($(this).position().left - $(this).parent().position().left) < 100) {
+          $(this).css("margin-left","0");
+        }
+    });
+</script>

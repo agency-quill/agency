@@ -1,0 +1,52 @@
+<style type="text/css">
+     #CarouselBrandsPh .scLeft {z-index:10;top:8px}
+     #CarouselBrandsPh .scRight {z-index:10;top:8px}
+</style>
+
+<h4 style="padding:10px 0;font:normal normal 400 24px/24px helvetica,arial,sans-serif;">$%u_ad_title_text%$</h4>
+<div id="CarouselBrandsPh"></div>
+
+<script type="text" id="BrandItemTemplate">
+     <li class="itemb panelItem" style="width:220px;padding:0;text-align:center;">
+          <a href="{{url}}"><img alt="{{alt}}" img src="{{src}}" style="height:84px;"></a>
+     </li>
+</script>
+
+<script type="text/javascript">
+     (function () {
+          var itemTemplate = document.getElementById("BrandItemTemplate").innerHTML;
+          var model = [
+               { url: "$%u_Brand01_Url%$", alt: "$%u_Brand01_Alt%$", src: "$%u_Brand01_Image%$" },
+               { url: "$%u_Brand02_Url%$", alt: "$%u_Brand02_Alt%$", src: "$%u_Brand02_Image%$" },
+               { url: "$%u_Brand03_Url%$", alt: "$%u_Brand03_Alt%$", src: "$%u_Brand03_Image%$" },
+               { url: "$%u_Brand04_Url%$", alt: "$%u_Brand04_Alt%$", src: "$%u_Brand04_Image%$" },
+               { url: "$%u_Brand05_Url%$", alt: "$%u_Brand05_Alt%$", src: "$%u_Brand05_Image%$" },
+               { url: "$%u_Brand06_Url%$", alt: "$%u_Brand06_Alt%$", src: "$%u_Brand06_Image%$" },
+               { url: "$%u_Brand07_Url%$", alt: "$%u_Brand07_Alt%$", src: "$%u_Brand07_Image%$" },
+               { url: "$%u_Brand08_Url%$", alt: "$%u_Brand08_Alt%$", src: "$%u_Brand08_Image%$" },
+               { url: "$%u_Brand09_Url%$", alt: "$%u_Brand09_Alt%$", src: "$%u_Brand09_Image%$" },
+               { url: "$%u_Brand10_Url%$", alt: "$%u_Brand10_Alt%$", src: "$%u_Brand10_Image%$" },
+               { url: "$%u_Brand11_Url%$", alt: "$%u_Brand11_Alt%$", src: "$%u_Brand11_Image%$" },
+               { url: "$%u_Brand12_Url%$", alt: "$%u_Brand12_Alt%$", src: "$%u_Brand12_Image%$" },
+               { url: "$%u_Brand13_Url%$", alt: "$%u_Brand13_Alt%$", src: "$%u_Brand13_Image%$" },
+               { url: "$%u_Brand14_Url%$", alt: "$%u_Brand14_Alt%$", src: "$%u_Brand14_Image%$" },
+               { url: "$%u_Brand15_Url%$", alt: "$%u_Brand15_Alt%$", src: "$%u_Brand15_Image%$" },
+               { url: "$%u_Brand16_Url%$", alt: "$%u_Brand16_Alt%$", src: "$%u_Brand16_Image%$" },
+               { url: "$%u_Brand17_Url%$", alt: "$%u_Brand17_Alt%$", src: "$%u_Brand17_Image%$" },
+               { url: "$%u_Brand18_Url%$", alt: "$%u_Brand18_Alt%$", src: "$%u_Brand18_Image%$" },
+               { url: "$%u_Brand19_Url%$", alt: "$%u_Brand19_Alt%$", src: "$%u_Brand19_Image%$" },
+               { url: "$%u_Brand20_Url%$", alt: "$%u_Brand20_Alt%$", src: "$%u_Brand20_Image%$" }
+          ];
+
+          document.getElementById("CarouselBrandsPh").innerHTML = '<div class="carousel carouselSupercat" data-templatetype="default" data-itemclass="itemb" data-itemtag="li" data-type="Horizontal"  data-itemsPerPage="4" data-ItemWidth="220" data-ItemHeight="84" data-height="84", data-ShowArrows="true"><div class="carouselWrap" id=""><ul style="display: block; height: 0px;left: 0px;" class="carouselInner" id="MainBrandCarouselInner"></ul></div></div>';
+          var html = "";
+          for (var i = 0; i < model.length; i++) {
+               var item = model[i];
+
+               if (item.url && item.src) {
+                    html += itemTemplate.replace("{{url}}", item.url).replace("{{alt}}", item.alt).replace("{{src}}", item.src);
+               };
+          };
+          document.getElementById("MainBrandCarouselInner").innerHTML = html;
+     })();
+</script>

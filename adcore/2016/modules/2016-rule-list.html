@@ -1,0 +1,27 @@
+<style type="item/css">
+	.listIntro, .orderedList, .orderedList li { font: 400 16px/1.5em helvetica, arial, sans-serif; margin: 0 0 8px; }
+	.orderedList { padding-left: 20px; }
+	.orderedList li { background: none; font-size: 14px; }
+</style>
+<script>
+	if(typeof listIndex != "undefined") listIndex += 1;
+	else listIndex = 1;
+</script>
+<script>
+	(function(){
+		var $listObject = "";
+		var listArray = ["$%u_ad_list_intro%$","$%u_ad_list_item_01%$","$%u_ad_list_item_02%$","$%u_ad_list_item_03%$","$%u_ad_list_item_04%$","$%u_ad_list_item_05%$","$%u_ad_list_item_06%$","$%u_ad_list_item_07%$","$%u_ad_list_item_08%$","$%u_ad_list_item_09%$","$%u_ad_list_item_10%$"];
+		if(listArray[0]) $listObject = "<p class=\"listIntro\">"+listArray[0]+"</p>";
+		if(listArray[1]){
+			$listObject = $listObject+"<ol class=\"orderedList\" id=\"" + "orderedList-" + listIndex + "\">";
+			for(var i=1; i < listArray.length; i++){
+				if(listArray[i]){
+					$listObject = $listObject+"<li>"+listArray[i]+"</li>";
+				} else break;
+				console.log(i);
+			}
+			$listObject = $listObject+"</ol>";
+		}
+		document.write($listObject);
+	})();
+</script>

@@ -1,0 +1,79 @@
+<!-- 2017-serialized-banr -->
+<link rel="stylesheet" href="/content/iw/styles/agency5.min.css">
+<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script type="text" id="iccDiv">
+    <div class="agency icc" id="icc-{{iccCode}}" style="bottom:{{iccBottom}}; left:{{iccLeft}};">
+        <div class="cpn_code_ph">
+            <div class="coupon_code">
+                <span>Use Code:</span> <b>{{iccCode}}</b>
+            </div>
+        </div>
+        <div id="couponWrap_{{iccCode}}" class="cpn-clipper-wrap">
+            <div class="coupon_code">
+                <span>Use Code: </span> <b>{{iccCode}}</b>
+                <a id="unclip_cpn_{{iccCode}}" data-cpncode="{{iccCode}}" class="unclip-coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none;"><i class="unclip-icon"></i>Undo</a>
+            </div>
+            <button type="button" id="cpnCode_{{iccCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon" data-cpncode="{{iccCode}}">Save to Clipboard</button>
+            <button type="button" id="shopNowBtn_{{iccCode}}" class="button shopNow-btn" href="{{iccUrl}}" style="display:none;">Shop Now</button>
+        </div>
+        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">One-time use per {{iccUsage}}.</p>
+        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">Offer good through {{iccExpiry}}. <a class="icc__a" href="javascript:void(0)" onclick="$(this).Tooltip('{{iccDisclaimer}}', 400, {hasCloseButton:true})" style="color:{{iccUsageColor}}">Disclaimer.</a></p>
+    </div>
+</script>
+<script type="text" id="iccImg">
+    <img alt="{{iccImgAlt}}" src="{{iccImgSrc}}">
+</script>
+<script type="text" id="iccLink">
+    <a href="{{iccImgUrl}}" title="{{iccImgTitle}}" {{iccImgEvents}}>{{a}}</a>
+</script>
+<script>
+    adIndex = typeof adIndex != 'undefined' ? adIndex + 1 : 1;
+    document.write('<div class="agency searchOffer $%u_ad_class%$" id="webAd-' + adIndex + '" style="$%u_ad_css%$"></div>');
+    (function(){
+        var data = {
+            'i': '1',
+            'icc1Code': ["$%coupon_code1%$",$%u_ad_icc_01_code%$],
+            'icc2Code': ["$%coupon_code2%$",$%u_ad_icc_02_code%$],
+            'icc3Code': ["$%coupon_code3%$",$%u_ad_icc_03_code%$],
+            'iccImgAlt': '$%u_ad_img_alt%$',
+            'iccImgEvents': '$%u_ad_link_events%$',
+            'iccImgSrc': '$%u_ad_img_src%$',
+            'iccImgTitle': '$%u_ad_link_title%$',
+            'iccImgUrl': '$%u_ad_link_url%$'
+        };
+        if(data.iccImgSrc){
+            if(data.iccImgUrl){
+                data.a = render($('#iccImg').html(), data);
+                data.iccHtml = render($('#iccLink').html(), data);
+            } else {
+                data.iccHtml = render($('#iccImg').html(), data);
+            }
+            for(data.i; data.i <= 6; data.i ++) {
+                if(data['icc' + data.i + 'Code'][0]){
+                    data.iccCode = data['icc' + data.i + 'Code'][0];
+                    data.iccBottom = data['icc' + data.i + 'Code'][1] ? data['icc' + data.i + 'Code'][1] : '0';
+                    data.iccLeft = data['icc' + data.i + 'Code'][2] ? data['icc' + data.i + 'Code'][2] : '0';
+                    data.iccUsage = data['icc' + data.i + 'Code'][3] ? data['icc' + data.i + 'Code'][3] : 'customer';
+                    data.iccExpiry = data['icc' + data.i + 'Code'][4] ? data['icc' + data.i + 'Code'][4] : 'XX/XX/XX';
+                    data.iccUsageColor = data['icc' + data.i + 'Code'][5] ? data['icc' + data.i + 'Code'][5] : '#000';
+                    data.iccUrl = data['icc' + data.i + 'Code'][6] ? data['icc' + data.i + 'Code'][6] : '/default.aspx';
+                    data.iccDisclaimer = data['icc' + data.i + 'Code'][7] ? disclaimerText[data['icc' + data.i + 'Code'][7]] : disclaimerText['d0'];
+                    data.iccHtml += render($('#iccDiv').html(), data);
+                } else {
+                    break;
+                }
+            }
+            $('#webAd-' + adIndex).append(data.iccHtml);
+        } else {
+            $('#webAd-' + adIndex).remove();
+        }
+        function render(html,obj){
+            for(var k in obj){
+                html = html.replaceAll('{{' + k + '}}', obj[k]);
+            }
+            return html;  
+        }
+    })();
+</script>
+
+<!-- 2017-serialized-banr --><link rel="stylesheet" href="/content/iw/styles/agency5.min.css"><script src="/content/iw/scripts/disclaimer-text.js"></script><script type="text" id="iccDiv"><div class="agency icc" id="icc-{{iccCode}}" style="bottom:{{iccBottom}}; left:{{iccLeft}};"><div class="cpn_code_ph"><div class="coupon_code"><span>Use Code:</span> <b>{{iccCode}}</b></div></div><div id="couponWrap_{{iccCode}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Use Code: </span> <b>{{iccCode}}</b><a id="unclip_cpn_{{iccCode}}" data-cpncode="{{iccCode}}" class="unclip-coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none;"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{iccCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon" data-cpncode="{{iccCode}}">Save to Clipboard</button><button type="button" id="shopNowBtn_{{iccCode}}" class="button shopNow-btn" href="{{iccUrl}}" style="display:none;">Shop Now</button></div><p class="icc__p--conditions" style="color:{{iccUsageColor}}">One-time use per {{iccUsage}}.</p><p class="icc__p--conditions" style="color:{{iccUsageColor}}">Offer good through {{iccExpiry}}. <a class="icc__a" href="javascript:void(0)" onclick="$(this).Tooltip('{{iccDisclaimer}}', 400, {hasCloseButton:true})" style="color:{{iccUsageColor}}">Disclaimer.</a></p></div></script><script type="text" id="iccImg"><img alt="{{iccImgAlt}}" src="{{iccImgSrc}}"></script><script type="text" id="iccLink"><a href="{{iccImgUrl}}" title="{{iccImgTitle}}" {{iccImgEvents}}>{{a}}</a></script><script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency searchOffer $%u_ad_class%$" id="webAd-'+adIndex+'" style="$%u_ad_css%$"></div>');(function(){var b={i:"1",icc1Code:["$%coupon_code1%$",$%u_ad_icc_01_code%$],icc2Code:["$%coupon_code2%$",$%u_ad_icc_02_code%$],icc3Code:["$%coupon_code3%$",$%u_ad_icc_03_code%$],iccImgAlt:"$%u_ad_img_alt%$",iccImgEvents:"$%u_ad_link_events%$",iccImgSrc:"$%u_ad_img_src%$",iccImgTitle:"$%u_ad_link_title%$",iccImgUrl:"$%u_ad_link_url%$"};if(b.iccImgSrc){if(b.iccImgUrl){b.a=a($("#iccImg").html(),b);b.iccHtml=a($("#iccLink").html(),b)}else{b.iccHtml=a($("#iccImg").html(),b)}for(b.i;b.i<=6;b.i++){if(b["icc"+b.i+"Code"][0]){b.iccCode=b["icc"+b.i+"Code"][0];b.iccBottom=b["icc"+b.i+"Code"][1]?b["icc"+b.i+"Code"][1]:"0";b.iccLeft=b["icc"+b.i+"Code"][2]?b["icc"+b.i+"Code"][2]:"0";b.iccUsage=b["icc"+b.i+"Code"][3]?b["icc"+b.i+"Code"][3]:"customer";b.iccExpiry=b["icc"+b.i+"Code"][4]?b["icc"+b.i+"Code"][4]:"XX/XX/XX";b.iccUsageColor=b["icc"+b.i+"Code"][5]?b["icc"+b.i+"Code"][5]:"#000";b.iccUrl=b["icc"+b.i+"Code"][6]?b["icc"+b.i+"Code"][6]:"/default.aspx";b.iccDisclaimer=b["icc"+b.i+"Code"][7]?disclaimerText[b["icc"+b.i+"Code"][7]]:disclaimerText.d0;b.iccHtml+=a($("#iccDiv").html(),b)}else{break}}$("#webAd-"+adIndex).append(b.iccHtml)}else{$("#webAd-"+adIndex).remove()}function a(d,e){for(var c in e){d=d.replaceAll("{{"+c+"}}",e[c])}return d}})();</script>

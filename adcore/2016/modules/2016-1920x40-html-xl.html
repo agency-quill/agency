@@ -1,0 +1,86 @@
+<!-- 2016-1920x40-html-xl -->
+<style type="text/css">
+	@font-face { font-family: '45HelveticaNeueLight'; src: url('/content/iw/fonts/helvetica-neue/hll-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hll-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hll-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hll-webfont.svg#webfont2uRkJLxm') format('svg'); }
+	.skinnyBanner { background: $%u_ad_background_color%$ url($%u_ad_background_image%$) no-repeat center; padding: 0 15px; text-decoration: none; }
+	.skinnyBanner div { font-size: 0; height: 40px; margin: 0 auto; min-width: 930px; overflow: hidden; width: $%u_ad_text_box_width%$px; }
+	.skinnyBanner p { color: $%u_ad_text_color%$; display: inline-block; font: 400 $%u_ad_text_size%$/40px '45HelveticaNeueLight', arial, helvetica, sans-serif; margin: 0; }
+	.skinnyBanner a { color: $%u_ad_anchor_color%$; text-decoration: underline; }
+	.skinnyBanner a:hover { color: $%u_ad_anchor_hover_color%$; text-decoration: underline; }
+	.skinnyBanner sup { font-size: .75em; line-height: .5em; vertical-align: .25em; }
+</style>
+<script>
+	// add module container
+	if(typeof adIndex != "undefined") adIndex = adIndex+1;
+	else adIndex = 1;
+	document.write("<div class=\"skinnyBanner\" id=\"" + "webAd-" + adIndex + "\"><div></div></div>");
+</script>
+<script type="text" id="pTag">
+	<p>{{html}}</p>
+</script>
+<script type="text" id="aTagText">
+	<a href="{{href}}" title="{{title}}">{{text}}</a>
+</script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;  
+		}
+		var data = {
+			"p1":["$%u_ad_01_text%$","$%u_ad_01_anchor_url%$","$%u_ad_01_anchor_title%$"],
+			"p2":["$%u_ad_02_text%$","$%u_ad_02_anchor_url%$","$%u_ad_02_anchor_title%$"],
+			"p3":["$%u_ad_03_text%$","$%u_ad_03_anchor_url%$","$%u_ad_03_anchor_title%$"],
+			"p4":["$%u_ad_04_text%$","$%u_ad_04_anchor_url%$","$%u_ad_04_anchor_title%$"]
+		};
+		if(data.p1[0]){
+			// if offer code not empty
+			for(var i=1;i<=4;i++){
+				if(data["p"+i][0]) {
+					// if text
+					if(data["p"+i][1]) {
+						// if url
+						data.href = data["p"+i][1];
+						if(data["p"+i][2]) {
+							// if title
+							data.title = data["p"+i][2];
+						} else {
+							data.title = data["p"+i][0];
+						}
+						data.text = data["p"+i][0];
+						data.html = render($("#aTagText").html(),data);
+					} else {
+						
+						data.html = data["p"+i][0];
+					}
+					$("#webAd-" + adIndex + " div").append(render($("#pTag").html(),data));
+				} else {
+					break;
+				}
+				if(data.p4[0]) {
+					$("#webAd-" + adIndex + " p").each(function(){
+						$(this).css("width","25%");
+					});
+				} else if(data.p3[0]) {
+					$("#webAd-" + adIndex + " p").each(function(){
+						$(this).css("width","33%");
+					});
+				} else if(data.p2[0]) {
+					$("#webAd-" + adIndex + " p").each(function(){
+						$(this).css("width","50%");
+					});
+				} else {
+					$("#webAd-" + adIndex + " p").each(function(){
+						$(this).css("width","100%");
+					});
+				}
+			}
+		} else {
+			// if no paragraph text remove html
+			$("#webAd-" + adIndex).remove();
+		}
+	})();
+</script>
+
+<!-- 2016-1920x40-html-xl --><style type="text/css">@font-face{font-family:'45HelveticaNeueLight';src:url('/content/iw/fonts/helvetica-neue/hll-webfont.eot');src:local('x'),url('/content/iw/fonts/helvetica-neue/hll-webfont.woff') format('woff'),url('/content/iw/fonts/helvetica-neue/hll-webfont.ttf') format('truetype'),url('/content/iw/fonts/helvetica-neue/hll-webfont.svg#webfont2uRkJLxm') format('svg')}.skinnyBanner{background:$%u_ad_background_color%$ url($%u_ad_background_image%$) no-repeat center;padding:0 15px;text-decoration:none}.skinnyBanner div{font-size:0;height:40px;margin:0 auto;min-width:930px;overflow:hidden;width:$%u_ad_text_box_width%$px}.skinnyBanner p{color:$%u_ad_text_color%$;display:inline-block;font:400 $%u_ad_text_size%$/40px '45HelveticaNeueLight',arial,helvetica,sans-serif;margin:0}.skinnyBanner a{color:$%u_ad_anchor_color%$;text-decoration:underline}.skinnyBanner a:hover{color:$%u_ad_anchor_hover_color%$;text-decoration:underline}.skinnyBanner sup{font-size:.75em;line-height:.5em;vertical-align:.25em}</style> <script>if(typeof adIndex!="undefined"){adIndex=adIndex+1}else{adIndex=1}document.write('<div class="skinnyBanner" id="webAd-'+adIndex+'"><div></div></div>');</script> <script type="text" id="pTag"><p>{{html}}</p></script> <script type="text" id="aTagText"><a href="{{href}}" title="{{title}}">{{text}}</a></script> <script>(function(){function b(e,f){for(var d in f){e=e.replace("{{"+d+"}}",f[d])}return e}var c={p1:["$%u_ad_01_text%$","$%u_ad_01_anchor_url%$","$%u_ad_01_anchor_title%$"],p2:["$%u_ad_02_text%$","$%u_ad_02_anchor_url%$","$%u_ad_02_anchor_title%$"],p3:["$%u_ad_03_text%$","$%u_ad_03_anchor_url%$","$%u_ad_03_anchor_title%$"],p4:["$%u_ad_04_text%$","$%u_ad_04_anchor_url%$","$%u_ad_04_anchor_title%$"]};if(c.p1[0]){for(var a=1;a<=4;a++){if(c["p"+a][0]){if(c["p"+a][1]){c.href=c["p"+a][1];if(c["p"+a][2]){c.title=c["p"+a][2]}else{c.title=c["p"+a][0]}c.text=c["p"+a][0];c.html=b($("#aTagText").html(),c)}else{c.html=c["p"+a][0]}$("#webAd-"+adIndex+" div").append(b($("#pTag").html(),c))}else{break}if(c.p4[0]){$("#webAd-"+adIndex+" p").each(function(){$(this).css("width","25%")})}else{if(c.p3[0]){$("#webAd-"+adIndex+" p").each(function(){$(this).css("width","33%")})}else{if(c.p2[0]){$("#webAd-"+adIndex+" p").each(function(){$(this).css("width","50%")})}else{$("#webAd-"+adIndex+" p").each(function(){$(this).css("width","100%")})}}}}}else{$("#webAd-"+adIndex).remove()}})();</script>

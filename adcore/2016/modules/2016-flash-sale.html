@@ -1,0 +1,48 @@
+<style type="text/css">
+    @font-face { font-family: '45HelveticaNeueLight'; src: url('/content/iw/fonts/helvetica-neue/hll-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hll-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hll-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hll-webfont.svg#webfont2uRkJLxm') format('svg'); }
+    #flashSale .carousel { background-color: #d1f2f5; margin: 0 auto !important; padding: 20px 20px 0; font-size: 0; }
+    .res1024 #flashSale .carousel { width: 920px !important; }
+    .res1280 #flashSale .carousel { width: 1165px !important; }
+    .res1450 #flashSale .carousel { width: 1410px !important; }
+    #flashSale .carousel .item_ph { display: inline-block; float: none; margin-bottom: 20px; margin-left: 20px; overflow: hidden; padding: 0; position: relative; width: 215px !important; }
+    .res1280 #flashSale .carousel .item_ph { width: 217px !important; }
+    .res1450 #flashSale .carousel .item_ph, .res1450 #hotDeals #m5-9 #flashSale .carouselFull .item_ph { width: 218px !important; }
+    #flashSale .carouselFull .itemb, .carouselFull .navOver .item_noFlyout { width: 195px !important; }
+    #flashSale .carousel .carouselFull .navOver .item_noFlyout { left: 0 !important; }
+    #flashSale .carousel .item_ph .dItem .title { border: none; color: #a20067; font-family: '45HelveticaNeueLight'; font-size: 28px; line-height: 38px; padding: 0; }
+    #flashSale .carousel .item_ph .dItem .desc2 { height: 32px; }
+    #flashSale .dv-addToCart { font-size: 12px; }
+    #flashSale .soldOut .soldOutFlag { left: 10px; position: absolute; top: 25px; z-index: 10; }
+    #flashSale .soldOut #SkuPageMainImg { opacity: 0.4; }
+    #flashSale .soldOut .soldOutDesc2 { color: #333; font-size: 12px; font-weight: 400; height: 32px; line-height: 17px; margin: 0 0 3px; }
+    #flashSale .soldOut .dv-addToCart, #flashSale .soldOut .iNumber.formLabel.adptfont { display: none; }
+</style>
+<div class="full image" id="flashSale">
+    <$= CarouselDynTemplate(['$%dynamic_list_id%$','0','$%dynamic_list_numb_items%$','$%dynamic_list_display_type%$','$%dynamic_list_numb_items_max%$']) $>
+</div>
+<script>
+    (function(){
+        $(document).ready(function(){
+            $('.carousel').css('height','auto');
+            $('.item_ph').each(function() {
+                if ($(this).position().left < 100) {
+                    $(this).css('margin-left','0');
+                }
+            });
+            var soldOutMods = [$%dynamic_list_sold_out_items%$];
+            if (soldOutMods[0]) {
+                $('#flashSale .item_ph').each(function(){
+                    var splitClasses = $(this).attr('class').split(' ');
+                    for (var i=0; i<soldOutMods.length; i++) {
+                        if (splitClasses[0] == 'item'+soldOutMods[i]) {
+                            $(this).addClass('soldOut');
+                        }
+                    }
+                });
+                $('.soldOut #SkuPageMainImg').unwrap();
+                $('.soldOut .desc2').wrap('<p class="soldOutDesc2"></p>').contents().unwrap();
+                $('.soldOut').append('<img src="/content/iw/images/sold-out.png" alt="Sold out" class="soldOutFlag"/>');
+            }
+        });
+    })();
+</script>

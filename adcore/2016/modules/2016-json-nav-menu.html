@@ -1,0 +1,25 @@
+<style>
+	#tabPanel {background-color:#eee;height: 40px;margin-bottom: 15px;width: 100%;}
+	#tabPanel #mainNav {margin:0 !important;z-index:100;}
+	#tabPanel ul li {background:none;border:none;color:#0072bc;display:inline-block;font-size:15px;height:20px;margin:0 !important;padding:12px 0 8px 0;position:relative;}
+	#tabPanel ul li a {color:#000;font-size:15px;text-decoration:none;}
+	#tabPanel ul li a:hover {color:#e87722;}
+	#tabPanel #mainNav li span {border-left:1px solid #000;padding:0 15px;}
+	#tabPanel #mainNav li span#firstTab {border:none;}
+	#tabPanel ul.subNav {background-color:#fff;border:1px solid #eee;display:none;left:0;margin:0 !important;padding-bottom:10px;position:absolute;top:39px;width:auto;z-index:99;}
+	#tabPanel ul.subNav li {border:none;display:block;height:13px;padding:8px 15px 5px;margin:0 !important;white-space:nowrap;}
+	#tabPanel #mainNav li ul.subNav li span {border:none;padding:0;}
+</style>
+
+<div id="tabPanel">
+	<ul id="mainNav"></ul>
+</div>
+
+<script src="/content/iw/scripts/agency2.js"></script>
+<script src="$%u_ad_json_src%$"></script>
+<script>
+	var trackingCode = "$%u_ad_tracking_code%$";
+	buildNav(navBar);
+	$('#mainNav li').mouseenter(function(){menuToggle($(this),"open");});
+	$('#mainNav li').mouseleave(function(){menuToggle($(this),"close");});
+</script>

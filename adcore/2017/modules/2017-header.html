@@ -1,0 +1,40 @@
+<!-- 2016-page-heading-h1 -->
+<style type="text/css">
+	@font-face { font-family: '55HelveticaNeueRoman'; src: url('/content/iw/fonts/helvetica-neue/hlr-webfont.eot'); src: local('x'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.woff') format('woff'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.ttf') format('truetype'), url('/content/iw/fonts/helvetica-neue/hlr-webfont.svg#webfontuVJGTgcF') format('svg'); }
+	#h1Header .toggleAccordion { background: none; border: none; color: #0079c1; display: inline; font-size: 16px; }
+	#h1Header .accordionContent { display: none; overflow: hidden; }
+	#h1Header .accordionContent p { color: #333; font-family: '55HelveticaNeueRoman'; font-size: 14px; line-height: 18px; margin-bottom: 14px; }
+	#h1Header .introText { font: 400 12px/1.5em '55HelveticaNeueRoman', helvetica, arial, sans-serif; margin-bottom: 20px; margin-top: 0; padding: 0;}
+</style>
+<script type="text" id="headingHtml">
+	<h1>{{heading}}</h1>
+</script>
+<script type="text" id="readMore">
+	<p class="toggleAccordion"><a href="javascript:void(0)">{{readMoreCta}}</a></p>
+	<div class="accordionContent">
+		<p>{{readMoreText}}</p>
+	</div>
+</script>
+<script type="text" id="introParagraph">
+	<p class="intro">{{introParagraph}}</p>
+</script>
+
+<link rel="stylesheet" href="/content/iw/styles/adcore.min.css">
+<script src="/content/iw/scripts/adcore.min.js"></script>
+<script>
+	(function(){
+		var data = {
+			"heading" : "$%u_ad_h1_title%$",
+			"readMoreCta" : "$%u_ad_read_more_call_to_action%$",
+			"readMoreText" : "$%u_ad_read_more_text%$",
+			"intro" : "$%u_ad_intro_text%$"
+		};
+		if(data.heading) {
+			document.write("<div id=\"header\" class=\"agency\"></div>");
+			$("#h1Header").html(render($("#headingHtml").html(),data));
+			if(data.readMoreCta) $("#h1Header").append(render($("#readMore").html(),data));
+			if(data.introParagraph) $("#h1Header").append(render($("#introParagraph").html(),data));
+		}
+	})();
+</script>
+

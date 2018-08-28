@@ -1,0 +1,79 @@
+<style type="text/css">
+	/*.res1024 .bannerWrap .img1450, .res1024 .bannerWrap .img1205, .res1024 .bannerWrap .imgMobile,
+	.res1280 .bannerWrap .img1450, .res1280 .bannerWrap .img960, .res1280 .bannerWrap .imgMobile, 
+	.res1450 .bannerWrap .img1205, .res1450 .bannerWrap .img960, .res1450 .bannerWrap .imgMobile, 
+	.mobileB .bannerWrap .img1450, .mobileB .bannerWrap .img1205, .mobileB .bannerWrap .img960
+	{ display: none; }*/
+	.banner li { margin: 0; padding: 0; }
+</style>
+<script>
+	if(typeof webAdIndex != "undefined") webAdIndex = webAdIndex+1;
+	else webAdIndex = 1;
+	document.write("<div class=\"banner\" id=\"" + "webAd-" + webAdIndex + "\"></div>");
+</script>
+<script type="text" id="baseBannerTemplate">
+    <div class="carousel carouselSupercat" id="adaptiveCarousel" data-itemclass="itemb" data-itemtag="li" 
+    data-type="horizontal" data-itemsperpage="1" data-showarrows="true" data-autostart="true" 
+    data-autoscroll="true" data-autostarttime="0.5" data-autoscrolltime="5" data-restart="true">	
+		<div class="carouselWrap" style="">
+		    <ul class="carouselInner">
+			{{html}}
+		    </ul>
+        </div>
+    </div>
+</script>
+<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script>
+	(function(){
+		function render(html,obj){
+		    for(var k in obj){
+		        html = html.replace("{{" + k + "}}",obj[k]);
+		    }
+		    return html;
+		}
+		var data = [
+			{	
+				"img490" : "$%u_ad_01_img_src_490%$",
+				"img960" : "$%u_ad_01_img_src_960%$",
+				"img1205" : "$%u_ad_01_img_src_1205%$",
+				"img1450" : "$%u_ad_01_img_src_1450%$",
+				"imgMobile" : "$%u_ad_01_img_src_mobile%$",
+				"alt" : "$%u_ad_01_img_alt%$",
+				"alignment" : "$%u_ad_01_img_alignment%$",
+				"url" : "$%u_ad_01_url_link",
+				"title" : "$%u_ad_01_url_title",
+				"icc1" : [$%u_ad_01_icc_01_code%$],
+				"disclaimer1" : [$%u_ad_01_icc_01_disclaimer%$],
+				"icc2" : [$%u_ad_01_icc_02_code%$],
+				"disclaimer2" : [$%u_ad_01_icc_02_disclaimer%$],
+				"icc3" : [$%u_ad_01_icc_03_code%$],
+				"disclaimer3" : [$%u_ad_01_icc_03_disclaimer%$],
+				"icc4" : [$%u_ad_01_icc_04_code%$],
+				"disclaimer4" : [$%u_ad_01_icc_04_disclaimer%$]
+			},
+			{	
+				"img490" : "$%u_ad_02_img_src_490%$",
+				"img960" : "$%u_ad_02_img_src_960%$",
+				"img1205" : "$%u_ad_02_img_src_1205%$",
+				"img1450" : "$%u_ad_02_img_src_1450%$",
+				"imgMobile" : "$%u_ad_02_img_src_mobile%$",
+				"alt" : "$%u_ad_02_img_alt%$",
+				"alignment" : "$%u_ad_02_img_alignment%$",
+				"url" : "$%u_ad_02_url_link",
+				"title" : "$%u_ad_02_url_title"
+			},
+			{   
+				"img490" : "$%u_ad_03_img_src_490%$",
+				"img960" : "$%u_ad_03_img_src_960%$",
+				"img1205" : "$%u_ad_03_img_src_1205%$",
+				"img1450" : "$%u_ad_03_img_src_1450%$",
+				"imgMobile" : "$%u_ad_03_img_src_mobile%$",
+				"alt" : "$%u_ad_03_img_alt%$",
+				"alignment" : "$%u_ad_03_img_alignment%$",
+				"url" : "$%u_ad_03_url_link",
+				"title" : "$%u_ad_03_url_title"
+			}
+		];
+		
+	})();
+</script>
