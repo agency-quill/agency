@@ -1,7 +1,7 @@
 // on load
 $(window).on('load', function(){
 	// carousel
-	if($('#agency .carouselMod')){	// if there is a carousel
+	if($('#agency .carouselMod').length !== 0 ){	// if there is a carousel
 		$('#agency .carouselMod').each(function(){
 			carouselInit($(this));	// initialize each carousel
 		});
@@ -20,17 +20,9 @@ $(window).on('load', function(){
 			}
 		});
 	}
-	if($('#agency .outOfStock').length !== 0) {
-		console.log('outOfStock: '+$('#agency .outOfStock').length);
-		addFlag('outOfStock');
-	}
-	if($('#agency .soldOut').length !== 0){
-		console.log('soldOut: '+$('#agency .soldOut').length);
-		addFlag('soldOut');
-	}
-	if($('.accordionDiv')){
-		accordionSet($('.accordionDiv'));
-	}
+	$('#agency .outOfStock').length !== 0 && addFlag('outOfStock');
+	$('#agency .soldOut').length !== 0 && addFlag('soldOut');
+	$('.accordionDiv').length !== 0 && accordionSet($('.accordionDiv'));
 	disclaimerLoad();
 	mobileLayout($(window).width());
 });

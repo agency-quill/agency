@@ -96,7 +96,6 @@ function webModCoupon(mod, obj){
 		} else {
 			obj.div += obj.a;
 		}
-		console.log('webMod'+mod);
 		obj.div += webModPopUp(obj);
 		obj.div += webModIcc(obj);
 		return obj.div + '</div>';
