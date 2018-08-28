@@ -362,7 +362,7 @@ function closeDetails($button){
 
 /* SOLD OUT FLAG */
 $('.soldOut img').unwrap();
-$('.soldOut .callToAction, .soldOut .openDisclaimer, .soldOutIcc .openDisclaimer, .soldOut .iccCode, .soldOutIcc .iccCode').remove();
+$('.soldOut .callToAction, .soldOut .openDisclaimer, .soldOutIcc .openDisclaimer, .soldOut .iccCode, .soldOutIcc .iccCode,.soldOutIcc .icc').remove();
 $('.soldOut, .soldOutIcc').append('<img src="/content/iw/images/sold-out.png" alt="Sold out" class="flag"/>');
 
 /* UNWRAP ACTIVE TABS 
