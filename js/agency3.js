@@ -524,9 +524,9 @@ $(window).on('load', function(){
 			}
 		});
 	}
-	$('#agency .outOfStock').length !== 0 && addFlag('outOfStock');
-	$('#agency .soldOut').length !== 0 && addFlag('soldOut');
-	$('.accordionDiv').length !== 0 && accordionSet($('.accordionDiv'));
+	$('#agency .outOfStock').length && addFlag('outOfStock');
+	$('#agency .soldOut').length && addFlag('soldOut');
+	$('.accordionDiv').length && accordionSet($('.accordionDiv'));
 	disclaimerLoad();
 	mobileLayout($(window).width());
 });
