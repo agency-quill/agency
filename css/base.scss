@@ -163,6 +163,10 @@
 		}
 	}
 
+	.dynPrice {
+		display: none;
+	}
+
 	.em {
 		font-style: italic;
 	}
@@ -552,7 +556,12 @@
 
 	.ul__li {
 		background-position: left $px * 1.3;
+
+		&--small {
+			background-position: left $px * .7;
+		}
 	}
+
 	.ul__li, .ul__li--small {
 		background-image: url("/content/iw/images/bullet.png");
 		background-repeat: no-repeat;
@@ -569,9 +578,5 @@
 				margin-right: 0;
 			}
 		}
-	}
-
-	.ul__li--small {
-		background-position: left $px * .7;
 	}
 }

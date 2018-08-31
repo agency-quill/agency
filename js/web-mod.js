@@ -38,7 +38,7 @@ function webMod(mod, obj){
 		obj.html += webModIcc(obj);
 		return obj.html + '</div>';
 	} else {
-		console.log('removing webMod'+mod);
+		console.log('removing '+mod);
         $('#' + mod).remove();
     }
 }
@@ -169,9 +169,18 @@ function webModHeader(mod, obj){
 			obj.events = '';
 			obj.id = '';
 			obj.html += render(template.div, obj);
+			console.log('obj.headingText: '+obj.headingText);
+			if(/\{\{dynPrice\}\}/.test(obj.headingText)){
+				console.log('dynPrice');
+				obj.class = 'dynPrice';
+				obj.css = 'display:none;';
+				obj.div = '<$= GetPLPPrice([\'4\']) $>';
+				obj.html += render(template.div, obj);
+			}
 		}
 		return obj.html;
 	} else {
+		console.log('removing '+mod);
         $('#' + mod).remove();
     }
 }

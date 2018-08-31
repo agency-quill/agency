@@ -154,9 +154,7 @@ function dropDown(target, action){
 	}
 }
 function fixDynPrice(node, price){
-	console.log(node+' fixDynPrice price: '+price);
 	if(price && /\{\{dynPrice\}\}/.test(node.html())){
-
 		node.html().replace(/\{\{dynPrice\}\}/, price);
 	}
 }
