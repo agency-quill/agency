@@ -59,7 +59,6 @@ function accordionToggle(accordion, button){
 }
 function addFlag(flag){
 	$('#agency .' + flag + ' .div--coupon').each(function(){
-		console.log('flag: '+flag);
 		$(this).append(template.flag[flag]);
 	});
 }

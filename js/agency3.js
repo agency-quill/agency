@@ -864,6 +864,15 @@ function webModHeader(mod, obj){
 			obj.title = 'Go back to the top of the page';
 			obj.heading += ' ' + render(template.a, obj);
 		}
+		// if(/\{\{dynPrice\}\}/.test(obj.headingText)){
+		// 	console.log('dynPrice');
+		// 	obj.class = 'dynPrice';
+		// 	obj.css = 'display:none;';
+		// 	obj.div = '<$= GetPLPPrice([\'4\']) $>';
+		// 	obj.events = '';
+		// 	obj.id = '';
+		// 	obj.heading += render(template.div, obj);
+		// }
 		obj.class = 'agency grid__unit--100 ' + obj.headingClass;
 		obj.css = obj.headingCss;
 		obj.events = '';
@@ -899,14 +908,6 @@ function webModHeader(mod, obj){
 			obj.events = '';
 			obj.id = '';
 			obj.html += render(template.div, obj);
-			console.log('obj.headingText: '+obj.headingText);
-			if(/\{\{dynPrice\}\}/.test(obj.headingText)){
-				console.log('dynPrice');
-				obj.class = 'dynPrice';
-				obj.css = 'display:none;';
-				obj.div = '<$= GetPLPPrice([\'4\']) $>';
-				obj.html += render(template.div, obj);
-			}
 		}
 		return obj.html;
 	} else {
