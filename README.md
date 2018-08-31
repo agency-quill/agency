@@ -27,6 +27,7 @@ After installing Git, clone the repository following these steps.
 `cd /path/to/folder`
 
 * Clone the repository by typing the command below.You now have the latest file from the github repository.
+
 `git clone https://github.com/agency-quill/agency-project-files.git`
 
  
