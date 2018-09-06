@@ -455,13 +455,12 @@
 		}
 
 		&--jump {
-		    bottom: 0;
-			font-size: $px * 3.6;
+		    bottom: 0;			
 		    position: absolute;
 		    text-align: center;
 		    width: 100%;
 
-		  	@media #{$mobLandMin} and #{$mobLandMax} {
+		  	@media #{$mobLandMax} {
 		    	font-size: $px * 2.4;
 		    }
 
