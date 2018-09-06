@@ -113,6 +113,7 @@ function webModFormat(data, format){
 function webModHeader(mod, obj){
 	console.log(mod);
 	if(obj.headingText){
+		loadFiles('/content/iw/styles/agency5.min.css');
 		obj.heading = obj.headingText;
 		if(obj.linkText){
 			obj.a = obj.linkText;
@@ -184,7 +185,7 @@ function webModIcc(obj){
 		obj.iccMultiple = webModFormat(obj.icc).split('+');
 		for(var i = 0, max = obj.iccMultiple.length; i < max; i++){
 			obj.iccArray = obj.iccMultiple[i].split(',');
-			obj.code = obj.iccArray[0] ? obj.iccArray[0] : 'MISSING!';
+			obj.code = obj.iccArray[0] ? obj.iccArray[0].toUpperCase() : '??ICC!??';
 			obj.disclaimer = obj.iccArray[1] ? obj.iccArray[1] : 'Disclaimer missing';
 	        obj.expiry = obj.iccArray[2] ? obj.iccArray[2] : 'Offer good through XX/XX/XX.';
 	        obj.usage = obj.iccArray[3] ? obj.iccArray[3] : 'One-time use per customer.';
