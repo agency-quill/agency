@@ -40,7 +40,7 @@ _git status_ is a command you will use often to verify the current state of your
 
 **Fetch and merge changes from the remote server (github) to your working directory. _Always fetch from the remote server before making any changes so you know you have the current file(s)._**
  
-`git pull`
+`git pull origin master`
  
 **Add one or more files to staging**
 
@@ -57,7 +57,14 @@ _Unstage a file_ `git reset HEAD YOUR-FILE-NAME`
 **Send changes to the master branch of your remote repository (in this case github repo)**
  
 `git push origin master`
- 
+
+**To trash changes in the working directory so as to allow a git pull.**
+
+`git checkout <fileName>`
+
+## WORKING WITH CONFLICTS
+
+If your update is different from what is on github because someone else updated and pushed the same file you're working on, push is going to fail. Need to do a `git pull` , auto merge would fail for the conflicting files and you can resolve conflict manually by looking at the file and see what is different between your file and what was on github. Resolve conflict, commit and push as normal to github.
  
 ## Help
 
