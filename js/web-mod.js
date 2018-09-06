@@ -4,7 +4,7 @@ function webMod(mod, obj){
 		/*for (var prop in obj){	// log all properties of obj
 			console.log(mod+' '+prop+': '+obj[prop]);
 		}*/
-
+        loadFiles('/content/iw/styles/agency5.min.css');
 		if(obj.card){
 			$('#' + mod).attr('class', $('#' + mod).attr('class') + ' webModCard');
 		}
@@ -18,13 +18,10 @@ function webMod(mod, obj){
 			obj.usemap = obj.map ? '#webModMap-' + mod : '';
         	obj.a += webModPicture(obj);
 		}
-        if(obj.div || obj.icc || obj.popup){
-        	loadFiles('/content/iw/styles/agency5.min.css');
-        	if(obj.div){
-        		obj.class = obj.src ? 'div__html--absolute' : 'div__html--static';
-	    		obj.a += render(template.div, obj);
-        	}
-		}
+    	if(obj.div){
+    		obj.class = obj.src ? 'div__html--absolute' : 'div__html--static';
+    		obj.a += render(template.div, obj);
+    	}
 		if(obj.link){
 			obj.number = '';
 			obj.html += render(template.a, webModLink(obj));
