@@ -1,18 +1,16 @@
 #agency {
 
-	.table {
-		table-layout: fixed;
-    }
-
-	.table, .table--card {
-		border-collapse: collapse;
-		width: 100%;
-	}
-
 	.caption {
 		font-size: $px * 1.4;
 		font-weight: 400;
 		text-align: left;
+	}
+
+	.table, .table--card {
+		border-collapse: collapse;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
 	}
 
 	.td {

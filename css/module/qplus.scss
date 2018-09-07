@@ -417,8 +417,19 @@
 		&--qpReward {}
 	}
 
-	.table--qpJoin > tbody > tr:nth-of-type(odd){
-		background-color: #f7f9f8;
+	.table {
+
+		&--qpJoin > tbody > tr:nth-of-type(odd) {
+			background-color: #f7f9f8;
+		}
+
+		&--qpPoints {
+			border-collapse: collapse;
+			border-spacing: $vw * .5 0;
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+		}
 	}
 
 	.td {
