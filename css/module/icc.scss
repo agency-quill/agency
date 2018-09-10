@@ -76,13 +76,13 @@
         
         @media #{$mobLandMin} {
             min-width: 157px;
-            font-size: 14px;
+            font-size: $px * 1.4;
         }
         
     }
     
     .coupon_code b{
-        font-size:14px;
+        font-size: $px * 1.4;
     }
     
 	.unclip-coupon {
