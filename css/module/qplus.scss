@@ -50,12 +50,12 @@
 		}
 	}
 
-	.h2, .h3, .h4, .p, .td {
+	.h2, .h3, .h4, .p, .td, .th {
 
 		&--qpBenefits {}
 
 		&--qpBonus, &--qpBenefits, &--qpJoin, &--qpPoints, &--qpReward {
-		    font-family: helvetica, arial, sans-serif;
+		    font-family: #{$fontFamily};
 		}
 
 		&--qpJoin {}
@@ -424,21 +424,62 @@
 		}
 
 		&--qpPoints {
-			border-collapse: collapse;
+			// border-collapse: collapse;
 			border-spacing: $vw * .5 0;
 			display: table;
 			table-layout: fixed;
 			width: 100%;
+
+			& tr:nth-of-type(even) {
+				& .td--qpPoints {
+					background-color: #efefef;
+
+					&:nth-of-type(even) {
+						background-color: #d8e9f6;
+					}
+				}
+			}
+
+			& tr:nth-of-type(odd) {
+				& .td--qpPoints {
+					background-color: #fafafa;
+				
+					&:nth-of-type(even) {
+						background-color: #f2f8fc;
+					}
+				}
+			}
 		}
 	}
 
-	.td {
+	.td, .th {
 
+        &--qpJoin{
+            font-size: $vw * 1.3;
+        }
+
+        &--qpPaper {
+        	color: #fd0;
+        	font-weight: 500;
+        }
+		
 		&--qpPoints {
 			font-weight: 300;
-			padding-bottom: $pct * 2;
+
+			&__span {
+				
+
+				&--sub {
+					font-size: .625em;
+				}
+			}
+		}
+
+		&--qpPaper, &--qpPoints {
+			padding-bottom: $pct * 1;
 			padding-left: $pct * 2;
 			padding-right: $pct * 2;
+			padding-top: $pct * 1;
 
 			@media #{$mobPortMax} {
 				font-size: $px * 2.4;
@@ -464,21 +505,30 @@
 				font-size: $px * 2.4;
 			}
 		}
-
-        &--qpJoin{
-            font-size: $vw * 1.3;
-        }
 	}
 
-	.th--horizontal {
+	.th {
 
-		.plp-tier-price-wrap {
-		    color: inherit;
-		    font-size: inherit;
+		&--horizontal {
 
-		    .plp-price {
-		    	font-weight: inherit;
-		    }
+			.plp-tier-price-wrap {
+			    color: inherit;
+			    font-size: inherit;
+
+			    .plp-price {
+			    	font-weight: inherit;
+			    }
+			}
+		}
+
+		&--qpPoints {
+			color: #fff;
+			text-align: center;
+
+			& .button--standard {
+				margin: 0 auto;
+				max-width: $px * 16;
+			}
 		}
 	}    
     

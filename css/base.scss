@@ -114,7 +114,7 @@
 			font-weight: 400;
 			height: 36px;
 			line-height: $px * 3.6;
-			min-width: $px * 10;
+			min-width: $px * 16;
 			padding-left: 10px;
 			padding-right: 10px;
 			text-align: center;
@@ -145,7 +145,7 @@
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 0;
-		text-align: left;
+		// text-align: left;
 	}
 
 	.div {
