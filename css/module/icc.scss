@@ -66,7 +66,25 @@
 			}
 		}
 	}
-
+    
+/*SDS related style*/
+    .btn-clip-coupon {
+        margin-bottom: 0;
+    }
+    
+    .coupon_code{
+        
+        @media #{$mobLandMin} {
+            min-width: 157px;
+            font-size: 14px;
+        }
+        
+    }
+    
+    .coupon_code b{
+        font-size:14px;
+    }
+    
 	.unclip-coupon {
 
 		@media #{$mobLandMin} {
