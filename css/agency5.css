@@ -440,9 +440,6 @@
   overflow: hidden;
   position: relative;
   display: block;
-  /*.h1, .h2, .h2--small, .h3, .h4, .h5, .htmlText, .ol, .ol__li, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul, .ul__li {
-  	color: #333;
-  }*/
 }
 #agency nav, .agency nav {
   height: 100%;
@@ -734,16 +731,13 @@
 }
 #agency .ol__li--small, #agency .p--small, #agency .ul__li--small, .agency .ol__li--small, .agency .p--small, .agency .ul__li--small {
   font-size: 18px;
-}
-@media (max-width: 1279px) {
-  #agency .ol__li--small, #agency .p--small, #agency .ul__li--small, .agency .ol__li--small, .agency .p--small, .agency .ul__li--small {
-    text-align: left;
+  /*@media (max-width: 1279px) {
+  	text-align: left;
   }
-}
-@media (min-width: 1280px) {
-  #agency .ol__li--small, #agency .p--small, #agency .ul__li--small, .agency .ol__li--small, .agency .p--small, .agency .ul__li--small {
-    text-align: justify;
-  }
+  
+  @media (min-width: 1280px) {
+  	text-align: justify;
+  }*/
 }
 #agency .ol__li, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ul__li, .agency .ul__li--small {
   padding-bottom: 0;
@@ -1126,7 +1120,7 @@
 }
 
 #agency, .agency {
-  /*SDS related style*/
+  /* SDS related style */
 }
 #agency .grid__unit--25 .icc, #agency.grid__unit--25 .icc, .agency .grid__unit--25 .icc, .agency.grid__unit--25 .icc {
   left: 0;
@@ -1185,7 +1179,7 @@
   margin-bottom: 0;
 }
 @media (min-width: 500px) {
-  #agency .coupon_code, .agency .coupon_code {
+  #agency .btn-clip-coupon, #agency .coupon_code, .agency .btn-clip-coupon, .agency .coupon_code {
     min-width: 157px;
     font-size: 14px;
   }
@@ -1725,6 +1719,13 @@
 }
 #agency .td--qpPoints, #agency .th--qpPoints, .agency .td--qpPoints, .agency .th--qpPoints {
   font-weight: 300;
+  text-align: center;
+}
+#agency .td--qpPoints:first-of-type, #agency .th--qpPoints:first-of-type, .agency .td--qpPoints:first-of-type, .agency .th--qpPoints:first-of-type {
+  text-align: left;
+}
+#agency .td--qpPoints__span, #agency .th--qpPoints__span, .agency .td--qpPoints__span, .agency .th--qpPoints__span {
+  font-size: 32px;
 }
 #agency .td--qpPoints__span--sub, #agency .th--qpPoints__span--sub, .agency .td--qpPoints__span--sub, .agency .th--qpPoints__span--sub {
   font-size: .625em;

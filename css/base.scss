@@ -145,7 +145,6 @@
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 0;
-		// text-align: left;
 	}
 
 	.div {
@@ -195,10 +194,6 @@
 		line-height: 1.25em;
 		position: relative;
 	}
-
-	/*.h1, .h2, .h2--small, .h3, .h4, .h5, .htmlText, .ol, .ol__li, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul, .ul__li {
-		color: #333;
-	}*/
 
 	.h1, .h2, .h2--small, .h3, .h4, .h5, .htmlText, .ol, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .table__caption, .ul, .ul__li {
 		display: block;
@@ -365,13 +360,13 @@
 		&--small {
 			font-size: $px * 1.8;
 
-			@media #{$tabLandMax} {
+			/*@media #{$tabLandMax} {
 				text-align: left;
 			}
 			
 			@media #{$laptopMin} {
 				text-align: justify;
-			}
+			}*/
 		}
 	}
 

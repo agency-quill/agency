@@ -465,9 +465,14 @@
 		
 		&--qpPoints {
 			font-weight: 300;
+			text-align: center;
+
+			&:first-of-type {
+				text-align: left;
+			}
 
 			&__span {
-				
+				font-size: 32px;
 
 				&--sub {
 					font-size: .625em;
