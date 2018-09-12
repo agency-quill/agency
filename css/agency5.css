@@ -1714,6 +1714,7 @@
   font-size: 1.3vw;
 }
 #agency .td--qpPaper, #agency .th--qpPaper, .agency .td--qpPaper, .agency .th--qpPaper {
+  background-color: #0072c6;
   color: #fd0;
   font-weight: 500;
 }

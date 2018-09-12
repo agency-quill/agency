@@ -40,7 +40,7 @@ function webMod(mod, obj){
     }
 }
 function webModCarousel(mod, obj){
-	if(obj.src1){
+	if(obj.div1 || obj.src1){
 		if(obj.src2){
 			console.log('webMod'+mod+' carousel');
 		} else {
