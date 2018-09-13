@@ -1,5 +1,6 @@
 .DS_Store
 /.sass-cache
+/css/base/.DS_Store
 /css/agency5.css.map
 /css/layout.bk.scss
 /landing-pages
