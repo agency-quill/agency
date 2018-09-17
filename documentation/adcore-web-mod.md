@@ -1,9 +1,9 @@
 # ADCore Modules
-Intro graph
+graph 
 ## Description Syntax
-For every field in ADCore there is a description of the type of content that goes in the field that can be accessed by clicking on the ADCore field name. Some of these descriptions use special characters. This is what they mean:
+For every field in ADCore there is a description of the type of content that goes in the field. You can see it by clicking on the *ADCore field name*. Some of these descriptions use special characters. This is what they mean:
 ### Commas ( ,,, )
-Commas are used to separate the values that 
+Commas are used to separate the values that the script that bui
 ### Brackets ( \[ \] )
 The parts brackets are used to denote optional values.
 ### Pipes ( || )
