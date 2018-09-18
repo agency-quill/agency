@@ -153,8 +153,8 @@ function dropDown(target, action){
 	}
 }
 function fixDynPrice(node, price){
-	if(price && /\{\{dynPrice\}\}/.test(node.html())){
-		node.html().replace(/\{\{dynPrice\}\}/, price);
+	if(price && node.html().indexOf('{{dynPrice}}') >= 0){
+		node.html(node.html().substring(0, node.html().indexOf('{{dynPrice}}')) + price + node.html().substring(node.html().indexOf('{{dynPrice}}') + 12));
 	}
 }
 function getParamVal(string, param){
