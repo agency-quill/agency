@@ -813,13 +813,18 @@
 }
 #agency .p--jump, .agency .p--jump {
   bottom: 0;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
 @media (max-width: 765px) {
   #agency .p--jump, .agency .p--jump {
     font-size: 18px;
+    margin-top: 0.5%;
+  }
+}
+@media (min-width: 766px) {
+  #agency .p--jump, .agency .p--jump {
+    margin-top: 5px;
   }
 }
 @media (min-width: 766px) and (max-width: 1011px) {

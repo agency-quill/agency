@@ -450,14 +450,18 @@
 		}
 
 		&--jump {
-		    bottom: 0;			
-		    position: absolute;
+		    bottom: 0;
 		    text-align: center;
 		    width: 100%;
 
-		  	@media #{$mobLandMax} {
+		   	@media #{$mobLandMax} {
 		    	font-size: $px * 1.8;
+				margin-top: $pct * 0.5;
 		    }
+
+			@media #{$tabPortMin} {
+				margin-top: $px * 0.5;
+			}
 
 		    @media #{$tabPortMin} and #{$tabPortMax} {
 		    	font-size: $px * 1.6;
