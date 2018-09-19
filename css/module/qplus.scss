@@ -117,7 +117,19 @@
 		}
 
 		&--qpJoin {
-            font-size: $vw * 1.875;
+            font-size: $vw * 6;
+
+            @media #{$mobLandMin} and #{$mobLandMax} {
+		    	font-size: $px * 2.8;
+		    }
+			
+			@media #{$tabPortMin} and #{$tabPortMax} {
+            	font-size: $vw * 3.55;
+		    }
+
+           	@media #{$tabLandMin} {
+            	font-size: $px * 3.6;
+            }
             
             .plp-price{
                 color: #797979;
@@ -242,7 +254,7 @@
 		    bottom: $vw * -0.5;
 			display: inline-block;
 		    position: relative;
-			width: $vw * 4;
+			width: $pct * 15;
 		}
 	}
 
@@ -482,33 +494,21 @@
 		}
 
 		&--qpPaper, &--qpPoints {
+			font-size: $vw * 5;
 			padding-bottom: $pct * 1;
 			padding-left: $pct * 2;
 			padding-right: $pct * 2;
 			padding-top: $pct * 1;
 
-			@media #{$mobPortMax} {
+			@media #{$mobLandMin} {
 				font-size: $px * 2.4;
 			}
 
-			@media #{$mobLandMin} and #{$mobLandMax} {
-				font-size: $px * 2.4;
-			}
+			& .button--standard {
 
-			@media #{$tabPortMin} and #{$tabPortMax} {
-				font-size: $px * 2.4;
-			}
-
-			@media #{$tabLandMin} and #{$tabLandMax} {
-				font-size: $px * 2.4;
-			}
-
-			@media #{$laptopMin} and #{$laptopMax} {
-				font-size: $px * 2.4;
-			}
-
-			@media #{$desktopMin} {
-				font-size: $px * 2.4;
+				@media #{$mobPortMax} {
+					min-width: auto;
+				}
 			}
 		}
 	}
