@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* 25 Helvetica Neue Ultra Light */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 200;
@@ -10,7 +10,7 @@
 }
 /* 26 Helvetica Neue Ultra Light Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 200;
@@ -19,7 +19,7 @@
 }
 /* 23 Helvetica Neue Ultra Light Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 200;
@@ -28,7 +28,7 @@
 }
 /* 23 Helvetica Neue Ultra Light Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 200;
@@ -37,7 +37,7 @@
 }
 /* 27 Helvetica Neu Ultra Light Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 200;
@@ -46,7 +46,7 @@
 }
 /* 27 Helvetica Neu Ultra Light Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 200;
@@ -55,7 +55,7 @@
 }
 /* 35 Helvetica Neue Thin */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 300;
@@ -64,7 +64,7 @@
 }
 /* 36 Helvetica Neue Thin Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 300;
@@ -73,7 +73,7 @@
 }
 /* 33 Helvetica Neue Thin Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 300;
@@ -82,7 +82,7 @@
 }
 /* 33 Helvetica Neue Thin Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 300;
@@ -91,7 +91,7 @@
 }
 /* 37 Helvetica Neue Thin Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 300;
@@ -100,7 +100,7 @@
 }
 /* 37 Helvetica Neue Thin Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 300;
@@ -109,7 +109,7 @@
 }
 /* 45 Helvetica Neue Light */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 400;
@@ -118,7 +118,7 @@
 }
 /* 46 Helvetica Neue Light Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 400;
@@ -127,7 +127,7 @@
 }
 /* 43 Helvetica Neue Light Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 400;
@@ -136,7 +136,7 @@
 }
 /* 43 Helvetica Neue Light Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 400;
@@ -145,7 +145,7 @@
 }
 /* 47 Helvetica Neue Light Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 400;
@@ -154,7 +154,7 @@
 }
 /* 47 Helvetica Neue Light Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 400;
@@ -163,7 +163,7 @@
 }
 /* 55 Helvetica Neue Roman */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 500;
@@ -172,7 +172,7 @@
 }
 /* 56 Helvetica Neue Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 500;
@@ -181,7 +181,7 @@
 }
 /* 53 Helvetica Neue Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 500;
@@ -190,7 +190,7 @@
 }
 /* 53 Helvetica Neue Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 500;
@@ -199,7 +199,7 @@
 }
 /* 57 Helvetica Neue Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 500;
@@ -208,7 +208,7 @@
 }
 /* 57 Helvetica Neue Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 500;
@@ -217,7 +217,7 @@
 }
 /* 65 Helvetica Neue Medium */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 600;
@@ -226,7 +226,7 @@
 }
 /* 66 Helvetica Neue Medium Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 600;
@@ -235,7 +235,7 @@
 }
 /* 63 Helvetica Neue Medium Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 600;
@@ -244,7 +244,7 @@
 }
 /* 63 Helvetica Neue Medium Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 600;
@@ -253,7 +253,7 @@
 }
 /* 67 Helvetica Neue Medium Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 600;
@@ -262,7 +262,7 @@
 }
 /* 67 Helvetica Neue Medium Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 600;
@@ -271,7 +271,7 @@
 }
 /* 75 Helvetica Neue Bold */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 700;
@@ -280,7 +280,7 @@
 }
 /* 76 Helvetica Neue Bold Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 700;
@@ -289,7 +289,7 @@
 }
 /* 73 Helvetica Neue Bold Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 700;
@@ -298,7 +298,7 @@
 }
 /* 73 Helvetica Neue Bold Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 700;
@@ -307,7 +307,7 @@
 }
 /* 77 Helvetica Neue Bold Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 700;
@@ -316,7 +316,7 @@
 }
 /* 77 Helvetica Neue Bold Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 700;
@@ -325,7 +325,7 @@
 }
 /* 85 Helvetica Neue Heavy */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 800;
@@ -334,7 +334,7 @@
 }
 /* 86 Helvetica Neue Heavy Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 800;
@@ -343,7 +343,7 @@
 }
 /* 83 Helvetica Neue Heavy Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 800;
@@ -352,7 +352,7 @@
 }
 /* 83 Helvetica Neue Heavy Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 800;
@@ -361,7 +361,7 @@
 }
 /* 87 Helvetica Neue Heavy Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 800;
@@ -370,7 +370,7 @@
 }
 /* 87 Helvetica Neue Heavy Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 800;
@@ -379,7 +379,7 @@
 }
 /* 95 Helvetica Neue Black */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: normal;
   font-weight: 900;
@@ -388,7 +388,7 @@
 }
 /* 96 Helvetica Neue Black Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: normal;
   font-style: italic;
   font-weight: 900;
@@ -397,7 +397,7 @@
 }
 /* 93 Helvetica Neue Black Expanded */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: normal;
   font-weight: 900;
@@ -406,7 +406,7 @@
 }
 /* 93 Helvetica Neue Black Expanded Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: expanded;
   font-style: italic;
   font-weight: 900;
@@ -415,7 +415,7 @@
 }
 /* 97 Helvetica Neue Black Condensed */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: normal;
   font-weight: 900;
@@ -424,7 +424,7 @@
 }
 /* 97 Helvetica Neue Black Condensed Italic */
 @font-face {
-  font-family: helvetica;
+  font-family: helveticaNeue;
   font-stretch: condensed;
   font-style: italic;
   font-weight: 900;
@@ -537,7 +537,7 @@
   background-color: #eebf04;
 }
 #agency .button--close, #agency .button--gray, #agency .button--standard, #agency .caption--qpPoints, #agency .h1, #agency .h2, #agency .h3, #agency .h4, #agency .h5, #agency .hn__a, #agency .htmlText, #agency .label, #agency .ol, #agency .p, #agency .p--attribution, #agency .p--disclaimer, #agency .p--jump, #agency .p--noMargin, #agency .p--small, #agency .table__caption, #agency .table__td, #agency .table__th--horizontal, #agency .table__th--vertical, #agency .ul, .agency .button--close, .agency .button--gray, .agency .button--standard, .agency .caption--qpPoints, .agency .h1, .agency .h2, .agency .h3, .agency .h4, .agency .h5, .agency .hn__a, .agency .htmlText, .agency .label, .agency .ol, .agency .p, .agency .p--attribution, .agency .p--disclaimer, .agency .p--jump, .agency .p--noMargin, .agency .p--small, .agency .table__caption, .agency .table__td, .agency .table__th--horizontal, .agency .table__th--vertical, .agency .ul {
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   font-stretch: normal;
   font-style: normal;
   font-variant: normal;
@@ -553,12 +553,13 @@
   border-color: #ccc;
   border-style: dashed;
   border-width: 2px;
+  box-sizing: border-box;
   padding-bottom: 135px;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 5%;
   position: relative;
-  width: calc(100% - 4px);
+  width: 100%;
 }
 #agency .dynPrice, .agency .dynPrice {
   display: none;
@@ -664,7 +665,7 @@
   font-weight: 600;
 }
 #agency .h4--title, .agency .h4--title {
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
 }
@@ -972,7 +973,7 @@
 }
 #agency .blockquote__h3, #agency .blockquote__p {
   color: #333;
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   font-stretch: normal;
   font-style: normal;
   font-variant: normal;
@@ -1154,7 +1155,7 @@
 #agency .icc__p, #agency.icc__p, .agency .icc__p, .agency.icc__p {
   background-color: #ccc;
   color: #000;
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   font-size: 12px;
   line-height: 1.125em;
   padding: 5px;
@@ -1209,7 +1210,7 @@
 #agency .nav--breadcrumb__item {
   background: none;
   display: inline-block;
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   font-size: 12px;
   line-height: 1.5em;
   padding: 0;
@@ -1261,7 +1262,7 @@
 }
 #agency .nav--jumpto__item {
   background: none;
-  font-family: helvetica, arial, sans-serif;
+  font-family: helveticaNeue, arial, sans-serif;
   margin-bottom: .25em;
   margin-top: .25em;
   padding-bottom: 0;
@@ -1357,8 +1358,8 @@
   align-items: baseline;
   position: relative;
 }
-#agency .h2--qpBonus, #agency .h2--qpBenefits, #agency .h2--qpJoin, #agency .h2--qpPoints, #agency .h2--qpReward, #agency .h3--qpBonus, #agency .h3--qpBenefits, #agency .h3--qpJoin, #agency .h3--qpPoints, #agency .h3--qpReward, #agency .h4--qpBonus, #agency .h4--qpBenefits, #agency .h4--qpJoin, #agency .h4--qpPoints, #agency .h4--qpReward, #agency .p--qpBonus, #agency .p--qpBenefits, #agency .p--qpJoin, #agency .p--qpPoints, #agency .p--qpReward, #agency .td--qpBonus, #agency .td--qpBenefits, #agency .td--qpJoin, #agency .td--qpPoints, #agency .td--qpReward, #agency .th--qpBonus, #agency .th--qpBenefits, #agency .th--qpJoin, #agency .th--qpPoints, #agency .th--qpReward, .agency .h2--qpBonus, .agency .h2--qpBenefits, .agency .h2--qpJoin, .agency .h2--qpPoints, .agency .h2--qpReward, .agency .h3--qpBonus, .agency .h3--qpBenefits, .agency .h3--qpJoin, .agency .h3--qpPoints, .agency .h3--qpReward, .agency .h4--qpBonus, .agency .h4--qpBenefits, .agency .h4--qpJoin, .agency .h4--qpPoints, .agency .h4--qpReward, .agency .p--qpBonus, .agency .p--qpBenefits, .agency .p--qpJoin, .agency .p--qpPoints, .agency .p--qpReward, .agency .td--qpBonus, .agency .td--qpBenefits, .agency .td--qpJoin, .agency .td--qpPoints, .agency .td--qpReward, .agency .th--qpBonus, .agency .th--qpBenefits, .agency .th--qpJoin, .agency .th--qpPoints, .agency .th--qpReward {
-  font-family: helvetica, arial, sans-serif;
+#agency .h2--qpBonus, #agency .h2--qpBenefits, #agency .h2--qpJoin, #agency .h2--qpPoints, #agency .h2--qpPointsPaper, #agency .h2--qpReward, #agency .h3--qpBonus, #agency .h3--qpBenefits, #agency .h3--qpJoin, #agency .h3--qpPoints, #agency .h3--qpPointsPaper, #agency .h3--qpReward, #agency .h4--qpBonus, #agency .h4--qpBenefits, #agency .h4--qpJoin, #agency .h4--qpPoints, #agency .h4--qpPointsPaper, #agency .h4--qpReward, #agency .p--qpBonus, #agency .p--qpBenefits, #agency .p--qpJoin, #agency .p--qpPoints, #agency .p--qpPointsPaper, #agency .p--qpReward, #agency .td--qpBonus, #agency .td--qpBenefits, #agency .td--qpJoin, #agency .td--qpPoints, #agency .td--qpPointsPaper, #agency .td--qpReward, #agency .th--qpBonus, #agency .th--qpBenefits, #agency .th--qpJoin, #agency .th--qpPoints, #agency .th--qpPointsPaper, #agency .th--qpReward, .agency .h2--qpBonus, .agency .h2--qpBenefits, .agency .h2--qpJoin, .agency .h2--qpPoints, .agency .h2--qpPointsPaper, .agency .h2--qpReward, .agency .h3--qpBonus, .agency .h3--qpBenefits, .agency .h3--qpJoin, .agency .h3--qpPoints, .agency .h3--qpPointsPaper, .agency .h3--qpReward, .agency .h4--qpBonus, .agency .h4--qpBenefits, .agency .h4--qpJoin, .agency .h4--qpPoints, .agency .h4--qpPointsPaper, .agency .h4--qpReward, .agency .p--qpBonus, .agency .p--qpBenefits, .agency .p--qpJoin, .agency .p--qpPoints, .agency .p--qpPointsPaper, .agency .p--qpReward, .agency .td--qpBonus, .agency .td--qpBenefits, .agency .td--qpJoin, .agency .td--qpPoints, .agency .td--qpPointsPaper, .agency .td--qpReward, .agency .th--qpBonus, .agency .th--qpBenefits, .agency .th--qpJoin, .agency .th--qpPoints, .agency .th--qpPointsPaper, .agency .th--qpReward {
+  font-family: helveticaNeue, arial, sans-serif;
 }
 #agency .h2--qpReward, #agency .h3--qpReward, #agency .h4--qpReward, #agency .p--qpReward, #agency .td--qpReward, #agency .th--qpReward, .agency .h2--qpReward, .agency .h3--qpReward, .agency .h4--qpReward, .agency .p--qpReward, .agency .td--qpReward, .agency .th--qpReward {
   left: 0;
@@ -1539,6 +1540,18 @@
 @media (min-width: 1520px) {
   #agency .h4--qpReward, .agency .h4--qpReward {
     font-size: 26px;
+  }
+}
+#agency .img--qpPaper, .agency .img--qpPaper {
+  display: none;
+}
+@media (min-width: 766px) {
+  #agency .img--qpPaper, .agency .img--qpPaper {
+    display: block;
+    margin-bottom: 1%;
+    margin-left: 3%;
+    margin-top: 1%;
+    width: 43%;
   }
 }
 #agency .img--qpPoints, .agency .img--qpPoints {
@@ -1747,9 +1760,17 @@
 }
 #agency .td--qpPoints__span, #agency .th--qpPoints__span, .agency .td--qpPoints__span, .agency .th--qpPoints__span {
   font-size: 32px;
+  line-height: 0.8em;
 }
 #agency .td--qpPoints__span--sub, #agency .th--qpPoints__span--sub, .agency .td--qpPoints__span--sub, .agency .th--qpPoints__span--sub {
   font-size: .625em;
+}
+@media (min-width: 766px) {
+  #agency .td--qpPointsPaper, #agency .th--qpPointsPaper, .agency .td--qpPointsPaper, .agency .th--qpPointsPaper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }
 #agency .td--qpPaper, #agency .td--qpPoints, #agency .th--qpPaper, #agency .th--qpPoints, .agency .td--qpPaper, .agency .td--qpPoints, .agency .th--qpPaper, .agency .th--qpPoints {
   font-size: 5vw;
@@ -1788,6 +1809,16 @@
 }
 #agency .tr--qpJoin > td:nth-child(1), .agency .tr--qpJoin > td:nth-child(1) {
   text-align: center;
+}
+@media (min-width: 766px) and (max-width: 1279px) {
+  #agency .span--qpPaper, .agency .span--qpPaper {
+    font-size: 3.25vw;
+  }
+}
+@media (min-width: 1280px) {
+  #agency .span--qpPaper, .agency .span--qpPaper {
+    font-size: 1.75em;
+  }
 }
 #agency .ul--qpPoints, .agency .ul--qpPoints {
   font-size: 0;

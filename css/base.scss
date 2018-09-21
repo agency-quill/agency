@@ -153,12 +153,13 @@
 			border-color: #ccc;
 			border-style: dashed;
 			border-width: 2px;
+			box-sizing: border-box;
 			padding-bottom: $px * 13.5;
 			padding-left: $pct * 5;
 			padding-right: $pct * 5;
 			padding-top: $pct * 5;
 			position: relative;
-			width: calc(100% - #{$px * 0.4});
+			width: 100%;
 		}
 	}
 

@@ -54,7 +54,7 @@
 
 		&--qpBenefits {}
 
-		&--qpBonus, &--qpBenefits, &--qpJoin, &--qpPoints, &--qpReward {
+		&--qpBonus, &--qpBenefits, &--qpJoin, &--qpPoints, &--qpPointsPaper, &--qpReward {
 		    font-family: #{$fontFamily};
 		}
 
@@ -249,6 +249,18 @@
 	}
 
 	.img {
+
+		&--qpPaper {
+			display: none;
+			
+			@media #{$tabPortMin} {
+				display: block;
+				margin-bottom: $pct * 1;
+				margin-left: $pct * 3;
+				margin-top: $pct * 1;
+				width: $pct * 43;
+			}
+		}
 
 		&--qpPoints {
 		    bottom: $vw * -0.5;
@@ -486,9 +498,23 @@
 
 			&__span {
 				font-size: 32px;
+				line-height: $em * .8;
+
+				@media #{$mobPortMax} and #{$mobLandMax} {
+					
+				}
 
 				&--sub {
 					font-size: .625em;
+				}
+			}
+
+			&Paper {
+
+				@media #{$tabPortMin} {
+					align-items: center;
+					display: flex;
+					justify-content: center;
 				}
 			}
 		}
@@ -548,6 +574,24 @@
 			}
 		}
 
+    }
+
+    .span {
+
+    	&--qpPaper {
+
+    		@media #{$mobPortMax} {}
+
+    		@media #{$mobLandMin} and #{$mobLandMax} {}
+
+    		@media #{$tabPortMin} and #{$tabLandMax} {
+				font-size: $vw * 3.25;
+    		}
+
+    		@media #{$laptopMin} {
+    			font-size: $em * 1.75;
+    		}
+    	}
     }
 
     .ul {

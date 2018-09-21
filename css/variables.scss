@@ -1,5 +1,6 @@
 $column: 8.333333%;	// column unit
 
+$em: 1em;	// size unit in ems
 $pct: 1%;	// size unit in percent
 $px: 10px;	// size unit in pixels
 $vw: 1vw;	// size unit in viewport width
@@ -15,4 +16,4 @@ $laptopMin: '(min-width: 1280px)';
 $laptopMax: '(max-width: 1519px)';
 $desktopMin: '(min-width: 1520px)';
 
-$fontFamily: 'helvetica, arial, sans-serif';
+$fontFamily: 'helveticaNeue, arial, sans-serif';
