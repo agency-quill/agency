@@ -493,6 +493,34 @@
   border-top-style: solid;
   border-top-color: #ccc;
 }
+#agency .button--blue, .agency .button--blue {
+  background-color: #0079c2;
+}
+#agency .button--blue:hover, #agency .button--blue:active, .agency .button--blue:hover, .agency .button--blue:active {
+  background-color: #0072bc;
+}
+#agency .button--blue, #agency .button--gray, .agency .button--blue, .agency .button--gray {
+  color: #fff;
+}
+#agency .button--blue, #agency .button--gray, #agency .button--standard, .agency .button--blue, .agency .button--gray, .agency .button--standard {
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 400;
+  height: 36px;
+  line-height: 36px;
+  max-width: 200px;
+  min-width: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+#agency .button--blue, #agency .button--close, #agency .button--gray, #agency .button--standard, .agency .button--blue, .agency .button--close, .agency .button--gray, .agency .button--standard {
+  outline: 0;
+}
 #agency .button--close, .agency .button--close {
   background: none;
   border: none;
@@ -504,30 +532,11 @@
   position: absolute;
   right: 15px;
 }
-#agency .button--close, #agency .button--gray, #agency .button--standard, .agency .button--close, .agency .button--gray, .agency .button--standard {
-  outline: 0;
-}
 #agency .button--close, #agency .button--standard, .agency .button--close, .agency .button--standard {
   cursor: pointer;
 }
 #agency .button--gray, .agency .button--gray {
   background-color: #e2e2e2;
-  color: #fff;
-}
-#agency .button--gray, #agency .button--standard, .agency .button--gray, .agency .button--standard {
-  border: none;
-  border-radius: 0;
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  height: 36px;
-  line-height: 36px;
-  min-width: 160px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;
-  text-decoration: none;
-  width: auto;
 }
 #agency .button--standard, .agency .button--standard {
   background-color: #fc0;

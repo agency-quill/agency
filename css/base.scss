@@ -81,6 +81,39 @@
 
 	.button {
 
+		&--blue {
+			background-color: #0079c2;
+
+			&:hover, &:active {
+				background-color: #0072bc;
+			}
+		}
+
+		&--blue, &--gray {
+			color: #fff
+		}
+
+		&--blue, &--gray, &--standard {
+			border: none;
+			border-radius: 0;
+			display: inline-block;
+			font-size: $px * 1.5;
+			font-weight: 400;
+			height: 36px;
+			line-height: $px * 3.6;
+			max-width: $px * 20;
+			min-width: $px * 15;
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: center;
+			text-decoration: none;
+			width: auto;
+		}
+
+		&--blue, &--close, &--gray, &--standard {
+			outline: 0;
+		}
+
 		&--close {
 			background: none;
 			border: none;
@@ -92,10 +125,6 @@
 			position: absolute;
 			right: $px * 1.5;
 		}
-
-		&--close, &--gray, &--standard {
-			outline: 0;
-		}
 		
 		&--close, &--standard {
 			cursor: pointer;
@@ -103,23 +132,6 @@
 
 		&--gray {
 			background-color: #e2e2e2;
-			color: #fff;
-		}
-
-		&--gray, &--standard {
-			border: none;
-			border-radius: 0;
-			display: block;
-			font-size: $px * 1.5;
-			font-weight: 400;
-			height: 36px;
-			line-height: $px * 3.6;
-			min-width: $px * 16;
-			padding-left: 10px;
-			padding-right: 10px;
-			text-align: center;
-			text-decoration: none;
-			width: auto;
 		}
 
 		&--standard {
