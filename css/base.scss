@@ -363,7 +363,7 @@
 		}
 	}
 	
-	.ol__li {
+	.ol__li, .ol__li--small {
 		display: list-item;
 		list-style-position: inside;
 	}
@@ -383,7 +383,7 @@
 		}
 	}
 
-	.ol__li, .ul__li, .ul__li--small {
+	.ol__li, .ol__li--small, .ul__li, .ul__li--small {
 		padding-bottom: 0;
 		padding-top: 0;
 

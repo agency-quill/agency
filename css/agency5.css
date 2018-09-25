@@ -735,7 +735,7 @@
     margin-bottom: 20px;
   }
 }
-#agency .ol__li, .agency .ol__li {
+#agency .ol__li, #agency .ol__li--small, .agency .ol__li, .agency .ol__li--small {
   display: list-item;
   list-style-position: inside;
 }
@@ -749,29 +749,29 @@
   	text-align: justify;
   }*/
 }
-#agency .ol__li, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ul__li, .agency .ul__li--small {
+#agency .ol__li, #agency .ol__li--small, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ol__li--small, .agency .ul__li, .agency .ul__li--small {
   padding-bottom: 0;
   padding-top: 0;
 }
 @media (max-width: 1279px) {
-  #agency .ol__li, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ul__li, .agency .ul__li--small {
+  #agency .ol__li, #agency .ol__li--small, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ol__li--small, .agency .ul__li, .agency .ul__li--small {
     margin-left: 14px;
     padding-left: 14px;
   }
 }
 @media (min-width: 1280px) and (max-width: 1519px) {
-  #agency .ol__li, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ul__li, .agency .ul__li--small {
+  #agency .ol__li, #agency .ol__li--small, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ol__li--small, .agency .ul__li, .agency .ul__li--small {
     margin-left: 1.8vw;
     padding-left: 1.8vw;
   }
 }
 @media (min-width: 1520px) {
-  #agency .ol__li, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ul__li, .agency .ul__li--small {
+  #agency .ol__li, #agency .ol__li--small, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ol__li--small, .agency .ul__li, .agency .ul__li--small {
     margin-left: 18px;
     padding-left: 18px;
   }
 }
-#agency .ol__li--table, #agency .ul__li--table, #agency .ul__li--small--table, .agency .ol__li--table, .agency .ul__li--table, .agency .ul__li--small--table {
+#agency .ol__li--table, #agency .ol__li--small--table, #agency .ul__li--table, #agency .ul__li--small--table, .agency .ol__li--table, .agency .ol__li--small--table, .agency .ul__li--table, .agency .ul__li--small--table {
   background-image: url("/content/iw/images/bullet.png");
   background-position: left 8px;
   background-repeat: no-repeat;
