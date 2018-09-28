@@ -66,34 +66,5 @@
 			}
 		}
 	}
-    
-	/* SDS related style */
-
-    .btn-clip-coupon {
-        margin-bottom: 0;
-    }
-    
-    .btn-clip-coupon, .coupon_code {
-        
-        @media #{$mobLandMin} {
-            min-width: 157px;
-            font-size: $px * 1.4;
-        }
-    }
-    
-    .coupon_code b {
-        font-size: $px * 1.4;
-    }
-    
-	.unclip-coupon {
-
-		@media #{$mobLandMin} {
-			font-size: $px * 1.1;
-			width: $px * 3.0;
-		}
-	}
-
-	.unclip-icon {
-		margin-left: $px * 0.6;
-	}
+	/* see sds.scss for css that modifies sds-managed elements */
 }

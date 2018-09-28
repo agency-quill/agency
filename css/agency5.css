@@ -741,13 +741,6 @@
 }
 #agency .ol__li--small, #agency .p--small, #agency .ul__li--small, .agency .ol__li--small, .agency .p--small, .agency .ul__li--small {
   font-size: 18px;
-  /*@media (max-width: 1279px) {
-  	text-align: left;
-  }
-  
-  @media (min-width: 1280px) {
-  	text-align: justify;
-  }*/
 }
 #agency .ol__li, #agency .ol__li--small, #agency .ul__li, #agency .ul__li--small, .agency .ol__li, .agency .ol__li--small, .agency .ul__li, .agency .ul__li--small {
   padding-bottom: 0;
@@ -1135,7 +1128,7 @@
 }
 
 #agency, .agency {
-  /* SDS related style */
+  /* see sds.scss for css that modifies sds-managed elements */
 }
 #agency .grid__unit--25 .icc, #agency.grid__unit--25 .icc, .agency .grid__unit--25 .icc, .agency.grid__unit--25 .icc {
   left: 0;
@@ -1189,27 +1182,6 @@
   font-size: 16px;
   font-weight: 800;
   line-height: 1.125em;
-}
-#agency .btn-clip-coupon, .agency .btn-clip-coupon {
-  margin-bottom: 0;
-}
-@media (min-width: 500px) {
-  #agency .btn-clip-coupon, #agency .coupon_code, .agency .btn-clip-coupon, .agency .coupon_code {
-    min-width: 157px;
-    font-size: 14px;
-  }
-}
-#agency .coupon_code b, .agency .coupon_code b {
-  font-size: 14px;
-}
-@media (min-width: 500px) {
-  #agency .unclip-coupon, .agency .unclip-coupon {
-    font-size: 11px;
-    width: 30px;
-  }
-}
-#agency .unclip-icon, .agency .unclip-icon {
-  margin-left: 6px;
 }
 
 #agency .nav--breadcrumb {
@@ -1345,9 +1317,24 @@
 }
 
 #agency .div--qpPoints, .agency .div--qpPoints {
-  margin-top: -8%;
-  position: relative;
-  top: 50%;
+  display: inline-block;
+}
+#agency .div--qpPoints, #agency .div--qpPointsPaper, .agency .div--qpPoints, .agency .div--qpPointsPaper {
+  vertical-align: middle;
+  width: 100%;
+}
+@media (min-width: 766px) {
+  #agency .div--qpPoints, #agency .div--qpPointsPaper, .agency .div--qpPoints, .agency .div--qpPointsPaper {
+    width: 50%;
+  }
+}
+#agency .div--qpPointsPaper, .agency .div--qpPointsPaper {
+  display: none;
+}
+@media (min-width: 766px) {
+  #agency .div--qpPointsPaper, .agency .div--qpPointsPaper {
+    display: inline-block;
+  }
 }
 #agency .h2--qpPoints, .agency .h2--qpPoints {
   font-size: 2.75vw;
@@ -1552,20 +1539,12 @@
   }
 }
 #agency .img--qpPaper, .agency .img--qpPaper {
-  display: none;
-}
-@media (min-width: 766px) {
-  #agency .img--qpPaper, .agency .img--qpPaper {
-    display: block;
-    margin-bottom: 1%;
-    margin-left: 3%;
-    margin-top: 1%;
-    width: 43%;
-  }
+  display: block;
+  width: 100%;
 }
 #agency .img--qpPoints, .agency .img--qpPoints {
-  bottom: -0.5vw;
   display: inline-block;
+  margin-right: 2%;
   position: relative;
   width: 15%;
 }
@@ -1763,22 +1742,32 @@
 #agency .td--qpPoints, #agency .th--qpPoints, .agency .td--qpPoints, .agency .th--qpPoints {
   font-weight: 300;
   text-align: center;
+  vertical-align: middle;
 }
 #agency .td--qpPoints:first-of-type, #agency .th--qpPoints:first-of-type, .agency .td--qpPoints:first-of-type, .agency .th--qpPoints:first-of-type {
   text-align: left;
 }
 #agency .td--qpPoints__span, #agency .th--qpPoints__span, .agency .td--qpPoints__span, .agency .th--qpPoints__span {
-  font-size: 32px;
+  font-size: 8vw;
   line-height: 0.8em;
+}
+@media (min-width: 500px) {
+  #agency .td--qpPoints__span, #agency .th--qpPoints__span, .agency .td--qpPoints__span, .agency .th--qpPoints__span {
+    font-size: 32px;
+  }
 }
 #agency .td--qpPoints__span--sub, #agency .th--qpPoints__span--sub, .agency .td--qpPoints__span--sub, .agency .th--qpPoints__span--sub {
   font-size: .625em;
 }
-@media (min-width: 766px) {
-  #agency .td--qpPointsPaper, #agency .th--qpPointsPaper, .agency .td--qpPointsPaper, .agency .th--qpPointsPaper {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+#agency .td--qpPointsPaper, #agency .th--qpPointsPaper, .agency .td--qpPointsPaper, .agency .th--qpPointsPaper {
+  align-items: center;
+  display: flex;
+  font-weight: 300;
+  justify-content: center;
+}
+@media (min-width: 0) and (max-width: 765px) {
+  #agency .td--qpPoints .button--standard, #agency .th--qpPoints .button--standard, .agency .td--qpPoints .button--standard, .agency .th--qpPoints .button--standard {
+    min-width: 82%;
   }
 }
 #agency .td--qpPaper, #agency .td--qpPoints, #agency .th--qpPaper, #agency .th--qpPoints, .agency .td--qpPaper, .agency .td--qpPoints, .agency .th--qpPaper, .agency .th--qpPoints {
@@ -1791,11 +1780,6 @@
 @media (min-width: 500px) {
   #agency .td--qpPaper, #agency .td--qpPoints, #agency .th--qpPaper, #agency .th--qpPoints, .agency .td--qpPaper, .agency .td--qpPoints, .agency .th--qpPaper, .agency .th--qpPoints {
     font-size: 24px;
-  }
-}
-@media (max-width: 499px) {
-  #agency .td--qpPaper .button--standard, #agency .td--qpPoints .button--standard, #agency .th--qpPaper .button--standard, #agency .th--qpPoints .button--standard, .agency .td--qpPaper .button--standard, .agency .td--qpPoints .button--standard, .agency .th--qpPaper .button--standard, .agency .th--qpPoints .button--standard {
-    min-width: auto;
   }
 }
 #agency .th--horizontal .plp-tier-price-wrap, .agency .th--horizontal .plp-tier-price-wrap {
@@ -1838,6 +1822,22 @@
   padding: 0;
 }
 
+#agency .btn-clip-coupon, .agency .btn-clip-coupon {
+  margin-bottom: 0;
+}
+#agency .btn-clip-coupon, #agency .coupon_code, #agency .shopNow-btn, .agency .btn-clip-coupon, .agency .coupon_code, .agency .shopNow-btn {
+  min-width: 150px;
+}
+@media (min-width: 0) and (max-width: 499px) {
+  #agency .btn-clip-coupon, #agency .coupon_code, #agency .coupon_code b, #agency .shopNow-btn, .agency .btn-clip-coupon, .agency .coupon_code, .agency .coupon_code b, .agency .shopNow-btn {
+    font-size: 3.5vw;
+  }
+}
+@media (min-width: 0) and (max-width: 499px) {
+  #agency .unclip-coupon, .agency .unclip-coupon {
+    font-size: 2.75vw;
+  }
+}
 #agency p, #agency h3, .agency p, .agency h3 {
   padding-bottom: 0;
   padding-left: 0;
@@ -1917,31 +1917,6 @@
   box-sizing: border-box;
   width: 100%;
 }
-#agency .grid .webModImg, .agency .grid .webModImg {
-  			/* &--75 {
-  				width: $pct * 155;
-  
-  				@media (min-width: 500px) and (max-width: 765px) {
-  					width: $pct * 132;
-  				}
-  
-  				@media (min-width: 766px) and (max-width: 1011px) {
-  					width: $pct * 151.5;
-  				}
-  
-  				@media (min-width: 1012px) and (max-width: 1279px) {
-  					width: $pct * 144.25;
-  				}
-  
-  				@media (min-width: 1280px) and (max-width: 1519px) {
-  					width: $pct * 115.4;
-  				}
-  
-  				@media (min-width: 1520px) {
-  					width: $pct * 100;
-  				}
-  			} */
-}
 #agency .grid .webModImg--12-5, #agency .grid .webModImg--25, #agency .grid .webModImg--33, #agency .grid .webModImg--50, #agency .grid .webModImg--66, #agency .grid .webModImg--75, #agency .grid .webModImg--100, .agency .grid .webModImg--12-5, .agency .grid .webModImg--25, .agency .grid .webModImg--33, .agency .grid .webModImg--50, .agency .grid .webModImg--66, .agency .grid .webModImg--75, .agency .grid .webModImg--100 {
   align-self: flex-end;
   flex-shrink: 0;
@@ -1974,11 +1949,11 @@
   }
 }
 #agency .grid .webModImg--33, .agency .grid .webModImg--33 {
-  width: 155%;
+  width: 100%;
 }
 @media (min-width: 500px) and (max-width: 765px) {
   #agency .grid .webModImg--33, .agency .grid .webModImg--33 {
-    width: 132%;
+    width: 140%;
   }
 }
 @media (min-width: 766px) and (max-width: 1011px) {
@@ -1994,11 +1969,6 @@
 @media (min-width: 1280px) and (max-width: 1519px) {
   #agency .grid .webModImg--33, .agency .grid .webModImg--33 {
     width: 120%;
-  }
-}
-@media (min-width: 1520px) {
-  #agency .grid .webModImg--33, .agency .grid .webModImg--33 {
-    width: 100%;
   }
 }
 #agency .grid .webModImg--50, .agency .grid .webModImg--50 {
@@ -2178,34 +2148,6 @@
 #agency .grid .grid__unit--12-5.webModCard, #agency .grid .grid__unit--25.webModCard, #agency .grid .grid__unit--33.webModCard, #agency .grid .grid__unit--50.webModCard, #agency .grid .grid__unit--66.webModCard, #agency .grid .grid__unit--75.webModCard, #agency .grid .grid__unit--100.webModCard, #agency.grid .grid__unit--12-5.webModCard, #agency.grid .grid__unit--25.webModCard, #agency.grid .grid__unit--33.webModCard, #agency.grid .grid__unit--50.webModCard, #agency.grid .grid__unit--66.webModCard, #agency.grid .grid__unit--75.webModCard, #agency.grid .grid__unit--100.webModCard, #agency .flex .grid__unit--12-5.webModCard, #agency .flex .grid__unit--25.webModCard, #agency .flex .grid__unit--33.webModCard, #agency .flex .grid__unit--50.webModCard, #agency .flex .grid__unit--66.webModCard, #agency .flex .grid__unit--75.webModCard, #agency .flex .grid__unit--100.webModCard, .agency .grid .grid__unit--12-5.webModCard, .agency .grid .grid__unit--25.webModCard, .agency .grid .grid__unit--33.webModCard, .agency .grid .grid__unit--50.webModCard, .agency .grid .grid__unit--66.webModCard, .agency .grid .grid__unit--75.webModCard, .agency .grid .grid__unit--100.webModCard, .agency.grid .grid__unit--12-5.webModCard, .agency.grid .grid__unit--25.webModCard, .agency.grid .grid__unit--33.webModCard, .agency.grid .grid__unit--50.webModCard, .agency.grid .grid__unit--66.webModCard, .agency.grid .grid__unit--75.webModCard, .agency.grid .grid__unit--100.webModCard, .agency .flex .grid__unit--12-5.webModCard, .agency .flex .grid__unit--25.webModCard, .agency .flex .grid__unit--33.webModCard, .agency .flex .grid__unit--50.webModCard, .agency .flex .grid__unit--66.webModCard, .agency .flex .grid__unit--75.webModCard, .agency .flex .grid__unit--100.webModCard {
   align-self: stretch;
 }
-#agency .grid > .grid__unit, #agency.grid > .grid__unit, #agency .flex > .grid__unit, .agency .grid > .grid__unit, .agency.grid > .grid__unit, .agency .flex > .grid__unit {
-  			/* &--75 {
-  
-  				@media (min-width: 766px) and (max-width: 1011px) {
-  					width: $column * 8;
-  				}
-  
-  				@media (min-width: 1012px) and (max-width: 1279px) {
-  					width: $column * 9;
-  				}
-  
-  				@media (min-width: 1280px) and (max-width: 1519px) {
-  					width: $column * 7.2;
-  				}
-  
-  				@media (min-width: 1520px) {
-  					width: $column * 6;
-  				}
-  
-  				&.fullSpan {
-  					width: $column * 6;
-  
-  					@media (min-width: 766px) {
-  						width: $column * 9;
-  					}
-  				}
-  			} */
-}
 #agency .grid > .grid__unit--12-5, #agency.grid > .grid__unit--12-5, #agency .flex > .grid__unit--12-5, .agency .grid > .grid__unit--12-5, .agency.grid > .grid__unit--12-5, .agency .flex > .grid__unit--12-5 {
   width: 8.333333%;
 }
@@ -2360,7 +2302,7 @@
 }
 @media (max-width: 765px) {
   #agency .grid .margin__all--100, #agency.grid .margin__all--100, #agency .margin__all--100, #agency.margin__all--100, .agency .grid .margin__all--100, .agency.grid .margin__all--100, .agency .margin__all--100, .agency.margin__all--100 {
-    margin: 4%;
+    margin: 8%;
   }
 }
 @media (min-width: 766px) {

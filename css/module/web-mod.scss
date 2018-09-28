@@ -25,10 +25,6 @@
 		box-sizing: border-box;
 		width: 100%;
 	}
-
-	// #event {
-	// 	display: none;
-	// }
 	
 	.grid {
 
@@ -37,7 +33,6 @@
 			&--12-5, &--25, &--33, &--50, &--66, &--75, &--100 {
 				align-self: flex-end;
 				flex-shrink: 0;
-				// height: $pct * 100;
 				position: relative;
 			}
 
@@ -66,10 +61,10 @@
 			}
 
 			&--33 {
-				width: $pct * 155;
+				width: $pct * 100;
 
 				@media #{$mobLandMin} and #{$mobLandMax} {
-					width: $pct * 132;
+					width: $pct * 140;
 				}
 
 				@media #{$tabPortMin} and #{$tabPortMax} {
@@ -82,10 +77,6 @@
 
 				@media #{$laptopMin} and #{$laptopMax} {
 					width: $pct * 120;
-				}
-
-				@media #{$desktopMin} {
-					width: $pct * 100;
 				}
 			}
 
@@ -108,30 +99,6 @@
 					width: $pct * 100;
 				}
 			}
-
-			/* &--75 {
-				width: $pct * 155;
-
-				@media #{$mobLandMin} and #{$mobLandMax} {
-					width: $pct * 132;
-				}
-
-				@media #{$tabPortMin} and #{$tabPortMax} {
-					width: $pct * 151.5;
-				}
-
-				@media #{$tabLandMin} and #{$tabLandMax} {
-					width: $pct * 144.25;
-				}
-
-				@media #{$laptopMin} and #{$laptopMax} {
-					width: $pct * 115.4;
-				}
-
-				@media #{$desktopMin} {
-					width: $pct * 100;
-				}
-			} */
 			
 			&--100 {
 				width: $pct * 159.325;
@@ -162,7 +129,6 @@
 				&--12-5, &--25, &--33 {
 					align-self: flex-end;
 					flex-shrink: 0;
-					// height: $pct * 100;
 					position: relative;
 					width: $pct * 100;
 				}

@@ -213,33 +213,6 @@
 				}
 			}
 
-			/* &--75 {
-
-				@media #{$tabPortMin} and #{$tabPortMax} {
-					width: $column * 8;
-				}
-
-				@media #{$tabLandMin} and #{$tabLandMax} {
-					width: $column * 9;
-				}
-
-				@media #{$laptopMin} and #{$laptopMax} {
-					width: $column * 7.2;
-				}
-
-				@media #{$desktopMin} {
-					width: $column * 6;
-				}
-
-				&.fullSpan {
-					width: $column * 6;
-
-					@media #{$tabPortMin} {
-						width: $column * 9;
-					}
-				}
-			} */
-
 			&--customList {
 				width: $vw * 100;
 			}
@@ -247,7 +220,6 @@
 	}	
 
 	.grid .margin, &.grid .margin, .margin, &.margin {
-	// .margin, &.margin {
 
 		&__all {
 
@@ -302,7 +274,7 @@
 			&--100 {
 
 				@media #{$mobLandMax} {
-					margin: $pct * 4;
+					margin: $pct * 8;
 				}
 				
 				@media #{$tabPortMin} {
