@@ -1,23 +1,38 @@
 # Responsive grid
-_"Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation."_
+_"Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation."_ - [Responsive Web Design – What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
 
-[Responsive Web Design – What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
+Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). Conceptually it's pretty simple. Use `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
 
-Most credit Ethan Marcotte with introducing the concept in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). Conceptually it's pretty simple. Use `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
+The foundation of reponsive design is the __responsive grid__ which uses a combination of cropping, scaling and wrapping to render a single block of `HTML` in the best possible presentation across multiple devices.
 
-The foundation of reponsive design is the __responsive grid__. Using a combination of cropping, scaling and wrapping, a responsive grid renders a single block of `HTML` in the best possible presentation across multiple devices.
-
-The next section goes into the `CSS` and `HTML` elements, units, properties and functions that underly the responsive grid. We get into the nuts and bolts of our responsive grid system in the following section.
+The next section goes into code and concepts that go into building a responsive grid. After that we get into the nuts and bolts of our implementation of a responsive grid system.
 
 ## The underlying functionality
-New elements, units, properties and functions that are a part of `HTML5` and `CSS3` make a responsive grid possible. Below are a few of the more important concepts.
+There are some new elements, units, properties and functions in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
 
 ### Semantic `HTML`
-`HTML` has always had semantic elements, or elements whose name describes the content within them (i.e. the `<blockquote>`, `<h1>`, `<p>` and `<table>` elements). Originally it also had a bunch of elements that were intended for presentation purposes (i.e. the `<b>`, `<center>`, `<font>` and `<i>` elements).  It also had a couple of elements for layout (i.e. the `<div>` and `<span>` elements).
+`HTML` has always had semantic elements, or elements whose name describes the content within them (i.e. the `<blockquote>`, `<h1>`, `<p>` and `<table>` elements).
 
-Once `CSS` came around all of the presentation elements were no longer needed, so they have, for the most part been deprecated.
+In the early days `HTML` also had a bunch of elements that were intended for presentation purposes (i.e. the `<b>`, `<center>`, `<font>` and `<i>` elements). Once `CSS` came around all of the presentation elements were no longer needed, so they have, for the most part been deprecated.
 
-`HTML5` added new elements in order to apply the semantic concept to layout. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The new elements describe the role of the content they contain. The `<div>` element still exists, but is used for non-semantic content divisions.
+Finally there were a couple of elements for layout (i.e. the `<div>` and `<span>` elements).
+
+`HTML5` added some new elements in order to extend the benefits of semantic naming to page layout. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The new elements describe the role of the content they contain. The `<div>` element still exists, but is used for non-semantic content divisions.
+
+__Example:__
+```html
+<article>
+	<header>
+		<h1>Lorem ipsum dolor sit amet</h1>
+	</header>
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis necessitatibus totam nemo eum minus, beatae hic vitae cumque quibusdam dicta, neque esse optio cum repellat delectus voluptatibus deserunt praesentium id.</p>
+	</section>
+	<footer>
+		<p>Consectetur unde esse sequi eveniet porro illo aperiam dolorem laboriosam delectus, molestiae dolores non possimus accusantium, perferendis beatae iusto.</p>
+	</footer>
+</article>
+```
 
 You can find out more about the new elements and which old elements have been deprecated in the [Mozilla Developers Network (MDN) HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
