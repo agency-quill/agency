@@ -31,7 +31,9 @@ You can find out more about the new elements and which old elements have been de
 
 __Example:__
 
-```css font-size: 3.5vw;
+```css 
+font-size: 3.5vw;
+```
 
 These allow us to set elemnt sizes relative to the dimensions of the viewport. This is particularly handy for font sizes since the `%` unit for `font-size` is relative to the `font-size` of the parent, not the parent's width or height.
 
