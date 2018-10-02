@@ -543,7 +543,7 @@
 			font-size: $vw * 1.6;
 			height: $vw * 17.75;
 			padding: $pct ($pct * 1.5);
-			width: calc(100% - #{$pct * 3 + 2})
+			width: calc(100% - #{$pct * 3 + 2});
 		}
         
         @media #{$tabPortMax}{
@@ -554,7 +554,7 @@
 			font-size: $px * 1.6;
 			height: $px * 17;
 			padding: $px ($px * 1.5);
-			width: calc(100% - #{$px * 3 + 2})
+			width: calc(100% - #{$px * 3 + 2});
 		}
 	}
 
