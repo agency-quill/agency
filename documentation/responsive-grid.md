@@ -1,5 +1,7 @@
 # Responsive grid
-_"Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation."_– [Responsive Web Design – What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
+	_"Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation."_
+
+	– [Responsive Web Design – What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
 
 Most credit Ethan Marcotte with introducing the concept in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). Conceptually it's pretty simple. Use `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
 
