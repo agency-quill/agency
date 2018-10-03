@@ -1,21 +1,21 @@
 # Responsive grid
 _"Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation."_ - [Responsive Web Design – What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
 
-Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). Conceptually it's pretty simple. Use `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
+Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). Conceptually it's pretty simple-use `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
 
-The foundation of reponsive design is the __responsive grid__ which uses a combination of cropping, scaling and wrapping to render a single block of `HTML` in the best possible presentation across multiple devices.
+The foundation of reponsive design is the __responsive grid__. A responsive grid uses a combination of cropping, scaling and wrapping to render a single block of `HTML` in the best possible presentation across multiple devices.
 
-The next section goes into code and concepts that go into building a responsive grid. After that we get into the nuts and bolts of our implementation of a responsive grid system.
+The next section goes into the code and concepts that go into building a responsive grid. After that we get into the nuts and bolts of our implementation.
 
 ## The underlying functionality
 There are some new elements, units, properties and functions in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
 
 ### Semantic `HTML`
-`HTML` has always had semantic elements, or elements whose name describes the content within them (i.e. the `<blockquote>`, `<h1>`, `<p>` and `<table>` elements).
+`HTML` has always had semantic elements, or elements whose name describes the content within them (e.g. the `<blockquote>`, `<h1>`, `<p>` and `<table>` elements).
 
-In the early days `HTML` also had a bunch of elements that were intended for presentation purposes (i.e. the `<b>`, `<center>`, `<font>` and `<i>` elements). Once `CSS` came around all of the presentation elements were no longer needed, so they have, for the most part been deprecated.
+In the early days, `HTML` also had a bunch of elements that were intended for presentation purposes (e.g. the `<b>`, `<center>`, `<font>` and `<i>` elements). Once `CSS` came around all of the presentation elements were no longer needed and have, for the most part, been deprecated.
 
-Finally there were a couple of elements for layout (i.e. the `<div>` and `<span>` elements).
+Finally there were a couple of elements for layout (e.g. the `<div>` and `<span>` elements).
 
 `HTML5` added some new elements in order to extend the benefits of semantic naming to page layout. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The new elements describe the role of the content they contain. The `<div>` element still exists, but is used for non-semantic content divisions.
 
@@ -26,10 +26,10 @@ __Example:__
 		<h1>Lorem ipsum dolor sit amet</h1>
 	</header>
 	<section>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis necessitatibus totam nemo eum minus, beatae hic vitae cumque quibusdam dicta, neque esse optio cum repellat delectus voluptatibus deserunt praesentium id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis necessitatibus totam nemo.</p>
 	</section>
 	<footer>
-		<p>Consectetur unde esse sequi eveniet porro illo aperiam dolorem laboriosam delectus, molestiae dolores non possimus accusantium, perferendis beatae iusto.</p>
+		<p>Consectetur unde esse sequi eveniet porro illo aperiam dolorem laboriosam delectus.</p>
 	</footer>
 </article>
 ```
@@ -37,7 +37,7 @@ __Example:__
 You can find out more about the new elements and which old elements have been deprecated in the [Mozilla Developers Network (MDN) HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ### Media queries
-Media queries are chunks of `CSS` that are applied conditionally, based on some criteria. For responsive design the criteria being tested is usually the viewport width. So if a viewport is 1024px wide, all of the `CSS` held within the `@media` rule for viewports between 1012px and 1279px will be applied.
+Media queries are chunks of `CSS` that are applied conditionally, based on some criteria. For responsive design the criteria being tested is usually the viewport width. So if a viewport is `1024px` wide, all of the `CSS` held within the `@media` rule for viewports between `1012px` and `1279px` will be applied.
 
 This allows us to set up breakpoints where elements are formatted differently. For instance, an element that is designed to take up half of the screen on a desktop would have a `width: 50%;`, but on a mobile device it would be too small, so it becomes two full-width rows with a `width: 100%;`.
 
@@ -51,10 +51,11 @@ __Example:__
 		padding-right: 1.25%;
 	}
 }
+
 @media (min-width: 1280px) and (max-width: 1519px) {
 	.grid__unit--25 {
-	    padding-left: 1%;
-		padding-right: 1%;
+	    padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 ```
