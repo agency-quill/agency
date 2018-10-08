@@ -117,63 +117,120 @@ You can find out more about the `calc()` function on the [Mozilla Developers Net
 ## The responsive grid
 Our responsive grid can handle every viewport from a `320px` wide iPhone to a `1920px` wide desktop monitor. It breaks the horizontal space into 12, proportional (`8.333333%`), columns.
 
-The grid is made up of rows of grid units. The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
+The grid is made up of a wrapper element with a class of `grid`. This element can be any of the layout elements (e.g. `article`, `header`, `section`, `div`, etc.) filled with rows of grid units. The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
 
 __Example:__
 ```html
 <section class="grid">
 	<div class="grid__unit--25">
-		<picture class="picture align--left">
-			<img class="img" src="module-25.gif">
-		</picture>
+		...content...
 	</div>
 	<div class="grid__unit--25">
-		<picture class="picture align--left">
-			<img class="img" src="module-25.gif">
-		</picture>
+		...content...
 	</div>
 	<div class="grid__unit--25">
-		<picture class="picture align--left">
-			<img class="img" src="module-25.gif">
-		</picture>
+		...content...
 	</div>
 	<div class="grid__unit--25">
-		<picture class="picture align--left">
-			<img class="img" src="module-25.gif">
-		</picture>
+		...content...
+	</div>
+</section>
+```
+
+The grids can be nested in grid units, but you have to be careful because the layout of the page uses media queries based on the whole viewport width and not the width of the parent div. It is an area that we need to explore further, so feel free to experiment. Keep in mind that we may not have ready solutions if you run into any issues.
+
+__Example:__
+```html
+<section class="grid">
+	<div class="grid grid__unit--50">
+		<div class="grid__unit--50">
+			...content...
+		</div>
+		<div class="grid__unit--50">
+			...content...
+		</div>
+	</div>
+	<div class="grid grid__unit--50">
+		<div class="grid__unit--50">
+			...content...
+		</div>
+		<div class="grid__unit--50">
+			...content...
+		</div>
 	</div>
 </section>
 ```
 
 ### Grid units
-Because the responsive grid changes its layout depending on viewport width, naming the components is a little difficult. As mentioned above, a grid unit that covers half of the width of the screen on a desktop monitor will cover the full width on a portrait-oriented tablet. That means that a unit named a 'half' will actually be 'full' on some screens.
+The grid units are `div` elements with a class of `grin__unit--` followed by a number representing the percentage of horizontal space that unit fills (e.g. `100`).
 
-Since the majority of our users are on laptops/desktops, that is what we have based our naming convention on.
+Because the responsive grid changes its layout depending on viewport width, any class name will only apply in some cases. Since the majority of our users are on laptops/desktops, we have based our naming convention on that viewport width.
+
+The grid units have left and right padding that expands and contracts depending on the viewport size. They use the flex-box display type so that all units in a row will stretch to the height of the tallest grid unit.
 
 Below are the grid unit classes that are available. It is recommended that a row only use one type of grid unit (except for a couple of cases that are also listed below).
 
-The naming convention uses percentages (`100`) instead of the number of columns (`12col`) or english words (`full`).
-
 #### `grid__unit--100`
-This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width.
+This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width. You can only have one `grid__unit--100` per row. Adoy.
 
 #### `grid__unit--66`
-
+This is a two-third-width unit. It has to be used with a third-width (`grid__unit--33`) unit.
 
 #### `grid__unit--50`
-
+This is a half-width unit. It can be used with either another half-width unit or two quarter-width (`grid__unit--25`) units.
 
 #### `grid__unit--33`
-
+This is a third-width unit. It can be used with two other third-width units or one two-third-width unit.
 
 #### `grid__unit--25`
-
+This is a quarter-width unit. It can be used with three other quarter-width units or one quarter-width unit and a half-width unit.
 
 #### `grid__unit--12-5`
+This is an eighth-width unit. It can only be used other eighth-width units.
+
+### Layout patterns
+Layout patterns are the ways that elements scale, crop and wrap related to viewport size. The requirements of our site design require our grid to support two different patterns. The `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units have two layout patterns: static and card-based. The others are restricted to the static flow.
+
+The different patterns can exist on the same page, but not in the same row. It might even be best to separate different layout patterns into their own grids.
+
+#### Static pattern
+In the static pattern the grid units hold their proportional widths as much as possible. This is the default pattern.
+
+The half and quarter-width units maintain their ratios from `1012px` through `1885px`. Below `1012px` the half-width units wrap to two rows with units spanning the full width of the viewport. The quarter-width units wrap to two rows of units spanning half of the viewport.
+
+The third-width unit stays at three-up from `500px` through `1885px`. Below `500px` the third-width units wrap to three rows of units spanning the full width of the viewport.
+
+#### Card-based pattern
+The card-based pattern is to support design elements like jump-to links and product cards that need to keep a consistent shape. They favor wrapping over cropping. 
+
+Card-based units fill the available space. The smaller the viewport, the fewer will fit in a row, with the overflow wrapping to the row below. This pattern will create widows at some viewport sizes.
+
+Only the `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units can be rendered as card-based at this time. If there is a need to include any others we can accommodate it then.
+
+To make a grid unit follow the card-based add the class `webModCard` to the grid unit element.
+
+__Example:__
+```html
+<section class="grid">
+	<div class="grid__unit--25 webModCard">
+		...content...
+	</div>
+	<div class="grid__unit--25 webModCard">
+		...content...
+	</div>
+	<div class="grid__unit--25 webModCard">
+		...content...
+	</div>
+	<div class="grid__unit--25 webModCard">
+		...content...
+	</div>
+</section>
+```
+
+### WebMod grid units
 
 
-### Flow patterns
-There are two flow patterns.
+## Conclusion
 
 
 
