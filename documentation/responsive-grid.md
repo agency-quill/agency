@@ -1,9 +1,9 @@
-it's # Responsive grid
+# Responsive grid
 >_Responsive Web design is the approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation._ &ndash; [Responsive Web Design - What It Is And How To Use It](https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/)
 
-Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses `CSS` to render `HTML` differently depending on the user's device and behavior. In practice it is a little more complex.
+Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses `CSS` to render `HTML` differently depending on the user's device. It's a little more complicated in practice.
 
-The foundation of responsive design is the __responsive grid__ which uses a combination of cropping, scaling and wrapping to render web pages across different viewport sizes.
+The foundation of responsive design is the __responsive grid__, which uses a combination of cropping, scaling and wrapping to render web pages across different viewports.
 
 ## The underlying functionality
 There are some elements, units, properties and functions in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
@@ -115,12 +115,68 @@ width: calc(100% - 32px);
 You can find out more about the `calc()` function on the [Mozilla Developers Network (MDN) calc() page](https://developer.mozilla.org/en-US/docs/Web/CSS/calc).
 
 ## The responsive grid
+Our responsive grid can handle every viewport from a `320px` wide iPhone to a `1920px` wide desktop monitor. It breaks the horizontal space into 12, proportional (`8.333333%`), columns.
+
+The grid is made up of rows of grid units. The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
+
+__Example:__
+```html
+<section class="grid">
+	<div class="grid__unit--25">
+		<picture class="picture align--left">
+			<img class="img" src="module-25.gif">
+		</picture>
+	</div>
+	<div class="grid__unit--25">
+		<picture class="picture align--left">
+			<img class="img" src="module-25.gif">
+		</picture>
+	</div>
+	<div class="grid__unit--25">
+		<picture class="picture align--left">
+			<img class="img" src="module-25.gif">
+		</picture>
+	</div>
+	<div class="grid__unit--25">
+		<picture class="picture align--left">
+			<img class="img" src="module-25.gif">
+		</picture>
+	</div>
+</section>
+```
+
+### Grid units
+Because the responsive grid changes its layout depending on viewport width, naming the components is a little difficult. As mentioned above, a grid unit that covers half of the width of the screen on a desktop monitor will cover the full width on a portrait-oriented tablet. That means that a unit named a 'half' will actually be 'full' on some screens.
+
+Since the majority of our users are on laptops/desktops, that is what we have based our naming convention on.
+
+Below are the grid unit classes that are available. It is recommended that a row only use one type of grid unit (except for a couple of cases that are also listed below).
+
+The naming convention uses percentages (`100`) instead of the number of columns (`12col`) or english words (`full`).
+
+#### `grid__unit--100`
+This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width.
+
+#### `grid__unit--66`
+
+
+#### `grid__unit--50`
+
+
+#### `grid__unit--33`
+
+
+#### `grid__unit--25`
+
+
+#### `grid__unit--12-5`
+
+
+### Flow patterns
+There are two flow patterns.
+
 
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml)
 
 [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml)
-
-```html
-
-```
