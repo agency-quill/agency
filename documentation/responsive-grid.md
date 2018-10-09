@@ -13,7 +13,7 @@ There are some elements, units, properties and functions in `HTML5` and `CSS3` t
 
 Semantic elements have names that describe the content within them (e.g. the `<blockquote>`, `<h1>`, `<p>` and `<table>` elements). They help define the hierarchy of information.
 
-In the beginning `HTML` also had a bunch of elements that were intended for presentation purposes (e.g. the `<b>`, `<center>`, `<font>` and `<i>` elements). They have since been depricated because of `CSS`.
+In the beginning `HTML` also had a bunch of elements that were intended for presentation purposes (e.g. the `<b>`, `<center>`, `<font>` and `<i>` elements). They have since been deprecated in favor of `CSS`.
 
 Finally there were a couple of elements for layout (e.g. the `<div>` and `<span>` elements).
 
@@ -37,11 +37,11 @@ __Example:__
 You can find out more about the new elements and which old elements have been deprecated in the [Mozilla Developers Network (MDN) HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ### Media queries
-Media queries are `CSS` rules that are applied conditionally, based on some criteria. For responsive design the criteria being tested is the viewport width.
+Media queries are `CSS` rules that are applied conditionally, based on some criteria. For responsive design the criteria is the viewport width.
 
-So, if a viewport is `1024px` wide, the `CSS` in a media query based on a viewport width between `1012px` and `1279px` will be applied.
+If a viewport is `1024px` wide, the `CSS` in a media query specified for a viewport width that falls between `1012px` and `1279px` will be applied.
 
-This allows us to set up breakpoints where layouts match the width of the user's viewport. For instance, an element that is designed to take up half of the screen on a desktop would have a `width: 50%;`. On a mobile device spanning half of the page would make the element too small, so the layout changes to two rows with a `width: 100%;`.
+This allows us to set up breakpoints that align with the width of the user's viewport. For instance, an element that is designed to take up half of the screen on a desktop would have a `width: 50%;`. On a mobile device spanning half of the page would make the element too small, so the layout changes to two rows with a `width: 100%;`.
 
 Below is an example of managing the left and right padding for an element on a landscape-oriented tablet vs. a laptop.
 
@@ -56,7 +56,7 @@ __Example:__
 
 @media (min-width: 1280px) and (max-width: 1519px) {
 	.grid__unit--25 {
-	    padding-left: 10px;
+		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
@@ -84,7 +84,7 @@ font-size: 3.5vw;
 If you are interested, this Smashing Magazine article goes into the subject further: [Responsive and Fluid Typography with vh and vw Units](https://www.smashingmagazine.com/2016/05/fluid-typography/).
 
 ### The `<picture>` element
-The `<picture>` element is what the `HTML5` spec calls an art direction-based selector element. It allows the browser to choose the appropriate image to load based on specified criteria. It contains within it an `<img>` element and zero or more `<source>` elements.
+The `<picture>` element is what the `HTML5` spec calls an art direction-based selector element. It allows the browser to choose the appropriate image to load based on specified criteria. Inside a `<picture>` element is an `<img>` element and zero or more `<source>` elements.
 
 The `<source>` element has a `media` attribute that takes a media query as its value.
 
@@ -101,7 +101,7 @@ __Example:__
 You can find out more about the `<picture>` element in section [4.8.4 Images of the WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/images.html#images).
 
 ### The `calc()` function
-The `calc()` function is a way to use more than one unit type when specifying a measurement. For instance, if you want an element to fill the full width of its parent but want to accommodate a `16px` gutter on the left and right it's easy if you know the width of the parent. If you don't, or if the width of the parent changes you are out of luck.
+The `calc()` function is a way to use more than one unit type when specifying a measurement. It's easy to lay out an element full width with a `16px` gutter of the left and the right if you know the width of the element's parent. If you don't, or if the width of the parent is proportional and changes based on viewport size you are out of luck.
 
 That is why the `calc()` function exists. With it you can say: "make this element 100% of its parent then subtract `32px`," combining fluid and static measurements.
 
@@ -117,7 +117,7 @@ You can find out more about the `calc()` function on the [Mozilla Developers Net
 ## The responsive grid
 Our responsive grid can handle every viewport from a `320px` wide iPhone to a `1920px` wide desktop monitor. It breaks the horizontal space into 12, proportional (`8.333333%`), columns.
 
-The grid is made up of a wrapper element with a class of `grid`. This element can be any of the layout elements (e.g. `article`, `header`, `section`, `div`, etc.) filled with rows of grid units. The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
+The grid is made up of a wrapper element with a class of `grid` filled with rows of grid units. The `grid` class can be added to any of the layout elements (e.g. `article`, `header`, `section`, `div`, etc.). The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
 
 __Example:__
 ```html
@@ -137,7 +137,7 @@ __Example:__
 </section>
 ```
 
-The grids can be nested in grid units, but you have to be careful because the layout of the page uses media queries based on the whole viewport width and not the width of the parent div. It is an area that we need to explore further, so feel free to experiment. Keep in mind that we may not have ready solutions if you run into any issues.
+Grids can also be nested. It is an area that we need to explore further, so feel free to experiment. Keep in mind that we may not have ready solutions if you run into any issues.
 
 __Example:__
 ```html
@@ -162,52 +162,52 @@ __Example:__
 ```
 
 ### Grid units
-The grid units are `div` elements with a class of `grin__unit--` followed by a number representing the percentage of horizontal space that unit fills (e.g. `100`).
+The grid units are `div` elements with a class of `grin__unit--` _('grid' followed by 2 underscores, followed by 'unit', followed by 2 dashes)_ followed by a number representing the percentage of horizontal space that unit fills (e.g. `grin__unit--100`).
 
-Because the responsive grid changes its layout depending on viewport width, any class name will only apply in some cases. Since the majority of our users are on laptops/desktops, we have based our naming convention on that viewport width.
+Because the responsive grid changes its layout depending on viewport size, class names based on dimensions will only apply some of the time. Since the majority of our users are on laptops/desktops, we have based our naming convention on the dimensions of that viewport size.
 
-The grid units have left and right padding that expands and contracts depending on the viewport size. They use the flex-box display type so that all units in a row will stretch to the height of the tallest grid unit.
+Grid units have left and right padding that expands and contracts with viewport size. They use the flex-box display type so that all units in a row will stretch to the height of the tallest grid unit.
 
-Below are the grid unit classes that are available. It is recommended that a row only use one type of grid unit (except for a couple of cases that are also listed below).
+Below are the available grid unit classes. It is recommended that a row only use one type of grid unit (except for a couple of cases that are also listed below).
 
 #### `grid__unit--100`
 This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width. You can only have one `grid__unit--100` per row. Adoy.
 
 #### `grid__unit--66`
-This is a two-third-width unit. It has to be used with a third-width (`grid__unit--33`) unit.
+This is a two-third-width unit. It needs to be used with a third-width (`grid__unit--33`) unit.
 
 #### `grid__unit--50`
 This is a half-width unit. It can be used with either another half-width unit or two quarter-width (`grid__unit--25`) units.
 
 #### `grid__unit--33`
-This is a third-width unit. It can be used with two other third-width units or one two-third-width unit.
+This is a third-width unit. It can be used with two other third-width units or one two-third-width (`grid__unit--66`) unit.
 
 #### `grid__unit--25`
-This is a quarter-width unit. It can be used with three other quarter-width units or one quarter-width unit and a half-width unit.
+This is a quarter-width unit. It can be used with three other quarter-width units or one quarter-width unit and a half-width (`grid__unit--50`) unit.
 
 #### `grid__unit--12-5`
 This is an eighth-width unit. It can only be used other eighth-width units.
 
 ### Layout patterns
-Layout patterns are the ways that elements scale, crop and wrap related to viewport size. The requirements of our site design require our grid to support two different patterns. The `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units have two layout patterns: static and card-based. The others are restricted to the static flow.
+Layout patterns are the ways that elements scale, crop and wrap related to viewport size. If you would like more information, Google has a nice intro to [Responsive Web Design Patterns](https://developers.google.com/web/fundamentals/design-and-ux/responsive/patterns). The requirements of our site require our grid to support two different patterns. The `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units have two layout patterns: static and card-based. The others are restricted to the static flow.
 
-The different patterns can exist on the same page, but not in the same row. It might even be best to separate different layout patterns into their own grids.
+The different patterns can exist on the same page, but not in the same row. It might be best to separate different layout patterns into their own grids.
 
 #### Static pattern
 In the static pattern the grid units hold their proportional widths as much as possible. This is the default pattern.
 
-The half and quarter-width units maintain their ratios from `1012px` through `1885px`. Below `1012px` the half-width units wrap to two rows with units spanning the full width of the viewport. The quarter-width units wrap to two rows of units spanning half of the viewport.
+Below `1012px` the half-width units wrap to two rows of full-width units. The quarter-width units wrap to two rows of two units. For view ports `1012px` and up the half and quarter-width units maintain their two-up and four-up layouts. 
 
-The third-width unit stays at three-up from `500px` through `1885px`. Below `500px` the third-width units wrap to three rows of units spanning the full width of the viewport.
+Below `500px` the third-width units wrap to three rows of full-width units. For view ports `500px` and up the third-width units are three-up.
 
 #### Card-based pattern
-The card-based pattern is to support design elements like jump-to links and product cards that need to keep a consistent shape. They favor wrapping over cropping. 
+The card-based pattern is to support design elements like jump-to links and product cards that need to keep a consistent aspect ratio. They favor wrapping over cropping. 
 
-Card-based units fill the available space. The smaller the viewport, the fewer will fit in a row, with the overflow wrapping to the row below. This pattern will create widows at some viewport sizes.
+Rows of card-based units fill the available horizontal space. The smaller the viewport, the fewer will fit in a row, with the overflow wrapping to the row below. This inevitably leads to widows, or rows with a single unit in them, for some viewport sizes.
 
-Only the `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units can be rendered as card-based at this time. If there is a need to include any others we can accommodate it then.
+Only the `grid__unit--33`, `grid__unit--25` and `grid__unit--12-5` units can be rendered as card-based at this time.
 
-To make a grid unit follow the card-based add the class `webModCard` to the grid unit element.
+To make a grid unit follow the card-based add the `webModCard` class to the grid unit element.
 
 __Example:__
 ```html
