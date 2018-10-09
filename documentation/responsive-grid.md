@@ -227,12 +227,14 @@ __Example:__
 </section>
 ```
 
-### WebMod grid units
+### Image-based grid units
+Up to this point we have been talking about the grid and grid units abstractly. When it comes to units that contain images, like web ads or banners, there is another level of consideration. These are units that follow the static pattern. They favor cropping over wrapping.
+
+#### Image sizes and cropping
 
 
 ## Conclusion
-
-
+Working with a responsive grid presents a fundamental shift in the way we think about page layout.
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml)
 
