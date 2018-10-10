@@ -162,7 +162,7 @@ __Example:__
 ```
 
 ### Grid units
-The grid units are `div` elements with a class of `grin__unit--` _('grid' followed by 2 underscores, followed by 'unit', followed by 2 dashes)_ followed by a number representing the percentage of horizontal space that unit fills (e.g. `grin__unit--100`).
+The grid units are `div` elements with a class of `grin__unit--` ('grid' followed by 2 underscores, followed by 'unit', followed by 2 dashes) followed by a number representing the percentage of horizontal space that unit fills (e.g. `grin__unit--100`).
 
 Because the responsive grid changes its layout depending on viewport size, class names based on dimensions will only apply some of the time. Since the majority of our users are on laptops/desktops, we have based our naming convention on the dimensions of that viewport size.
 
@@ -194,10 +194,12 @@ Layout patterns are the ways that elements scale, crop and wrap related to viewp
 The different patterns can exist on the same page, but not in the same row. It might be best to separate different layout patterns into their own grids.
 
 #### Static pattern
-In the static pattern the grid units hold their proportional widths as much as possible. This is the default pattern.
+In the static pattern the grid units hold their proportional widths as much as possible. This is the default pattern, and is mandatory for full-width image-based grid units like web ads or banners.
 
+##### Half and quarter-width units
 Below `1012px` the half-width units wrap to two rows of full-width units. The quarter-width units wrap to two rows of two units. For view ports `1012px` and up the half and quarter-width units maintain their two-up and four-up layouts. 
 
+##### Third-width units
 Below `500px` the third-width units wrap to three rows of full-width units. For view ports `500px` and up the third-width units are three-up.
 
 #### Card-based pattern
@@ -228,13 +230,20 @@ __Example:__
 ```
 
 ### Image-based grid units
-Up to this point we have been talking about the grid and grid units abstractly. When it comes to units that contain images, like web ads or banners, there is another level of consideration. These are units that follow the static pattern. They favor cropping over wrapping.
+When it comes to units that contain full-width images, like web ads or banners, because they favor cropping over wrapping, there is another level of consideration.
+
+Images that are part of blocks of `HTML`, like product images in product cards, because they are not cropped.
 
 #### Image sizes and cropping
+Each grid unit has a set width to which images need to be built. Height is not set in stone and can be adjusted to fit the design. Because cropping is used 
 
+For more information see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
 
-## Conclusion
-Working with a responsive grid presents a fundamental shift in the way we think about page layout.
+## How to design for a responsive grid
+Working with a responsive grid presents a fundamental shift in the way we think about page layout. Layouts need to be viewed in terms of how the grid will render them on all of the possible viewports.
+
+### Think in terms of blocks of full-width grid units
+
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml)
 

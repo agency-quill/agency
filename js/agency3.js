@@ -2,21 +2,21 @@ function accordionSet(accordion){
 	accordion.each(function(index){
 		var $accordionBody = $(this).find('.accordionList'),
 			$accordionButton = $(this).find('[data-accordion-button-open]');
-		if($accordionBody.attr('data-accordion-open') === 'yes'){
-			$accordionBody.css('height', 'auto').attr('data-accordion-height-opened', $accordionBody.height());
-			if(!$accordionButton.attr('data-accordion-button-close')){
-				$accordionButton.attr('data-accordion-button-close', 'close -');
-			}
-			$accordionButton.text($accordionButton.attr('data-accordion-button-close'));
-		} else {
+		if($accordionBody.attr('data-accordion-open') !== 'yes'){
 			if(!$accordionBody.attr('data-accordion-height-closed')){
 				$accordionBody.attr('data-accordion-height-closed', '0');
 			}
 			$accordionBody.css('height', $accordionBody.attr('data-accordion-height-closed'));
 			if(!$accordionButton.attr('data-accordion-button-open')){
-				$accordionButton.attr('data-accordion-button-open', 'open +');
+				$accordionButton.attr('data-accordion-button-open', 'Open');
 			}
 			$accordionButton.text($accordionButton.attr('data-accordion-button-open'));
+		} else {
+			$accordionBody.attr('data-accordion-height-opened', $accordionBody.height());
+			if(!$accordionButton.attr('data-accordion-button-close')){
+				$accordionButton.attr('data-accordion-button-close', 'Close');
+			}
+			$accordionButton.text($accordionButton.attr('data-accordion-button-close'));
 		}
 	});
 }

@@ -473,7 +473,7 @@
   width: 100%;
 }
 #agency .accordionList, .agency .accordionList {
-  height: 488px;
+  height: auto;
 }
 #agency .article, #agency .footer, #agency .header, #agency .section, #agency .width--1205, #agency.width--1205, #agency .width--960, #agency.width--960, .agency .article, .agency .footer, .agency .header, .agency .section, .agency .width--1205, .agency.width--1205, .agency .width--960, .agency.width--960 {
   margin-left: auto;
