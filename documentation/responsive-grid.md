@@ -1,12 +1,14 @@
 # Responsive grid
 
-## TL;DR
+##The short version
 `CSS` styles and `HTML` code supporting a responsive design grid have been developed. This code supports web assets that work on all devices from mobile phones to large desktop monitors. Below are two examples of the responsive grid. 
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml)
+
 This is an empty grid that demonstrates the relationships of the different grid units.
 
 [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml)
+
 This grid demonstrates the way web ad, or banner, images are handled within the responsive grid.
 
 ## Responsive web design

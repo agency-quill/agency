@@ -492,6 +492,11 @@
 				}
 			}
 
+			& .plp-price {
+			    font-size: $px * 2.4;
+			    font-weight: 300;
+			}
+
 			&Paper {
 				align-items: center;
 				display: flex;

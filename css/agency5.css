@@ -708,6 +708,11 @@
   align-self: flex-start;
   width: 100%;
 }
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  #agency .img, .agency .img {
+    width: auto;
+  }
+}
 #agency .img__flag--coupon, .agency .img__flag--coupon {
   position: absolute;
   width: 90%;
@@ -1758,6 +1763,10 @@
 }
 #agency .td--qpPoints__span--sub, #agency .th--qpPoints__span--sub, .agency .td--qpPoints__span--sub, .agency .th--qpPoints__span--sub {
   font-size: .625em;
+}
+#agency .td--qpPoints .plp-price, #agency .th--qpPoints .plp-price, .agency .td--qpPoints .plp-price, .agency .th--qpPoints .plp-price {
+  font-size: 24px;
+  font-weight: 300;
 }
 #agency .td--qpPointsPaper, #agency .th--qpPointsPaper, .agency .td--qpPointsPaper, .agency .th--qpPointsPaper {
   align-items: center;
