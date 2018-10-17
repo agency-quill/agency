@@ -70,7 +70,7 @@ function buildCustomPrint(arr) {
             out += "<div class=\"grid__unit--25\"><div class=\"align--center\">" + "<a class=\"a--noHighlight\" href=\"" + arr[i].productUrl + "\"><picture class=\"align--center\"><img src=\"" + arr[i].productImage +"\" alt=\"" + arr[i].productName + "\" class=\"webModImg__webModCard--25 margin__bottom--25\"></picture>" + "<h4 class=\"h4 margin__bottom--0\">" + arr[i].productName + "</h4>" + "<p class=\"p--small\">" + arr[i].productPriceStart + "</p></a></div></div>";
             }
         else{
-                out += "<div class=\"grid__unit--25\"><div class=\"align--center\">" + "<a class=\"a--noHighlight\" href=\"" + arr[i].productUrl + "\"><picture class=\"align--center\"><img src=\"" + arr[i].productImage +"\" alt=\"" + arr[i].productName + "\" class=\"img margin__bottom--25\"></picture>" + "<h4 class=\"h4 margin__bottom--50\">" + arr[i].productName + "</h4></a></div></div>";
+                out += "<div class=\"grid__unit--25\"><div class=\"align--center\">" + "<a class=\"a--noHighlight\" href=\"" + arr[i].productUrl + "\"><picture class=\"align--center\"><img src=\"" + arr[i].productImage +"\" alt=\"" + arr[i].productName + "\" class=\"webModImg__webModCard--25 margin__bottom--25\"></picture>" + "<h4 class=\"h4 margin__bottom--50\">" + arr[i].productName + "</h4></a></div></div>";
             }
     }
     document.getElementById("pList").innerHTML = out;
