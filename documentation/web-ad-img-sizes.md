@@ -13,12 +13,12 @@
 
 ## Image width and usable space
 | grid unit 			| desktop 	| usable	| mobile	| usable	|
-| :---					| :---:		| :---:		| :---:		| :---:		|		
+| :---					| :---:		| :---:		| :---:		| :---:		|
 | grid__unit--12-5		| 165		| -			| -			| -			|
 | grid__unit--25		| 470		| 302		| - 		| - 		|
 | grid__unit--25.card	| 355		| - 		| -			| -			|
 | grid__unit--33		| 600		| 393		| 320		| 228		|
-| grid__unit--33.card	| 			| 			| 			| 			|
+| grid__unit--33.card	| n/a		| n/a		| n/a		| n/a		|
 | grid__unit--50		| 1125		| 726		| -			| -			|
-| grid__unit--66		| 			| 			| 			| 			|
-| grid__unit--100		| 1858		| 1246		| -			| -			|		
+| grid__unit--66		| n/a		| n/a		| n/a		| n/a		|
+| grid__unit--100		| 1858		| 1246		| -			| -			|

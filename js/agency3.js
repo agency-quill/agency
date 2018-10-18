@@ -795,7 +795,7 @@ function webModCoupon(mod, obj){
 		}
 		obj.div = '<div class="div--coupon ' + obj.class + '" id="' + obj.id + '" style="' + obj.css + '">';
 		obj.align = 'center';
-		obj.class = 'img';
+		obj.card = '1';
 		obj.css = '';
 		obj.events = '';
 		obj.id = '';
@@ -1003,7 +1003,6 @@ function webModMap(mod, obj){
 		}
 	}
 	obj.mapAreas += obj.default ? obj.default : '';
-	// obj.usemap = 'webModMap-' + mod;
 	return render(template.map, obj);
 }
 function webModPicture(obj){
@@ -1019,9 +1018,6 @@ function webModPicture(obj){
 			case '66':
 				obj.media += size.tabPort;
 				break;
-			case '75':
-				obj.media += size.tabPort;
-				break;
 			case '100':
 				obj.media += size.tabPort;
 				break;
@@ -1032,8 +1028,8 @@ function webModPicture(obj){
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
+	console.log('obj.card: '+obj.card);
 	obj.class += obj.card ? '__webModCard--' : '--';
-	// obj.class += obj.span ? '__fullSpan--' : '--';
 	obj.class += obj.unit;
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
