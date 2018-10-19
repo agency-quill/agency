@@ -11,21 +11,21 @@ We have developed `CSS` and `HTML` for a responsive design grid. The code suppor
 
 ---
 
-Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses `CSS` to render `HTML` differently depending on the user's device. It's a little more complicated in practice.
+Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses `CSS` to render `HTML` differently depending on the user's device. In practice it's a little more complicated, but `CSS` and `HTML` have been evolving to accommodate it.
 
-The foundation of responsive design is the __responsive grid__, which uses a combination of cropping, scaling and wrapping to render web pages across different viewports.
+The foundation of responsive design is the __responsive grid__, which uses a combination of cropping, scaling and wrapping to render web pages differently across viewports.
 
 ## The underlying functionality
-There are some elements, units, properties and functions in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
+There are some developments in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
 
 ### Semantic `HTML`
-`HTML` is made up of different types of elements. (e.g. semantic, presentation and layout).
+`HTML` is made up of different types of elements (e.g. semantic, presentation and layout).
 
-Semantic elements have names that describe the content within them (e.g. `<blockquote>`, `<h1>`, `<p>` and `<table>`). They tell the browser how to treat the content within them visually and in the hierarchy of information.
+Semantic elements have names that describe the content within them (e.g. `<blockquote>`, `<h1>`, `<p>`, `<table>`, etc.). They tell the browser how to treat the content within them visually and in the hierarchy of information.
 
-Presentation elements were intended purely for presentation purposes (e.g. `<b>`, `<center>`, `<font>` and `<i>`). They have since been deprecated in favor of `CSS` and semantic elements (e.g. `<em>` and `<strong>`).
+Presentation elements were intended purely for presentation purposes (e.g. `<b>`, `<center>`, `<font>`, `<i>`, etc.). They have since been deprecated in favor of `CSS` and semantic elements (e.g. `<em>`, `<strong>`, etc.).
 
-Layout elements are for breaking the `HTML` up into visual bocks for layout or applying targeted `CSS` (e.g. `<div>` and `<span>`).
+Layout elements are for breaking the `HTML` up into visual bocks for layout or applying targeted `CSS` (e.g. `<div>`, `<span>`, etc.).
 
 `HTML5` added some new elements in order to extend the benefits of semantic naming to page layout. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The `<div>` element still exists, but is used for non-semantic content divisions.
 
@@ -188,7 +188,7 @@ Grid units use the flex-box display type so that all units in a row will stretch
 Below are the available grid unit classes. It is recommended that a row only use one type of grid unit (except for a couple of cases).
 
 #### `grid__unit--100`
-This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width. You can only have one `grid__unit--100` per row. Adoy. :)
+This a a full-width unit. From mobile to desktop this unit fills 100% of the screen width. You can only have one `grid__unit--100` per row, adoy. :)
 
 #### `grid__unit--66`
 This is a two-third-width unit. It must be used with a third-width (`grid__unit--33`) unit.
