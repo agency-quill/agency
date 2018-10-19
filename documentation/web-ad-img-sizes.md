@@ -1,4 +1,6 @@
 # Web ad image sizes
+The __Web ad by viewport__ and __Image width and usable space__ tables define the width of and usable space within the web ad/banners of each responsive grid units.
+
 The __Web ad by viewport__ table lists all of the web ad/banner image size(s) for each grid unit. The numbers in parenthesis mark the space within the image that can contain text or critical visual elements. For example, a `grid__unit--100` uses a `966px`-wide image for viewport widths of `0px` - `1011px` and a `1858px`-wide image for `1012px` - `1885px`. From `0px` - `499px` the `966px`-wide image is cropped to `598px`; from `500px` - `765px` the `966px`-wide image is cropped to `728px`; and from `766px` - `1011px` the `966px`-wide image is not cropped. So, for viewport widths of `0px` - `1011px`, text or critical visual elements should be kept within `598px`.
 
 The __Image width and usable space__ table is a detail of image size and usable space, in pixels, by grid unit. The numbers in the desktop column are the pixel widths of the images used for desktop sized viewports. The numbers in the mobile column are the pixel widths of the images used for mobile sized viewports if needed.
