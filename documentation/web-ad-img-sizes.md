@@ -11,8 +11,8 @@ The __Image width and usable space__ table is a detail of image size and usable 
 | mobile portrait: 0 - 499			| 165 				| 470 (302)			| 355 					| 600				| n/a					| 1125 (726)		| n/a				| 966 (598)			|
 | mobile landscape: 500 - 765		| 165 				| 470 (355)			| 355 					| 320 (228)			| n/a					| 1125 (726)		| n/a				| 966 (728)			|
 | tablet portrait: 766 - 1011		| 165 				| 470				| 355 					| 320 				| n/a					| 1125				| n/a				| 966				|
-| tablet landscape: 1012 - 1279		| 165 				| 470 (302)			| 355 					| 600 (393)			| n/a					| 1125 (749)		| n/a				| 1858 (124)		|
-| laptop: 1280 - 1519				| 165 				| 470 (388)			| 355 					| 600 (500)			| n/a					| 1125 (944)		| n/a				| 1858 (156)		|
+| tablet landscape: 1012 - 1279		| 165 				| 470 (302)			| 355 					| 600 (393)			| n/a					| 1125 (749)		| n/a				| 1858 (1246)		|
+| laptop: 1280 - 1519				| 165 				| 470 (388)			| 355 					| 600 (500)			| n/a					| 1125 (944)		| n/a				| 1858 (1560)		|
 | desktop: 1520 - 1885				| 165 				| 470				| 355 					| 600 				| n/a					| 1125				| n/a				| 1858				|
 
 ## Image width and usable space
