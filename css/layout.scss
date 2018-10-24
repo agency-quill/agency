@@ -199,6 +199,26 @@
 				@media #{$tabLandMin} {
 					width: $column * 6;
 				}
+
+				&.webModCard {
+					width: $column * 12;
+					
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						width: $column * 8;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						width: $column * 6;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						width: $column * 4.8;
+					}
+
+					@media #{$desktopMin} {
+						width: $column * 4;
+					}
+				}
 			}
 
 			&--66 {
