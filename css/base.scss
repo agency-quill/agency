@@ -212,7 +212,7 @@
 		display: block;
 	}
 
-	.h1, .h2, .h2--small, .h3, .h4, .h5 {
+	.h1, .h2, .h2--small, .h3, .h4, .h5, .hr {
 		
 		@media #{$mobLandMax} {
 			margin-bottom: $pct * 1;
