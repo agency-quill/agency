@@ -1,9 +1,9 @@
 # Responsive grid
-We have developed `CSS` and `HTML` for a responsive design grid. The code supports web assets that work on all devices from mobile phones to large desktop monitors using a single block of code. Below are two examples of the responsive grid to play with. 
+Welcome to the world of responsive design!  You are now the proud owner of a reposnsive design grid. Your new responsive grid is made up of HTML and CSS code that works seamlessly on devices from mobile phones to large desktop monitors without the need to write HTML for each. That's right!  You only need to use a single block of code. For a quick introduction to the responsive grid, check out the two examples below. 
 
-[Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout.
+[Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout relationships.
 
-[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images are handled within the responsive grid.
+[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images work within the responsive grid. Review the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc for specs on image and cropping sizes.
 
 ---
 
@@ -11,25 +11,25 @@ We have developed `CSS` and `HTML` for a responsive design grid. The code suppor
 
 ---
 
-Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses `CSS` to render `HTML` differently depending on the user's device. In practice it's a little more complicated, but `CSS` and `HTML` have been evolving to accommodate it.
+Ethan Marcotte introduced the concept of responsive design in his 2010 _A List Apart_ article [Responsive Web Design](https://alistapart.com/article/responsive-web-design). The idea is pretty simple. Responsive design uses CSS to render HTML differently depending on the user's device. In practice it's a little more complicated, but CSS and HTML have been evolving to accommodate it.
 
 The foundation of responsive design is the __responsive grid__, which uses a combination of cropping, scaling and wrapping to render web pages differently across viewports.
 
 ## The underlying functionality
-There are some developments in `HTML5` and `CSS3` that make responsive grids possible. Below are a few of the more important ones.
+There are some developments in HTML and CSS that make responsive grids possible. Below are a few of the more important ones.
 
-### Semantic `HTML`
-`HTML` is made up of different types of elements (e.g. semantic, presentation and layout).
+### Semantic HTML
+HTML is made up of different types of elements (e.g. semantic, presentation and layout).
 
-Semantic elements have names that describe the content within them (e.g. `<blockquote>`, `<h1>`, `<p>`, `<table>`, etc.). They tell the browser how to treat the content within them visually and in the hierarchy of information.
+Semantic elements have names that describe the content within them (e.g. `<blockquote>`, `<h1>`, `<p>`, `<table>`, etc.). They tell the browser the nature of the content within them.
 
-Presentation elements were intended purely for presentation purposes (e.g. `<b>`, `<center>`, `<font>`, `<i>`, etc.). They have since been deprecated in favor of `CSS` and semantic elements (e.g. `<em>`, `<strong>`, etc.).
+Presentation elements were intended for presentation purposes (e.g. `<b>`, `<center>`, `<font>`, `<i>`, etc.). They have since been deprecated (are no longer supported) in favor of CSS and new semantic elements (e.g. `<em>`, `<strong>`, etc.).
 
-Layout elements are for breaking the `HTML` up into visual bocks for layout or applying targeted `CSS` (e.g. `<div>`, `<span>`, etc.).
+Layout elements are for breaking the HTML up into visual bocks for layout or applying targeted CSS (e.g. `<div>`, `<span>`, etc.).
 
-`HTML5` added some new elements in order to extend the benefits of semantic naming to page layout. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The `<div>` element still exists, but is used for non-semantic content divisions.
+HTML5 added some new elements in order to extend the benefits of semantic naming to page layout and presentation. Generic `<div>` elements have been replaced with new, descriptive, elements like `<header>`, `<section>` and `<footer>`. The `<div>` element still exists, but is used for non-semantic content divisions.
 
-__Example:__
+##### Example
 ```html
 <article>
 	<header>
@@ -50,15 +50,15 @@ __Example:__
 You can find out more about the new elements and which old elements have been deprecated in the [Mozilla Developers Network (MDN) HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ### Media queries
-Media queries are `CSS` rules that are applied conditionally, based on some criteria. For responsive design the criteria we use is the viewport width.
+Media queries are CSS rules that are applied conditionally, based on some criteria. For responsive design the criteria we use is the viewport width.
 
-If a viewport is `1024px` wide, the `CSS` in a media query specified for a viewport width that falls between `1012px` and `1279px` will be applied.
+If a viewport is 1024px wide, the CSS in a media query specified for a viewport width that falls between 1012px and 1279px will be applied.
 
 This allows our layout to change depending on the width of the user's viewport. For instance, an element that is designed to take up half of the screen on a desktop would have a `width: 50%;`. On a mobile device spanning half of the page would make the element too small, so the layout changes to two rows each with a `width: 100%;`.
 
 Below is an example of managing the left and right padding for an element on a landscape-oriented tablet vs. a laptop.
 
-__Example:__
+##### Example
 ```css 
 @media (min-width: 1012px) and (max-width: 1279px) {
 	.grid__unit--25 {
@@ -78,7 +78,7 @@ __Example:__
 You can find out more about media queries on the [Mozilla Developers Network (MDN) Using media queries page](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
 
 ### Responsive typography
-`CSS3` has added some new typography units to support responsive design. Along with the `px`, `em` and `%` units we now have the `vh`, `vw`, `vmin` and `vmax` units.
+CSS3 has added some new typography units to support responsive design. Along with the px, `em` and `%` units we now have the `vh`, `vw`, `vmin` and `vmax` units.
 
 These units allow us to set element sizes relative to the dimensions of the viewport. This is particularly handy for font sizes since the `%` unit for `font-size` is relative to the `font-size` of its parent, not the parent's width or height.
 
@@ -89,7 +89,7 @@ The units are defined as:
 + `vmin` The smaller of `vw` and `vh`
 + `vmax` The larger of `vw` and `vh`
 
-__Example:__
+##### Example
 ```css 
 font-size: 3.5vw;
 ```
@@ -97,14 +97,14 @@ font-size: 3.5vw;
 If you are interested, [Responsive and Fluid Typography with vh and vw Units](https://www.smashingmagazine.com/2016/05/fluid-typography/) from [Smashing Magazine](https://www.smashingmagazine.com) goes into the subject further.
 
 ### The `<picture>` element
-The `<picture>` element is what the `HTML5` spec calls an [art direction](https://html.spec.whatwg.org/multipage/images.html#art-direction)-based selector element. It allows the browser to choose the appropriate image to load based on specified criteria. Inside a `<picture>` element is an `<img>` element and zero or more `<source>` elements.
+The `<picture>` element is what the HTML5 spec calls an [art direction](https://html.spec.whatwg.org/multipage/images.html#art-direction)-based selector element. It allows the browser to choose the appropriate image to load based on specified criteria. Inside a `<picture>` element is an `<img>` element and zero or more `<source>` elements.
 
 The `<source>` element has a `media` attribute that takes a media query as its value.
 
-The example below renders `small-image.jpg` if the viewport width is under `1012px` and `large-image.jpg` if it is `1012px` or over.
+The example below renders `small-image.jpg` if the viewport width is under 1012px and `large-image.jpg` if it is 1012px or over.
 
-__Example:__
-```css 
+##### Example
+```html 
 <picture>
 	<source media="(max-width: 1011px)" srcset="small-image.jpg">
 	<img src="large-image.jpg">
@@ -116,13 +116,13 @@ You can find out more about the `<picture>` element in section [4.8.4 Images of 
 ### The `calc()` function
 The `calc()` function is a way to use more than one unit type when specifying a measurement.
 
-It's easy to lay out an element full width with a `16px` gutter on the left and the right if you know the width of the element's parent. If you don't, or if the width of the parent is proportional, and changes based on viewport size, you are out of luck.
+It's easy to lay out an element full width with a 16px gutter on the left and the right if you know the width of the element's parent. If you don't, or if the width of the parent is proportional, and changes based on viewport size, you are out of luck.
 
-That is why the `calc()` function exists. With it you can say: "make this element 100% of its parent then subtract `32px`," combining fluid and static measurements.
+That is why the `calc()` function exists. With it you can say: "make this element 100% of its parent then subtract 32px," combining fluid and static measurements.
 
 With the `calc()` function the problem above would be resolved by the example below.
 
-__Example:__
+##### Example
 ```css 
 width: calc(100% - 32px);
 ```
@@ -130,11 +130,11 @@ width: calc(100% - 32px);
 You can find out more about the `calc()` function on the [Mozilla Developers Network (MDN) calc() page](https://developer.mozilla.org/en-US/docs/Web/CSS/calc).
 
 ## The responsive grid
-Our responsive grid can handle every viewport from a `320px` wide iPhone to a `1920px` wide desktop monitor. It breaks the horizontal space into 12, proportional (`8.333333%`), columns.
+Our responsive grid can handle every viewport from a 320px wide iPhone to a 1920px wide desktop monitor. It breaks the horizontal space into 12, proportional (8.333333%), columns.
 
-The grid is made up of a wrapper element with a class of `grid` filled with rows of grid units. The `grid` class can be added to any of the layout elements (e.g. `article`, `header`, `section`, `div`, etc.). The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
+The grid is made up of a wrapper element with a class of `grid` filled with rows of grid units. The `grid` class can be added to any of the layout elements (e.g. `<article>`, `<header>`, `<section>`, `<div>`, etc.). The grid units divide the row proportionally (e.g. four quarters, two halves, etc.).
 
-__Example:__
+##### Example
 ```html
 <section class="grid">
 	<div class="grid__unit--25">
@@ -154,7 +154,7 @@ __Example:__
 
 Grids can also be nested. It is functionality that we need to explore further, so feel free to experiment. Keep in mind that we may not have ready solutions if you run into any issues.
 
-__Example:__
+##### Example
 ```html
 <section class="grid">
 	<div class="grid grid__unit--50">
@@ -177,7 +177,7 @@ __Example:__
 ```
 
 ### Grid units
-The grid units are `div` elements with a class of `grin__unit--` ('grid' followed by 2 underscores, followed by 'unit', followed by 2 dashes) followed by a number representing the percentage of horizontal space that unit fills (e.g. `grin__unit--100`).
+The grid units are `<div>` elements with a class of `grin__unit--` ('grid' followed by 2 underscores, followed by 'unit', followed by 2 dashes) followed by a number representing the percentage of horizontal space that unit fills (e.g. `grin__unit--100`).
 
 Because the responsive grid changes its layout depending on viewport size, class names based on dimensions will only apply some of the time. Since the majority of our users are on laptops/desktops, we have based our naming convention on the dimensions of that viewport size.
 
@@ -208,7 +208,7 @@ This is an eighth-width unit. It can only be used other eighth-width units.
 #### .webModInner
 Inside the grid unit element is an element with a class of `webModInner` that serves as the wrapper for any content within it. The `webModInner` class fills all of the horizontal and vertical space.
 
-__Example:__
+##### Example
 ```html
 <div class="grid__unit--50">
 	<div class="webModInner">
@@ -228,10 +228,10 @@ The different patterns can exist on the same page, but not in the same row.
 In the static pattern the grid units hold their proportional widths as much as possible. It relies on cropping over wrapping to maintain the layout. This is the default pattern. 
 
 ##### Half and quarter-width units
-Below `1012px` the half-width units wrap to two rows of full-width units. The quarter-width units wrap to two rows of half-width units. For view ports `1012px` and up the half and quarter-width units maintain their two-up and four-up layouts. 
+Below 1012px the half-width units wrap to two rows of full-width units. The quarter-width units wrap to two rows of half-width units. For viewports 1012px and up the half and quarter-width units maintain their two-up and four-up layouts. 
 
 ##### Third-width units
-Below `500px` the third-width units wrap to three rows of full-width units. For view ports `500px` and up the third-width units are three-up.
+Below 500px the third-width units wrap to three rows of full-width units. For viewports 500px and up the third-width units are three-up.
 
 #### Card-based pattern
 The card-based pattern is to support design elements like jump-to links and product cards that need to keep a consistent aspect ratio. They favor wrapping over cropping. 
@@ -242,7 +242,7 @@ Only the `grid__unit--12-5`, `grid__unit--25` and `grid__unit--33` units can be 
 
 To make a grid unit follow the card-based pattern, add the `webModCard` class to the grid unit element.
 
-__Example:__
+##### Example
 ```html
 <section class="grid">
 	<div class="grid__unit--25 webModCard">
