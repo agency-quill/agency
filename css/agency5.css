@@ -603,12 +603,12 @@
   display: block;
 }
 @media (max-width: 765px) {
-  #agency .h1, #agency .h2, #agency .h2--small, #agency .h3, #agency .h4, #agency .h5, .agency .h1, .agency .h2, .agency .h2--small, .agency .h3, .agency .h4, .agency .h5 {
+  #agency .h1, #agency .h2, #agency .h2--small, #agency .h3, #agency .h4, #agency .h5, #agency .hr, .agency .h1, .agency .h2, .agency .h2--small, .agency .h3, .agency .h4, .agency .h5, .agency .hr {
     margin-bottom: 1%;
   }
 }
 @media (min-width: 766px) {
-  #agency .h1, #agency .h2, #agency .h2--small, #agency .h3, #agency .h4, #agency .h5, .agency .h1, .agency .h2, .agency .h2--small, .agency .h3, .agency .h4, .agency .h5 {
+  #agency .h1, #agency .h2, #agency .h2--small, #agency .h3, #agency .h4, #agency .h5, #agency .hr, .agency .h1, .agency .h2, .agency .h2--small, .agency .h3, .agency .h4, .agency .h5, .agency .hr {
     margin-bottom: 10px;
   }
 }
@@ -1136,6 +1136,7 @@
   /* see sds.scss for css that modifies sds-managed elements */
 }
 #agency .grid__unit--25 .icc, #agency.grid__unit--25 .icc, .agency .grid__unit--25 .icc, .agency.grid__unit--25 .icc {
+  bottom: 2%;
   left: 0;
   max-width: 100%;
   padding-left: 5%;
