@@ -42,7 +42,7 @@ Instead of offer codes to be used strictly for web ads, we have built grid unit-
 __If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (\\).__
 
 ### 2018-eighth-mod
-This unit should always follow the card-based pattern. It renders as between 2-up under 500px through 12-up above 1519px. This unit is best used for jump-to links. It isn't really wide enough for rich content.
+This unit should always follow the card-based pattern. It renders between 2-up under 500px through 12-up at 1520px and above. This unit is best used for jump-to links. It isn't really wide enough for a lot of content.
 
 This offer code renders HTML similar to the below examples.
 ```html
@@ -73,7 +73,7 @@ This offer code renders HTML similar to the below examples.
 ```
 
 #### u\_ad\_card
-This is a flag that, when set, will render the web ad in the card-based pattern by adding the `webModCard` class to the grid unit. The number one `1` will set the flag. Leaving the field blank or using the number `0` will not. This module should always follow the card-based pattern. It is not wide enough to support the static pattern.
+This is a flag that, when set, will render the web ad in the card-based pattern by adding the `webModCard` class to the grid unit. The number `1` will set the flag. Leaving the field blank or using the number `0` will not. The `2018-eighth-mod` module should always follow the card-based pattern. It is not wide enough to support the static pattern.
 
 There is more info on the card-based and static patterns in the [Responsive grid](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-grid.md) doc.
 
@@ -85,6 +85,7 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 
 ##### Examples
 `className`
+
 `listOf classNames`
 
 #### u\_ad\_css
@@ -124,7 +125,9 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 
 ##### Examples
 `left`
+
 `center`
+
 `right`
 
 #### u\_ad\_img\_alt
@@ -150,8 +153,11 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
+
 `#filteredContainer`
+
 `181004, 723, 105007CT, qview`
+
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
@@ -159,8 +165,11 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 ##### Examples
 `Click to see our selection of gel pens`
+
 `Scroll to All Deals`
+
 `Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
+
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_popup
@@ -183,7 +192,7 @@ This module spans half of the width of the viewport if it's over 1011px wide and
 
 This offer code renders HTML similar to the below example.
 ```html
-<div class="grid__unit--50">
+<div class="agency grid__unit--50 searchOffer">
 	<div class="webModInner">
 		<a href="/link/url/page.html" title="link title">
 			<picture class="webModPicture align--left">
@@ -199,6 +208,7 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 
 ##### Examples
 `className`
+
 `listOf classNames`
 
 #### u\_ad\_css
@@ -236,10 +246,13 @@ __disclaimer (position 2):__ This content renders the text that appears in the '
 
 ##### Examples
 `d9`
+
 `This is a disclaimer`
+
 ```html
 d1<br><br>d2<br><br>d3 Excludes Epson<sup class="sup">&reg;</sup>
 ```
+
 ```html
 <ul><li>d1</li><li>d2</li><li>d3</li>
 ```
@@ -254,8 +267,11 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 
 ##### Examples
 `#ffffff`
+
 `#fff`
+
 `rgb(255,255,255)`
+
 `white`
 
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
@@ -310,7 +326,9 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 
 ##### Examples
 `left`
+
 `center`
+
 `right`
 
 #### u\_ad\_img\_alt
@@ -336,8 +354,11 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
+
 `#filteredContainer`
+
 `181004, 723, 105007CT, qview`
+
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
@@ -345,8 +366,11 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 ##### Examples
 `Click to see our selection of gel pens`
+
 `Scroll to All Deals`
+
 `Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
+
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_map\_href
@@ -370,7 +394,9 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html, circle, Shop our selection of printer paper, 100, 100, 50`
+
 `#filteredContainer, rect, Scroll to All Products, 0, 0, 100, 50`
+
 `181004, 723, 105007CT, qview, poly, Learn more about HammerMill&reg; Copy Plus Copy Paper, 0, 0, 100, 100, 0, 100, 0, 0`
 
 #### u\_ad\_popup
@@ -387,6 +413,7 @@ __(css | icc) (position 3):__ This position can hold the in-line CSS that govern
 
 ##### Examples
 `Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
+
 `More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
 
 ### 2018-quarter-mod
@@ -394,7 +421,7 @@ This module spans a quarter of the width of the viewport if it's over 1011px wid
 
 This offer code renders HTML similar to the below examples.
 ```html
-<div class="grid__unit--25">
+<div class="agency grid__unit--25 searchOffer">
 	<div class="webModInner">
 		<a href="/link/url/page.html" title="link title">
 			<picture class="webModPicture align--left">
@@ -406,7 +433,7 @@ This offer code renders HTML similar to the below examples.
 ```
 
 ```html
-<div class="grid__unit--25 webModCard">
+<div class="agency grid__unit--25 searchOffer webModCard">
 	<div class="webModInner">
 		<a href="/link/url/page.html" title="link title">
 			<picture class="webModPicture align--left">
@@ -422,6 +449,7 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 
 ##### Examples
 `className`
+
 `listOf classNames`
 
 #### u\_ad\_css
@@ -459,10 +487,13 @@ __disclaimer (position 2):__ This content renders the text that appears in the '
 
 ##### Examples
 `d9`
+
 `This is a disclaimer`
+
 ```html
 d1<br><br>d2<br><br>d3 Excludes Epson<sup class="sup">&reg;</sup>
 ```
+
 ```html
 <ul><li>d1</li><li>d2</li><li>d3</li>
 ```
@@ -477,8 +508,11 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 
 ##### Examples
 `#ffffff`
+
 `#fff`
+
 `rgb(255,255,255)`
+
 `white`
 
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
@@ -533,7 +567,9 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 
 ##### Examples
 `left`
+
 `center`
+
 `right`
 
 #### u\_ad\_img\_alt
@@ -559,8 +595,11 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
+
 `#filteredContainer`
+
 `181004, 723, 105007CT, qview`
+
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
@@ -568,8 +607,11 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 ##### Examples
 `Click to see our selection of gel pens`
+
 `Scroll to All Deals`
+
 `Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
+
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_map\_href
@@ -593,7 +635,9 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html, circle, Shop our selection of printer paper, 100, 100, 50`
+
 `#filteredContainer, rect, Scroll to All Products, 0, 0, 100, 50`
+
 `181004, 723, 105007CT, qview, poly, Learn more about HammerMill&reg; Copy Plus Copy Paper, 0, 0, 100, 100, 0, 100, 0, 0`
 
 #### u\_ad\_popup
@@ -610,6 +654,7 @@ __(css | icc) (position 3):__ This position can hold the in-line CSS that govern
 
 ##### Examples
 `Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
+
 `More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
 
 ### 2018-third-mod
@@ -617,7 +662,7 @@ This module spans a third of the width of the view port if it's over 499px and f
 
 This offer code renders HTML similar to the below example.
 ```html
-<div class="grid__unit--100">
+<div class="agency grid__unit--100 searchOffer">
 	<div class="webModInner">
 		<a href="/link/url/page.html" title="link title">
 			<picture class="webModPicture align--left">
@@ -634,6 +679,7 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 
 ##### Examples
 `className`
+
 `listOf classNames`
 
 #### u\_ad\_css
@@ -671,10 +717,13 @@ __disclaimer (position 2):__ This content renders the text that appears in the '
 
 ##### Examples
 `d9`
+
 `This is a disclaimer`
+
 ```html
 d1<br><br>d2<br><br>d3 Excludes Epson<sup class="sup">&reg;</sup>
 ```
+
 ```html
 <ul><li>d1</li><li>d2</li><li>d3</li>
 ```
@@ -689,8 +738,11 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 
 ##### Examples
 `#ffffff`
+
 `#fff`
+
 `rgb(255,255,255)`
+
 `white`
 
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
@@ -745,7 +797,9 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 
 ##### Examples
 `left`
+
 `center`
+
 `right`
 
 #### u\_ad\_img\_alt
@@ -771,8 +825,11 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
+
 `#filteredContainer`
+
 `181004, 723, 105007CT, qview`
+
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
@@ -780,8 +837,11 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 ##### Examples
 `Click to see our selection of gel pens`
+
 `Scroll to All Deals`
+
 `Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
+
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_map\_href
@@ -805,7 +865,9 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html, circle, Shop our selection of printer paper, 100, 100, 50`
+
 `#filteredContainer, rect, Scroll to All Products, 0, 0, 100, 50`
+
 `181004, 723, 105007CT, qview, poly, Learn more about HammerMill&reg; Copy Plus Copy Paper, 0, 0, 100, 100, 0, 100, 0, 0`
 
 #### u\_ad\_popup
@@ -822,6 +884,7 @@ __(css | icc) (position 3):__ This position can hold the in-line CSS that govern
 
 ##### Examples
 `Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
+
 `More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
 
 ### 2018-two-third-mod
@@ -832,7 +895,7 @@ This module spans the full width of the view port at all viewport sizes. To do t
 
 This offer code renders HTML similar to the below example.
 ```html
-<div class="grid__unit--100">
+<div class="agency grid__unit--100 searchOffer">
 	<div class="webModInner">
 		<a href="/link/url/page.html" title="link title">
 			<picture class="webModPicture align--left">
@@ -849,6 +912,7 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 
 ##### Examples
 `className`
+
 `listOf classNames`
 
 #### u\_ad\_css
@@ -886,10 +950,13 @@ __disclaimer (position 2):__ This content renders the text that appears in the '
 
 ##### Examples
 `d9`
+
 `This is a disclaimer`
+
 ```html
 d1<br><br>d2<br><br>d3 Excludes Epson<sup class="sup">&reg;</sup>
 ```
+
 ```html
 <ul><li>d1</li><li>d2</li><li>d3</li>
 ```
@@ -904,8 +971,11 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 
 ##### Examples
 `#ffffff`
+
 `#fff`
+
 `rgb(255,255,255)`
+
 `white`
 
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
@@ -960,7 +1030,9 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 
 ##### Examples
 `left`
+
 `center`
+
 `right`
 
 #### u\_ad\_img\_alt
@@ -986,8 +1058,11 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
+
 `#filteredContainer`
+
 `181004, 723, 105007CT, qview`
+
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
@@ -995,8 +1070,11 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 ##### Examples
 `Click to see our selection of gel pens`
+
 `Scroll to All Deals`
+
 `Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
+
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_map\_href
@@ -1020,7 +1098,9 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html, circle, Shop our selection of printer paper, 100, 100, 50`
+
 `#filteredContainer, rect, Scroll to All Products, 0, 0, 100, 50`
+
 `181004, 723, 105007CT, qview, poly, Learn more about HammerMill&reg; Copy Plus Copy Paper, 0, 0, 100, 100, 0, 100, 0, 0`
 
 #### u\_ad\_popup
@@ -1037,4 +1117,5 @@ __(css | icc) (position 3):__ This position can hold the in-line CSS that govern
 
 ##### Examples
 `Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
+
 `More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
