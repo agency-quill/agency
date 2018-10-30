@@ -1,14 +1,16 @@
 # ADCore Modules
-To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
+To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, and HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
+
+You can see an example of each of these modules, and how they interact, on the [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml) page.
 
 ## How to read descriptions
-For the new modules offer code fields accept different types of data. Some take URLs, some take text, some take HTML and some take arrays. For every field in an offer code there is a description of the type of content that goes in the field. You can see it by clicking on the _ADCore field name (e.g. "u_ad_img_src")_. Some of these descriptions use special characters to explain how the data should be formatted.
+For the new modules, offer code fields accept different types of data. Some take URLs, some take text, some take HTML and some take arrays. For every field in an offer code there is a description of the type of content that goes in the field. You can see it by clicking on the _ADCore field name (e.g. "u_ad_img_src")_. Some of these descriptions use special characters to explain how the data should be formatted.
 
 ### Commas ( ,,, )
-Several of the fields accept comma-separated arrays as input. Commas separate the data into individual array elements. Each value is used by the scripts that build the web ad. 
+Several of the fields accept comma-separated arrays as input. Commas separate the data into individual array elements.
 
 ##### Example
-`QQ6PNT96, d9p, Offer good through 9/2/18., 5-time use per customer&#44; 1 per order., /daily-deals/cbx/35.html', , bottom:2%;right:2%;`
+`QQ6PNT96, d9p, Offer good through 9/2/18., 5-time use per customer&#44; 1 per order., /daily-deals/cbx/35.html, , bottom:2%;right:2%;`
 
 ### Brackets ( \[ \] )
 Brackets are used to denote optional values. In the example below, everything from the comma after 'expiry' through 'css' is optional. 
@@ -35,12 +37,18 @@ In the descriptions below CSS selector notation has been used as shorthand for e
 `div.webModInner#thisIsAnId`
 
 ## Grid Units/Web Ads
-Instead of web ad offer codes we have built grid unit-based offer codes. They can hold traditional web ad images or HTML. Below each of the offer codes is defined and each of its fields is explained. Most of the modules share fields.
+Instead of offer codes to be used strictly for web ads, we have built grid unit-based offer codes. They can hold traditional web ad images or more complex HTML. Below each of the offer codes is defined and each of its fields is explained. Most of the modules have fields in common.
+
+__If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (\\).__
+
+### 2018-eighth-mod
+
+### 2018-full-mod
 
 ### 2018-half-mod
-This module spans half of the width of the viewport if it's over 1011px wide and the full width if it is under 1012px. If the card flag is set, the module will render 3-up if the viewport is over 1520px, 2-up if it's over 1012px and 1-up under that. There is more info on the card-based pattern in the [Responsive grid](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-grid.md) doc.
+This module spans half of the width of the viewport if it's over 1011px wide and the full width if it is under 1012px. If the card flag is set, the module will render 3-up if the viewport is over 1520px, 2-up if it's over 1012px and 1-up under that. 
 
-__If an apostrophe, or single quote, is present in any of the fields for this offer code, the apostrophe/single quote needs to be preceded by a backslash (\\).__
+
 
 This offer code renders HTML similar to the below example.
 ```html
@@ -56,7 +64,9 @@ This offer code renders HTML similar to the below example.
 ```
 
 #### u\_ad\_card
-This is a flag that, when set, will render the web ad in the card-based pattern by adding the `webModCard` class. The number one `1` will set the flag. Leaving the field blank or the number `0` will not.
+This is a flag that, when set, will render the web ad in the card-based pattern by adding the `webModCard` classto the grid unit. The number one `1` will set the flag. Leaving the field blank or using the number `0` will not.
+
+There is more info on the card-based pattern in the [Responsive grid](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-grid.md) doc.
 
 ##### Example
 `1`
@@ -171,13 +181,18 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 `listOf classNames`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad/banner images with regard to cropping. It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images with regard to cropping. It also applies to any HTML whether superimposed on an image or not.
 
 ##### Format
 `left | center | right`
 
+##### Examples
+`left`
+`center`
+`right`
+
 #### u\_ad\_img\_alt
-This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image.
+This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
 #### u\_ad\_img\_src
 This is the URL of the image file used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. 
@@ -186,7 +201,7 @@ This is the URL of the image file used for a web ad or banner. If this is empty,
 `/content/iw/adv/2018/07/011/W18_07_011_STOCKUPICT.jpg`
 
 #### u\_ad\_link\_href
-This field handles what happens when you click the web ad/banner. It takes four different types of input. You can leave it blank which will not render and anchor element at all. You can add a URL for a traditional link, an anchor for an on-page anchor link, and a comma-separated array for either a QView popup or to add a SKU directly to the cart.
+This field handles what happens when you click the web ad. It takes four different types of input. You can leave it blank which will not render and anchor element at all. You can add a URL for a traditional link, an anchor for an on-page anchor link, and a comma-separated array for either a QView popup or to add a SKU directly to the cart.
 
 ##### Format
 `url | #anchor | sku, effort, item, (qview | addtocart)`
@@ -195,7 +210,7 @@ __url:__ This is a traditional URL.
 
 __#anchor:__ This is a hash mark (`#`) followed by the id value of an element elsewhere on the page.
 
-__sku, effort, item, (qview | addtocart):__ This is an array of values. First are the SKU number, effort number and item number of a product. That is followed by 'qview' for the QView popup or 'addtocart' if the link adds the product directly to the cart.
+__sku, effort, item, (qview | addtocart):__ This is an array of values. First are three numbers used to identify the product.  They are, in order, the SKU number, effort number and item number. That is followed by 'qview' for the QView popup or 'addtocart' if the link adds the product directly to the cart.
 
 ##### Examples
 `/bulk-printer-paper-and-office-paper/cbu/28.html`
@@ -204,25 +219,23 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 `181004, 723, 105007CT, addtocart`
 
 #### u\_ad\_link\_title
-This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad/banner.
+This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
 ##### Examples
 `Click to see our selection of gel pens`
 `Scroll to All Deals`
-`Learn more about Quill Brand&reg; 8" Stainless-Steel Scissors`
+`Learn more about Quill Brand&reg; 8&quot; Stainless-Steel Scissors`
 `Add Quill Brand&reg; 8" Stainless-Steel Scissors to your cart`
 
 #### u\_ad\_map\_href
-x
-
-[Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area)
+This field generates an image map and as many `<area>` elements as you need. _This functionality is not responsive at this point and should probably be avoided._ For more info on the `<area>` element check out the [Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area) reference.
 
 ##### Format
-`link, (circle | default | poly | rect), title, [coord1, coordX][ + url...]`
+`link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]`
 
 __link (position 1):__ This is a link, and follows the same format as `u_ad_link_href`. It can be a URL, anchor, QView or add to cart link.
 
-__(circle | default | poly | rect) (position 2):__ For an image map the `<map>` element is populated with `<area>` elements that define the space(s) within the map that are links. `<area>` elements have a `shape` attribute that sets the shape of the area. Adoy. The possible options are 'circle', 'default', 'poly' and 'rect'. The choice of shape affects the `coords` attribute see below for more info.
+__(circle | default | poly | rect) (position 2):__ For an image map the `<map>` element is populated with `<area>` elements that define the space(s) within the map that are clickable. `<area>` elements have a `shape` attribute that tells the browser the shape of the area. The possible options are 'circle', 'default', 'poly' and 'rect'. The choice of shape affects the `coords` attribute below.
 
 __title (position 3):__ This field adds a `title` attribute to the `<area>` element. This text should describe the result of clicking the `<area>`. This text appears in a tooltip when the cursor hovers over the `<area>`.
 
@@ -234,20 +247,28 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 * _rect -_ creates a rectangle.  It requires 4 numbers, two `x,y` pairs: left, top, right, bottom.
 
 ##### Examples
-
+`/bulk-printer-paper-and-office-paper/cbu/28.html, circle, Shop our selection of printer paper, 100, 100, 50`
+`#filteredContainer, rect, Scroll to All Products, 0, 0, 100, 50`
+`181004, 723, 105007CT, qview, poly, Learn more about HammerMill&reg; Copy Plus Copy Paper, 0, 0, 100, 100, 0, 100, 0, 0`
 
 #### u\_ad\_popup
-x
+This field creates text links that, upon clicking, generate popup overlays. The rendered popup is the same as the one used for disclaimers. The popup can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
 
 ##### Format
 `cta, html[, (css | icc)][ + cta...]`
 
-##### Example
+__cta (position 1):__ x
 
+__html (position 2):__ x
 
-### 2018-eighth-mod
-### 2018-full-mod
-### 2018-half-mod
+__(css | icc) (position 3):__ x
+
+##### Examples
+`Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
+`More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
+
 ### 2018-quarter-mod
+
 ### 2018-third-mod
+
 ### 2018-two-third-mod
