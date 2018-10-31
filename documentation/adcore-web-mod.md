@@ -92,10 +92,10 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 #### u\_ad\_html\_text
-This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image. If not, the HTML is treated as in-line. ADCore will remove any carriage returns or tabs, so indented HTML like the second example is acceptable.
+This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
 ##### Examples
 ```html
@@ -112,13 +112,13 @@ This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will
 ```
 
 #### u\_ad\_id
-This field adds an id attribute to the `div.webModInner` element. You can only have one id.
+This field adds an `id` attribute to the `div.webModInner` element. You can only have one id.
 
 ##### Example
 `idName`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad images with regard to cropping. It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the `u_ad_card` flag is set the image will not be cropped, but will still be aligned.
 
 ##### Format
 `left | center | right`
@@ -215,10 +215,10 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 #### u\_ad\_html\_text
-This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as inline display. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
+This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
 ##### Examples
 ```html
@@ -277,7 +277,7 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 This entry will render the HTML below it:
 
@@ -313,13 +313,13 @@ ICCICC01, d3 Excludes Epson<sup class="sup">&reg;</sup>., Offer good through 1/1
 ```
 
 #### u\_ad\_id
-This field adds an id attribute to the `div.webModInner` element. You can only have one id.
+This field adds an `id` attribute to the `div.webModInner` element. You can only have one id.
 
 ##### Example
 `idName`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the `u_ad_card` flag is set the image will not be cropped, but will still be aligned.
 
 ##### Format
 `left | center | right`
@@ -456,10 +456,10 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 #### u\_ad\_html\_text
-This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as inline display. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
+This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
 ##### Examples
 ```html
@@ -518,7 +518,7 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 This entry will render the HTML below it:
 
@@ -554,13 +554,13 @@ ICCICC01, d3 Excludes Epson<sup class="sup">&reg;</sup>., Offer good through 1/1
 ```
 
 #### u\_ad\_id
-This field adds an id attribute to the `div.webModInner` element. You can only have one id.
+This field adds an `id` attribute to the `div.webModInner` element. You can only have one id.
 
 ##### Example
 `idName`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the `u_ad_card` flag is set the image will not be cropped, but will still be aligned.
 
 ##### Format
 `left | center | right`
@@ -686,10 +686,10 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 #### u\_ad\_html\_text
-This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as inline display. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
+This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
 ##### Examples
 ```html
@@ -748,7 +748,7 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 This entry will render the HTML below it:
 
@@ -784,13 +784,13 @@ ICCICC01, d3 Excludes Epson<sup class="sup">&reg;</sup>., Offer good through 1/1
 ```
 
 #### u\_ad\_id
-This field adds an id attribute to the `div.webModInner` element. You can only have one id.
+This field adds an `id` attribute to the `div.webModInner` element. You can only have one id.
 
 ##### Example
 `idName`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the `u_ad_card` flag is set the image will not be cropped, but will still be aligned.
 
 ##### Format
 `left | center | right`
@@ -919,10 +919,10 @@ This field applies a space-separated list of classes to `div.webModInner`. Class
 This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 #### u\_ad\_html\_text
-This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as inline display. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
+This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
 ##### Examples
 ```html
@@ -981,7 +981,7 @@ __color (position 6):__ This defines the color of the expiry, usage and disclaim
 __css (position 7):__ This field applies in-line CSS code to the `style` attribute of `div.webModInner`.
 
 ##### Example
-`align-self:start;height:25%;`
+`align-self: start; height: 25%;`
 
 This entry will render the HTML below it:
 
@@ -1017,13 +1017,13 @@ ICCICC01, d3 Excludes Epson<sup class="sup">&reg;</sup>., Offer good through 1/1
 ```
 
 #### u\_ad\_id
-This field adds an id attribute to the `div.webModInner` element. You can only have one id.
+This field adds an `id` attribute to the `div.webModInner` element. You can only have one id.
 
 ##### Example
 `idName`
 
 #### u\_ad\_img\_align
-This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not.
+This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a `u_ad_img_align` of 'left' will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the `u_ad_card` flag is set the image will not be cropped, but will still be aligned.
 
 ##### Format
 `left | center | right`
