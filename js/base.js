@@ -1,20 +1,23 @@
 function accordionSet(accordion){
 	accordion.each(function(index){
 		var $accordionBody = $(this).find('.accordionList'),
-			$accordionButton = $(this).find('[data-accordion-button-open]');
+			$accordionButton = $(this).find('[data-accordion-button-open]')
+			$carouselInner = $(this).find('.carouselInner');
 		if($accordionBody.attr('data-accordion-open') === 'yes'){
 			$accordionBody.css('height', 'auto').attr('data-accordion-height-opened', $accordionBody.height());
+			$carouselInner.css('height', 'auto');
 			if(!$accordionButton.attr('data-accordion-button-close')){
-				$accordionButton.attr('data-accordion-button-close', 'close -');
+				$accordionButton.attr('data-accordion-button-close', 'Hide');
 			}
 			$accordionButton.text($accordionButton.attr('data-accordion-button-close'));
 		} else {
 			if(!$accordionBody.attr('data-accordion-height-closed')){
-				$accordionBody.attr('data-accordion-height-closed', '0');
+				$accordionBody.attr('data-accordion-height-closed', '488');
 			}
 			$accordionBody.css('height', $accordionBody.attr('data-accordion-height-closed'));
+			$carouselInner.css('height', $accordionBody.attr('data-accordion-height-closed'));
 			if(!$accordionButton.attr('data-accordion-button-open')){
-				$accordionButton.attr('data-accordion-button-open', 'open +');
+				$accordionButton.attr('data-accordion-button-open', 'See all');
 			}
 			$accordionButton.text($accordionButton.attr('data-accordion-button-open'));
 		}
@@ -22,6 +25,7 @@ function accordionSet(accordion){
 }
 function accordionToggle(accordion, button){
 	if(accordion.attr('data-accordion-open') !== 'yes'){
+		accordion.find('.carouselInner').css('height', 'auto');
 		if(!accordion.attr('data-accordion-height-closed')){
 			accordion.attr('data-accordion-height-closed', accordion.height());
 		}
@@ -40,7 +44,7 @@ function accordionToggle(accordion, button){
 		});
 	} else {
 		if(!accordion.attr('data-accordion-height-closed')){
-			accordion.attr('data-accordion-height-closed', 0);
+			accordion.attr('data-accordion-height-closed', '488');
 		}
 		if(!accordion.attr('data-accordion-height-opened')){
 			accordion.attr('data-accordion-height-opened', accordion.height());
@@ -61,6 +65,12 @@ function addFlag(flag){
 	$('#agency .' + flag + ' .div--coupon').each(function(){
 		$(this).append(template.flag[flag]);
 	});
+}
+function anchorScroll(start, end, offset){
+    offset = offset === null ? -60 : offset - 60;
+    $('html, body').animate({
+        scrollTop: end.offset().top + offset
+    }, Math.abs(end.offset().top - start.offset().top) * 150 / 1000);
 }
 function buildCustomPrint(arr) {
     var out = "";

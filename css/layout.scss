@@ -194,7 +194,6 @@
 			}
 			
 			&--50 {
-				width: $column * 12;
 
 				@media #{$tabLandMin} {
 					width: $column * 6;
@@ -222,14 +221,16 @@
 			}
 
 			&--66 {
-				width: $column * 8;
 
-				@media #{$laptopMin} and #{$laptopMax} {
-					width: $column * 6;
+				@media #{$mobLandMin} {
+					width: $column * 8;
 				}
+			}
+
+			&--75 {
 
 				@media #{$desktopMin} {
-					width: $column * 4.8;
+					width: $column * 9;
 				}
 			}
 

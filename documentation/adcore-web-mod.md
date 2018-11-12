@@ -1,4 +1,4 @@
-# ADCore Modules
+# ADCore modules
 To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, and HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
 
 You can see an example of each of these modules, and how they interact, on the [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml) page.

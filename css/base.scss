@@ -83,19 +83,17 @@
 
 		&--blue {
 			background-color: #0079c2;
+			color: #fff;
 
 			&:hover, &:active {
 				background-color: #0072bc;
 			}
 		}
 
-		&--blue, &--gray {
-			color: #fff
-		}
-
 		&--blue, &--gray, &--standard {
 			border: none;
 			border-radius: 0;
+			cursor: pointer;
 			display: inline-block;
 			font-size: $px * 1.5;
 			font-weight: 400;
@@ -134,9 +132,12 @@
 			background-color: #e2e2e2;
 		}
 
+		&--gray, &--standard {
+			color: #000;
+		}
+
 		&--standard {
 			background-color: #fc0;
-			color: #000;
 
 			&:hover, &:active {
 				background-color: #eebf04;
@@ -144,14 +145,14 @@
 		}
 	}
 
-	.button--close, .button--gray, .button--standard, .caption--qpPoints, .h1, .h2, .h3, .h4, .h5, .hn__a, .htmlText, .label, .ol, .p, .p--attribution, .p--disclaimer, .p--jump, .p--noMargin, .p--small, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul {
+	.button--close, .button--gray, .button--standard, .caption--qpPoints, .h1, .h2, .h3, .h4, .h5, .hn__a, .htmlText, .input, .label, .ol, .p, .p--attribution, .p--disclaimer, .p--jump, .p--noMargin, .p--small, .select, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul {
 		font-family: #{$fontFamily};
 		font-stretch: normal; 
 		font-style: normal;
 		font-variant: normal;
 	}
 
-	.caption--qpPoints, .h1, .h2, .h2--small, .h3, .h4, .h5, .hn__a, .htmlText, .label, .ol, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .table, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul {
+	.caption--qpPoints, .h1, .h2, .h2--small, .h3, .h4, .h5, .hn__a, .htmlText, .input, .label, .ol, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .select, .table, .table__caption, .table__td, .table__th--horizontal, .table__th--vertical, .ul {
 		margin: 0;
 		padding-bottom: 0;
 		padding-left: 0;
@@ -327,11 +328,7 @@
 
     .img {
         align-self: flex-start;
-		width: 100%;
-
-		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
-		   width: auto;  
-		}
+        width: 100%;
 
 		&__flag--coupon {
 		    position: absolute;
@@ -340,11 +337,7 @@
 		}
     }
 
-	.label, .ol__li, .p, .p--noMargin, .ul__li {
-		line-height: 1.75em;
-	}
-
-	.label, .p, .p--attribution, .p--small, .textarea, .ul__li {
+	.input, .label, .ol__li, .p, .p--attribution, .p--noMargin, .p--small, .select, .textarea, .ul__li {
 		font-weight: 400;
 		line-height: 1.5em;
 	}
@@ -528,9 +521,9 @@
 	}
 
 	.sup {
-        font-size: .5em;
+        font-size: .6em;
         line-height: 1em;
-        vertical-align: .5em;
+        vertical-align: .4em;
     }
 
 	.textarea {
