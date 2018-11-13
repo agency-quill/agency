@@ -35,7 +35,7 @@ function webMod(mod, obj){
 		obj.html += webModIcc(obj);
 		return obj.html + '</div>';
 	} else {
-		console.log('removing '+mod);
+		console.log('removing ' + mod);
         $('#' + mod).remove();
     }
 }
@@ -282,7 +282,7 @@ function webModPicture(obj){
 	if(obj.srcArray.length > 1){
 		obj.srcset = obj.srcArray[1];
 		obj.media = '(max-width: ';
-		switch (obj.unit) {
+		switch(obj.unit){
 			case '33':
 				obj.media += size.tabPort;
 				break;
@@ -299,7 +299,7 @@ function webModPicture(obj){
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
-	console.log('obj.card: '+obj.card);
+	obj.card && console.log('obj.card: ' + obj.card);
 	obj.class += obj.card ? '__webModCard--' : '--';
 	obj.class += obj.unit;
 	obj.srcset = '';

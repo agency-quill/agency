@@ -41,6 +41,10 @@ Instead of offer codes to be used strictly for web ads, we have built grid unit-
 
 __If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (\\).__
 
+__Commas in fields that accept arrays as input need to be replaced with the ASCII value &\#044;.__
+
+__Positioning using px can pose an issue for responsive design.__
+
 ### 2018-eighth-mod
 This unit should always follow the card-based pattern. It renders between 2-up under 500px through 12-up at 1520px and above. This unit is best used for jump-to links. It isn't really wide enough for a lot of content.
 

@@ -260,6 +260,10 @@ function popupToggle(popup){
 		popup.attr('data-popup-state', 'open');
 	}
 }
+function previewClean(){
+	$('.hdr_banner') && $('.hdr_banner').remove();
+	$('#DynamicAlley') && $('#DynamicAlley').remove();
+}
 function removeEachAttr(element, attr){
 	if(element){
 		element.each(function(){
