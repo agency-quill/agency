@@ -39,11 +39,12 @@ In the descriptions below CSS selector notation has been used as shorthand for e
 ## Grid Units/Web Ads
 Instead of offer codes to be used strictly for web ads, we have built grid unit-based offer codes. They can hold traditional web ad images or more complex HTML. Below each of the offer codes is defined and each of its fields is explained. Most of the modules have fields in common.
 
-__If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (\\).__
+#### Warning!
+* __If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (`\`).__
 
-__Commas in fields that accept arrays as input need to be replaced with the ASCII value &\#044;.__
+* __Commas in fields that accept arrays as input need to be replaced with the ASCII value `&#044;`.__
 
-__Positioning using px can pose an issue for responsive design.__
+* __Positioning using `px` can pose an issue for responsive design.__
 
 ### 2018-eighth-mod
 This unit should always follow the card-based pattern. It renders between 2-up under 500px through 12-up at 1520px and above. This unit is best used for jump-to links. It isn't really wide enough for a lot of content.
@@ -101,6 +102,8 @@ This field applies in-line CSS code to the `style` attribute of `div.webModInner
 #### u\_ad\_html\_text
 This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
+
 ##### Examples
 ```html
 <p class="a align--center p--small" style="bottom:0;position:absolute">Inkjet Printers</p>
@@ -137,6 +140,8 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 #### u\_ad\_img\_alt
 This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
+
 #### u\_ad\_img\_src
 This is the URL of the image file used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty, the offer code is not rendered. The surrounding HTML 'collapses'. 
 
@@ -167,6 +172,8 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 #### u\_ad\_link\_title
 This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`).__
+
 ##### Examples
 `Click to see our selection of gel pens`
 
@@ -178,6 +185,8 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 #### u\_ad\_popup
 This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `[cta], html[, css][ + cta...]`
@@ -224,6 +233,8 @@ This field applies in-line CSS code to the `style` attribute of `div.webModInner
 #### u\_ad\_html\_text
 This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
+
 ##### Examples
 ```html
 <p class="a align--center p--small" style="bottom:0;position:absolute">Inkjet Printers</p>
@@ -240,6 +251,8 @@ This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will
 
 #### u\_ad\_icc
 This field accepts one or more arrays of data used to build coupon clipper ICCs. Each of the elements in an array represent specific information. __The position of the data is important.__ Some of the array elements have default values that will render if the element is left blank. If an element is left blank, _the comma still needs to be included_. Otherwise the data will not line up with the script and it will fail.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `icc, disclaimer, expiry[, usage, url, color, css][ + icc...]`
@@ -338,6 +351,8 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 #### u\_ad\_img\_alt
 This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
+
 #### u\_ad\_img\_src
 This is the URL of the image file used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty, the offer code is not rendered. The surrounding HTML 'collapses'. 
 
@@ -368,6 +383,8 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 #### u\_ad\_link\_title
 This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`).__
+
 ##### Examples
 `Click to see our selection of gel pens`
 
@@ -379,6 +396,8 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 #### u\_ad\_map\_href
 This field generates an image map and as many `<area>` elements as you need. _This functionality is not responsive at this point and should probably be avoided._ For more info on the `<area>` element check out the [Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area) reference.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]`
@@ -405,6 +424,8 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 #### u\_ad\_popup
 This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `cta, html[, (css | icc)][ + cta...]`
@@ -465,6 +486,8 @@ This field applies in-line CSS code to the `style` attribute of `div.webModInner
 #### u\_ad\_html\_text
 This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
+
 ##### Examples
 ```html
 <p class="a align--center p--small" style="bottom:0;position:absolute">Inkjet Printers</p>
@@ -481,6 +504,8 @@ This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will
 
 #### u\_ad\_icc
 This field accepts one or more arrays of data used to build coupon clipper ICCs. Each of the elements in an array represent specific information. __The position of the data is important.__ Some of the array elements have default values that will render if the element is left blank. If an element is left blank, _the comma still needs to be included_. Otherwise the data will not line up with the script and it will fail.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `icc, disclaimer, expiry[, usage, url, color, css][ + icc...]`
@@ -579,6 +604,8 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 #### u\_ad\_img\_alt
 This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
+
 #### u\_ad\_img\_src
 This is the URL of the image file used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty, the offer code is not rendered. The surrounding HTML 'collapses'. 
 
@@ -609,6 +636,8 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 #### u\_ad\_link\_title
 This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`).__
+
 ##### Examples
 `Click to see our selection of gel pens`
 
@@ -620,6 +649,8 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 #### u\_ad\_map\_href
 This field generates an image map and as many `<area>` elements as you need. _This functionality is not responsive at this point and should probably be avoided._ For more info on the `<area>` element check out the [Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area) reference.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]`
@@ -646,6 +677,8 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 #### u\_ad\_popup
 This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `cta, html[, (css | icc)][ + cta...]`
@@ -695,6 +728,8 @@ This field applies in-line CSS code to the `style` attribute of `div.webModInner
 #### u\_ad\_html\_text
 This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
+
 ##### Examples
 ```html
 <p class="a align--center p--small" style="bottom:0;position:absolute">Inkjet Printers</p>
@@ -711,6 +746,8 @@ This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will
 
 #### u\_ad\_icc
 This field accepts one or more arrays of data used to build coupon clipper ICCs. Each of the elements in an array represent specific information. __The position of the data is important.__ Some of the array elements have default values that will render if the element is left blank. If an element is left blank, _the comma still needs to be included_. Otherwise the data will not line up with the script and it will fail.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `icc, disclaimer, expiry[, usage, url, color, css][ + icc...]`
@@ -809,6 +846,8 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 #### u\_ad\_img\_alt
 This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
+
 #### u\_ad\_img\_src
 This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-third-mod` based offer code two image files are required. The first URL is for the main (600px) image, the second for the secondary (320px) image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
 
@@ -839,6 +878,8 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 #### u\_ad\_link\_title
 This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`).__
+
 ##### Examples
 `Click to see our selection of gel pens`
 
@@ -850,6 +891,8 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 #### u\_ad\_map\_href
 This field generates an image map and as many `<area>` elements as you need. _This functionality is not responsive at this point and should probably be avoided._ For more info on the `<area>` element check out the [Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area) reference.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]`
@@ -876,6 +919,8 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 #### u\_ad\_popup
 This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `cta, html[, (css | icc)][ + cta...]`
@@ -928,6 +973,8 @@ This field applies in-line CSS code to the `style` attribute of `div.webModInner
 #### u\_ad\_html\_text
 This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will float on top of the image designated in the `u_ad_img_src` field. If not, the HTML is treated as `display: inline`. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
+
 ##### Examples
 ```html
 <p class="a align--center p--small" style="bottom:0;position:absolute">Inkjet Printers</p>
@@ -944,6 +991,8 @@ This field accepts HTML. If the `u_ad_img_src` field is populated, the HTML will
 
 #### u\_ad\_icc
 This field accepts one or more arrays of data used to build coupon clipper ICCs. Each of the elements in an array represent specific information. __The position of the data is important.__ Some of the array elements have default values that will render if the element is left blank. If an element is left blank, _the comma still needs to be included_. Otherwise the data will not line up with the script and it will fail.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `icc, disclaimer, expiry[, usage, url, color, css][ + icc...]`
@@ -1042,6 +1091,8 @@ This field aligns the content of the web ad. The alignment applies to web ad ima
 #### u\_ad\_img\_alt
 This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It should be text that describes the content of the image for users that can't see it.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
+
 #### u\_ad\_img\_src
 This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-full-mod` based offer code two image files are required. The first URL is for the large image, the second for the smaller image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
 
@@ -1072,6 +1123,8 @@ __sku, effort, item, (qview | addtocart):__ This is an array of values. First ar
 #### u\_ad\_link\_title
 This field adds a `title` attribute to the anchor element populated in the `u_ad_link_href` field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad.
 
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`).__
+
 ##### Examples
 `Click to see our selection of gel pens`
 
@@ -1083,6 +1136,8 @@ This field adds a `title` attribute to the anchor element populated in the `u_ad
 
 #### u\_ad\_map\_href
 This field generates an image map and as many `<area>` elements as you need. _This functionality is not responsive at this point and should probably be avoided._ For more info on the `<area>` element check out the [Mozilla Developers Network (MDN) `<area>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/area) reference.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]`
@@ -1109,6 +1164,8 @@ __coord1, coordX (position 4-):__ This is a series of numbers, separated by comm
 
 #### u\_ad\_popup
 This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it's own CSS for positioning and formatting, or it can be locked into an ICC for gift details.
+
+__Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`). Commas need to be replaced with their ASCII code (e.g. `&#044;`). Positioning using `px` can pose an issue for responsive design.__
 
 ##### Format
 `cta, html[, (css | icc)][ + cta...]`
