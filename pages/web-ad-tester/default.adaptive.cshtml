@@ -1,0 +1,170 @@
+@{
+	//C# HEADER: v4.12 7/14/17 | TEMPLATE: v2.7 10/17/17
+	var expiry = new DateTime(2049,12,31,23,59,59);	// modify to expire page sooner. Format: YYYY,MM,DD,HH,MM,SS  - only update YYYY (year), MM (month) and DD (day).
+	RequestData.Current.Title = "Web Ad Tester";  // page title
+	// RequestData.Current.Description = "xxx_DESCRIPTION_xxx";  // meta description 
+
+	if (Request.QueryString["showspotlight"] != "yes") {string redirectURL = ""; if (DateTime.Now >= expiry.AddMonths(1)) {redirectURL = "/sorry";} else {if (DateTime.Now >= expiry) {redirectURL = "/content/iw/promotion/offers/msg/expired.cshtml";}} if (redirectURL != "") {if (Request.QueryString["cm_sp"] != null || Request.QueryString["cm_mmc"] != null) {Response.RedirectPermanent(redirectURL + "?" + Request.QueryString);} else {Response.RedirectPermanent(redirectURL);}}}
+}
+
+<!-- 
+
+URL: http://qpreview.quillcorp.com/content/iw/tools/web-ad-test/default.cshtml
+
+Please add the most recent web request number for this file at the bottom of the list below:
+
+WEBREQUESTNUMBER - DATE - DESIGNER
+n/a - 11/12/18 - Andy
+
+-->
+
+<link href="/content/iw/styles/agency5.min.css" rel="stylesheet">
+<link href="/content/iw/styles/responsive-shim.min.css" rel="stylesheet">
+
+<style type="text/css">
+	.coolTipCont {
+		font-weight: 400;
+	}
+	#agency .grid > * {
+		text-align: left;
+	}
+	#agency .input {
+		flex-grow: 2;
+	    padding: 0 10px;
+	}
+	#agency .input, #agency .select {
+		border: 1px solid #ccc;
+    	font-size: 18px;
+    }
+</style>
+
+<div id="agency">
+	<header class="grid header">
+		<h1 class="grid__unit--100 h1 margin__bottom--100">Web ad tester</h1>
+	</header>
+	<section class="align--center grid section" id="webModWindow"></section>
+	<section class="grid section">
+		<div class="align--center grid grid__unit--100 margin__bottom--100">
+			<hr class="grid__unit--75 hr">
+		</div>
+		<div class="grid grid__unit--75" id="modForm">
+			<div class="align--center grid__unit--100 margin__bottom--75 web_ad_type">
+				<label class="label margin__right--25" for="web_ad_type">module</label>
+				<select class="select" id="web_ad_type" onchange="renderForm($(this))">
+					<option value="">choose a module</option>
+					<option value="12-5">2018-eighth-mod</option>
+					<option value="50">2018-half-mod</option>
+					<option value="25">2018-quarter-mod</option>
+					<option value="33">2018-third-mod</option>
+					@* <option value="66">2018-two-third-mod</option> *@
+					<option value="100">2019-full-mod</option>
+				</select>
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_card">
+				<label class="label margin__right--25" for="u_ad_card"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>0 | 1</strong></em><br><br>This is a flag that, when set, will render the web ad in the card-based pattern by adding the <em>webModCard</em> class to the grid unit. The number <em>1</em> will set the flag. Leaving the field blank or using the number <em>0</em> will not. The <em>2018-eighth-mod</em> module should always follow the card-based pattern. It is not wide enough to support the static pattern.',600,{hasCloseButton:true})">u_ad_card</a></label>
+				<input class="input" type="text" id="u_ad_card" name="u_ad_card">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_class">
+				<label class="label margin__right--25" for="u_ad_class"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field applies a space-separated list of classes to <em>div.webModInner</em>. Classes governing margins and alignment (e.g. <em>margin__bottom--50</em>, <em>align--center</em>) should be populated here.',600,{hasCloseButton:true})">u_ad_class</a></label>
+				<input class="input" type="text" id="u_ad_class" name="u_ad_class">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_css">
+				<label class="label margin__right--25" for="u_ad_css"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field applies in-line CSS code to the <em>style</em> attribute of <em>div.webModInner</em>.',600,{hasCloseButton:true})">u_ad_css</a></label>
+				<input class="input" type="text" id="u_ad_css" name="u_ad_css">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_html_text">
+				<label class="label margin__right--25" for="u_ad_html_text"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field accepts HTML. If the <em>u_ad_img_src</em> field is populated, the HTML will float on top of the image designated in the <em>u_ad_img_src</em> field. If not, the HTML is treated as <em>display: inline</em>. ADCore will remove any carriage returns or tabs, so indented HTML like the second example below is acceptable. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong> <em style=&quot;color:red&quot;>Positioning using px can pose an issue for responsive design.</em>',600,{hasCloseButton:true})">u_ad_html_text</a></label>
+				<input class="input" type="text" id="u_ad_html_text" name="u_ad_html_text">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_icc">
+				<label class="label margin__right--25" for="u_ad_icc"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>icc, disclaimer, expiry[, usage, url, color, css][ + icc...]</strong></em><br><br>This field accepts one or more arrays of data used to build coupon clipper ICCs. Each of the elements in an array represent specific information. <strong>The position of the data is important.</strong> Some of the array elements have default values that will render if the element is left blank. If an element is left blank, <em>the comma still needs to be included</em>. Otherwise the data will not line up with the script and it will fail. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong> <em style=&quot;color:red&quot;>Positioning using px can pose an issue for responsive design.</em>',600,{hasCloseButton:true})">u_ad_icc</a></label>
+				<input class="input" type="text" id="u_ad_icc" name="u_ad_icc">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_id">
+				<label class="label margin__right--25" for="u_ad_id"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field adds an <em>id</em> attribute to the <em>div.webModInner</em> element. You can only have one id.',600,{hasCloseButton:true})">u_ad_id</a></label>
+				<input class="input" type="text" id="u_ad_id" name="u_ad_id">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_img_align">
+				<label class="label margin__right--25" for="u_ad_img_align"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>left | center | right</strong></em><br><br>This field aligns the content of the web ad. The alignment applies to web ad images. It governs how the image is cropped at different viewport widths. (i.e. a <em>u_ad_img_align</em> of &quot;left&quot; will crop the right-hand side of the image.) It also applies to any HTML whether superimposed on an image or not. If the <em>u_ad_card</em> flag is set the image will not be cropped, but will still be aligned.',600,{hasCloseButton:true})">u_ad_img_align</a></label>
+				<input class="input" type="text" id="u_ad_img_align" name="u_ad_img_align">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_img_alt">
+				<label class="label margin__right--25" for="u_ad_img_alt"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field is the <em>alt</em> attribute for the image referenced in <em>u_ad_img_src</em>. It should be text that describes the content of the image for users that can\'t see it. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong>',600,{hasCloseButton:true})">u_ad_img_alt</a></label>
+				<input class="input" type="text" id="u_ad_img_alt" name="u_ad_img_alt">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_img_src">
+				<label class="label margin__right--25" for="u_ad_img_src"><a href="javascript:void(0)" onclick="$(this).Tooltip('This is the URL of the image file used for a web ad or banner. If this is empty, and the <em>u_ad_html_text</em> field is empty, the offer code is not rendered. The surrounding HTML &quot;collapses&quot;. <strong>Image files must be hosted on the preview server.</strong>',600,{hasCloseButton:true})">u_ad_img_src</a></label>
+				<input class="input" type="text" id="u_ad_img_src" name="u_ad_img_src">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_link_href">
+				<label class="label margin__right--25" for="u_ad_link_href"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>url | #anchor | sku, effort, item, (qview | addtocart)</strong></em><br><br>This field handles what happens when you click the web ad. It takes four different types of input. You can leave it blank which will not render and anchor element at all. You can add a URL for a traditional link, an anchor for an on-page anchor link, and a comma-separated array for either a QView pop-up or to add a SKU directly to the cart.',600,{hasCloseButton:true})">u_ad_link_href</a></label>
+				<input class="input" type="text" id="u_ad_link_href" name="u_ad_link_href">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_link_title">
+				<label class="label margin__right--25" for="u_ad_link_title"><a href="javascript:void(0)" onclick="$(this).Tooltip('This field adds a <em>title</em> attribute to the anchor element populated in the <em>u_ad_link_href</em> field. This text should describe the result of clicking the link. This text appears in a tooltip when the cursor hovers over the web ad. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong>',600,{hasCloseButton:true})">u_ad_link_title</a></label>
+				<input class="input" type="text" id="u_ad_link_title" name="u_ad_link_title">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_map_href">
+				<label class="label margin__right--25" for="u_ad_map_href"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>link, (circle | default | poly | rect), title, [coord1, coordX][ + link...]</strong></em><br><br>This field generates an image map and as many </em><area></em> elements as you need. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong> <em style=&quot;color:red&quot;>This functionality is not responsive at this point and should probably be avoided.</em>',600,{hasCloseButton:true})">u_ad_map_href</a></label>
+				<input class="input" type="text" id="u_ad_map_href" name="u_ad_map_href">
+			</div>
+			<div class="grid__unit--50 margin__bottom--25 u_ad_popup">
+				<label class="label margin__right--25" for="u_ad_popup"><a href="javascript:void(0)" onclick="$(this).Tooltip('<em><strong>cta, html[, (css | icc)][ + cta...]</strong></em><br><br>This field creates text links that, upon clicking, generate pop-up overlays. The rendered pop-up is the same as the one used for disclaimers. The pop-up can free free-standing, with it\'s own CSS for positioning and formatting, or it can be locked into an ICC for gift details. <strong>Apostrophes, or single quotes, must be preceded by a backslash (\\).</strong> <em style=&quot;color:red&quot;>Positioning using px can pose an issue for responsive design.</em>',600,{hasCloseButton:true})">u_ad_popup</a></label>
+				<input class="input" type="text" id="u_ad_popup" name="u_ad_popup">
+			</div>
+			<div class="align--center grid__unit--100 margin__bottom--25 margin__top--50">
+		    	<p class="button--standard" onclick="renderMod()">render</p>
+			</div>
+			<div class="align--center grid__unit--100 margin__bottom--100">
+		    	<p class="button--gray" onclick="location.reload(false)">reset</p>
+		    </div>
+		</div>
+	</section>
+</div>
+<script src="/content/iw/scripts/agency3.min.js"></script>
+<script>
+	var modData = new Object();
+	previewClean();
+	function renderForm(dropdown) {
+		switch(dropdown.val()){
+			case '12-5':
+				$('.u_ad_card').css('display') === 'none' && $('.u_ad_card').css('display', 'flex');
+				$('.u_ad_icc').css('display') === 'flex' && $('.u_ad_icc').css('display', 'none');
+				$('.u_ad_map_href').css('display') === 'flex' && $('.u_ad_map_href').css('display', 'none');
+				break;
+			case '100':
+				$('.u_ad_card').css('display') === 'flex' && $('.u_ad_card').css('display', 'none')
+				$('.u_ad_icc').css('display') === 'none' && $('.u_ad_icc').css('display', 'flex');
+				$('.u_ad_map_href').css('display') === 'none' && $('.u_ad_map_href').css('display', 'flex');
+				break;
+			default:
+				$('.u_ad_card').css('display') === 'none' && $('.u_ad_card').css('display', 'flex');
+				$('.u_ad_icc').css('display') === 'none' && $('.u_ad_icc').css('display', 'flex');
+				$('.u_ad_map_href').css('display') === 'none' && $('.u_ad_map_href').css('display', 'flex');
+		}
+	}
+    function renderMod(){
+    	if($('#web_ad_type').val()){
+	    	modData.align = $('#u_ad_img_align').val();
+	        modData.alt = $('#u_ad_img_alt').val();
+	        modData.card = $('#u_ad_card').val();
+	        modData.class = $('#u_ad_class').val();
+	        modData.css = $('#u_ad_css').val();
+	        modData.div = $('#u_ad_html_text').val();
+	        modData.icc = $('#u_ad_icc').val();
+	        modData.id  = $('#u_ad_id').val();
+	        modData.link = $('#u_ad_link_href').val();
+	        modData.map = $('#u_ad_map_href').val();
+	        modData.popup = $('#u_ad_popup').val();
+	        // if (modData.popup){}
+	        modData.src = $('#u_ad_img_src').val();
+	        modData.title = $('#u_ad_link_title').val();
+	        modData.unit = $('#web_ad_type').val();
+			$('#webMod').length || $('#webModWindow').html('<div class="grid__unit--' + modData.unit + '" id="webMod"></div>');
+	    	$('#webMod').html(webMod('webMod', modData));
+	    	modData.icc && disclaimerLoad();
+	    } else {
+    		alert('please choose a module');
+	    }
+    }
+</script>
