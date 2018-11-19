@@ -40,9 +40,9 @@ In the descriptions below CSS selector notation has been used as shorthand for e
 Instead of offer codes to be used strictly for web ads, we have built grid unit-based offer codes. They can hold traditional web ad images or more complex HTML. Below each of the offer codes is defined and each of its fields is explained. Most of the modules have fields in common.
 
 #### Warning!
-* __If an apostrophe, or single quote, is present in any of the fields for these offer codes, the apostrophe/single quote needs to be preceded by a backslash (e.g. `\'`).__
+* __Apostrophes, or single quotes, needs to be preceded by a backslash (e.g. `\'`).__
 
-* __Commas in fields that accept arrays as input need to be replaced with the ASCII value `&#044;`.__
+* __Commas need to be replaced with the ASCII value `&#044;`.__
 
 * __Positioning using `px` can pose an issue for responsive design.__
 
