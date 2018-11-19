@@ -25,7 +25,7 @@ function webMod(mod, obj){
 		if(obj.link){
 			obj.number = '';
 			obj.html += render(template.a, webModLink(obj));
-		} else {
+		}else{
 			if(obj.map){
 				obj.a += webModMap(mod, obj);
 			}
@@ -34,7 +34,7 @@ function webMod(mod, obj){
 		obj.html += webModPopUp(obj);
 		obj.html += webModIcc(obj);
 		return obj.html + '</div>';
-	} else {
+	}else{
 		console.log('removing ' + mod);
         $('#' + mod).remove();
     }
@@ -43,7 +43,7 @@ function webModCarousel(mod, obj){
 	if(obj.div1 || obj.src1){
 		if(obj.src2){
 			console.log('webMod'+mod+' carousel');
-		} else {
+		}else{
 			obj.align = obj.align1 ? obj.align1 : '';
 			obj.alt = obj.alt1 ? obj.alt1 : '';
 	        obj.div = obj.div1 ? obj.div1 : '';
@@ -55,7 +55,7 @@ function webModCarousel(mod, obj){
 	        obj.title = obj.title1 ? obj.title1 : '';
 	        return webMod(mod, obj);
 		}
-	} else {
+	}else{
 		$('#' + mod).remove();
 	}
 }
@@ -90,20 +90,20 @@ function webModCoupon(mod, obj){
 		if(obj.link){
 			obj.number = '';
 			obj.div += render(template.a, webModLink(obj));
-		} else {
+		}else{
 			obj.div += obj.a;
 		}
 		obj.div += webModPopUp(obj);
 		obj.div += webModIcc(obj);
 		return obj.div + '</div>';
-	} else {
+	}else{
         $('#' + mod).remove();
     }
 }
 function webModFormat(data, format){
 	if(format === 'link'){
 		return data.replace(/(\w)\s+([\w\?])/g,'$1,$2').replace(/\s*([,+])\s*/g,'$1').replace(/([^,])([\?&]cm_sp)/g,'$1,$2').replace(/([^,:])(#\w+)/g,'$1,$2').trim();
-	} else {
+	}else{
 		return data.replace(/\s*([,+])\s*/g,'$1').trim();
 	}
 }
@@ -169,7 +169,7 @@ function webModHeader(mod, obj){
 			obj.html += render(template.div, obj);
 		}
 		return obj.html;
-	} else {
+	}else{
 		console.log('removing '+mod);
         $('#' + mod).remove();
     }
@@ -193,9 +193,10 @@ function webModIcc(obj){
 	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:5%;';
 			obj.iccHtml += render(template.icc, obj);
 		}
+		obj.code = '';
 		obj.css = '';
 		return obj.iccHtml;
-	} else {
+	}else{
 		return ''; 
 	}
 }
@@ -213,7 +214,7 @@ function webModLink(obj){
 			for(var i = 1; i < obj.linkArrayLength; i++){
 				if(obj.linkArray[i].indexOf('cm_sp') === 1){
 					obj.mcode =  obj.linkArray[i];
-				} else if(obj.linkArray[i].indexOf('#') === 0){
+				}else if(obj.linkArray[i].indexOf('#') === 0){
 					obj.tag =  obj.linkArray[i];
 				}
 			}
@@ -227,11 +228,11 @@ function webModLink(obj){
 			obj.sku = obj.linkArray[0].slice(obj.skuIndex + 4, obj.linkArray[0].indexOf('.'));
 			obj.events = render(template.locator, obj);
 		}
-	} else if(obj.linkArray[0].indexOf('#') === 0){
+	}else if(obj.linkArray[0].indexOf('#') === 0){
 		obj.href = template.void;
 		obj.end = obj.linkArray[0];
 		obj.events = render(template.event.AnimateScroll, obj);
-	} else {
+	}else{
 		obj.href = template.void;
 		obj.locator = 'carousel_1';
 		obj.sku = obj.linkArray[0];
@@ -241,7 +242,7 @@ function webModLink(obj){
 			obj.class += ' pfm scTrack';
 			obj.sctype = 'pfm';
 			obj.events = render(template.event.qView, obj) + ' ' + render(template.locator, obj);
-		} else {
+		}else{
 			obj.class += ' cta scTrack';
 			obj.sctype = 'cta';
 			obj.events = render(template.event.addToCart, obj) + ' ' + render(template.locator, obj);
@@ -269,7 +270,7 @@ function webModMap(mod, obj){
 		if(obj.shape === 'default'){
 			obj.coords = '';
 			obj.default = render(template.area, webModLink(obj));
-		} else {
+		}else{
 			obj.mapAreas += render(template.area, webModLink(obj));
 		}
 	}
@@ -295,7 +296,7 @@ function webModPicture(obj){
 		}
 		obj.media += 'px)';
 		obj.picture = render(template.source, obj);
-	} else {
+	}else{
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
@@ -316,6 +317,10 @@ function webModPopUp(obj){
 		obj.width = 400;
 		for(var i = 0, max = obj.popUpMultiple.length; i < max; i++){
 			obj.popUpArray = obj.popUpMultiple[i].split(',');
+			
+
+
+
 			if(obj.popUpArray.length < 3 || obj.popUpArray[2].search(/[A-Z0-9]{8}/) < 0){
 				if(obj.code === undefined){
 					obj.a = obj.popUpArray[0] ? obj.popUpArray[0] : 'Gift Details';
@@ -324,7 +329,7 @@ function webModPopUp(obj){
 					if(obj.colorIndexStart > 5){
 						obj.colorIndexEnd = obj.popUpArray[2].indexOf(';', obj.colorIndexStart) >= 0 ? obj.popUpArray[2].indexOf(';', obj.colorIndexStart) : obj.popUpArray[2].length;
 						obj.color = obj.popUpArray[2].slice(obj.colorIndexStart, obj.colorIndexEnd);
-					} else {
+					}else{
 						obj.color = '#000';
 					}
 					obj.css = 'color:' + obj.color + ';';
@@ -336,7 +341,7 @@ function webModPopUp(obj){
 					obj.events = '';
 					obj.popUpHtml += render(template.p, obj);
 				}
-			} else {
+			}else{
 				if(obj.code !== undefined){
 					if(obj.popUpArray[2] === obj.code){
 						obj.a = obj.popUpArray[0] ? obj.popUpArray[0] : 'Gift Details';
@@ -354,7 +359,7 @@ function webModPopUp(obj){
 		}
 		obj.css = '';
 		return obj.popUpHtml;
-	} else {
+	}else{
 		return '';
 	}
 }

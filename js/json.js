@@ -10,7 +10,7 @@ function jsonFetch(obj, term){
 		if(Array.isArray(value) || typeof value === 'object'){	// if element contains an array or an object
 			result = jsonFetch(value, term);	// call this function passing the array or object
 			if(result) return false;	// if data returned break loop
-		} else {
+		}else{
 			if(value === term){	// if element value matched search term
 				result = obj;	// add data to result variable
 			}
@@ -30,7 +30,7 @@ function jsonLoad(fileUrl, callback){
 	if(data){	// if json already loaded
         console.log('json already loaded');
 		callback(data.obj, args);	// call callback function passing json object and undeclared parameters
-	} else {
+	}else{
 		$.ajax({ // load json
             url: fileUrl,
             dataType: 'json',

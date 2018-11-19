@@ -69,7 +69,7 @@ function isEmpty(content, node){
     if(content.trim() == ''){   // if no content
         node.remove();  // remove node
         return 0;   // yes offer code is empty
-    } else {
+    }else{
         return 1;   // no offer code isn't empty
     }
 }
@@ -112,7 +112,7 @@ function webAd(ad, obj){
                 // if(obj.){
                 //     obj.html += 'xxx';
                 // }
-            } else {    // not qview
+            }else{    // not qview
                 obj.url = obj.linkArray[0]; // get url
                 if(obj.linkArray[2]){   // if locator
                     if(obj.linkArray[0].indexOf('/cbs/') >= 0){   // if sku url
@@ -120,13 +120,13 @@ function webAd(ad, obj){
                         obj.locator = obj.linkArray[1]; // get locator
                     }
                     obj.mcode = obj.linkArray[2];   // get mcode
-                } else {
+                }else{
                     obj.mcode = obj.linkArray[1];   // get mcode
                 }
                 obj.href = render(templateMod.href,obj);   // build href html
                 obj.html = render(templateMod.anchorTag,obj);  // build link html
             }
-        } else if(obj.map){ // if image map
+        }else if(obj.map){ // if image map
             obj.mapName = "map-"+ad;    // build map name
             obj.html = obj.anchorContent.slice(0,obj.anchorContent.search('s'))+'usemap="#'+obj.mapName+'" '+obj.anchorContent.slice(obj.anchorContent.search('s')); // add map name to img
             obj.mcode = obj.map.slice(obj.map.lastIndexOf(',')+1)+'-00';  // get mcode and customize
@@ -154,7 +154,7 @@ function webAd(ad, obj){
                     if(obj.j == 4){
                         obj.locator = obj.mapArray[3];   // if locator get locator
                     } 
-                } else {
+                }else{
                     obj.url = obj.mapArray[0]; // get url
                     if(obj.j == 2){   // if locator
                         if(obj.mapArray[0].indexOf('/cbs/') >= 0){   // if sku url
@@ -169,7 +169,7 @@ function webAd(ad, obj){
                 if(obj.i < obj.mapMultiple.length) obj.mcode = obj.mcode.slice(0,obj.mcode.lastIndexOf('-')+1)+obj.i+1;  // if next area customize mcode
             }
             obj.html += render(templateMod.mapTag,obj);    // add map to html
-        } else {
+        }else{
             obj.html = obj.anchorContent;   // add image html
         }
         if(obj.icc){    // if icc
@@ -195,7 +195,7 @@ function webAd(ad, obj){
                 $.getScript('/content/iw/scripts/disclaimers.js', function(){   // load disclaimer file
                     buildDisclaimer(obj);   // build disclaimer
                 });
-            } else {    // no disclaimer numbers
+            }else{    // no disclaimer numbers
                 buildDisclaimer(obj);   // build disclaimer
             }
         }
@@ -203,10 +203,10 @@ function webAd(ad, obj){
             $(document).ajaxComplete(function(){    // wait until disclaimer file loaded
                 $('#webAd-' + ad).html(obj.html);   // build module
             });
-        } else {
+        }else{
             $('#webAd-' + ad).html(obj.html);   // build module
         }
-    } else {    // if no image
+    }else{    // if no image
         $('#webAd-' + ad).remove(); // remove module
     }
 }

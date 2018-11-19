@@ -42,44 +42,44 @@ function addTabNav(items, pageUrl, trackingCode, lvl, trackingNum){
                 obj.open = items[i].navName+'<img class="nav--tabs__img" src="/content/iw/images/nav-arrow-open.png" alt="opened">'; // set accordion event data-accordion-button-open attribute for li element
             	obj.target = '$(this).children(\'nav--drop\')';	// set target for dropdown event
                 obj.events = render(template.event.accordion, obj);    // render accordion onclick event for li element
-            } else {
+            }else{
             	obj.events = render(template.event.dropDown, obj);	// render dropdown onmouseentger/onmouseleav events for li element
             }
 			obj.class = 'nav--tabs__item';	// set class attribute for li element
 			obj.html += render(template.li, obj);	// render li element
-		} else {
+		}else{
 			obj.events = '';
 			if(pageUrl !== items[i].navLink.substring(items[i].navLink.indexOf('/'),items[i].navLink.lastIndexOf('.'))){	// if href attribute of li element not the same as the url of the current page
 				if(lvl === 1){	// if at tab level
 					if(i === 0){
 						obj.class = 'nav--tabs__a--first';	// set anchor element class attribute to first tab style
-					} else {
+					}else{
 						obj.class = 'nav--tabs__a';	// set anchor element class attribute to tab style
 					}
-				} else {
+				}else{
 					obj.class = 'nav--drop__a';	// set anchor element class attribute to drop down style
 				}
 				if(trackingCode){
 					if(lvl === 1){
 						obj.mcode = '?cm_sp='+trackingCode+'-_-'+i+'-'+trackingNum;	// add tracking code for level 1 item
-					} else {
+					}else{
 						obj.mcode = '?cm_sp='+trackingCode+'-_-'+trackingNum+'-'+i;	// add tracking code for level > 1 item
 					}
-				} else {
+				}else{
 					obj.mcode = '';	// no tracking code
 				}	
 				obj.title = 'Click to open '+items[i].navName+' page';	// set title attribute for anchor element
 				obj.url = items[i].navLink;	// set url for anchor element href attribute
 				obj.href = render(template.href, obj);	// render href attribute for anchor element
 				obj.li = render(template.a, obj);	// render anchor element
-			} else {
+			}else{
 				if(lvl === 1){
 					if(i === 0){
 						obj.class = 'nav--tabs__span--first';	// set span element class attribute to first tab style
-					} else {
+					}else{
 						obj.class = 'nav--tabs__span';	// set span element class attribute to tab style
 					}
-				} else {
+				}else{
 					obj.class = 'nav--drop__span';	// set span element class attribute to dropdown span
 				}
 				obj.span = obj.a;	// set tab content for span element
@@ -87,7 +87,7 @@ function addTabNav(items, pageUrl, trackingCode, lvl, trackingNum){
 			}
 			if(lvl === 1){	// if at tab level
 				obj.class = 'nav--tabs__item';	// set li element class attribute to tab style
-			} else {
+			}else{
 				obj.class = 'nav--drop__item margin__bottom--25';	// set li element class attribute to drop down style
 			}
 			obj.html += render(template.li, obj);	// render li element
@@ -108,14 +108,14 @@ function buildNavMod(obj, args){
 		trackingCode = args[1];
 	if(node.attr('data-nav-format') === 'jump'){
 		node.append(addJumpNav(obj.items));
-	} else {
+	}else{
 		if(trackingCode === 'undefined'){
 			trackingCode = '';
 		}
 		pageUrl = window.location.href.substring(window.location.href.indexOf('.com')+4,window.location.href.lastIndexOf('.'));
 		if(node.attr('data-nav-format') === 'bc'){
 			node.append(addBcNav(obj.items, pageUrl, trackingCode));
-		} else {
+		}else{
 			node.append(addTabNav(obj.items, pageUrl, trackingCode));
 		}
 	}

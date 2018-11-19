@@ -21,7 +21,7 @@ function carouselButtons(node, widthObj){
 	if(widthObj.panelWidth <= widthObj.frameWidth){	// if total carousel elements <= containing frame
 		node.addClass('carouselMod--noButtons');	//  apply hidden button css
 		return 'no';
-	} else {
+	}else{
 		node.removeClass('carouselMod--noButtons');	// remove hidden button css
 		return 'yes';
 	}
@@ -55,7 +55,7 @@ function carouselGetWidth(node, direction){
 			if(widthObj.panePx + $(widthObj.liArray[i]).outerWidth(true) <= widthObj.frameWidth){
 				widthObj.paneNum++;	// get number of panes to be shifted
 				widthObj.panePx += $(widthObj.liArray[i]).outerWidth(true);	// get width of panes to be shifted
-			} else {
+			}else{
 				break;
 			}
 		}
@@ -122,7 +122,7 @@ function carouselRotate(node, direction){
 				node.find('li').slice(-widthObj.paneNum).detach();	// remove mods from end
 				node.find('ul').css('width', widthObj.panelWidth);	// adjust width to max-content for ie/edge
 			});	
-		} else if(direction === 'right'){
+		}else if(direction === 'right'){
 			node.find('ul').append(node.find('li').slice(0,widthObj.paneNum).clone());	// copy mods from start and put them at end
 			node.find('ul').css('width', (widthObj.panelWidth + widthObj.panePx) + 'px');	// adjust width to max-content for ie/edge
 			node.find('ul').animate({
@@ -134,7 +134,7 @@ function carouselRotate(node, direction){
 					'width' : widthObj.panelWidth + 'px'	// adjust width to max-content for ie/edge
 				});
 			});
-		} else {
+		}else{
 			alert(errorMsgs[0]);	// direction value missing or misspelled
 		}
 	}

@@ -10,7 +10,7 @@ function accordionSet(accordion){
 				$accordionButton.attr('data-accordion-button-close', 'Hide');
 			}
 			$accordionButton.text($accordionButton.attr('data-accordion-button-close'));
-		} else {
+		}else{
 			if(!$accordionBody.attr('data-accordion-height-closed')){
 				$accordionBody.attr('data-accordion-height-closed', '488');
 			}
@@ -42,7 +42,7 @@ function accordionToggle(accordion, button){
 				button.html(button.attr('data-accordion-button-close'));
 			}
 		});
-	} else {
+	}else{
 		if(!accordion.attr('data-accordion-height-closed')){
 			accordion.attr('data-accordion-height-closed', '488');
 		}
@@ -98,7 +98,7 @@ function cardLayout(node, state){
 					'vertical-align': 'top'
 				});
 			}
-		} else {
+		}else{
 			if(node.find('.card__body').hasClass('card--horizontal__body')){
 				node.find('.card__body').removeClass('card--horizontal__body').css({
 					'width': '100%',
@@ -148,7 +148,7 @@ function disclaimerLoad(){
 	    		},
 	    		url: '/content/iw/scripts/disclaimers.js'
 	    	});
-		} else {
+		}else{
 			toolTipElements.each(function(){
             	$(this).attr('onclick', disclaimerInsert($(this).attr('onclick')));
             });
@@ -158,7 +158,7 @@ function disclaimerLoad(){
 function dropDown(target, action){
 	if(action === 'open'){
 		target.fadeIn(100);
-	} else {
+	}else{
 		target.fadeOut(100);
 	}
 }
@@ -197,7 +197,7 @@ function isEmpty(content, element){
 			element.remove();
 		}
 		return 1;
-	} else {
+	}else{
 		return 0;
 	}
 }
@@ -208,7 +208,7 @@ function loadFiles(fileArray){
 	        if(!$('link[href="' + fileArray[i] + '"]').length){
 	        	$('head').append('<link href="' + fileArray[i] + '" rel="stylesheet">');
 	        }
-    	} else {
+    	}else{
     		if(!$('script[src="' + fileArray[i] + '"]').length){
 	        	$('head').append('<script src="' + fileArray[i] + '"></script>');
 	        }
@@ -219,7 +219,7 @@ function mobileLayout(screenWidth){
 	if(screenWidth <= 552){
 		cardLayout($('#agency .grid--1205__unit--33 .card'), 'mobile');
 		tuck($('#agency #introP'), $('#agency #introAccordion'), 'top');
-	} else {
+	}else{
 		cardLayout($('#agency .grid--1205__unit--33 .card'), 'desktop');
 		unTuck($('#agency #introP'), $('#agency #introAccordion'));
 	}
@@ -236,7 +236,7 @@ function popupToggle(popup){
 				}
 			});
 		});
-	} else {
+	}else{
 		popupObj.button = 'close';
 		popupObj.class = 'button--close';
 		popupObj.css = '';
@@ -247,7 +247,7 @@ function popupToggle(popup){
 			console.log('popup height provided');
 			popup.css('height','auto').attr('data-popup-height', popup.height() - parseInt(popup.css('padding-bottom')) + 30).css('height','0');
 
-		} else {
+		}else{
 			popup.attr('data-popup-height', parseInt(popup.attr('data-popup-height')) - parseInt(popup.css('padding-bottom')) + 30);
 		}
 		popup.animate({'height': popup.attr('data-popup-height'), 'opacity': '1'}, popup.attr('data-popup-height') * 250 / 1000, function(){
@@ -322,7 +322,7 @@ function carouselButtons(node, widthObj){
 	if(widthObj.panelWidth <= widthObj.frameWidth){	// if total carousel elements <= containing frame
 		node.addClass('carouselMod--noButtons');	//  apply hidden button css
 		return 'no';
-	} else {
+	}else{
 		node.removeClass('carouselMod--noButtons');	// remove hidden button css
 		return 'yes';
 	}
@@ -356,7 +356,7 @@ function carouselGetWidth(node, direction){
 			if(widthObj.panePx + $(widthObj.liArray[i]).outerWidth(true) <= widthObj.frameWidth){
 				widthObj.paneNum++;	// get number of panes to be shifted
 				widthObj.panePx += $(widthObj.liArray[i]).outerWidth(true);	// get width of panes to be shifted
-			} else {
+			}else{
 				break;
 			}
 		}
@@ -423,7 +423,7 @@ function carouselRotate(node, direction){
 				node.find('li').slice(-widthObj.paneNum).detach();	// remove mods from end
 				node.find('ul').css('width', widthObj.panelWidth);	// adjust width to max-content for ie/edge
 			});	
-		} else if(direction === 'right'){
+		}else if(direction === 'right'){
 			node.find('ul').append(node.find('li').slice(0,widthObj.paneNum).clone());	// copy mods from start and put them at end
 			node.find('ul').css('width', (widthObj.panelWidth + widthObj.panePx) + 'px');	// adjust width to max-content for ie/edge
 			node.find('ul').animate({
@@ -435,7 +435,7 @@ function carouselRotate(node, direction){
 					'width' : widthObj.panelWidth + 'px'	// adjust width to max-content for ie/edge
 				});
 			});
-		} else {
+		}else{
 			alert(errorMsgs[0]);	// direction value missing or misspelled
 		}
 	}
@@ -475,7 +475,7 @@ function jsonFetch(obj, term){
 		if(Array.isArray(value) || typeof value === 'object'){	// if element contains an array or an object
 			result = jsonFetch(value, term);	// call this function passing the array or object
 			if(result) return false;	// if data returned break loop
-		} else {
+		}else{
 			if(value === term){	// if element value matched search term
 				result = obj;	// add data to result variable
 			}
@@ -495,7 +495,7 @@ function jsonLoad(fileUrl, callback){
 	if(data){	// if json already loaded
         console.log('json already loaded');
 		callback(data.obj, args);	// call callback function passing json object and undeclared parameters
-	} else {
+	}else{
 		$.ajax({ // load json
             url: fileUrl,
             dataType: 'json',
@@ -600,44 +600,44 @@ function addTabNav(items, pageUrl, trackingCode, lvl, trackingNum){
                 obj.open = items[i].navName+'<img class="nav--tabs__img" src="/content/iw/images/nav-arrow-open.png" alt="opened">'; // set accordion event data-accordion-button-open attribute for li element
             	obj.target = '$(this).children(\'nav--drop\')';	// set target for dropdown event
                 obj.events = render(template.event.accordion, obj);    // render accordion onclick event for li element
-            } else {
+            }else{
             	obj.events = render(template.event.dropDown, obj);	// render dropdown onmouseentger/onmouseleav events for li element
             }
 			obj.class = 'nav--tabs__item';	// set class attribute for li element
 			obj.html += render(template.li, obj);	// render li element
-		} else {
+		}else{
 			obj.events = '';
 			if(pageUrl !== items[i].navLink.substring(items[i].navLink.indexOf('/'),items[i].navLink.lastIndexOf('.'))){	// if href attribute of li element not the same as the url of the current page
 				if(lvl === 1){	// if at tab level
 					if(i === 0){
 						obj.class = 'nav--tabs__a--first';	// set anchor element class attribute to first tab style
-					} else {
+					}else{
 						obj.class = 'nav--tabs__a';	// set anchor element class attribute to tab style
 					}
-				} else {
+				}else{
 					obj.class = 'nav--drop__a';	// set anchor element class attribute to drop down style
 				}
 				if(trackingCode){
 					if(lvl === 1){
 						obj.mcode = '?cm_sp='+trackingCode+'-_-'+i+'-'+trackingNum;	// add tracking code for level 1 item
-					} else {
+					}else{
 						obj.mcode = '?cm_sp='+trackingCode+'-_-'+trackingNum+'-'+i;	// add tracking code for level > 1 item
 					}
-				} else {
+				}else{
 					obj.mcode = '';	// no tracking code
 				}	
 				obj.title = 'Click to open '+items[i].navName+' page';	// set title attribute for anchor element
 				obj.url = items[i].navLink;	// set url for anchor element href attribute
 				obj.href = render(template.href, obj);	// render href attribute for anchor element
 				obj.li = render(template.a, obj);	// render anchor element
-			} else {
+			}else{
 				if(lvl === 1){
 					if(i === 0){
 						obj.class = 'nav--tabs__span--first';	// set span element class attribute to first tab style
-					} else {
+					}else{
 						obj.class = 'nav--tabs__span';	// set span element class attribute to tab style
 					}
-				} else {
+				}else{
 					obj.class = 'nav--drop__span';	// set span element class attribute to dropdown span
 				}
 				obj.span = obj.a;	// set tab content for span element
@@ -645,7 +645,7 @@ function addTabNav(items, pageUrl, trackingCode, lvl, trackingNum){
 			}
 			if(lvl === 1){	// if at tab level
 				obj.class = 'nav--tabs__item';	// set li element class attribute to tab style
-			} else {
+			}else{
 				obj.class = 'nav--drop__item margin__bottom--25';	// set li element class attribute to drop down style
 			}
 			obj.html += render(template.li, obj);	// render li element
@@ -666,14 +666,14 @@ function buildNavMod(obj, args){
 		trackingCode = args[1];
 	if(node.attr('data-nav-format') === 'jump'){
 		node.append(addJumpNav(obj.items));
-	} else {
+	}else{
 		if(trackingCode === 'undefined'){
 			trackingCode = '';
 		}
 		pageUrl = window.location.href.substring(window.location.href.indexOf('.com')+4,window.location.href.lastIndexOf('.'));
 		if(node.attr('data-nav-format') === 'bc'){
 			node.append(addBcNav(obj.items, pageUrl, trackingCode));
-		} else {
+		}else{
 			node.append(addTabNav(obj.items, pageUrl, trackingCode));
 		}
 	}
@@ -768,7 +768,7 @@ function webMod(mod, obj){
 		if(obj.link){
 			obj.number = '';
 			obj.html += render(template.a, webModLink(obj));
-		} else {
+		}else{
 			if(obj.map){
 				obj.a += webModMap(mod, obj);
 			}
@@ -777,7 +777,7 @@ function webMod(mod, obj){
 		obj.html += webModPopUp(obj);
 		obj.html += webModIcc(obj);
 		return obj.html + '</div>';
-	} else {
+	}else{
 		console.log('removing ' + mod);
         $('#' + mod).remove();
     }
@@ -786,7 +786,7 @@ function webModCarousel(mod, obj){
 	if(obj.div1 || obj.src1){
 		if(obj.src2){
 			console.log('webMod'+mod+' carousel');
-		} else {
+		}else{
 			obj.align = obj.align1 ? obj.align1 : '';
 			obj.alt = obj.alt1 ? obj.alt1 : '';
 	        obj.div = obj.div1 ? obj.div1 : '';
@@ -798,7 +798,7 @@ function webModCarousel(mod, obj){
 	        obj.title = obj.title1 ? obj.title1 : '';
 	        return webMod(mod, obj);
 		}
-	} else {
+	}else{
 		$('#' + mod).remove();
 	}
 }
@@ -833,20 +833,20 @@ function webModCoupon(mod, obj){
 		if(obj.link){
 			obj.number = '';
 			obj.div += render(template.a, webModLink(obj));
-		} else {
+		}else{
 			obj.div += obj.a;
 		}
 		obj.div += webModPopUp(obj);
 		obj.div += webModIcc(obj);
 		return obj.div + '</div>';
-	} else {
+	}else{
         $('#' + mod).remove();
     }
 }
 function webModFormat(data, format){
 	if(format === 'link'){
 		return data.replace(/(\w)\s+([\w\?])/g,'$1,$2').replace(/\s*([,+])\s*/g,'$1').replace(/([^,])([\?&]cm_sp)/g,'$1,$2').replace(/([^,:])(#\w+)/g,'$1,$2').trim();
-	} else {
+	}else{
 		return data.replace(/\s*([,+])\s*/g,'$1').trim();
 	}
 }
@@ -912,7 +912,7 @@ function webModHeader(mod, obj){
 			obj.html += render(template.div, obj);
 		}
 		return obj.html;
-	} else {
+	}else{
 		console.log('removing '+mod);
         $('#' + mod).remove();
     }
@@ -936,9 +936,10 @@ function webModIcc(obj){
 	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:5%;';
 			obj.iccHtml += render(template.icc, obj);
 		}
+		obj.code = '';
 		obj.css = '';
 		return obj.iccHtml;
-	} else {
+	}else{
 		return ''; 
 	}
 }
@@ -956,7 +957,7 @@ function webModLink(obj){
 			for(var i = 1; i < obj.linkArrayLength; i++){
 				if(obj.linkArray[i].indexOf('cm_sp') === 1){
 					obj.mcode =  obj.linkArray[i];
-				} else if(obj.linkArray[i].indexOf('#') === 0){
+				}else if(obj.linkArray[i].indexOf('#') === 0){
 					obj.tag =  obj.linkArray[i];
 				}
 			}
@@ -970,11 +971,11 @@ function webModLink(obj){
 			obj.sku = obj.linkArray[0].slice(obj.skuIndex + 4, obj.linkArray[0].indexOf('.'));
 			obj.events = render(template.locator, obj);
 		}
-	} else if(obj.linkArray[0].indexOf('#') === 0){
+	}else if(obj.linkArray[0].indexOf('#') === 0){
 		obj.href = template.void;
 		obj.end = obj.linkArray[0];
 		obj.events = render(template.event.AnimateScroll, obj);
-	} else {
+	}else{
 		obj.href = template.void;
 		obj.locator = 'carousel_1';
 		obj.sku = obj.linkArray[0];
@@ -984,7 +985,7 @@ function webModLink(obj){
 			obj.class += ' pfm scTrack';
 			obj.sctype = 'pfm';
 			obj.events = render(template.event.qView, obj) + ' ' + render(template.locator, obj);
-		} else {
+		}else{
 			obj.class += ' cta scTrack';
 			obj.sctype = 'cta';
 			obj.events = render(template.event.addToCart, obj) + ' ' + render(template.locator, obj);
@@ -1012,7 +1013,7 @@ function webModMap(mod, obj){
 		if(obj.shape === 'default'){
 			obj.coords = '';
 			obj.default = render(template.area, webModLink(obj));
-		} else {
+		}else{
 			obj.mapAreas += render(template.area, webModLink(obj));
 		}
 	}
@@ -1038,7 +1039,7 @@ function webModPicture(obj){
 		}
 		obj.media += 'px)';
 		obj.picture = render(template.source, obj);
-	} else {
+	}else{
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
@@ -1059,6 +1060,10 @@ function webModPopUp(obj){
 		obj.width = 400;
 		for(var i = 0, max = obj.popUpMultiple.length; i < max; i++){
 			obj.popUpArray = obj.popUpMultiple[i].split(',');
+			
+
+
+
 			if(obj.popUpArray.length < 3 || obj.popUpArray[2].search(/[A-Z0-9]{8}/) < 0){
 				if(obj.code === undefined){
 					obj.a = obj.popUpArray[0] ? obj.popUpArray[0] : 'Gift Details';
@@ -1067,7 +1072,7 @@ function webModPopUp(obj){
 					if(obj.colorIndexStart > 5){
 						obj.colorIndexEnd = obj.popUpArray[2].indexOf(';', obj.colorIndexStart) >= 0 ? obj.popUpArray[2].indexOf(';', obj.colorIndexStart) : obj.popUpArray[2].length;
 						obj.color = obj.popUpArray[2].slice(obj.colorIndexStart, obj.colorIndexEnd);
-					} else {
+					}else{
 						obj.color = '#000';
 					}
 					obj.css = 'color:' + obj.color + ';';
@@ -1079,7 +1084,7 @@ function webModPopUp(obj){
 					obj.events = '';
 					obj.popUpHtml += render(template.p, obj);
 				}
-			} else {
+			}else{
 				if(obj.code !== undefined){
 					if(obj.popUpArray[2] === obj.code){
 						obj.a = obj.popUpArray[0] ? obj.popUpArray[0] : 'Gift Details';
@@ -1097,7 +1102,7 @@ function webModPopUp(obj){
 		}
 		obj.css = '';
 		return obj.popUpHtml;
-	} else {
+	}else{
 		return '';
 	}
 }

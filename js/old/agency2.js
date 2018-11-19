@@ -4,7 +4,7 @@ $(".toggleAccordion").click(function(){
 	console.log("accordionState: "+$(this).siblings('.accordionContent').attr('accordionState'));
 	if ($(this).siblings(".accordionContent").attr("accordionState")==="open"){
 		$(this).siblings(".accordionContent").slideUp(300).attr("accordionState","closed");
-	} else {
+	}else{
 		$(".accordionContent").slideUp(300).attr("accordionState","closed");
 		$(this).siblings(".accordionContent").slideDown(300).attr("accordionState","open");
 	}
@@ -25,7 +25,7 @@ function buildCrumbs(crumbObject) {
 			for (var i=0; i < crumbObject.length; i++) {
 				if (crumbObject[i].breadcrumbsUrl != "") {
 					$('ul#breadcrumbs').append('<li id="breadcrumb'+i+'"><a href="'+crumbObject[i].breadcrumbsUrl+'" title="Return to '+crumbObject[i].breadcrumbsText+'">'+crumbObject[i].breadcrumbsText+'</a></li>');
-				} else {
+				}else{
 					$('ul#breadcrumbs').append('<li id="breadcrumb'+i+'">'+crumbObject[i].breadcrumbsText+'</li>');
 				}
 				if (i != crumbObject.length-1) {
@@ -49,13 +49,13 @@ function openDialog(contents,node,width,height){
 	$(node).append($dialog);
 	if(width){
 		width = parseInt(width);
-	} else {
+	}else{
 		width = $(contents).width();
 	}
 	width += parseInt($('.dialogBox').css('padding-right'))+parseInt($('.dialogBox').css('padding-left'));
 	if(height){
 		height = parseInt(height);
-	} else {
+	}else{
 		height = $(contents).height();
 	}
 	height += parseInt($('.dialogBox').css('padding-top'))+parseInt($('.dialogBox').css('padding-bottom'));
@@ -86,7 +86,7 @@ $(".openDisclaimer").click(function(){
 			var disclaimerString = "";
 			if ($(this).attr("custom")) {
 				disclaimerString = $(this).attr("custom");
-			} else {
+			}else{
 				if ($(this).attr("expiry")) {
 					disclaimerString += "Good through "+$(this).attr("expiry")+". ";
 				}
@@ -177,7 +177,7 @@ function buildNav(navObject) {
 					if(pageUrl == navLinkUrl) { 	
 						// if menu tab link is to current page, highlight and don't add <a>
 						$('#mainNav').append('<li id="menuTab'+i+'" class="menuRollOver '+ (typeof navObject.items[i].class !== "undefined" ? navObject.items[i].class: "") +'"><span>'+navObject.items[i].menuTabText+'</span></li>');
-					} else {
+					}else{
 						$('#mainNav').append('<li id="menuTab'+i+'" class="menuRollOver"><a href="'+navObject.items[i].menuTabUrl+'" title="Click to open '+navObject.items[i].menuTabText+' page"><span>'+navObject.items[i].menuTabText+'</span></a></li>');
 						if(trackingCode) {
 							// if there is a tracking code, append it to <a href>
@@ -200,7 +200,7 @@ function buildNav(navObject) {
 								console.log('navObject.items['+i+'].menuTabUrl.search(\'\\?\')= '+navObject.items[i].menuTabUrl.search('\\?'));
 								// if there is a '?' in the link, add tracking code using '&'
 								$('#menuTab'+i+' a').attr('href',$('#menuTab'+i+' a').attr('href')+'&cm_sp='+trackingCode+'-_-'+i);
-							} else {
+							}else{
 								// if there is not a '?' in the link, add tracking code using '?'
 								$('#menuTab'+i+' a').attr('href',$('#menuTab'+i+' a').attr('href')+'?cm_sp='+trackingCode+'-_-'+i);
 							}
@@ -214,7 +214,7 @@ function buildNav(navObject) {
 							'scValue':navObject.items[i].menuTabText.replace(/\s/g,"").toLowerCase()});
 							// if there is a scType & scValue add attributes to <a>
 						}
-				} else {	
+				}else{	
 					// if menu tab doesn't have link
 					$('#mainNav').append('<li id="menuTab'+i+'" class="menuRollOver"><a href="javascript:void(0)" title="Make your selection below"><span>'+navObject.items[i].menuTabText+'</span></a></li>');
 				}
@@ -227,7 +227,7 @@ function buildNav(navObject) {
 						if(pageUrl == navLinkUrl) {
 							// if menu item link is to current page, highlight and don't add <a>
 							$('#menuTab'+i+' .subNav').append('<li id="menuItem'+j+'"><span>'+navObject.items[i].menuDropDown[j].menuItemText+'</span></li>');
-						} else {
+						}else{
 							// if menu item link is not to current page, add <a>
 							$('#menuTab'+i+' .subNav').append('<li id="menuItem'+j+'"><a href="'+navObject.items[i].menuDropDown[j].menuItemUrl+'" title="Click to open '+navObject.items[i].menuDropDown[j].menuItemText+' page"><span>'+navObject.items[i].menuDropDown[j].menuItemText+'</span></a></li>');
 							if(trackingCode) {
@@ -235,7 +235,7 @@ function buildNav(navObject) {
 								if(navObject.items[i].menuDropDown[j].menuItemUrl.search('\\?') != -1){
 									// if there is a '?' in the link, add tracking code using '&'
 									$('#menuTab'+i+' #menuItem'+j+' a').attr('href',$('#menuTab'+i+' #menuItem'+j+' a').attr('href')+'&cm_sp='+trackingCode+'-_-'+i+'-_-'+j);
-								} else {
+								}else{
 									// if there is not a '?' in the link add, tracking code using '?'
 									$('#menuTab'+i+' #menuItem'+j+' a').attr('href',$('#menuTab'+i+' #menuItem'+j+' a').attr('href')+'?cm_sp='+trackingCode+'-_-'+i+'-_-'+j);
 								}
@@ -260,7 +260,7 @@ function menuToggle($menuTrigger,menuAction) {
 	/*if ($menuTrigger.find(".menuDropDown").is(':animated')){return false;}*/
 	if (menuAction == "open") {
 		$menuTrigger.find(".menuDropDown").fadeIn(100);
-	} else {
+	}else{
 		$menuTrigger.find(".menuDropDown").fadeOut(100);
 	}
 }
@@ -304,7 +304,7 @@ if ($("ul.main li#"+$("ul.main").attr("active"))){
 function showDetails(contents,node,width,height){
 	if (node.find('.frame').length) {
 		return;
-	} else {
+	}else{
 		// closeDetails();
 		var $frame = $('<div class="frame"><div class="contents"></div><button class="close" onclick="closeDetails($(this))">close</button></div>');
 		$frame.find('.contents').append(contents);
@@ -324,7 +324,7 @@ function showDetails(contents,node,width,height){
 					$(this).parent().find('.close').fadeIn(600);
 				});
 			});
-		} else {
+		}else{
 			return;
 		}
 	}
