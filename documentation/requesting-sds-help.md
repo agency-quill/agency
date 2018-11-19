@@ -1,7 +1,7 @@
 # How to request assistance from SDS
 
 ## If the issue is time-sensitive, create an incident ticket:
-* Email (USQC IT (Quill) Problem Tickets)[USQCITQuillProblemTickets@quill.com].
+* Email [USQC __IT__ (Quill) Problem Tickets](USQCITQuillProblemTickets@quill.com).
 * Include the Agency development team: [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor.
 * In the subject line include terms that describe the specific issue.
 * Also include terms like `emergency`, `urgent` or `time-sensitive` to convey urgency in the subjecty line.
