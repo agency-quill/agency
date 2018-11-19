@@ -1,13 +1,13 @@
 # How to request assistance from SDS
 
 ## If the issue is time-sensitive, create an incident ticket:
-* Email [USQC ___IT___ (Quill) Problem Tickets](USQCITQuillProblemTickets@quill.com).
+* Email [USQC ___IT___ (Quill) Problem Tickets](mailto:USQCITQuillProblemTickets@quill.com).
 * Include the Agency development team: [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor.
 * In the subject line include terms that describe the specific issue.
-* Also include terms like _emergency_, _urgent_ or _time-sensitive_ to convey urgency in the subjecty line.
-* In the body of the email, _as fully as possible,_ describe the issue. 
+* Also include terms like _emergency_, _urgent_ or _time-sensitive_ to convey urgency.
+* In the body of the email, __as fully as possible,__ describe the issue. 
 * Include as much information as you can: offer codes, module names, urls, etc.
-* Include terms that convey urgency: _emergency_, _urgent_ or _time-sensitive_.
+* Also include terms that convey urgency: _emergency_, _urgent_ or _time-sensitive_.
 * Write _Assign to App Supt (CMS/ADCore - US.Quill)_ if the issue is about ADCore, CMS or GMP.
 * Write _Assign to Web Team (Web Dev - US.Quill)_ if the issue is about the site.
 
