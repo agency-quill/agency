@@ -145,6 +145,7 @@ n/a - 11/12/18 - Andy
 	}
     function renderMod(){
     	if($('#web_ad_type').val()){
+    		modData = {};
 	    	modData.align = $('#u_ad_img_align').val();
 	        modData.alt = $('#u_ad_img_alt').val();
 	        modData.card = $('#u_ad_card').val();
@@ -156,7 +157,6 @@ n/a - 11/12/18 - Andy
 	        modData.link = $('#u_ad_link_href').val();
 	        modData.map = $('#u_ad_map_href').val();
 	        modData.popup = $('#u_ad_popup').val();
-	        // if (modData.popup){}
 	        modData.src = $('#u_ad_img_src').val();
 	        modData.title = $('#u_ad_link_title').val();
 	        modData.unit = $('#web_ad_type').val();
