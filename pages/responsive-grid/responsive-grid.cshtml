@@ -1,0 +1,544 @@
+@{
+	//C# HEADER: v4.1 7/14/17 | TEMPLATE: v2.7 10/17/17
+	var expiry = new DateTime(2049,12,31,23,59,59);	// modify to expire page sooner. Format: YYYY,MM,DD,HH,MM,SS  - only update YYYY (year), MM (month) and DD (day).
+	RequestData.Current.Title = "Responsive Grid";  // page title
+	RequestData.Current.Description = "xxx_DESCRIPTION_xxx";  // meta description 
+
+	if (Request.QueryString["showspotlight"] != "yes") {string redirectURL = ""; if (DateTime.Now >= expiry.AddMonths(1)) {redirectURL = "/sorry";} else {if (DateTime.Now >= expiry) {redirectURL = "/content/iw/promotion/offers/msg/expired.cshtml";}} if (redirectURL != "") {if (Request.QueryString["cm_sp"] != null || Request.QueryString["cm_mmc"] != null) {Response.RedirectPermanent(redirectURL + "?" + Request.QueryString);} else {Response.RedirectPermanent(redirectURL);}}}
+}
+
+<!-- 
+
+URL: 
+
+Please add the most recent web request number for this file at the bottom of the list below:
+
+WEBREQUESTNUMBER - DATE - DESIGNER
+
+-->
+
+<link href="/content/iw/styles/agency5.min.css" rel="stylesheet">
+<link href="/content/iw/styles/responsive-shim.min.css" rel="stylesheet">
+<style type="text/css">
+	#agency .breakpoints {
+		background-color: #eee;
+		/*display: none;*/
+		padding: 5px;
+		position: absolute;
+		right: 1.25%;
+		top: 5px;
+		z-index: 1;
+	}
+	@@media (max-width: 445px) {
+		#agency .breakpoints {
+			display: none;
+		}
+	}
+	#agency .breakpoints__td {
+		font-size: 10px;
+		padding-left: 5px;
+    	padding-right: 5px;
+	}
+	#agency .grid > div:nth-child(6n+1) .modWidth {
+		background-color: #D81159;
+	}
+	#agency .grid > div:nth-child(6n+2) .modWidth {
+		background-color: #8F2D56;
+	}
+	#agency .grid > div:nth-child(6n+3) .modWidth {
+		background-color: #0062A9;
+	}
+	#agency .grid > div:nth-child(6n+4) .modWidth {
+		background-color: #FBB13C;
+	}
+	#agency .grid > div:nth-child(6n+5) .modWidth {
+		background-color: #73D2DE;
+	}
+	#agency .grid > div:nth-child(6n+6) .modWidth {
+		background-color: #582B11;
+	}
+	#agency .grid__unit--12-5 .colWidth {
+		height: 20px;
+		width: 100%;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+1) .colWidth {
+		background-color: #00365D;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+2) .colWidth {
+		background-color: #003F6C;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+3) .colWidth {
+		background-color: #00487B;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+4) .colWidth {
+		background-color: #00518B;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+5) .colWidth {
+		background-color: #005A9A;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+6) .colWidth {
+		background-color: #0062A9;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+7) .colWidth {
+		background-color: #1770B0;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+8) .colWidth {
+		background-color: #2E7EB8;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+9) .colWidth {
+		background-color: #458CC0;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+10) .colWidth {
+		background-color: #5C9BC8;
+	}
+	 #agency .grid__unit--12-5:nth-child(12n+11) .colWidth {
+		background-color: #73A9D0;
+	}
+	#agency .grid__unit--12-5:nth-child(12n+12) .colWidth {
+		background-color: #8BB7D7;
+	}
+	#agency .modWidth__text {
+    	font-size: 14px;
+    	left: 10px;
+    	top: 5px;
+	}
+	#agency .grid__unit--name {
+		bottom: 7px;
+    	font-size: 12px;
+		right: 10px;
+	}
+	#agency .modWidth__text, #agency .grid__unit--name {
+		color: #acf;
+    	font-weight: 400;
+    	position: absolute;
+	}
+	#agency .webModInner {
+		background-color: #0062A9;
+		height: 300px;
+	}
+</style>
+<div class="margin__bottom--50 margin__top--50" id="agency">
+	<header class="header grid">
+		<h1 class="grid__unit--100 h1 margin__bottom--50">Responsive Grid</h1>
+		<h2 class="grid__unit--100 h2 margin__bottom--50">Page Width: <span id="pageWidth"></span>px</h2>
+		<table class="breakpoints">
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>mobile portrait</td>
+				<td class=breakpoints__td>0 - 499px</td>
+			</tr>
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>mobile landscape</td>
+				<td class=breakpoints__td>500 - 765px</td>
+			</tr>
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>tablet portrait</td>
+				<td class=breakpoints__td>766 - 1011px</td>
+			</tr>
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>tablet landscape</td>
+				<td class=breakpoints__td>1012 - 1279px</td>
+			</tr>
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>laptop</td>
+				<td class=breakpoints__td>1280 - 1519px</td>
+			</tr>
+			<tr class="breakpoints__tr">
+				<td class=breakpoints__td>desktop</td>
+				<td class=breakpoints__td>1520 - 1885px</td>
+			</tr>
+		</table>
+	</header>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--100">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--100</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--50">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--50</p>
+			</div>
+		</div>
+		<div class="grid__unit--50">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--50</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--33">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--33</p>
+			</div>
+		</div>
+		<div class="grid__unit--33">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--33</p>
+			</div>
+		</div>
+		<div class="grid__unit--33">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--33</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--50">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--50</p>
+			</div>
+		</div>
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+		<div class="grid__unit--25">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+		<div class="grid__unit--25 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--25.card</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+		<div class="grid__unit--12-5 webModCard">
+			<div class="webModInner">
+				<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+				<p class="grid__unit--name">grid__unit--12-5</p>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+	<section class="grid">
+		<div class="grid grid__unit--50">
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+		</div>
+		<div class="grid grid__unit--50">
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+			<div class="grid__unit--33">
+				<div class="webModInner">
+					<p class="p modWidth__text">module width: <span class="modWidth__module"></span>px</p>
+					<p class="grid__unit--name">grid__unit--33</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="grid">
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+		<div class="grid__unit--12-5 margin__bottom--50"><div class="colWidth"></div></div>
+	</section>
+</div>
+<script src="/content/iw/scripts/agency3.min.js"></script>
+<script>
+	$(window).on('load', function(){
+		measurements();
+	});
+	$(window).resize(function(){
+		measurements();
+	});
+	function measurements(){
+		$('#pageWidth').text(function(){
+			return window.innerWidth;
+		})
+		$('.grid div').each(function(){
+			$(this).find('.modWidth__left').text(function(){
+				return $(this).parents('div[class*="grid__unit"]').css('padding-left');
+			});
+			$(this).find('.modWidth__module').text(function(){
+				return $(this).parents('div[class*="grid__unit"]').width();
+			});
+			$(this).find('.modWidth__right').text(function(){
+				return $(this).parents('div[class*="grid__unit"]').css('padding-right');
+			});
+		});
+	}
+</script>
