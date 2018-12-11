@@ -9,7 +9,7 @@ $(window).on('load', function(){
 	if($('#agency [data-nav-json]')){
 		$('#agency [data-nav-json]').each(function(index){
 			if(!isEmpty($(this).attr('data-nav-json'),$(this))){
-				jsonLoad($(this).attr('data-nav-json'), buildNav, $(this), $(this).attr('data-nav-code'));
+				jsonLoad($(this).attr('data-nav-json'), buildNavMod, $(this), $(this).attr('data-nav-code'));
 			}
 		});
 	}

@@ -1,9 +1,9 @@
 # Responsive grid
 Welcome to the world of responsive design!  You are now the proud owner of a reposnsive design grid. Your new responsive grid is made up of HTML and CSS code that works seamlessly on devices from mobile phones to large desktop monitors without the need to write HTML for each. That's right!  You only need to use a single block of code. For a quick introduction to the responsive grid, check out the two examples below. 
 
-[Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout relationships.
+[Responsive Grid](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout relationships.
 
-[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images work within the responsive grid. Review the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc for specs on image and cropping sizes.
+[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images work within the responsive grid. Review the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc for specs on image and cropping sizes.
 
 ---
 
@@ -260,7 +260,7 @@ To make a grid unit follow the card-based pattern, add the `webModCard` class to
 </section>
 ```
 
-You can see the way grid units scale and wrap in this example: [Responsive Grid](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-grid.cshtml).
+You can see the way grid units scale and wrap in this example: [Responsive Grid](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-grid.cshtml).
 
 ### Web ad grid units
 Content, including images, scale to fit the bounds of the grid unit. Web ad, or banner, images behave a little differently. Rather than wrap, web ad images crop (for the most part).
@@ -270,4 +270,4 @@ The height of a banner is not set and can be whatever the design calls for. The 
 
 For more information see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
 
-You can see the way images scale, crop and wrap in this example: [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/adv/sandbox/responsive-web-ads.cshtml).
+You can see the way images scale, crop and wrap in this example: [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml).

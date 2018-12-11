@@ -160,11 +160,25 @@ n/a - 11/12/18 - Andy
 	        modData.src = $('#u_ad_img_src').val();
 	        modData.title = $('#u_ad_link_title').val();
 	        modData.unit = $('#web_ad_type').val();
-			$('#webMod').length || $('#webModWindow').html('<div class="grid__unit--' + modData.unit + '" id="webMod"></div>');
-	    	$('#webMod').html(webMod('webMod', modData));
+	        $('#webMod').length || $('#webModWindow').html('<div class="grid__unit--' + modData.unit + '" id="webMod"></div>');
+	    	$('#webMod').html(webMod('webMod', fieldCheck(modData)));
 	    	modData.icc && disclaimerLoad();
 	    } else {
     		alert('please choose a module');
 	    }
+    }
+    function fieldCheck(obj){
+    	for(var prop in obj){
+	    	if(/[^\\]'/g.test(obj[prop])){
+	    		alert('please escape all apostrophes (\\\')');
+	    		break;
+	    	} else {
+	    		if(prop === 'icc'){
+	    			
+		    		obj[prop] = obj[prop].replace(/\\\'/g,'\'');
+		    	}
+		    }
+    	}
+    	return obj;
     }
 </script>

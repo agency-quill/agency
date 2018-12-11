@@ -4,19 +4,27 @@
 In the Agency we primarily use 3 file servers. The pages, preview and push servers.
 
 ### Pages drive
-`//qlnnas/pages/` (Mac) `\\qlnnas\pages\` (PC)
+`//qlnnas/pages/`
 
-There are a lot of files in the pages drive. This is where all of the Agency source files are housed. It has the `Creative` folder which contains all of the print files and the `WebTeam` folder, which contains all of the web and email files.
+The pages drive is where all of the Agency source files are housed. It has the `Creative` folder which contains all of the print files and the `WebTeam` folder, which contains all of the web and email files. The `webTeam` folder holds the email and web assets that the Agency produces.
 
-The `webTeam` folder holds the main repositories for the email and web assets that the Agency produces. The `Quill/Email` folder has all of the working files for emails. The `Quill/WebAd` folder has all of the working files for web assets (i.e. graphics or landing pages). And the `CAMPAIGN_RESOURCES` folder has all of the creative files for over-arching campaigns.
+The `Quill/Email` folder has all of the working files for emails.
 
-`//qlnnas/pages/WebTeam/Quill/Email` (Mac) `\\qlnnas\pages\WebTeam\Quill\Email` (PC)
+`//qlnnas/pages/WebTeam/Quill/Email`
 
-`//qlnnas/pages/WebTeam/Quill/WebAd` (Mac) `\\qlnnas\pages\WebTeam\Quill\WebAd` (PC)
+The `Quill/WebAd` folder has all of the working files for web assets (i.e. graphics or landing pages).
 
-`//qlnnas/pages/WebTeam/CAMPAIGN_RESOURCES/` (Mac) `\\qlnnas\pages\WebTeam\CAMPAIGN_RESOURCES\` (PC)
+`//qlnnas/pages/WebTeam/Quill/WebAd`
+
+The `CAMPAIGN_RESOURCES` folder has all of the creative files for campaigns.
+
+`//qlnnas/pages/WebTeam/CAMPAIGN_RESOURCES/`
+
+For more information on how the file hierarchy is structured, see the [Folder Structure](https://github.com/agency-quill/agency-project-files/blob/master/documentation/folder-structure.md) documentation.
 
 #### Archiving/restoring files
+Constraints on the 
+
 Just wanted to give everyone a small update on the process for archiving/restoring old files.
  
 In an effort to ensure that we are all working from the correct files, we are going use the new process below.
@@ -29,11 +37,14 @@ Once complete the designer moves to Re-Archive folder (\__REARCHIVE_Folder)
 There are folders by year/month, please place in the appropriate folder. These will be pushed backed into the archives to overwrite the now obsolete files.
 
 ### Preview server
-`//qlnprteamsite1/QuillContent_Preview/Content/` (Mac) `\\qlnprteamsite1\QuillContent_Preview\Content\` (PC)
+`//qlnprteamsite1/QuillContent_Preview/Content/`
+
 http://qpreview.quillcorp.com/content/
 
 ### Push server
-`//contentsrvr/imagepush/new_content/` (Mac) `\\contentsrvr\imagepush\new_content\` (PC)
+`//contentsrvr/imagepush/new_content/`
 
-`//contentsrvr/imagepush/new_content/PROD_EMAIL_QUILL` (Mac) `\\contentsrvr\imagepush\new_content\PROD_EMAIL_QUILL` (PC)
+`//contentsrvr/imagepush/new_content/PROD_EMAIL_QUILL`
 
+`00_IMMEDIATE`
+`10_Monday`, `20_Tuesday`, `30_Wednesday`, `40_Thursday`, `50_Friday`, `60_Saturday`, `70_Sunday`
