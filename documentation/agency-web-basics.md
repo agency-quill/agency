@@ -11,15 +11,17 @@ The pages drive is where all of the Agency source files are housed. There are a 
 #### CAMPAIGN_RESOURCES
 `//qlnnas/pages/WebTeam/CAMPAIGN_RESOURCES`
 
-The `CAMPAIGN_RESOURCES` folder has all of the creative files for campaigns.
+The `CAMPAIGN_RESOURCES` folder has all of the creative files for campaigns. It is organized by year and then by campaign. Beyond that there is no established structure. The campaign can house assets, concepts and working files.
 
 #### Personal_Projects
 `//qlnnas/pages/WebTeam/Personal_Projects`
 
+The `Personal_Projects` folder has folders for each member of the Agency. It serves as a personal workspace. It can be used to house files that don't have any other home or as a place to transfer files between Agency members. It's pretty much whatever you want it to be. Keep in mind that storage space isn't infinite, and `Personal_Projects` files are not part of our periodic archiving process. Please avoid storing large or duplicate creative files unnecessarily.
+
 #### Quill
 `//qlnnas/pages/WebTeam/Quill`
 
-The `Quill` folder has.
+The `Quill` folder has the `Email` and `WebAd` folders. These are where the working files and final assets for email and web are stored.
 
 ##### Email
 `//qlnnas/pages/WebTeam/Quill/Email`
@@ -31,28 +33,29 @@ The `Email` folder has all of the working files for emails.
 
 The `WebAd` folder has all of the working files for web assets (i.e. web ads, graphics and landing pages).
 
-For more information on how the `WebAd` folder file hierarchy is structured, see the [Folder Structure](https://github.com/agency-quill/agency-project-files/blob/master/documentation/folder-structure.md) documentation.
+For more information on how the `WebAd` folder file hierarchies are structured, see the [Folder Structure](https://github.com/agency-quill/agency-project-files/blob/master/documentation/folder-structure.md) documentation.
 
 #### Resources
 `//qlnnas/pages/WebTeam/Resources`
 
-
-
+The `Resources` folder houses files that are used to build email and web assets. There are documents, fonts, images, scripts, styles, templates, etc.. Most of the scripts and styles are moving to our [GitHub](https://github.com/agency-quill/agency-project-files) page, but there are still many useful files in the `Resources` folder.
 
 #### Archiving/restoring files
 We have a limited amount of server space so we need to periodically archive our files.
 
+When we are bumping up against our data limit, we will archive folders in the `Email` and `WebAd` folders. We generally archive entire months or years.
 
-Just wanted to give everyone a small update on the process for archiving/restoring old files.
+If you need access to an archived file you can request for it to be restored. Restored files are found in the `__UNARCHIVED_Folder` folders in the root of the `Email` an d `WebAd` folders. 
  
-In an effort to ensure that we are all working from the correct files, we are going use the new process below.
- 
-Check to ensure it is not already unarchived
-Archive request to Ben & Zibi
-Ben or Zibi will File moved to Unarchive Folder (File will be placed in \__UNARCHIVED_Folder)
-Designer makes updates
-Once complete the designer moves to Re-Archive folder (\__REARCHIVE_Folder)
-There are folders by year/month, please place in the appropriate folder. These will be pushed backed into the archives to overwrite the now obsolete files.
+The file restoration/re-archiving process is:
+
+* Check the `__UNARCHIVED_Folder` to ensure it has not already been restored
+* If not, send an email to Ben &amp; Zibi asking them to restore the email or web assets you need. Be sure to send the email or web request number of job you need restored.
+* The restored folder will be placed in the root of the `__UNARCHIVED_Folder` folder (e.g. `__UNARCHIVED_Folder/W14_05_374_HELP`)
+* Make any updates to the files in the `__UNARCHIVED_Folder`
+* If the file in question is repeatedly updated leave it in the `__UNARCHIVED_Folder` folder
+* The `__REARCHIVE_Folder` is in the root of the `__UNARCHIVED_Folder`. To re-archive the files, move the folder from the `__UNARCHIVED_Folder` folder to the proper folder within the `__REARCHIVE_Folder` (e.g. `__UNARCHIVED_Folder/__REARCHIVE_Folder/2014/05/W14_05_374_HELP`)
+
 
 ### Preview server
 `//qlnprteamsite1/QuillContent_Preview/Content/`
@@ -67,3 +70,9 @@ http://qpreview.quillcorp.com/content/
 `00_IMMEDIATE`
 `10_Monday`, `20_Tuesday`, `30_Wednesday`, `40_Thursday`, `50_Friday`, `60_Saturday`, `70_Sunday`
 
+## Web Apps
+### ADCore
+### CMS
+### Lago
+### GMP
+### ServiceNow
