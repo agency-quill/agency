@@ -1,4 +1,8 @@
 # ADCore modules
+---
+Last updated 12/12/18 by A. Edmonds
+---
+
 To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, and HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
 
 You can see an example of each of these modules, and how they interact, on the [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml) page.
@@ -1180,3 +1184,6 @@ __(css | icc) (position 3):__ This position can hold the in-line CSS that govern
 `Gift details, <ul><li>4 Ceramic mugs with tapered shape</li><li>Contemporary designs</li><li>12 oz. capacity</li><li>Microwave and dishwasher safe</li></ul>, ICCICC01`
 
 `More information, Lorem ipsum dolor sit amet&#44; consectetur adipisicing elit. Sunt saepe magni commodi&#44; necessitatibus quas&#44; eligendi magnam exercitationem sequi ipsum at iure officiis praesentium sed blanditiis iste! Nostrum ex quidem cumque!, bottom:15px;color:#fff;`
+
+___
+a.edmonds 12/12/18
