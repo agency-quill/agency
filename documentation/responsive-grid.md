@@ -1,4 +1,6 @@
 # Responsive grid
+_Last updated 12/12/18_
+
 Welcome to the world of responsive design!  You are now the proud owner of a reposnsive design grid. Your new responsive grid is made up of HTML and CSS code that works seamlessly on devices from mobile phones to large desktop monitors without the need to write HTML for each. That's right!  You only need to use a single block of code. For a quick introduction to the responsive grid, check out the two examples below. 
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout relationships.

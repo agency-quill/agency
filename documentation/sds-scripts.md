@@ -1,4 +1,6 @@
 #SDS Scripts
+_Last updated 12/12/18_
+
 ##Custom list
 `<$= CarouselDynTemplate(['$%dynamic_list_id%$','0','$%custom_list_numb_items%$','$%custom_list_display_type%$','$%custom_list_numb_items_max%$','','$%custom_list_accordion_sort%$','$%custom_list_accordion_state%$']) $>`
 
@@ -33,5 +35,3 @@ number of items returned by the list.
 ###Element 8
 `0`
 accordion default (0 = list open, 1 = only first row visible)
-
- 

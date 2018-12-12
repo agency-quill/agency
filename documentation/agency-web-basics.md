@@ -1,4 +1,5 @@
 # Agency Web Basics
+_Last updated 12/12/18_
 
 ## File servers
 In the Agency we primarily use 3 file servers. The __pages__, __preview__ and __push__ servers. In most cases, final web asset should be copied to all three.
