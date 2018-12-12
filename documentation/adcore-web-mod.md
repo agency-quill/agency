@@ -1,5 +1,4 @@
 # ADCore modules
----
 Last updated 12/12/18 by A. Edmonds
 ---
 
