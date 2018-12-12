@@ -1,5 +1,6 @@
 # ADCore modules
-Last updated 12/12/18 by A. Edmonds
+_Last updated 12/12/18 by A. Edmonds_
+
 ---
 
 To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, and HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
