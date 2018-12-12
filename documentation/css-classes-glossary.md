@@ -273,7 +273,7 @@ Usage
 <h2 class="h2--small">Lorem ipsum</h2>
 ```
 
-**`.hn\__a--right, .hn\__a--underline--right`**
+**`.hn__a--right, .hn__a--underline--right`**
 Use for anchors that are in heading element (Section headings), off page links (e.g. view all) or "Back to top" links.
 ```html
 Usage
@@ -332,7 +332,7 @@ Usage
 <p class="icc__p--strong"> lorem ipsum</p>
 ```
 
-**`.margin\__all--0, .margin\__all--12-5, .margin\__all--25, .margin\__all--75, .margin\__all--100`**
+**`.margin__all--0, .margin__all--12-5, .margin__all--25, .margin__all--75, .margin__all--100`**
 Use to create same spacing (top, right, bottom, left) around block elements.
 ```html
 Usage
@@ -341,14 +341,14 @@ Usage
 </div>
 ```
 
-**`.margin\__bottom--0, .margin\__bottom--12-5, .margin\__bottom--25, .margin\__bottom--75, .margin\__bottom--100`**
+**`.margin__bottom--0, .margin__bottom--12-5, .margin__bottom--25, .margin__bottom--75, .margin__bottom--100`**
 Use to create space at the bottom of block elements.
 ```html
 Usage
 <p class="margin__bottom--25">Lorem ipsum</p>
 ```
 
-**`.margin\__horizontal--0, .margin\__horizontal--12-5, .margin\__horizontal--25, .margin\__horizontal--75, .margin\__horizontal--100`**
+**`.margin__horizontal--0, .margin__horizontal--12-5, .margin__horizontal--25, .margin__horizontal--75, .margin__horizontal--100`**
 Use to create same spacing on both right and left of a block elements.
 ```html
 Usage
@@ -357,28 +357,28 @@ Usage
 </div>
 ```
 
-**`.margin\__left--0, .margin\__left--12-5, .margin\__left--25, .margin\__left--75, .margin\__left--100`**
+**`.margin__left--0, .margin__left--12-5, .margin__left--25, .margin__left--75, .margin__left--100`**
 Use to create space at the left of block elements.
 ```html
 Usage
 <p class="margin__left--25">Lorem ipsum</p>
 ```
 
-**`.margin\__right--0, .margin\__right--12-5, .margin\__right--25, .margin\__right--75, .margin\__right--100`**
+**`.margin__right--0, .margin__right--12-5, .margin__right--25, .margin__right--75, .margin__right--100`**
 Use to create space at the right of block elements.
 ```html
 Usage
 <div class="margin__right--25">Lorem ipsum</div>
 ```
 
-**`.margin\__top--0, .margin\__top--25, .margin\__top--75, .margin\__top--100`**
+**`.margin__top--0, .margin__top--25, .margin__top--75, .margin__top--100`**
 Use to create space at the top of block elements.
 ```html
 Usage
 <div class="margin__top--25">Lorem ipsum</div>
 ```
 
-**`.margin\__vertical--0, .margin\__vertical--12-5, .margin\__vertical--25, .margin\__vertical--75, .margin\__vertical--100`**
+**`.margin__vertical--0, .margin__vertical--12-5, .margin__vertical--25, .margin__vertical--75, .margin__vertical--100`**
 Use to create same spacing (top and bottom) on a block element.
 ```html
 Usage
@@ -562,28 +562,28 @@ Usage
 <ul class="ul">Lorem ipsum</ul>
 ```
 
-**`.ul\__li and .ol\__li`**
+**`.ul__li and .ol__li`**
 Use to style list items
 ```html
 Usage
 <li class="ul__li">Lorem ipsum</li>
 ```
 
-**`.ul\__li--inline and .ol\__li--inline`**
+**`.ul__li--inline and .ol__li--inline`**
 Use to style a list item displayed inline (horizontal)
 ```html
 Usage
 <li class="ul__li--inline">Lorem ipsum</li>
 ```
 
-**`.ul\__li--small, .ol\__li--small, .ul__li--small--inline`**
+**`.ul__li--small, .ol__li--small, .ul__li--small--inline`**
 Use to style a list items with smaller font size. 
 ```html
 Usage
 <li class="ul__li--small">Lorem ipsum</li>
 ```
 
-**`.ul\__li--table and .ul\__li--small--table `**
+**`.ul__li--table and .ul__li--small--table `**
 For unordered lists inside tables
 ```html 
 <table class="table">
