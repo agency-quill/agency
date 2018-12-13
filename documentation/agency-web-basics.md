@@ -1,6 +1,8 @@
 # Agency Web Basics
 _Last updated 12/12/18_
 
+This document covers most of the things you need to work in the email and web teams in the Agency. If there is aomething you feel belongs in this document, please let someone know. :)
+
 ## File servers
 In the Agency we primarily use 3 file servers. The __pages__, __preview__ and __push__ servers. In most cases, final web asset should be copied to all three.
 
@@ -36,39 +38,47 @@ The `WebAd` folder has all of the working files for web assets (i.e. web ads, gr
 
 For more information on how the `WebAd` folder file hierarchy, see the [Folder Structure](https://github.com/agency-quill/agency-project-files/blob/master/documentation/folder-structure.md) documentation.
 
+##### File archiving/restoring
+We have a limited amount of server space so we need to periodically archive our files.
+
+For more information on the file archiving/restoring process, see the [Archiving and restoring files](https://github.com/agency-quill/agency-project-files/blob/master/documentation/file-archiving-restoring.md) documentation.
+
 #### Resources
 `//qlnnas/pages/WebTeam/Resources`
 
 The `Resources` folder houses files that are used to build email and web assets. There are documents, fonts, images, scripts, styles, templates, and more. Most of the scripts and styles are moving to our [GitHub](https://github.com/agency-quill/agency-project-files) page, but there are still many useful files in the `Resources` folder.
 
-#### Archiving and restoring files
-We have a limited amount of server space so we need to periodically archive our files.
-
-When we are bumping up against our data limit, we archive folders in the `Email` and `WebAd` folders. We archive entire months or entire years. You will know a file has been archived because the folder has the word "archived" added to it. Sometimes archiving working files doesn't remove enough and we look for other folders (i.e. `Personal_Projects`) to archive.
-
-If you need access to an archived file, you can request for it to be restored. Restored files are found in the `__UNARCHIVED_Folder` folder in the root of the `Email` and `WebAd` folders. 
- 
-The file restoration/re-archiving process is:
-
-* Check the `__UNARCHIVED_Folder` to make sure it has not already been restored
-* If not, send an email to Ben &amp; Zibi asking them to restore the email or web assets you need. Be sure to send the email or web request number of job you need restored.
-* The restored folder will be placed in the root of the `__UNARCHIVED_Folder` folder (e.g. `__UNARCHIVED_Folder/W14_05_374_HELP`)
-* Make any updates to the files in the `__UNARCHIVED_Folder`
-* If the file in question is repeatedly updated leave it in the `__UNARCHIVED_Folder` folder
-* If not, re-archive the files. The `__REARCHIVE_Folder` folder is in the root of the `__UNARCHIVED_Folder` folder. To re-archive the files, move the folder from the `__UNARCHIVED_Folder` folder to the proper folder within the `__REARCHIVE_Folder` folder (e.g. `__UNARCHIVED_Folder/__REARCHIVE_Folder/2014/05/W14_05_374_HELP`)
-
 ### Preview server
 `//qlnprteamsite1/QuillContent_Preview/Content/`
 
-http://qpreview.quillcorp.com/content/
+The preview server is a copy of the live site that is only accessible internally. We use it to proof and debug web pages and graphics.
+
+To render the most accurate appearance for proofing, all of the files, except those in the `content` folder, are updated with data from production nightly. The contents of the `content` folder are maintained solely by the Agency.
+
+To preview your assets, copy your files from the pages drive to the preview server. Use the path they will have in production. The assets will be available via web browser at http://qpreview.quillcorp.com/content/ + the unique path to the files (e.g. http://qpreview.quillcorp.com/content/index/resource-center/healthcare/exam-surgical-gloves/default.cshtml or http://qpreview.quillcorp.com/content/iw/adv/2018/12/015/default.cshtml).
+
+Files that will be visible to search engines are placed in the `index` folder, those that don't need to be indexed are placed in the `iw` folder.
+
+__Files should not be worked on from the preview server. All work should be done on the pages drive.__
+
+__The files on the preview server should not be used as pickups, or to make edits. They may not be the final versions. All work should be done using files found on the pages drive.__
 
 ### Push server
-`//contentsrvr/imagepush/new_content/`
+`//contentsrvr/imagepush/new_content/PROD_WEB_QUILL`
 
-`//contentsrvr/imagepush/new_content/PROD_EMAIL_QUILL`
+The push server is how we get our files posted to the live site. 
 
 `00_IMMEDIATE`
 `10_Monday`, `20_Tuesday`, `30_Wednesday`, `40_Thursday`, `50_Friday`, `60_Saturday`, `70_Sunday`
+
+## Processes
+
+### Email
+
+### Web
+
+## Terminology
+For Quill and Agency acronyms and terminology please see the [Agency Terms](https://github.com/agency-quill/agency-project-files/blob/master/documentation/agency-terms.md) document.
 
 ## Web Apps
 ### ADCore

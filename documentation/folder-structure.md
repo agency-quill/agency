@@ -1,4 +1,4 @@
-# Folder Structure #
+# Folder structure #
 _Last updated 12/12/18_
 
 The folders in the `WebAd` directory are organized by year, month and web request number. Inside the web request directory are two type of folders: ones that hold the work files, which are preceded by an underscore (\_), and ones that hold the final collateral files.
