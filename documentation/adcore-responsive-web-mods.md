@@ -1,4 +1,4 @@
-# ADCore modules
+# ADCore Responsive Web Modules
 _Last updated 12/12/18_
 
 To support the new responsive grid we have developed some new ADCore modules. They are rich in functionality. They support images with or without links, and HTML that floats on top of an image or with no image at all. Links can be standard, jump-to, QView or add to cart. You can add as many image maps, iccs or pop-ups as you want too.
@@ -851,7 +851,7 @@ This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It
 __Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
 
 #### u\_ad\_img\_src
-This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-third-mod` based offer code two image files are required. The first URL is for the main (600px) image, the second for the secondary (320px) image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
+This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-third-mod` based offer code two image files are required. The first URL is for the main (600px) image, the second for the secondary (320px) image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-img-sizes.md) doc.
 
 ##### Example
 `/content/iw/adv/2018/07/011/W18_07_011_STOCKUPICT-1.jpg, /content/iw/adv/2018/07/011/W18_07_011_STOCKUPICT-2.jpg`
@@ -1096,7 +1096,7 @@ This field is the `alt` attribute for the image referenced in `u_ad_img_src`. It
 __Apostrophes/single quotes need to be preceded by a backslash (e.g. `\'`).__
 
 #### u\_ad\_img\_src
-This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-full-mod` based offer code two image files are required. The first URL is for the large image, the second for the smaller image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
+This is an array of URLs of the image files used for a web ad or banner. If this is empty, and the `u_ad_html_text` field is empty the offer code is not rendered. The surrounding HTML 'collapses'. For a `2018-full-mod` based offer code two image files are required. The first URL is for the large image, the second for the smaller image. For more info on image sizes see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-img-sizes.md) doc.
 
 ##### Example
 `/content/iw/adv/2018/07/011/W18_07_011_STOCKUPICT-lg.jpg, /content/iw/adv/2018/07/011/W18_07_011_STOCKUPICT-sm.jpg`

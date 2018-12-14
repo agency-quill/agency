@@ -5,7 +5,7 @@ Welcome to the world of responsive design!  You are now the proud owner of a rep
 
 [Responsive Grid](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-grid.cshtml) &ndash; This is an empty grid that demonstrates the basic layout relationships.
 
-[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images work within the responsive grid. Review the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc for specs on image and cropping sizes.
+[Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml) &ndash; This grid demonstrates the way web ad, or banner, images work within the responsive grid. Review the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-img-sizes.md) doc for specs on image and cropping sizes.
 
 ---
 
@@ -270,6 +270,6 @@ Content, including images, scale to fit the bounds of the grid unit. Web ad, or 
 #### Image sizes and cropping
 The height of a banner is not set and can be whatever the design calls for. The widths of the grid units however, have specific pixel dimensions. Additionally, only a portion of the total image can contain information. For instance, a half-width unit image should be 1125px wide, but and text or important imagery should only fill 726px.
 
-For more information see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web-ad-img-sizes.md) doc.
+For more information see the [Web ad image sizes](https://github.com/agency-quill/agency-project-files/blob/master/documentation/responsive-img-sizes.md) doc.
 
 You can see the way images scale, crop and wrap in this example: [Responsive Web Ads](http://qpreview.quillcorp.com/content/iw/tools/responsive-grid/responsive-web-ads.cshtml).
