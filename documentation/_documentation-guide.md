@@ -14,7 +14,7 @@ This document is an introduction to Agency systems and processes relating to web
 If you are confused about where to find a file you are in luck. The working files for web assets are stored following the structure outlined in this document.
 
 ## Page ID (page-id.md)
-Page IDs are needed for any new ADCore/CMS-driven landing page. This document walks through the steps necessary to request one. ___not started yet___
+Page IDs are needed for any new ADCore/CMS-driven landing page. This document walks through the steps necessary to request one. ___working draft___
 
 ## Requesting SDS Help (requesting-sds-help.md)
 This walk-through explains how to get help from the SDS department in both emergency and non-emergency situations.
@@ -23,5 +23,6 @@ This walk-through explains how to get help from the SDS department in both emerg
 
 
 ## SDS Script (sds-scripts.md)
+___working draft___
 
 ## Web Ad Image Sizes (web-ad-img-sizes.md)
