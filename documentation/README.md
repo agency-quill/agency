@@ -1,4 +1,4 @@
-# Agency Documentation Guide
+# Agency Documentation
 Below are short descriptions of each of the documents in the Agency documentation repository.
 
 ## ADCore Responsive Web Mods 
@@ -6,12 +6,12 @@ The web ad modules described in this document have been designed to work within 
 
 [adcore-responsive-web-mods.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/adcore-responsive-web-mods.md)
 
-## Agency Terms ___WORKING DRAFT___
+## Agency Terms _-WORKING DRAFT-_
 Acronyms, abbreviations and jargon are a normal part of Quill/Agency communications. This is a glossary of some of the more useful terms. 
 
 [agency-terms.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/agency-terms.md)
 
-## Agency Web Basics ___WORKING DRAFT___
+## Agency Web Basics _-WORKING DRAFT-_
 This document is an introduction to Agency systems and processes relating to web asset production. It covers topics like file servers, processes and web applications. 
 
 [agency-web-basics.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/agency-web-basics.md)
@@ -31,7 +31,7 @@ If you are confused about where to find a file you are in luck. The working file
 
 [folder-structure.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/folder-structure.md)
 
-## Page ID ___WORKING DRAFT___
+## Page ID _-WORKING DRAFT-_
 Page IDs are needed for any new ADCore/CMS-driven landing page. This document walks through the steps necessary to request one.
 
 [page-id.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/page-id.md)
@@ -51,7 +51,7 @@ In order to build images that work within the responsive grid, they need to be b
 
 [responsive-img-sizes.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/responsive-img-sizes.md)
 
-## SDS Scripts ___WORKING DRAFT___
+## SDS Scripts _-WORKING DRAFT-_
 There are several scripts that are supported by SDS that we have access to. This document compiles them, and explains what they do and how to use them.
 
 [sds-scripts.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/sds-scripts.md)
