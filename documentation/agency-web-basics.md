@@ -5,7 +5,7 @@ This document covers the basic things you need to work on email and web assets i
 
 * [File servers](#file-servers)
 * [Pages drive](#pages-drive)
-* [&rdsh; CAMPAIGN_RESOURCES](#-campaing_resources)
+* [&rdsh; CAMPAIGN_RESOURCES](#-campaign_resources)
 * [&rdsh; Personal_Projects](#-personal_projects)
 * [&rdsh; Quill](#-quill)
 * [&rdsh; &rdsh; Email](#--email)
@@ -73,7 +73,7 @@ For more information on the file archiving/restoring process, see the [Archiving
 ### Preview server
 `//qlnprteamsite1/QuillContent_Preview/Content/`
 
-The preview server is a copy of the live site that is only accessible internally. We use it to proof and debug web pages and graphics.
+The preview server is a copy of the live site that is only accessible from within Quill. We use it to proof and debug web pages and graphics.
 
 To render the most accurate appearance for proofing, all of the files, except those in the `content` folder, are updated with data from production nightly. The contents of the `content` folder are maintained solely by the Agency.
 
@@ -88,7 +88,7 @@ __The files on the preview server should not be used as pickups, or to make edit
 ### Push server
 `//contentsrvr/imagepush/new_content/PROD_WEB_QUILL`
 
-The push server is how we get our files posted to the live site. 
+The push server is how we get our files posted to the live site. When we copy a file to the push server, it gets copied to the 11 Quill servers and sent to [Akamai](https://www.akamai.com/) to copy to their network.
 
 `00_IMMEDIATE`
 `10_Monday`, `20_Tuesday`, `30_Wednesday`, `40_Thursday`, `50_Friday`, `60_Saturday`, `70_Sunday`

@@ -17,12 +17,12 @@ This document is an introduction to Agency systems and processes relating to web
 [agency-web-basics.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/agency-web-basics.md)
 
 ## CSS Classes Glossary 
-This glossary is a list of CSS classes available in the `agency5.css`style sheet and their usage.
+This glossary is a list of CSS classes available in the `agency5.css` style sheet and their usage.
 
 [css-classes-glossary.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/css-classes-glossary.md)
 
 ## File Archiving/Restoring 
-We have a limited amount of server space for our files so we need to periodically archive them. This document explains how we do that. More importantly, it explains how to get files restored back to the pages drive.
+We have a limited amount of server space for our files so we need to periodically archive them. This document explains how we do that and more importantly, it explains how to get files restored back to the pages drive.
 
 [file-archiving-restoring.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/file-archiving-restoring.md)
 
@@ -42,7 +42,7 @@ This walk-through explains how to get help from the SDS department in both emerg
 [requesting-sds-help.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/requesting-sds-help.md)
 
 ## Responsive Grid 
-A responsive grid is the backbone of a website that can, with a single set of code, render well on all devices and sizes. This document covers the theory and tools needed to build a responsive grid, and the specifics of the Agency implementation.
+A responsive grid is the backbone of websites that can, with a single set of code, render well on all devices and sizes. This document covers the theory and tools needed to build a responsive grid, as well as the specifics of the Agency implementation.
 
 [responsive-grid.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/responsive-grid.md)
 
@@ -52,6 +52,6 @@ In order to build images that work within the responsive grid, they need to be b
 [responsive-img-sizes.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/responsive-img-sizes.md)
 
 ## SDS Scripts _-WORKING DRAFT-_
-There are several scripts that are supported by SDS that we have access to. This document compiles them, and explains what they do and how to use them.
+There are SDS-supported scripts that we have access to. This document compiles them, and explains what they do and how to use them.
 
 [sds-scripts.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/sds-scripts.md)
