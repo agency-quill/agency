@@ -1,29 +1,29 @@
 # Agency Web Basics
 _Last updated 12/12/18_
 
-This document covers the basic things you need to work on email and web assets in the Agency. If anything is confusing, or missing, please let us know. :) Thanks!
+This document covers the basic things you need to work on web assets in the Agency. If anything is confusing, or missing, please let us know. :) Thanks!
 
 * [File servers](#file-servers)
-* [Pages drive](#pages-drive)
-* [&rdsh; CAMPAIGN_RESOURCES](#-campaign_resources)
-* [&rdsh; Personal_Projects](#-personal_projects)
-* [&rdsh; Quill](#-quill)
-* [&rdsh; &rdsh; Email](#--email)
-* [&rdsh; &rdsh; WebAd](#--webad)
-* [&rdsh; Resources](#-resources)
-* [File archiving/restoring](#file-archivingrestoring)
-* [Preview server](#preview-server)
-* [Push server](#push-server)
+* 	[Pages drive](#pages-drive)
+* 		[&rdsh; CAMPAIGN_RESOURCES](#-campaign_resources)
+* 		[&rdsh; Personal_Projects](#-personal_projects)
+* 		[&rdsh; Quill](#-quill)
+* 			[&rdsh; &rdsh; Email](#--email)
+* 			[&rdsh; &rdsh; WebAd](#--webad)
+* 		[&rdsh; Resources](#-resources)
+* 		[File archiving/restoring](#file-archivingrestoring)
+* 	[Preview server](#preview-server)
+* 	[Push server](#push-server)
+*		[`00_IMMEDIATE`](#00_immediate)
+		[Scheduled deployment](#scheduled-deployment)
 * [Processes](#processes)
-* [Email](#email)
-* [Web](#web)
 * [Terminology](#terminology)
 * [Web Apps](#web-apps)
-* [ADCore](#adcore)
-* [CMS](#cms)
-* [Lago](#lago)
-* [GMP](#gmp)
-* [ServiceNow](#servicenow)
+* 	[ADCore](#adcore)
+* 	[CMS](#cms)
+* 	[GMP](#gmp)
+* 	[Lago](#lago)
+* 	[ServiceNow](#servicenow)
 
 ## File servers
 In the Agency we primarily use 3 file servers. The __pages__, __preview__ and __push__ servers. In most cases, final web asset should be copied to all three.
@@ -88,16 +88,23 @@ __The files on the preview server should not be used as pickups, or to make edit
 ### Push server
 `//contentsrvr/imagepush/new_content/PROD_WEB_QUILL`
 
-The push server is how we get our files posted to the live site. When we copy a file to the push server, it gets copied to the 11 Quill servers and sent to [Akamai](https://www.akamai.com/) to copy to their network.
+Copying files to the push server is how we get them posted to the live site. When we copy a file to the push server, it gets copied to the 11 Quill servers and sent to [Akamai](https://www.akamai.com/) to copy throughout their network.
 
-`00_IMMEDIATE`
-`10_Monday`, `20_Tuesday`, `30_Wednesday`, `40_Thursday`, `50_Friday`, `60_Saturday`, `70_Sunday`
+Inside the push server root folder are a series of folders that begin with 2-digit numbers. The ones we are concerned with run from 00 to 70. Each one is a copy of the folders on the production servers.
+
+___Not all of the folders in production are in the push folders. You may need to add, or recreate folders___
+
+#### `00_IMMEDIATE`
+This is the primary push folder. Files dropped into this folder are copied to Quill production and Akamai servers then deleted. This process runs every minute but can take up to 10 minutes to finish.
+
+___Please be careful. We have the ability to delete files from production and the push server, but not folders___
+
+#### Scheduled deployment
+The `10_Monday` folder through the `70_Sunday` folder are for delayed deployment. If a web asset needs to be updated on a particular day, drop the file(s) in the folder of that day. This means we can only schedule deployments a week in advance.
+
+When the days of the week 
 
 ## Processes
-
-### Email
-
-### Web
 
 ## Terminology
 For Quill and Agency acronyms and terminology please see the [Agency Terms](https://github.com/agency-quill/agency-project-files/blob/master/documentation/agency-terms.md) document.
