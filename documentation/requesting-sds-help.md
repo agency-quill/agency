@@ -2,7 +2,7 @@
 _Last updated 12/12/18_
 
 ## If the issue is time-sensitive, create an incident ticket:
-* Email [USQC ___IT___ (Quill) Problem Tickets](mailto:USQCITQuillProblemTickets@quill.com).
+* Email [USQC __IT__ (Quill) Problem Tickets](mailto:USQCITQuillProblemTickets@quill.com).
 * Include the Agency development team: [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor.
 * In the subject line include terms that describe the specific issue.
 * Also include terms like _emergency_, _urgent_ or _time-sensitive_ to convey urgency.

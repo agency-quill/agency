@@ -6,8 +6,10 @@ This document covers the basic things you need to work on email and web assets i
 * [Applications](#applications)
 	* [ADCore](#adcore)
 	* [CMS](#cms)
+	* [ConnectPoint](#connectpoint)
 	* [GMP](#gmp)
 	* [Lago](#lago)
+	* [Lago4Web](#lago4web)
 	* [ServiceNow](#servicenow)
 * [File servers](#file-servers)
 	* [Pages drive](#pages-drive)
@@ -32,19 +34,24 @@ We use several applications to build and manage email and web assets. Here are o
 ADCore is one half of the Quill content management system. It houses the html templates, modules and content (called offer codes) for email and web assets.
 
 ### CMS
-The system we call CMS is actually named GCPS (Genesis Customer Personalization System). It was originally called CMS and the new name never stuck. It is the other half (with ADCore) of the content management system. It is the system that compiles emails and manages when and where web assets are rendered on the live site.
+The system we call CMS is actually named GCPS (Genesis Customer Personalization System). It was originally called CMS and the new name never stuck. It is the other half (with ADCore) of the content management system. CMS establishes the rules that the back-end uses to assemble emails and render web assets based on user data.
 
 ### ConnectPoint
 ConnectPoint is a database tool used company-wide. For the Agency, the primary use of ConnectPoint is to generate web requests. Web specialists create the web requests, including mockups to provide creative direction. This process also dynamically builds all of the ADCore offer codes needed for the requested assets.
 
-### Lago
-
-
 ### GMP
 The Genesis Management Portal (GMP) houses a collection of dashboards used to manage various aspects of the website. The dashboards used by the Agency are to manage virtual directory redirects and the push updates to ADCore offer codes to the live site.
 
-### ServiceNow
+### Lago
+Lago is a print catalog management tool. The print team use it to build catalog pages dynamically from product databases. The email and web processes have been tailored to use Lago as a workflow tool.
 
+For more information see [Russ Brocato](mailto:Rosario.Brocato@quill.com) and [Zibi Szczalba](mailto:Zibi.Szczalba@quill.com).
+
+### Lago4Web
+Lago4Web is a web app ([Lago4Web](http://lagopap/LagoWeb/)) that is used in the workflow for the email and web asset proofing. There is a PowerPoint presentation on how to use Lago4Web here: [LagoWeb training_3_22_17.pptx](http://connectpoint.quillcorp.com/Dept/Agency/Shared%20Documents/LagoWeb%20training_3_22_17.pptx) (password required). [Russ Brocato](mailto:Rosario.Brocato@quill.com) and [Zibi Szczalba](mailto:Zibi.Szczalba@quill.com) support Lago4Web as well.
+
+### ServiceNow
+ServiceNow is the system we use to request technical assistance from the SDS (Staples Digital Solutions) team. For specific instructions on how to use it see the [How to request assistance from SDS](https://github.com/agency-quill/agency-project-files/blob/master/documentation/requesting-sds-help.md) document.
 
 ## File servers
 In the Agency we primarily use 3 file servers. The __pages__, __preview__ and __push__ servers. In most cases, final web asset should be copied to all three.
@@ -73,6 +80,8 @@ The `Quill` folder has the `Email` and `WebAd` folders. These are where the work
 `//qlnnas/pages/WebTeam/Quill/Email`
 
 The `Email` folder has all of the working files for emails.
+
+For more information on the `Email` folder file hierarchy, see the [Folder Structure](https://github.com/agency-quill/agency-project-files/blob/master/documentation/folder-structure.md) documentation.
 
 ##### WebAd
 `//qlnnas/pages/WebTeam/Quill/WebAd`
@@ -131,12 +140,7 @@ The `10_Monday` folder through the `70_Sunday` folder are for delayed deployment
 Prior to the first push of the day, the push process copies all of the files from the folder for that day of the week (e.g. `20_Tuesday`) to the `00_IMMEDIATE` folder.
 
 ## Production processes
-
-
-### Tier 1
-### Tier 2
-### Tier 3
-### Web request
+Coming soon.
 
 ## Terminology
 For Quill and Agency acronyms and terminology please see the [Agency Terms](https://github.com/agency-quill/agency-project-files/blob/master/documentation/agency-terms.md) document.

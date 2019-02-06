@@ -61,8 +61,8 @@
 	.grid, &.grid, .flex {
 		align-items: flex-start;
 		display: flex;
-		margin: 0 auto;
-		// overflow: hidden;
+		// margin: 0 auto;
+		overflow: hidden;
 		padding-bottom: 0;
 
 		& .grid__unit {
@@ -192,6 +192,10 @@
 					}
 				}
 			}
+
+			&--40 {
+				width: $column * 4.8;
+			}
 			
 			&--50 {
 
@@ -220,10 +224,30 @@
 				}
 			}
 
+			&--60 {
+				width: $column * 7.2;
+			}
+
 			&--66 {
 
 				@media #{$mobLandMin} {
 					width: $column * 8;
+				}
+
+				&.webModCard {
+					width: $column * 6;
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						width: $column * 8;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						width: $column * 9;
+					}
+
+					@media #{$desktopMin} {
+						width: $column * 9.6;
+					}
 				}
 			}
 

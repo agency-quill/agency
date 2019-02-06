@@ -32,10 +32,10 @@ This walk-through explains how to get help from the SDS department in both emerg
 [requesting-sds-help.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/requesting-sds-help.md)
 
 ## Email
-The documentation in the Email folder covers the processes, conventions and tools related tot he production of email assets.
+The documentation in the Email folder covers the processes, conventions and tools related to the production of email assets.
 
 ## Web
-The documentation in the Web folder covers the processes, conventions and tools related tot he production of email assets.
+The documentation in the Web folder covers the processes, conventions and tools related to the production of email assets.
 
 ### ADCore Web Basics _-WORKING DRAFT-_
 The ADCore system is crucial to Quill.com. It is a big part of the content management system that renders content on the site. This document walks through all of ADCore's components, tools and services that the Agency uses to make web assets available to the live site.

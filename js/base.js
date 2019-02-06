@@ -229,7 +229,7 @@ function popupToggle(popup){
 	if(popup.attr('data-popup-state') === 'open'){
 		popup.children().animate({opacity: '0'}, 250, function(){
 			popup.animate({height: '0', 'opacity': '0'}, popup.attr('data-popup-height') * 500 / 1000, function(){
-				popup.removeAttr('data-popup-state').removeAttr('data-popup-height');
+				popup.attr('data-popup-state','closed').removeAttr('data-popup-height');
 				if(popup.children('iframe').length){
 					popupObj.src = popup.children('iframe').attr('src');
 					popup.children('iframe').attr('src','').attr('src', popupObj.src);
