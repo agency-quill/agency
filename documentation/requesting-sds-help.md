@@ -9,8 +9,8 @@ _Last updated 12/12/18_
 * In the body of the email, __as fully as possible,__ describe the issue. 
 * Include as much information as you can: offer codes, module names, urls, etc.
 * Also include terms that convey urgency: _emergency_, _urgent_ or _time-sensitive_.
-* Write _Assign to App Supt (CMS/ADCore - US.Quill)_ if the issue is about ADCore, CMS or GMP.
-* Write _Assign to Web Team (Web Dev - US.Quill)_ if the issue is about the site.
+* Write _Forward to App Supt (CMS/ADCore - US.Quill)_ if the issue is about ADCore, CMS or GMP.
+* Write _Forward to Web Team (Web Dev - US.Quill)_ if the issue is about the site.
 
 The help desk will create an incident ticket and the system will issue a receipt email. The request will move to SDS to be resolved. __Any communication with SDS about this issue should contain the request number from the receipt email issued by SDS.__
 
