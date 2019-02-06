@@ -25,8 +25,8 @@ __If you do not receive a receipt email from SDS they are not working to resolve
 * Select _Service Desk Only (Quill)_ from the _All Quill Requests_ list.
 * __As fully as possible,__ describe your issue in the _Notes / Comments_ field.
 * Include as much information as you can: offer codes, module names, urls, etc.
-* Include the text: _Assign to App Supt (CMS/ADCore - US.Quill)_ in the _Notes / Comments_ field if the issue is about ADCore, CMS or GMP.
-* Include the text: _Assign to Web Team (Web Dev - US.Quill)_ in the _Notes / Comments_ field if the issue is about the site.
+* Include the text: _Forward to App Supt (CMS/ADCore - US.Quill)_ in the _Notes / Comments_ field if the issue is about ADCore, CMS or GMP.
+* Include the text: _Forward to Web Team (Web Dev - US.Quill)_ in the _Notes / Comments_ field if the issue is about the site.
 * Press either the _Order Now_ or _Add to Cart_ button (they are the same as far as I can tell).
 * Click _Submit Order_.
 
