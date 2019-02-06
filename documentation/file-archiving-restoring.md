@@ -12,8 +12,8 @@ Sometimes archiving web and email working files doesn't remove enough and we loo
 If you need access to an archived file, you can request for it to be restored. Restored files are found in the `__UNARCHIVED_Folder` folder in the root of the `Email` and `WebAd` folders. 
  
 ### The Process
-* Check the `__UNARCHIVED_Folder` to make sure it has not already been restored
-* If not, send an email to [Ben &amp; Zibi](mailto:Ben.Wilson@quill.com,Zibi.Szczalba@quill.com) asking them to restore the assets you need by job number.
+* Check the `__UNARCHIVED_Folder` folder root, and in the `__REARCHIVE_Folder` folder to make sure it has not already been restored
+* If the folder hasn't been restored, send an email to [Ben &amp; Zibi](mailto:Ben.Wilson@quill.com,Zibi.Szczalba@quill.com) asking them to restore the assets you need by job number.
 * The restored folder will be placed in the root of the `__UNARCHIVED_Folder` folder (e.g. `__UNARCHIVED_Folder/W14_05_374_HELP`)
 * Make any updates to the files in the `__UNARCHIVED_Folder`
 * If the file in question is repeatedly updated leave it in the `__UNARCHIVED_Folder` folder for future updates
