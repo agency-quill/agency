@@ -1,12 +1,12 @@
-var docRef = app.activeDocument;
-var colorSamplerRef = docRef.colorSamplers.add([2,2]);
-app.backgroundColor = colorSamplerRef.color;
-
-
-var savedRuler= app.preferences.rulerUnits;
+var docRef = app.activeDocument,
+    savedRuler= app.preferences.rulerUnits,
+    w = docRef.width,
+    h = docRef.height;
+app.backgroundColor = docRef.colorSamplers.add([2,2]).color;
 app.preferences.rulerUnits = Units.PIXELS;
-var w = app.activeDocument.width;
-var h = app.activeDocument.height;
-if(w>h) app.activeDocument.resizeCanvas (w, w, AnchorPosition.MIDDLECENTER);
-if(w<h) app.activeDocument.resizeCanvas (h, h, AnchorPosition.MIDDLECENTER);
+if(w>h){
+	docRef.resizeCanvas (w, w, AnchorPosition.MIDDLECENTER);
+}else{
+	if(w<h) docRef.resizeCanvas (h, h, AnchorPosition.MIDDLECENTER);
+}
 app.preferences.rulerUnits = savedRuler;
