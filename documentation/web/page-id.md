@@ -6,12 +6,12 @@ To build a new supercategory or spotlight (ADCore/CMS-driven) page you will need
 First, SDS creates a Page ID (a unique 3-digit number) and place the new page into the CMS navigation.
 
 #### Example
-`https://www.quill.com/3M-Post-It-Notes/cbx/_391_.html`
+https://www.quill.com/3M-Post-It-Notes/cbx/_391_.html
 
 Second, the SEO team creates the SEO-friendly part of the URL.
 
 #### Example
-`https://www.quill.com/_3M-Post-It-Notes_/cbx/391.html`
+https://www.quill.com/_3M-Post-It-Notes_/cbx/391.html
 
 
 
