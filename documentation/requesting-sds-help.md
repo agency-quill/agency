@@ -32,6 +32,6 @@ __If you do not receive a receipt email from SDS they are not working to resolve
 
 The system will issue a receipt email and forward your request to your supervisor for approval. Once approved, you will get another email and the request will move to SDS to be resolved. That can mean being put in the list for the next release, put at the end of the backlog or being resolved ASAP.
 
-If you don’t hear from SDS after some time, send a follow-up email, including the request number of the ticket. Also include the Agency development team: [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor on the email.
+If you don’t hear from SDS after some time, send a follow-up email to the help desk, [USQC IT Web Support](USQCITWebSupport@Staples.com), including the request number of the ticket. Also include the Agency development team: [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor on the email.
 
 You can always reach out the Agency development team for assistance, to troubleshoot your issue or submit the request.

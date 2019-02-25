@@ -279,6 +279,9 @@ function webModMap(mod, obj){
 }
 function webModPicture(obj){
 	obj.srcArray = webModFormat(obj.src).split(',');
+	for(var i = 0, max = obj.srcArray.length; i < max; i++){
+		obj.srcArray[i] = /^[A-Za-z]/.test(obj.srcArray[i]) ? '/' + obj.srcArray[i] : obj.srcArray[i];
+	}
 	obj.src = obj.srcArray[0];
 	if(obj.srcArray.length > 1){
 		obj.srcset = obj.srcArray[1];
