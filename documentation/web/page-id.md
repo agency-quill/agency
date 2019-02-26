@@ -21,7 +21,7 @@ Second, the SEO team creates the SEO-friendly part of the URL (e.g. quill.com/__
 
 The system will issue a receipt email and forward your request to your supervisor for approval. Once approved, you will get another email and the request will move to SDS to be resolved. That can mean being put in the list for the next release, put at the end of the backlog or being resolved ASAP.
 
-If you don’t hear from SDS after some time, send a follow-up email to the help desk, [USQC IT Web Support](USQCITWebSupport@Staples.com), including the request number of the ticket. Also include the Agency development team: [Nick Iozzo](mailto:nick.iozzo@quill.com), [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor on the email.
+If you don’t hear from SDS after some time, send a follow-up email to the help desk, [USQC IT Web Support](USQCITWebSupport@Staples.com), including the request number of the ticket. Also include the Agency development team: [Nick Iozzo](mailto:nick.iozzo@quill.com), [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andy Edmonds](mailto:andrew.edmonds@quill.com) plus your supervisor on the email.
 
 You can always reach out the Agency development team for assistance or to submit the request.
 
@@ -29,6 +29,6 @@ You can always reach out the Agency development team for assistance or to submit
 * Send an email to [Krista Wolfe](mailto:krista.wolfe@quill.com) and [Tiffany Jersey](mailto:tiffany.jersey@quill.com) requesting the SEO-friendly URL.
 * Provide the Page ID and page name.
 * Include the business owner(s).
-* Include the Agency development team: [Nick Iozzo](mailto:nick.iozzo@quill.com), [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andrew Edmonds](mailto:andrew.edmonds@quill.com).
+* Include the Agency development team: [Nick Iozzo](mailto:nick.iozzo@quill.com), [Seyi Owolabi](mailto:seyi.owolabi@quill.com) and [Andy Edmonds](mailto:andrew.edmonds@quill.com).
 
 Once the SEO-friendly URL is created and assigned, the SEO team will reply with the new URL.
