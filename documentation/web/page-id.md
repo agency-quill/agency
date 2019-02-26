@@ -3,9 +3,9 @@ _Last updated 2/22/19_
 
 To build a new supercategory or spotlight (ADCore/CMS-driven) page you will need a new URL (e.g. quill.com/3M-Post-It-Notes/cbx/391.html). To do that you will need to accomplish two tasks.
 
-First, SDS creates a Page ID (a unique 3-digit number) and places the new page into the CMS navigation. (e.g. quill.com/3M-Post-It-Notes/cbx/__391__.html)
+First, SDS creates a Page ID (a unique 3-digit number) and places the new page into the CMS navigation (e.g. quill.com/3M-Post-It-Notes/cbx/__391__.html).
 
-Second, the SEO team creates the SEO-friendly part of the URL. (e.g. quill.com/__3M-Post-It-Notes__/cbx/391.html)
+Second, the SEO team creates the SEO-friendly part of the URL (e.g. quill.com/__3M-Post-It-Notes__/cbx/391.html).
 
 ## Requesting a Page ID through ServiceNow
 * Open [ServiceNow](https://staples.service-now.com/).
@@ -26,4 +26,8 @@ If you don’t hear from SDS after some time, send a follow-up email to the help
 You can always reach out the Agency development team for assistance or to submit the request.
 
 ## Requesting SEO build the SEO-friendly url
-* Send an email to 
+* Send an email to [Krista Wolfe](mailto:krista.wolfe@quill.com) and [Tiffany Jersey](mailto:tiffany.jersey@quill.com).
+* Provide the Page ID and page name
+* Copy the business owner on all communications
+
+Once the SEO-friendly URL is created and assigned the SEO team will reply with the new URL.
