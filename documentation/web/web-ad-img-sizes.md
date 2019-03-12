@@ -30,15 +30,14 @@ The __Image width and usable space__ table is a detail of image size and usable 
 | grid__unit--100		| 1860		| 1250		| 970		| 605		|
 
 ## Usable space - ICC
-| grid unit 					| 1 ICC				| 2 ICC				| 3 ICC 			| 1 ICC 		| 2 ICC 		| 3 ICC 		|
-|								| left/right align	| left/right align	| left/right align	| center align	| center align	| center align	|
-| :---							| :---:				| :---:				| :---:				| :---:			| :---:			| :---:			|
-| grid__unit--25				| 					| -					| -					| 				| -				| -				|
-| grid__unit--25.card			| 0					| -					| -					| -				| -				| -				|
-| grid__unit--33				| 					| -					| -					| 				| -				| -				|
-| grid__unit--33 - mobile		| 					| -					| -					| 				| -				| -				|
-| grid__unit--50				| 					| 					| -					| 				| 				| -				|
-| grid__unit--50.card			| 					| -					| -					| 				| -				| -				|
-| grid__unit--66				| n/a				| n/a				| n/a				| n/a			| n/a			| n/a			|
-| grid__unit--100				| 1265				| 680				| 680				| 1280			| 700			| 700			|
-| grid__unit--100 - mobile		| 					| 					| 					| 				| 				| 				|
+| grid unit 					| 1 ICC (left/right align)	| 2 ICC (left/right align)	| 3 ICC (left/right align)	| 1 ICC (center align)	| 2 ICC (center align)	| 3 ICC (center align)	|
+| :---							| :---:						| :---:						| :---:						| :---:					| :---:					| :---:					|
+| grid__unit--25				| 							| -							| -							| 						| -						| -						|
+| grid__unit--25.card			| 0							| -							| -							| -						| -						| -						|
+| grid__unit--33				| 							| -							| -							| 						| -						| -						|
+| grid__unit--33 - mobile		| 							| -							| -							| 						| -						| -						|
+| grid__unit--50				| 							| 							| -							| 						| 						| -						|
+| grid__unit--50.card			| 							| -							| -							| 						| -						| -						|
+| grid__unit--66				| n/a						| n/a						| n/a						| n/a					| n/a					| n/a					|
+| grid__unit--100				| 1265						| 680						| 680						| 1280					| 700					| 700					|
+| grid__unit--100 - mobile		| 							| 							| 							| 						| 						| 						|
