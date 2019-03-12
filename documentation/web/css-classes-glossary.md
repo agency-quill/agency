@@ -514,7 +514,7 @@ Usage
 Use to style a table data/cell.
 ```html
 Usage
-<td class="table__td">
+<td class="td">
     [content]
 </td>
 ```
@@ -523,7 +523,7 @@ Usage
 Use to style a vertical table header.
 ```html
 Usage
-<th class="table__th--vertical">
+<th class="th--vertical">
     [content]
 </th>
 ```
@@ -532,7 +532,7 @@ Usage
 Use to style a horizontal table header.
 ```html
 Usage
-<th class="table__th--horizontal">
+<th class="th--horizontal">
     [content]
 </th>
 ```
@@ -541,7 +541,7 @@ Usage
 Use to style a table row.
 ```html
 Usage
-<tr class="table__tr">
+<tr class="tr">
     [content]
 </tr>
 ```
@@ -587,8 +587,8 @@ Usage
 For unordered lists inside tables
 ```html 
 <table class="table">
-  <tr class="table__tr">
-    <td class="table__td">
+  <tr class="tr">
+    <td class="td">
      <ul class="ul">
        <li class="ul__li--table">Lorem ipsum</li>
      </ul>
