@@ -3,7 +3,8 @@
 	max-width: $px * 145;
 }
 
-#agency, .agency {
+#agency, 
+.agency {
 
 	.align {
 
@@ -30,7 +31,24 @@
         }
     }
 
-	.article, .footer, .h1, .h2, .h3, .h4, .h5, .header, .htmlText, .ol, .p, .p--attribution, .p--disclaimer, .p--noMargin, .p--small, .section, .table__caption, .ul {
+	.article, 
+	.footer, 
+	.h1, 
+	.h2, 
+	.h3, 
+	.h4, 
+	.h5, 
+	.header, 
+	.htmlText, 
+	.ol, 
+	.p, 
+	.p--attribution, 
+	.p--disclaimer, 
+	.p--noMargin, 
+	.p--small, 
+	.section, 
+	.table__caption, 
+	.ul {
 		max-width: $px * 188.5;
 		width: $pct * 100;
 	}
@@ -54,11 +72,14 @@
 		flex-flow: column wrap;
     }
 
-	.grid, &.grid {
+	.grid, 
+	&.grid {
 		flex-flow: row wrap;
 	}
 
-	.grid, &.grid, .flex {
+	.grid, 
+	&.grid, 
+	.flex {
 		align-items: flex-start;
 		display: flex;
 		// margin: 0 auto;
@@ -67,7 +88,13 @@
 
 		& .grid__unit {
 
-			&--12-5, &--25, &--33, &--50, &--66, &--75, &--100 {
+			&--12-5, 
+			&--25, 
+			&--33, 
+			&--50, 
+			&--66, 
+			&--75, 
+			&--100 {
 				// align-self: stretch;
 				background-image: none;
 				box-sizing: border-box;
@@ -166,7 +193,11 @@
 				}
 			}
 
-			&--33, &--50, &--66, &--75, &--100 {
+			&--33, 
+			&--50, 
+			&--66, 
+			&--75, 
+			&--100 {
 				width: $column * 12;
 			}
 
@@ -264,7 +295,10 @@
 		}
 	}	
 
-	.grid .margin, &.grid .margin, .margin, &.margin {
+	.grid .margin, 
+	&.grid .margin, 
+	.margin, 
+	&.margin {
 
 		&__all {
 
@@ -723,19 +757,35 @@
 		}
 	}
 
-	.width--445, &.width--445, .width--mobPort, &.width--mobPort {
+	.width--445, 
+	&.width--445, 
+	.width--mobPort, 
+	&.width--mobPort {
 		max-width: $px * 44.5;
 	}
 
-	.width--695, &.width--695, .width--mobLand, &.width--mobLand {
+	.width--695, 
+	&.width--695, 
+	.width--mobLand, 
+	&.width--mobLand {
 		max-width: $px * 69.5;
 	}
 
-	.width--944, &.width--944, .width--tabPort, &.width--tabPort {
+	.width--944, 
+	&.width--944, 
+	.width--tabPort, 
+	&.width--tabPort {
 		max-width: $px * 94.4;
 	}
 
-	.width--944, &.width--944, .width--tabPort, &.width--tabPort, .width--1212, &.width--1212, .width--tabLand, &.width--tabLand {
+	.width--944, 
+	&.width--944, 
+	.width--tabPort, 
+	&.width--tabPort, 
+	.width--1212, 
+	&.width--1212, 
+	.width--tabLand, 
+	&.width--tabLand {
 
 		.grid {
 
@@ -770,11 +820,17 @@
 		}
 	}
 
-	.width--1212, &.width--1212, .width--tabLand, &.width--tabLand {
+	.width--1212, 
+	&.width--1212, 
+	.width--tabLand, 
+	&.width--tabLand {
 		max-width: $px * 121.2;
 	}
 
-	.width--1500, &.width--1500, .width--laptop, &.width--laptop {
+	.width--1500, 
+	&.width--1500, 
+	.width--laptop, 
+	&.width--laptop {
 		max-width: $px * 150;
 
 		.grid {
