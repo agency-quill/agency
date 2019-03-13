@@ -30,7 +30,7 @@ The __Image width and usable space__ table is a detail of image size and usable 
 | grid__unit--100		| 1860		| 1250		| 970		| 605		|
 
 ## Usable space - ICC
-| grid unit 					| 1 ICC (left/right align)	| 2 ICC (left/right align)	| 3 ICC (left/right align)	| 1 ICC (center align)	| 2 ICC (center align)	| 3 ICC (center align)	|
+| grid unit 					| 1 icc (left/right align)	| 2 icc (left/right align)	| 3 icc (left/right align)	| 1 icc (center align)	| 2 icc (center align)	| 3 icc (center align)	|
 | :---							| :---:						| :---:						| :---:						| :---:					| :---:					| :---:					|
 | grid__unit--25				| 							| -							| -							| 						| -						| -						|
 | grid__unit--25.card			| 0							| -							| -							| -						| -						| -						|
