@@ -10,10 +10,10 @@ The __Image width and usable space__ table is a detail of image size and usable 
 ## Web ad by viewport
 | viewport width 					| grid__unit--12-5.card	| grid__unit--25 	| grid__unit--25.card	| grid__unit--33	| grid__unit--50	| grid__unit--50.card	| grid__unit--66	| grid__unit--100	|
 | :---								| :---:					| :---:				| :---:					| :---:				| :---:				| :---:					| :---:				| :---:				|
-| mobile portrait: 0 - 499			| 165 					| 470 (302)			| 355 					| 600				| 1125 (725)		| 660					| n/a				| 970 (605)			|
+| mobile portrait: 0 - 499			| 165 					| 470 (300)			| 355 					| 600				| 1125 (725)		| 660					| n/a				| 970 (605)			|
 | mobile landscape: 500 - 765		| 165 					| 470 (355)			| 355 					| 320 (230)			| 1125 (725)		| 660					| n/a				| 970 (735)			|
 | tablet portrait: 766 - 1011		| 165 					| 470				| 355 					| 320 				| 1125				| 660					| n/a				| 970				|
-| tablet landscape: 1012 - 1279		| 165 					| 470 (302)			| 355 					| 600 (395)			| 1125 (750)		| 660					| n/a				| 1860 (1250)		|
+| tablet landscape: 1012 - 1279		| 165 					| 470 (300)			| 355 					| 600 (395)			| 1125 (750)		| 660					| n/a				| 1860 (1250)		|
 | laptop: 1280 - 1519				| 165 					| 470 (388)			| 355 					| 600 (500)			| 1125 (945)		| 660					| n/a				| 1860 (1560)		|
 | desktop: 1520 - 1885				| 165 					| 470				| 355 					| 600 				| 1125				| 660					| n/a				| 1860				|
 
