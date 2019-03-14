@@ -1,19 +1,46 @@
-$column: 8.333333%;	// column unit
+// variables
+$column: 8.333333%;
+$fontFamily: 'helveticaNeue, arial, sans-serif';
 
-$em: 1em;	// size unit in ems
-$pct: 1%;	// size unit in percent
-$px: 10px;	// size unit in pixels
-$vw: 1vw;	// size unit in viewport width
+// units
+$em: 1em;
+$pct: 1%;
+$px: 10px;
+$vw: 1vw;
 
-$mobPortMax: '(max-width: 499px)';
+// media queries 
+//device
+$ie11: 'screen and (-ms-high-contrast: active), (-ms-high-contrast: none)';
+
+// responsive grid
+$mobPortMax: '(max-width: 500px)';
 $mobLandMin: '(min-width: 500px)';
-$mobLandMax: '(max-width: 765px)';
+$mobLandMax: '(max-width: 766px)';
 $tabPortMin: '(min-width: 766px)';
-$tabPortMax: '(max-width: 1011px)';
+$tabPortMax: '(max-width: 1012px)';
 $tabLandMin: '(min-width: 1012px)';
-$tabLandMax: '(max-width: 1279px)';
+$tabLandMax: '(max-width: 1280px)';
 $laptopMin: '(min-width: 1280px)';
-$laptopMax: '(max-width: 1519px)';
+$laptopMax: '(max-width: 1520px)';
 $desktopMin: '(min-width: 1520px)';
 
-$fontFamily: 'helveticaNeue, arial, sans-serif';
+
+
+// mixins
+@mixin font($color: #333, $height: 1em, $weight: 400) {
+	color: $color;
+	fill: $color;
+	font-family: #{$fontFamily};
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: $weight;
+    line-height: $height;
+}
+@mixin svg--or($bottom, $diameter, $right) {
+    bottom: $bottom;
+	height: $diameter;
+	right: $right;
+	width: $diameter;
+}
+
