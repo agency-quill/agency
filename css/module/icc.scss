@@ -173,7 +173,6 @@
 
 			&.webMod__icc {
 				
-				&--1up {}
 			}
 		}
 
@@ -181,7 +180,6 @@
 
 			&.webMod__icc {
 				
-				&--1up {}
 			}
 		}
 
@@ -359,6 +357,21 @@
 						max-width: $pct * 64;
 					}
 
+					.grid__unit {
+
+						&--50 {
+							height: auto;
+
+							@media #{$mobLandMin} and #{$tabPortMax} {
+								height: calc(#{$pct * 50} - #{$vw * .5});
+							}
+
+							@media #{$tabLandMin} {
+								height: 100%;
+							}
+						}
+					}
+
 					.icc {
 
 						&__h2 {
@@ -440,39 +453,39 @@
 							@include svg--or(
 								$vw * -3.5, 
 								$vw * 6, 
-								calc(#{$pct} * 50 - #{$vw} * 3));
+								calc(#{$pct * 50} - #{$vw * 3}));
 
 							@media #{$mobLandMin} and #{$mobLandMax} {
 								@include svg--or(
 									$vw * -2.75, 
 									$vw * 4.5, 
-									calc(#{$pct} * 50 - #{$vw} * right));
+									calc(#{$pct * 50} - #{$vw * 2.25}));
 							}
 
 							@media #{$tabPortMin} and #{$tabPortMax} {
 								@include svg--or(
 									$vw * -2.375, 
 									$vw * 3.75, 
-									calc(#{$pct} * 50 - #{$vw} * 1.875));
+									calc(#{$pct * 50} - #{$vw * 1.875}));
 							}
 
 							@media #{$tabLandMin} and #{$tabLandMax} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.875), 
+									calc(#{$pct * 50} - #{$vw * 1.875}), 
 									$vw * 3.75, 
 									$vw * -1.875);
 							}
 
 							@media #{$laptopMin} and #{$laptopMax} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.5), 
+									calc(#{$pct * 50} - #{$vw * 1.5}), 
 									$vw * 3, 
 									$vw * -1.5);
 							}
 
 							@media #{$desktopMin} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.25), 
+									calc(#{$pct * 50} - #{$vw * 1.25}), 
 									$vw * 2.5, 
 									$vw * -1.25);
 							}
@@ -562,6 +575,11 @@
 					.grid__unit {
 
 						&--33 {
+							height: auto;
+
+							@media #{$mobLandMin} and #{$tabPortMax} {
+								height: calc(#{$pct * 50} - #{$vw * 1.5});
+							}
 
 							@media #{$tabLandMin} {
 								height: 100%;
@@ -657,39 +675,39 @@
 							@include svg--or(
 								$vw * -3.5, 
 								$vw * 6, 
-								calc(#{$pct} * 50 - #{$vw} * 3));
+								calc(#{$pct * 50} - #{$vw * 3}));
 
 							@media #{$mobLandMin} and #{$mobLandMax} {
 								@include svg--or(
-									$vw * -2.75, 
+									$vw * -3.75, 
 									$vw * 4.5, 
-									calc(#{$pct} * 50 - #{$vw} * 2.25));
+									calc(#{$pct * 50} - #{$vw * 2.25}));
 							}
 
 							@media #{$tabPortMin} and #{$tabPortMax} {
 								@include svg--or(
 									$vw * -3.75, 
 									$vw * 4.5, 
-									calc(#{$pct} * 50 - #{$vw} * 2.25));
+									calc(#{$pct * 50} - #{$vw * 2.25}));
 							}
 
 							@media #{$tabLandMin} and #{$tabLandMax} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.875), 
+									calc(#{$pct * 50} - #{$vw * 1.875}), 
 									$vw * 3.75, 
 									$vw * -1.875);
 								}
 
 							@media #{$laptopMin} and #{$laptopMax} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.5), 
+									calc(#{$pct * 50} - #{$vw * 1.5}), 
 									$vw * 3, 
 									$vw * -1.5);	
 							}
 
 							@media #{$desktopMin} {
 								@include svg--or(
-									calc(#{$pct} * 50 - #{$vw} * 1.25), 
+									calc(#{$pct * 50} - #{$vw * 1.25}), 
 									$vw * 2.5, 
 									$vw * -1.25);
 							}
@@ -698,39 +716,39 @@
 								@include svg--or(
 									$vw * -3.5, 
 									$vw * 6, 
-									calc(#{$pct} * 50 - #{$vw} * 3));
+									calc(#{$pct * 50} - #{$vw * 3}));
 
 								@media #{$mobLandMin} and #{$mobLandMax} {
 									@include svg--or(
-										calc(#{$pct} * 50 - #{$vw} * 2.25), 
+										calc(#{$pct * 50} - #{$vw * 2.25}), 
 										$vw * 4.5, 
-										calc(#{$pct} * 100 - #{$vw} * 2.25));
+										calc(#{$pct * 100} - #{$vw * 2.25}));
 								}
 
 								@media #{$tabPortMin} and #{$tabPortMax} {
 									@include svg--or(
-										calc(#{$pct} * 50 - #{$vw} * 2.25), 
+										calc(#{$pct * 50} - #{$vw * 2.25}), 
 										$vw * 4.5, 
-										calc(#{$pct} * 100 - #{$vw} * 2.25));
+										calc(#{$pct * 100} - #{$vw * 2.25}));
 								}
 
 								@media #{$tabLandMin} and #{$tabLandMax} {
 									@include svg--or(
-										calc(#{$pct} * 50 - #{$vw} * 1.875), 
+										calc(#{$pct * 50} - #{$vw * 1.875}), 
 										$vw * 3.75, 
 										$vw * -1.875);
 								}
 
 								@media #{$laptopMin} and #{$laptopMax} {
 									@include svg--or(
-										calc(#{$pct} * 50 - #{$vw} * 1.5), 
+										calc(#{$pct * 50} - #{$vw * 1.5}), 
 										$vw * 3, 
 										$vw * -1.5);	
 								}
 
 								@media #{$desktopMin} {
 									@include svg--or(
-										calc(#{$pct} * 50 - #{$vw} * 1.25), 
+										calc(#{$pct * 50} - #{$vw * 1.25}), 
 										$vw * 2.5, 
 										$vw * -1.25);
 								}
@@ -790,27 +808,6 @@
 	    					@media #{$tabLandMin} {
 								display: none;
 	    					}
-						}
-					}
-				}
-
-				&--1up, &--2up, &--3up {
-					.grid__unit {
-
-						&--33, &--50 {
-							height: auto;
-
-							@media #{$mobLandMin} and #{$tabPortMax} {
-								height: calc(#{$pct} * 50 - #{$vw} * .5);
-							}
-
-							@media #{$tabLandMin} {
-								height: 100%;
-							}
-						}
-
-						&--100 {
-							height: 100%;
 						}
 					}
 				}
@@ -879,6 +876,10 @@
 					
 					> div {
 						margin-bottom: $vw * 1;
+
+						@media #{$mobLandMin} and #{$tabPortMax} {
+							margin-bottom: $vw * 3;
+						}
 
 						&:last-of-type {
 							margin-bottom: 0;
