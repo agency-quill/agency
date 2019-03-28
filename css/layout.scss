@@ -80,7 +80,7 @@
 	.grid, 
 	&.grid, 
 	.flex {
-		align-items: flex-start;
+		align-items: stretch;
 		display: flex;
 		// margin: 0 auto;
 		// overflow: hidden;
@@ -95,7 +95,7 @@
 			&--66, 
 			&--75, 
 			&--100 {
-				// align-self: stretch;
+				align-self: flex-start;
 				background-image: none;
 				box-sizing: border-box;
 				display: flex;
