@@ -40,17 +40,17 @@ The documentation in the Web folder covers the processes, conventions and tools 
 ### ADCore Web Basics _-WORKING DRAFT-_
 The ADCore system is crucial to Quill.com. It is a big part of the content management system that renders content on the site. This document walks through all of ADCore's components, tools and services that the Agency uses to make web assets available to the live site.
 
-[adcore-web-basics.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/adcore-web-basics.md)
+[adcore-web-basics.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/web/adcore-web-basics.md)
 
 ### ADCore Responsive Web Mods 
 The web ad modules described in this document have been designed to work within a responsive grid. They are more versatile than traditional offer codes, which makes them a little more complex. This document walks through the functionality of each.
 
-[adcore-responsive-web-mods.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/adcore-responsive-web-mods.md)
+[adcore-responsive-web-mods.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/web/adcore-responsive-web-mods.md)
 
 ### CSS Classes Glossary 
 This glossary is a list of CSS classes available in the `agency5.css` style sheet and their usage.
 
-[css-classes-glossary.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/css-classes-glossary.md)
+[css-classes-glossary.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/web/css-classes-glossary.md)
 
 ### Page ID _-WORKING DRAFT-_
 Page IDs are needed for any new ADCore/CMS-driven landing page. This document walks through the steps necessary to request one.
@@ -60,14 +60,14 @@ Page IDs are needed for any new ADCore/CMS-driven landing page. This document wa
 ### Responsive Grid 
 A responsive grid is the backbone of websites that can, with a single set of code, render well on all devices and sizes. This document covers the theory and tools needed to build a responsive grid, as well as the specifics of the Agency implementation.
 
-[responsive-grid.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/responsive-grid.md)
+[responsive-grid.md](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web/responsive-grid.md)
 
 ### Responsive Image Sizes 
 In order to build images that work within the responsive grid, they need to be built to specific widths. This document lists all of the images and defines the widths at which they need to be built.
 
-[responsive-img-sizes.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/responsive-img-sizes.md)
+[responsive-img-sizes.md](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web/web-ad-img-sizes.md)
 
 ### SDS Scripts _-WORKING DRAFT-_
 There are SDS-supported scripts that we have access to. This document compiles them, and explains what they do and how to use them.
 
-[sds-scripts.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/sds-scripts.md)
+[sds-scripts.md](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web/sds-scripts.md)
