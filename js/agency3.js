@@ -138,7 +138,7 @@ function disclaimerLoad(){
 			$.ajax({
 	    		dataType: 'json',
 	    		error: function(jqXHR, status, error) {
-	        		alert('Error: ' + status + ' - ' + error);
+	    			console.log('Error: ' + status + ' - ' + error);
 	    		},
 	    		success: function(data, status, d) {
 		            disclaimers = data;
@@ -709,12 +709,12 @@ var carouselAttr = [	// array of carousel attributes with default values
 	    'em': '<em class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{em}}</em>',
 	    'event': {
 	    	'accordion': 'data-accordion-button-close="{{close}}" data-accordion-button-open="{{open}}" onclick="accordionToggle({{target}},$(this))"',
-	    	'addToCart': 'bindtype="dom" ctatype="addtocart" data-effortcode="{{effort}}" data-findnumber="{{absolute}}" data-pagetype="Content" data-promocode="989989999" data-sku="{{sku}}" itemindex="0" onclick="$(this).AddItemsToCart({mode: \'qviewatc\', skuid: \'{{sku}}\'})" rel="QViewAddToCart_{{sku}}" tabindex="1"',
+	    	'addToCart': 'bindtype="dom" ctatype="addtocart" data-effortcode="{{effort}}" data-findnumber="{{item}}" data-pagetype="Content" data-promocode="989989999" data-sku="{{sku}}" itemindex="0" onclick="$(this).AddItemsToCart({mode: \'qviewatc\', skuid: \'{{sku}}\'})" rel="QViewAddToCart_{{sku}}" tabindex="1"',
 	    	'AnimateScroll': 'onClick="AnimateScroll(\'{{end}}\')"',
 	    	'carousel': 'onClick="carouselRotate($(this).parent(\'{{carousel}}\'),\'{{direction}}\')"',
 	    	'dropDown': 'onmouseenter="dropDown({{target}},\'open\')" onmouseleave="dropDown({{target}},\'close\')"',
 	    	'popup': 'onclick="popupToggle($(\'{{popup}}\'))"',
-	    	'qView': 'onclick="showPriceInCart(this, \'{{sku}}\', \'{{effort}}\', \'{{absolute}}\')"',
+	    	'qView': 'onclick="showPriceInCart(this, \'{{sku}}\', \'{{effort}}\', \'{{item}}\')"',
 	    	'toolTip': 'onclick="$(this).Tooltip(\'{{text}}\',{{width}},{hasCloseButton:true})"'
 	    },
 	    'flag': {
@@ -724,7 +724,8 @@ var carouselAttr = [	// array of carousel attributes with default values
 	    'heading': '<h{{num}} class="h{{num}} {{class}}" id="{{id}}" {{events}} style="{{css}}">{{heading}}</h{{num}}>',
 	    'hr': '<hr class="{{class}}" style="{{css}}">',
 	    'href': '{{url}}{{mcode}}{{number}}{{tag}}',
-	    'icc': '<div class="icc {{class}}" {{events}} id="icc-{{code}}" style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Code: </span><b>{{code}}</b><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="unclip-coupon scTrack" scType="cta" ctaType="removefromclipboard" locater="undo" onclick="CouponClipper.removeCoupon($(this))" style="display:none"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" scType="cta" ctaType="savetoclipboard" data-cpncode="{{code}}">Save to Clipboard</button><a href="{{url}}" class="button shopNow-btn scTrack" scType="scLink" scValue="shopnow:{{code}}" id="shopNowBtn_{{code}}" style="display:none">Shop Now</a></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer.</a></p></div>',
+	    /*'icc': '<div class="icc {{class}}" {{events}} id="icc-{{code}}" style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Code: </span><b>{{code}}</b><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="unclip-coupon scTrack" scType="cta" ctaType="removefromclipboard" locater="undo" onclick="CouponClipper.removeCoupon($(this))" style="display:none"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" scType="cta" ctaType="savetoclipboard" data-cpncode="{{code}}">Save to Clipboard</button><a href="{{url}}" class="button shopNow-btn scTrack" scType="scLink" scValue="shopnow:{{code}}" id="shopNowBtn_{{code}}" style="display:none">Shop Now</a></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer.</a></p></div>',*/
+	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code:</span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
 		'img': '<img alt="{{alt}}" class="{{class}}" id="{{id}}" {{events}} src="{{src}}" srcset="{{srcset}}" style="{{css}}" usemap="{{usemap}}">',
 		'li': '<li class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{li}}</li>',
 	    'locator': 'locater="{{locator}}" sctype="{{sctype}}" sku="{{sku}}"',
@@ -743,7 +744,7 @@ if(typeof navBar === 'undefined'){
 }
 function webMod(mod, obj){
 	console.log(mod);
-	if(obj.div || obj.src){
+	if(obj.src || obj.div){
 		/*for (var prop in obj){	// log all properties of obj
 			console.log(mod+' '+prop+': '+obj[prop]);
 		}*/
@@ -980,7 +981,7 @@ function webModLink(obj){
 		obj.locator = 'carousel_1';
 		obj.sku = obj.linkArray[0];
 		obj.effort = obj.linkArray[1];
-		obj.absolute = obj.linkArray[2];
+		obj.item = obj.linkArray[2];
 		if(obj.linkArray[3].toLowerCase() === 'qview'){
 			obj.class += ' pfm scTrack';
 			obj.sctype = 'pfm';
@@ -1023,7 +1024,7 @@ function webModMap(mod, obj){
 function webModPicture(obj){
 	obj.srcArray = webModFormat(obj.src).split(',');
 	for(var i = 0, max = obj.srcArray.length; i < max; i++){
-		obj.srcArray[i] = /^[A-Za-z]/.test(obj.srcArray[i]) ? '/' + obj.srcArray[i] : obj.srcArray[i];
+		obj.srcArray[i] = /^https|\//.test(obj.srcArray[i]) ? obj.srcArray[i] : '/' + obj.srcArray[i];
 	}
 	obj.src = obj.srcArray[0];
 	if(obj.srcArray.length > 1){
@@ -1031,7 +1032,7 @@ function webModPicture(obj){
 		obj.media = '(max-width: ';
 		switch(obj.unit){
 			case '33':
-				obj.media += size.tabPort;
+				obj.media += size.tabPort + 'px) and (min-width: ' + size.mobPort;
 				break;
 			case '66':
 				obj.media += size.tabPort;
@@ -1052,7 +1053,7 @@ function webModPicture(obj){
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
 	obj.class = 'webModPicture';
-	obj.class += obj.align ? ' align--' + obj.align : ' align--left';
+	obj.class += obj.align ? ' align--' + obj.align.toLowerCase() : ' align--left';
 	return render(template.picture, obj);
 }
 function webModPopUp(obj){

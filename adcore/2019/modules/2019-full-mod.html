@@ -1,27 +1,62 @@
 <!-- 2019-full-mod -->
-<div class="agency grid__unit--100 searchOffer" id="webMod"></div>
+<div class="agency grid__unit--100 searchOffer" id="webMod">
+    $%u_ad_data_tags%$
+</div>
 <script>
-    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+    if(!$('script[src=*"agency3.min.js"]').length){
         $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
     }
-    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
+    modIndex = typeof modIndex = 'undefined' ? 1 : modIndex + 1;
     $('#webMod').attr('id', 'webMod-' + modIndex);
     var modData = {
-        'align': '$%u_ad_img_align%$',
+        'align': '$%u_ad_align%$',
+        'align-mobile': '$%u_ad_align_mobile%$',
         'alt': '$%u_ad_img_alt%$',
+        'background' : '$%u_ad_background%$',
         'class': '$%u_ad_class%$',
+        'coupon-alt-1': '$%u_ad_coupon_1_img_alt%$',
+        'coupon-alt-2': '$%u_ad_coupon_2_img_alt%$',
+        'coupon-alt-3': '$%u_ad_coupon_3_img_alt%$',
+        'coupon-border': '$%u_ad_coupon_border%$',
+        'coupon-color': '$%u_ad_coupon_or_color%$',
+        'coupon-details-1': '$%u_ad_coupon_1_details%$',
+        'coupon-details-2': '$%u_ad_coupon_2_details%$',
+        'coupon-details-3': '$%u_ad_coupon_3_details%$',
+        'coupon-exclusion-1': '$%u_ad_coupon_1_exclusion%$',
+        'coupon-exclusion-2': '$%u_ad_coupon_2_exclusion%$',
+        'coupon-exclusion-3': '$%u_ad_coupon_3_exclusion%$',
+        'coupon-headline-1': '$%u_ad_coupon_1_headline%$',
+        'coupon-headline-2': '$%u_ad_coupon_2_headline%$',
+        'coupon-headline-3': '$%u_ad_coupon_3_headline%$',
+        'coupon-html-1': '$%u_ad_coupon_1_html%$',
+        'coupon-html-2': '$%u_ad_coupon_2_html%$',
+        'coupon-html-3': '$%u_ad_coupon_3_html%$',
+        'coupon-icc-1': '$%u_ad_coupon_1_icc%$',
+        'coupon-icc-2': '$%u_ad_coupon_2_icc%$',
+        'coupon-icc-3': '$%u_ad_coupon_3_icc%$',
+        'coupon-intro-1': '$%u_ad_coupon_1_intro%$',
+        'coupon-intro-2': '$%u_ad_coupon_2_intro%$',
+        'coupon-intro-3': '$%u_ad_coupon_3_intro%$',
+        'coupon-src-1': '$%u_ad_coupon_1_img_src%$',
+        'coupon-src-2': '$%u_ad_coupon_2_img_src%$',
+        'coupon-src-3': '$%u_ad_coupon_3_img_src%$',
+        'coupon-subhead-1': '$%u_ad_coupon_1_subhead%$',
+        'coupon-subhead-2': '$%u_ad_coupon_2_subhead%$',
+        'coupon-subhead-3': '$%u_ad_coupon_3_subhead%$',
         'css': '$%u_ad_css%$',
-        'div': '$%u_ad_html_text%$',
-        'icc': '$%u_ad_icc%$',
+        'css-file': '$%u_ad_html_css_file%$',
+        'html': '$%u_ad_html%$',
         'id': '$%u_ad_id%$',
         'link': '$%u_ad_link_href%$',
-        'map': '$%u_ad_map_href%$',
-        'popup': '$%u_ad_popup%$',
+        'map': '$%u_ad_map%$',
+        'map-mobile': '$%u_ad_map_mobile%$',
         'src': '$%u_ad_img_src%$',
+        'src-mobile': '$%u_ad_img_src_mobile%$',
         'title': '$%u_ad_link_title%$',
         'unit': '100'
     };
-    $('#webMod-' + modIndex).html(webMod('webMod-' + modIndex, modData));
+    $('#webMod-' + modIndex).prepend(webMod('webMod-' + modIndex, modData));
 </script>
+$%u_ad_script%$
 
-<!-- 2019-full-mod --><div class="agency grid__unit--100 searchOffer" id="webMod"></div><script>if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length)$('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');modIndex=typeof modIndex!='undefined'?modIndex+1:1;$('#webMod').attr('id','webMod-'+modIndex);var modData={align:'$%u_ad_img_align%$',alt:'$%u_ad_img_alt%$',class:'$%u_ad_class%$',css:'$%u_ad_css%$',div:'$%u_ad_html_text%$',icc:'$%u_ad_icc%$',id:'$%u_ad_id%$',link:'$%u_ad_link_href%$',map:'$%u_ad_map_href%$',popup:'$%u_ad_popup%$',src:'$%u_ad_img_src%$',title:'$%u_ad_link_title%$',unit:'100'};$('#webMod-'+modIndex).html(webMod('webMod-'+modIndex,modData));</script>
+<!-- 2019-full-mod --><div class="agency grid__unit--100 searchOffer" id="webMod">$%u_ad_data_tags%$</div><script>if(!$('script[src=*"agency3.min.js"]').length){$('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');}modIndex=typeof modIndex='undefined'?1:modIndex+1;$('#webMod').attr('id','webMod-'+modIndex);var modData={'align':'$%u_ad_align%$','align-mobile':'$%u_ad_align_mobile%$','alt':'$%u_ad_img_alt%$','background':'$%u_ad_background%$','class':'$%u_ad_class%$','coupon-alt-1':'$%u_ad_coupon_1_img_alt%$','coupon-alt-2':'$%u_ad_coupon_2_img_alt%$','coupon-alt-3':'$%u_ad_coupon_3_img_alt%$','coupon-border':'$%u_ad_coupon_border%$','coupon-color':'$%u_ad_coupon_or_color%$','coupon-details-1':'$%u_ad_coupon_1_details%$','coupon-details-2':'$%u_ad_coupon_2_details%$','coupon-details-3':'$%u_ad_coupon_3_details%$','coupon-exclusion-1':'$%u_ad_coupon_1_exclusion%$','coupon-exclusion-2':'$%u_ad_coupon_2_exclusion%$','coupon-exclusion-3':'$%u_ad_coupon_3_exclusion%$','coupon-headline-1':'$%u_ad_coupon_1_headline%$','coupon-headline-2':'$%u_ad_coupon_2_headline%$','coupon-headline-3':'$%u_ad_coupon_3_headline%$','coupon-html-1':'$%u_ad_coupon_1_html%$','coupon-html-2':'$%u_ad_coupon_2_html%$','coupon-html-3':'$%u_ad_coupon_3_html%$','coupon-icc-1':'$%u_ad_coupon_1_icc%$','coupon-icc-2':'$%u_ad_coupon_2_icc%$','coupon-icc-3':'$%u_ad_coupon_3_icc%$','coupon-intro-1':'$%u_ad_coupon_1_intro%$','coupon-intro-2':'$%u_ad_coupon_2_intro%$','coupon-intro-3':'$%u_ad_coupon_3_intro%$','coupon-src-1':'$%u_ad_coupon_1_img_src%$','coupon-src-2':'$%u_ad_coupon_2_img_src%$','coupon-src-3':'$%u_ad_coupon_3_img_src%$','coupon-subhead-1':'$%u_ad_coupon_1_subhead%$','coupon-subhead-2':'$%u_ad_coupon_2_subhead%$','coupon-subhead-3':'$%u_ad_coupon_3_subhead%$','css':'$%u_ad_css%$','css-file':'$%u_ad_html_css_file%$','html':'$%u_ad_html%$','id':'$%u_ad_id%$','link':'$%u_ad_link_href%$','map':'$%u_ad_map%$','map-mobile':'$%u_ad_map_mobile%$','src':'$%u_ad_img_src%$','src-mobile':'$%u_ad_img_src_mobile%$','title':'$%u_ad_link_title%$','unit':'100'};$('#webMod-'+modIndex).prepend(webMod('webMod-'+modIndex,modData));</script>$%u_ad_script%$

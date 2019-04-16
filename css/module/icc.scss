@@ -79,6 +79,11 @@
 			}
 		}
 
+		&__div {
+			@include font(#000, 1.125em, 400);
+			font-size: $px * 1.2;
+		}
+
 		&__h2 {
 			@include font(#333, 1.25em, 300);
 			font-size: $vw * 4;
@@ -99,6 +104,7 @@
 			text-align: center;	
 
 			&--conditions {
+				@include font(#000, 1.125em, 400);
 				font-size: $px * 1.1;
 				line-height: $em * 1.125;
 				margin: 0;

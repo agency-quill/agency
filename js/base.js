@@ -138,7 +138,7 @@ function disclaimerLoad(){
 			$.ajax({
 	    		dataType: 'json',
 	    		error: function(jqXHR, status, error) {
-	        		alert('Error: ' + status + ' - ' + error);
+	    			console.log('Error: ' + status + ' - ' + error);
 	    		},
 	    		success: function(data, status, d) {
 		            disclaimers = data;

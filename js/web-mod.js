@@ -1,6 +1,6 @@
 function webMod(mod, obj){
 	console.log(mod);
-	if(obj.div || obj.src){
+	if(obj.src || obj.div){
 		/*for (var prop in obj){	// log all properties of obj
 			console.log(mod+' '+prop+': '+obj[prop]);
 		}*/
@@ -237,7 +237,7 @@ function webModLink(obj){
 		obj.locator = 'carousel_1';
 		obj.sku = obj.linkArray[0];
 		obj.effort = obj.linkArray[1];
-		obj.absolute = obj.linkArray[2];
+		obj.item = obj.linkArray[2];
 		if(obj.linkArray[3].toLowerCase() === 'qview'){
 			obj.class += ' pfm scTrack';
 			obj.sctype = 'pfm';
@@ -280,7 +280,7 @@ function webModMap(mod, obj){
 function webModPicture(obj){
 	obj.srcArray = webModFormat(obj.src).split(',');
 	for(var i = 0, max = obj.srcArray.length; i < max; i++){
-		obj.srcArray[i] = /^[A-Za-z]/.test(obj.srcArray[i]) ? '/' + obj.srcArray[i] : obj.srcArray[i];
+		obj.srcArray[i] = /^https|\//.test(obj.srcArray[i]) ? obj.srcArray[i] : '/' + obj.srcArray[i];
 	}
 	obj.src = obj.srcArray[0];
 	if(obj.srcArray.length > 1){
@@ -288,7 +288,7 @@ function webModPicture(obj){
 		obj.media = '(max-width: ';
 		switch(obj.unit){
 			case '33':
-				obj.media += size.tabPort;
+				obj.media += size.tabPort + 'px) and (min-width: ' + size.mobPort;
 				break;
 			case '66':
 				obj.media += size.tabPort;
@@ -309,7 +309,7 @@ function webModPicture(obj){
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
 	obj.class = 'webModPicture';
-	obj.class += obj.align ? ' align--' + obj.align : ' align--left';
+	obj.class += obj.align ? ' align--' + obj.align.toLowerCase() : ' align--left';
 	return render(template.picture, obj);
 }
 function webModPopUp(obj){
