@@ -1,0 +1,31 @@
+@{
+	//C# HEADER: v4.12 7/14/17 | TEMPLATE: v2.7 10/17/17
+	var expiry = new DateTime(2049,12,31,23,59,59);	// modify to expire page sooner. Format: YYYY,MM,DD,HH,MM,SS  - only update YYYY (year), MM (month) and DD (day).
+	RequestData.Current.Title = "xxx_PAGE_TITLE_xxx";  // page title
+	RequestData.Current.Description = "xxx_DESCRIPTION_xxx";  // meta description 
+
+	if (Request.QueryString["showspotlight"] != "yes") {string redirectURL = ""; if (DateTime.Now >= expiry.AddMonths(1)) {redirectURL = "/sorry";} else {if (DateTime.Now >= expiry) {redirectURL = "/content/iw/promotion/offers/msg/expired.cshtml";}} if (redirectURL != "") {if (Request.QueryString["cm_sp"] != null || Request.QueryString["cm_mmc"] != null) {Response.RedirectPermanent(redirectURL + "?" + Request.QueryString);} else {Response.RedirectPermanent(redirectURL);}}}
+}
+
+<!-- 
+
+URL: 
+
+Please add the most recent web request number for this file at the bottom of the list below:
+
+WEBREQUESTNUMBER - DATE - DESIGNER
+
+-->
+
+<link href="/content/iw/styles/agency5.min.css" rel="stylesheet">
+<link href="/content/iw/styles/responsive-shim.min.css" rel="stylesheet">
+
+<style type="text/css">
+/* LOCAL STYLES */
+</style>
+
+<div id="agency">
+	
+</div>
+
+<script src="/content/iw/scripts/agency3.min.js"></script>
