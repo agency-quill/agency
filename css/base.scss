@@ -638,6 +638,11 @@
 		&Blue {
 			color: #1f89ca;
 			fill: #1f89ca;
+
+			&--light {
+				color: #d6e9f6;
+				fill: #d6e9f6;
+			}
 		}
 
 		&Gold {
@@ -651,9 +656,19 @@
 			fill: #bcbcbc;
 		}
 
+		&Orange {
+			color: #eb7722;
+			fill: #eb7722;
+		}
+
 		&Plum {
 			color: #a20067;
 			fill: #a20067;
+		}
+
+		&Red {
+			color: #e4002b;
+			fill: #e4002b;
 		}
 	}
 

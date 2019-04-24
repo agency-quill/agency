@@ -1303,6 +1303,11 @@
   color: #1f89ca;
   fill: #1f89ca;
 }
+#agency .quillBlue--light,
+.agency .quillBlue--light {
+  color: #d6e9f6;
+  fill: #d6e9f6;
+}
 #agency .quillGold,
 .agency .quillGold {
   color: #ca9d2c;
@@ -1314,10 +1319,20 @@
   color: #bcbcbc;
   fill: #bcbcbc;
 }
+#agency .quillOrange,
+.agency .quillOrange {
+  color: #eb7722;
+  fill: #eb7722;
+}
 #agency .quillPlum,
 .agency .quillPlum {
   color: #a20067;
   fill: #a20067;
+}
+#agency .quillRed,
+.agency .quillRed {
+  color: #e4002b;
+  fill: #e4002b;
 }
 #agency .reg,
 .agency .reg {
