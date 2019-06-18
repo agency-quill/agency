@@ -1,0 +1,190 @@
+#agency, 
+.agency {
+
+	.div {
+
+		&__background--paper {
+			background-color: $lightBlue;
+			padding-bottom: 0;
+			padding-left: $pct * 2;
+			padding-right: $pct * 2;
+			padding-top: $pct * 2;
+		}
+
+		&__content--paper {
+		    text-align: left;
+		    vertical-align: top;
+		    width: $pct * 32;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 14;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 44;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 24;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 46;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 44;
+			}
+		}
+
+		&__content--paper, 
+		&__img--paper {
+			display: inline-block;
+		}
+
+		&__img--paper {
+		    width: $pct * 67;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 85;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 55;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 75;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 53;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 55;
+			}
+		}
+
+		&__info--paper {
+			background-color: $blue;
+			bottom: 0;
+			left: 40%;
+			padding: $px * .5 $px * .5 $px * .3;
+			position: absolute;
+		}
+	}
+
+	.ellipse {
+
+		&--paper {
+			fill: $blue;
+			stroke: none;
+		}
+	}
+
+	.flag {
+
+		&--hotbuy {
+			background-color: $orange;
+		}
+
+		&--hotbuy, 
+		&--sale {
+			@include font($white, #{$em * 1.25}, 300);
+		    font-size: $px * 1.4;
+		    padding-bottom: 0;
+			padding-left: $px * .4;
+			padding-right: 0;
+			padding-top: $px * .4;
+		    width: $px * 7;
+		}
+
+		&--sale {
+		    background-color: $red;
+		}
+	}
+
+	.flag--sale, 
+	.p--paper {
+		margin-bottom: $px * .2;
+	}
+
+	.h2 {
+
+		&--paper {
+			@include font($darkGray, #{$em * 1.25}, 400);
+		    font-size: $px * 2.2;
+		    margin-bottom: $px * .6;
+		}
+	}
+
+	.h2--paper, 
+	.h3--paper, 
+	.p--paper {
+	    padding: 0;
+	    width: 100%;
+	}
+
+	.h3 {
+
+		&--paper {
+			@include font($darkGray, #{$em * 1}, 400);
+		    font-size: $px * 3.6;
+		    line-height: $em * 1;
+		}
+	}
+
+	.img {
+
+		&--paper {
+			bottom: $px * -1;
+			position: relative;
+			width: $pct * 80;
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 90.35;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 67.875;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 94;
+				// width: $pct * 82.375;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 90.35;
+			}
+		}
+	}
+
+	.p {
+
+		&--paper {
+			@include font($darkGray, #{$em * 1.25}, 400);
+			font-size: $px * 1.2;
+		}
+	}
+
+	.svg {
+
+		&__text {
+
+			&--paper {
+				@include font($white, #{$em * 1.25}, 400);
+				font-size: $px * 1.8;
+			}
+		}
+
+		&--paper {
+			bottom: 0;
+			height: 76px;
+			left: 40%;
+			position: absolute;
+			width: 152px;
+		}
+	}
+}

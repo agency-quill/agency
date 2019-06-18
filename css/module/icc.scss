@@ -74,7 +74,7 @@
 			text-decoration: none;
 
 			&:hover, &:active {
-				color: #f69036;
+				color: $orange;
 				text-decoration: underline;
 			}
 		}
@@ -85,12 +85,12 @@
 		}
 
 		&__h2 {
-			@include font(#333, 1.25em, 300);
+			@include font($darkGray, 1.25em, 300);
 			font-size: $vw * 4;
 			padding: 0;
 
 			&--headline {
-				@include font(#333, 1.25em, 300);
+				@include font($darkGray, 1.25em, 300);
 				display: block;
 				font-size: $vw * 5.5;
 			}
@@ -139,7 +139,7 @@
 		&__circle {
 
 			&--or {
-				fill: #fff;
+				fill: $white;
 			}
 		}
 
@@ -158,7 +158,7 @@
 	}
 
 	.webMod__icc {
-		border: dashed $px * .1 #333; // move?
+		border: dashed $px * .1 $darkGray; // move?
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

@@ -57,7 +57,7 @@ function accordionToggle(accordion, button){
 			accordion.removeAttr('data-accordion-open');
 			if(button.attr('scValue')){
 				button.attr('scValue', button.attr('scValue').replace('Hide', 'See All'));
-			}	
+			}
 		});
 	}
 }
@@ -76,7 +76,7 @@ function buildCustomPrint(arr) {
     var out = "";
     for(var i = 0, max = arr.length; i < max; i++){
         var ob = function(e){return e.hasOwnProperty('productPriceStart'); }
-        if (arr.some(ob)){
+        if(arr.some(ob)){
             out += "<div class=\"grid__unit--25\"><div class=\"align--center\">" + "<a class=\"a--noHighlight\" href=\"" + arr[i].productUrl + "\"><picture class=\"align--center\"><img src=\"" + arr[i].productImage +"\" alt=\"" + arr[i].productName + "\" class=\"webModImg__webModCard--25 margin__bottom--25\"></picture>" + "<h4 class=\"h4 margin__bottom--0\">" + arr[i].productName + "</h4>" + "<p class=\"p--small\">" + arr[i].productPriceStart + "</p></a></div></div>";
             }
         else{
@@ -111,6 +111,20 @@ function cardLayout(node, state){
 			}
 		}
 	});
+}
+function calcSavePrice(str){
+	var indexEnd,
+		indexStart,
+		priceArray = ['wasPrice','isPrice'],
+		savePrice;
+	for(var i = 0, max = priceArray.length; i < max; i++){
+		indexStart = str.indexOf(priceArray[i])+priceArray[i].length+2;
+		indexEnd = str.indexOf('</span>',indexStart);
+		priceArray[i] = parseFloat(str.substring(indexStart,indexEnd));
+	}
+	savePrice = parseFloat(Math.round((priceArray[0] - priceArray[1]) * 100) / 100).toFixed(2);
+	str = str.replace(/\{\{savings\}\}/g, savePrice);
+	return str;
 }
 function classSplitter(node){
 	return node.attr('class').split(' ');
@@ -177,7 +191,7 @@ function getParamVal(string, param){
     return false;
 }
 function initObj(obj){
-	for (var prop in obj){
+	for(var prop in obj){
     	obj[prop] = '';
     }
 }
@@ -282,8 +296,8 @@ function tuck(inside, outside, place){
 	if(!$('#' + outside.attr('id') + ' #' + inside.attr('id'))[0]){
 		if(place =='beginning' || place === 'start' || place === 'top'){
 			inside.clone().prependTo(outside);
-		}
-		else {inside.clone().appendTo(outside);
+		}else{
+			inside.clone().appendTo(outside);
 		}
 	}
 	$('#' + outside.attr('id') + ' #' + inside.attr('id')).css('display','block');
@@ -516,7 +530,7 @@ function jsonLoad(fileUrl, callback){
 // on load
 $(window).on('load', function(){
 	// carousel
-	if($('#agency .carouselMod').length !== 0 ){	// if there is a carousel
+	if($('#agency .carouselMod').length){	// if there is a carousel
 		$('#agency .carouselMod').each(function(){
 			carouselInit($(this));	// initialize each carousel
 		});
@@ -724,7 +738,6 @@ var carouselAttr = [	// array of carousel attributes with default values
 	    'heading': '<h{{num}} class="h{{num}} {{class}}" id="{{id}}" {{events}} style="{{css}}">{{heading}}</h{{num}}>',
 	    'hr': '<hr class="{{class}}" style="{{css}}">',
 	    'href': '{{url}}{{mcode}}{{number}}{{tag}}',
-	    /*'icc': '<div class="icc {{class}}" {{events}} id="icc-{{code}}" style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Code: </span><b>{{code}}</b><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="unclip-coupon scTrack" scType="cta" ctaType="removefromclipboard" locater="undo" onclick="CouponClipper.removeCoupon($(this))" style="display:none"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" scType="cta" ctaType="savetoclipboard" data-cpncode="{{code}}">Save to Clipboard</button><a href="{{url}}" class="button shopNow-btn scTrack" scType="scLink" scValue="shopnow:{{code}}" id="shopNowBtn_{{code}}" style="display:none">Shop Now</a></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer.</a></p></div>',*/
 	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code:</span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
 		'img': '<img alt="{{alt}}" class="{{class}}" id="{{id}}" {{events}} src="{{src}}" srcset="{{srcset}}" style="{{css}}" usemap="{{usemap}}">',
 		'li': '<li class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{li}}</li>',
@@ -764,6 +777,9 @@ function webMod(mod, obj){
 		}
     	if(obj.div){
     		obj.class = obj.src ? 'div__html--absolute' : 'div__html--static';
+    		if(/wasPrice/.test(obj.div) && /savePrice/.test(obj.div) && /\{\{savings\}\}/.test(obj.div)){
+	    		obj.div = calcSavePrice(obj.div);
+	    	}
     		obj.a += render(template.div, obj);
     	}
 		if(obj.link){

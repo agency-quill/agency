@@ -1,6 +1,6 @@
 @import "base/fonts.scss";	// @font-face rules
 #agency {
-	color: #333;
+	color: $darkGray;
     min-width: $px * 30;
 }
 
@@ -16,16 +16,16 @@
 
 	.a,
 	.hn__a {
-		color: #0079c1;
+		color: $blue;
 
 		&:hover,
 		&:active {
-			color: #f69036;
+			color: $orange;
 			text-decoration: underline;
 		}
 
 		&--noHighlight {
-			color: #333;						
+			color: $darkGray;						
 		}
 
 		&--underline {
@@ -33,7 +33,7 @@
 
 			&:hover,
 			&:active {
-				color: #f69036;
+				color: $orange;
 				text-decoration: none;
 			}
 		}
@@ -95,7 +95,7 @@
 
 		&--blue {
 			background-color: #0079c2;
-			color: #fff;
+			color: $white;
 
 			&:hover,
 			&:active {
@@ -236,6 +236,7 @@
 			border-style: dashed;
 			border-width: 2px;
 			box-sizing: border-box;
+			height: 95%;
 			padding-bottom: $px * 13.5;
 			padding-left: $pct * 5;
 			padding-right: $pct * 5;
@@ -245,7 +246,7 @@
 		}
 
 		&--popup {
-			background-color: #fff;
+			background-color: $white;
 			left: 50%;
 			position: absolute;
 			top: 50%;
@@ -577,7 +578,7 @@
 
 		&--coupon,
 		&--exception {
-		    color: #333;
+		    color: $darkGray;
 		}
 
 		&--details {
@@ -595,7 +596,7 @@
 		}
 
 		&--grey {
-			color: #bcbcbc;
+			color: $gray;
 		}
 
 		&--jump {
@@ -636,39 +637,44 @@
 	.quill {
 
 		&Blue {
-			color: #1f89ca;
-			fill: #1f89ca;
+			color: $blue !important;
+			fill: $blue;
 
 			&--light {
-				color: #d6e9f6;
-				fill: #d6e9f6;
+				color: $lightBlue !important;
+				fill: $lightBlue;
 			}
 		}
 
 		&Gold {
-			color: #ca9d2c;
-			fill: #ca9d2c;
+			color: $gold !important;
+			fill: $gold;
 		}
 
 		&Gray,
 		&Grey {
-			color: #bcbcbc;
-			fill: #bcbcbc;
+			color: $gray !important;
+			fill: $gray;
 		}
 
 		&Orange {
-			color: #eb7722;
-			fill: #eb7722;
+			color: $orange !important;
+			fill: $orange;
 		}
 
 		&Plum {
-			color: #a20067;
-			fill: #a20067;
+			color: $plum !important;
+			fill: $plum;
 		}
 
 		&Red {
-			color: #e4002b;
-			fill: #e4002b;
+			color: $red !important;
+			fill: $red;
+		}
+
+		&White {
+			color: $white !important;
+			fill: $white;
 		}
 	}
 
@@ -682,7 +688,7 @@
     	}
 	}
     
-    .strike{
+    .strike {
         text-decoration: line-through;
     }
 
@@ -697,10 +703,9 @@
     }
 
 	.textarea {
-		border: $px * 0.1 solid #999;
-		color: #999;
-		font-family: courier,
-		monospace;
+		border: $px * 0.1 solid $lightGray;
+		color: $lightGray;
+		font-family: courier, monospace;
 		outline: none;
 		
 		@media #{$tabLandMax} {

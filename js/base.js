@@ -57,7 +57,7 @@ function accordionToggle(accordion, button){
 			accordion.removeAttr('data-accordion-open');
 			if(button.attr('scValue')){
 				button.attr('scValue', button.attr('scValue').replace('Hide', 'See All'));
-			}	
+			}
 		});
 	}
 }
@@ -76,7 +76,7 @@ function buildCustomPrint(arr) {
     var out = "";
     for(var i = 0, max = arr.length; i < max; i++){
         var ob = function(e){return e.hasOwnProperty('productPriceStart'); }
-        if (arr.some(ob)){
+        if(arr.some(ob)){
             out += "<div class=\"grid__unit--25\"><div class=\"align--center\">" + "<a class=\"a--noHighlight\" href=\"" + arr[i].productUrl + "\"><picture class=\"align--center\"><img src=\"" + arr[i].productImage +"\" alt=\"" + arr[i].productName + "\" class=\"webModImg__webModCard--25 margin__bottom--25\"></picture>" + "<h4 class=\"h4 margin__bottom--0\">" + arr[i].productName + "</h4>" + "<p class=\"p--small\">" + arr[i].productPriceStart + "</p></a></div></div>";
             }
         else{
@@ -111,6 +111,20 @@ function cardLayout(node, state){
 			}
 		}
 	});
+}
+function calcSavePrice(str){
+	var indexEnd,
+		indexStart,
+		priceArray = ['wasPrice','isPrice'],
+		savePrice;
+	for(var i = 0, max = priceArray.length; i < max; i++){
+		indexStart = str.indexOf(priceArray[i])+priceArray[i].length+2;
+		indexEnd = str.indexOf('</span>',indexStart);
+		priceArray[i] = parseFloat(str.substring(indexStart,indexEnd));
+	}
+	savePrice = parseFloat(Math.round((priceArray[0] - priceArray[1]) * 100) / 100).toFixed(2);
+	str = str.replace(/\{\{savings\}\}/g, savePrice);
+	return str;
 }
 function classSplitter(node){
 	return node.attr('class').split(' ');
@@ -177,7 +191,7 @@ function getParamVal(string, param){
     return false;
 }
 function initObj(obj){
-	for (var prop in obj){
+	for(var prop in obj){
     	obj[prop] = '';
     }
 }
@@ -282,8 +296,8 @@ function tuck(inside, outside, place){
 	if(!$('#' + outside.attr('id') + ' #' + inside.attr('id'))[0]){
 		if(place =='beginning' || place === 'start' || place === 'top'){
 			inside.clone().prependTo(outside);
-		}
-		else {inside.clone().appendTo(outside);
+		}else{
+			inside.clone().appendTo(outside);
 		}
 	}
 	$('#' + outside.attr('id') + ' #' + inside.attr('id')).css('display','block');

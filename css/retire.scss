@@ -79,8 +79,8 @@
         }
 
 		&__td, &__th--horizontal, &__th--vertical {
-			border-bottom: $px * .1 solid #fff;
-			border-right: $px * .1 solid #fff;
+			border-bottom: $px * .1 solid $white;
+			border-right: $px * .1 solid $white;
 			padding: $px * 1.5;
 
 			@media #{$mobPortMax}{
@@ -102,7 +102,7 @@
 
 			&--horizontal {
 				background-color: #0072c6;
-				color: #fff;
+				color: $white;
 				font-size: $px * 1.5;
 				font-weight: 400;
 
@@ -123,7 +123,7 @@
 
 				@media #{$mobPortMax}{
 					background-color:#0072c6; 
-	                color:#fff;
+	                color:$white;
 	                width:auto;
 	            }
 			}

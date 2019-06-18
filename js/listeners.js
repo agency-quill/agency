@@ -1,7 +1,7 @@
 // on load
 $(window).on('load', function(){
 	// carousel
-	if($('#agency .carouselMod').length !== 0 ){	// if there is a carousel
+	if($('#agency .carouselMod').length){	// if there is a carousel
 		$('#agency .carouselMod').each(function(){
 			carouselInit($(this));	// initialize each carousel
 		});

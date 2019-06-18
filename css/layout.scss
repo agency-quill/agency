@@ -8,6 +8,11 @@
 
 	.align {
 
+        &--bottom {
+        	align-self: flex-end;
+        	vertical-align: bottom; 
+        }
+
         &--center {
             justify-content: center;
             margin-left: auto;
@@ -25,9 +30,23 @@
             text-align: left;
         }
 
+        &--middle {
+        	align-self: center;
+        	vertical-align: middle;
+        }
+
         &--right {
             justify-content: flex-end;
             text-align: right;
+        }
+
+        &--stretch {
+        	align-self: stretch;
+        }
+
+        &--top {
+        	align-self: flex-start;
+        	vertical-align: top; 
         }
     }
 

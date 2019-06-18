@@ -1,12 +1,25 @@
-// variables
-$column: 8.333333%;
-$fontFamily: 'helveticaNeue, arial, sans-serif';
+//colors
+$blue: #0079c2;
+$darkGray: #333;
+$gold: #ca9d2c;
+$gray: #bcbcbc;
+$lightBlue: #d6e9f6;
+$lightGray: #999;
+$orange: #f69036;
+$plum: #a20067;
+$red: #e4002b;
+$white: #fff;
 
 // units
 $em: 1em;
 $pct: 1%;
 $px: 10px;
 $vw: 1vw;
+
+// variables
+$column: 8.333333%;
+$fontFamily: 'helveticaNeue, arial, sans-serif';
+
 
 // media queries 
 //device
@@ -23,7 +36,6 @@ $tabLandMax: '(max-width: 1280px)';
 $laptopMin: '(min-width: 1280px)';
 $laptopMax: '(max-width: 1520px)';
 $desktopMin: '(min-width: 1520px)';
-
 
 
 // mixins

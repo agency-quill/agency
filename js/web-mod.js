@@ -20,6 +20,9 @@ function webMod(mod, obj){
 		}
     	if(obj.div){
     		obj.class = obj.src ? 'div__html--absolute' : 'div__html--static';
+    		if(/wasPrice/.test(obj.div) && /savePrice/.test(obj.div) && /\{\{savings\}\}/.test(obj.div)){
+	    		obj.div = calcSavePrice(obj.div);
+	    	}
     		obj.a += render(template.div, obj);
     	}
 		if(obj.link){

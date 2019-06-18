@@ -38,7 +38,7 @@
 				font-size: $vw * 2.75;
 				
 				& .plp-price {
-					color: #333;
+					color: $darkGray;
 					font-weight: 400;
 				}
     		}
@@ -88,7 +88,7 @@
 		}
 
 		&--qpBenefits {
-		    color: #333;
+		    color: $darkGray;
 		    font-weight: 400;
 		    line-height: 1.25em;
 
@@ -175,7 +175,7 @@
 	.h4 {
 
 		&--qpBonus {
-		    color: #333;
+		    color: $darkGray;
 		    font-size: $vw * 1;
 		    font-weight: 400;
 		}
@@ -544,7 +544,7 @@
 		}
 
 		&--qpPoints {
-			color: #fff;
+			color: $white;
 			text-align: center;
 
 			& .button--standard {
