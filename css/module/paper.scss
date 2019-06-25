@@ -43,6 +43,7 @@
 		}
 
 		&__img--paper {
+			vertical-align: bottom;
 		    width: $pct * 67;
 
 			@media #{$mobLandMin} and #{$mobLandMax} {

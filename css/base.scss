@@ -639,16 +639,11 @@
 		&Blue {
 			color: $blue !important;
 			fill: $blue;
-
-			&--light {
-				color: $lightBlue !important;
-				fill: $lightBlue;
-			}
 		}
 
-		&Gold {
-			color: $gold !important;
-			fill: $gold;
+		&Coral {
+			color: $coral !important;
+			fill: $coral;
 		}
 
 		&Gray,
@@ -657,19 +652,14 @@
 			fill: $gray;
 		}
 
-		&Orange {
-			color: $orange !important;
-			fill: $orange;
+		&Mint {
+			color: $mint !important;
+			fill: $mint;
 		}
 
-		&Plum {
-			color: $plum !important;
-			fill: $plum;
-		}
-
-		&Red {
-			color: $red !important;
-			fill: $red;
+		&Sky {
+			color: $sky !important;
+			fill: $sky;
 		}
 
 		&White {

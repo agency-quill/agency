@@ -42,6 +42,37 @@
 		}
 	}
 
+	.quill {
+
+		&Blue {
+			
+			&--light {
+				color: $lightBlue !important;
+				fill: $lightBlue;
+			}
+		}
+
+		&Gold {
+			color: $gold !important;
+			fill: $gold;
+		}
+
+		&Orange {
+			color: $orange !important;
+			fill: $orange;
+		}
+
+		&Plum {
+			color: $plum !important;
+			fill: $plum;
+		}
+
+		&Red {
+			color: $red !important;
+			fill: $red;
+		}
+	}
+
 	.right, &.right {
 
 		&__align {

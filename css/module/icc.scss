@@ -6,13 +6,9 @@
 		&__icc {
 
 			&--absolute {
-				box-sizing: border-box;
-				height: 100%;
 			    left: 0;
-			    padding:  $pct * .5;
 			    position: relative;
 			    top: 0;
-				width: 100%;
 
 				@media #{$mobLandMin} {
 				    position: absolute;
@@ -21,6 +17,18 @@
 				@media #{$ie11} and #{$mobLandMin} and #{$tabPortMax} {  
 					position: relative;
 				}
+			}
+
+			&--absolute,
+			&--static {
+				box-sizing: border-box;
+				height: 100%;
+			    padding:  $pct * .5;
+				width: 100%;
+			}
+
+			&--static {
+			    position: relative;
 			}
 		}
 	}
@@ -168,17 +176,15 @@
 		width: 100%;
 
 		@media #{$mobLandMin} and #{$tabPortMax} {
-			padding: $vw * 1.5;
-		}
-
-		.icc {
-			position: relative;
+		    min-height: $px * 20;
+		    padding: $vw * 1.5;
 		}
 
 		&--25 {
 
 			&.webMod__icc {
 				
+				&--1up {}
 			}
 		}
 
@@ -186,6 +192,7 @@
 
 			&.webMod__icc {
 				
+				&--1up {}
 			}
 		}
 
@@ -795,6 +802,14 @@
 							padding: $vw * .5 $vw * 1;
 						}
 
+						&--header {
+							width: 60%;
+
+							@media #{$tabLandMin} {
+								width: 100%;
+							}
+						}
+
 						&--img {
 
 							@media #{$mobLandMin} and #{$mobLandMax} {
@@ -826,10 +841,15 @@
 
 		&--img {
 			bottom: 0;
+			display: none;
 			height: $vw * 28;
 			position: absolute;
 			right: 0;
 			width: $vw * 35;
+
+			@media #{$mobLandMin} {
+				display: block;
+			}
 
 			@media #{$mobLandMin} and #{$mobLandMax} {
 				height: $vw * 26;
@@ -887,12 +907,20 @@
 							margin-bottom: $vw * 3;
 						}
 
+						@media #{$tabLandMin} {
+							margin-bottom: 0;
+						}
+
 						&:last-of-type {
 							margin-bottom: 0;
 						}
 					}
 				}
 			}
+		}
+
+		.icc {
+			position: relative;
 		}
 	}
 	/* see sds.scss for css that modifies sds-managed elements */

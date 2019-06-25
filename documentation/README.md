@@ -1,5 +1,7 @@
 # Agency Documentation
-Below are short descriptions of each of the documents in the Agency documentation repository.
+_Last updated 6/25/19_
+
+Below are short descriptions of each of the documents in the Agency documentation repository. These documents are written using [Markdown](https://daringfireball.net/projects/markdown/) which is a text-to-HTML conversion tool for web writers.
 
 ## Agency Basics _-WORKING DRAFT-_
 This document is an introduction to Agency systems and processes relating to web asset production. It covers topics like file servers, processes and web applications. 
