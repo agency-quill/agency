@@ -54,6 +54,11 @@ This glossary is a list of CSS classes available in the `agency5.css` style shee
 
 [css-classes-glossary.md](https://github.com/agency-quill/agency-project-files/tree/master/documentation/web/css-classes-glossary.md)
 
+### Dynamic Paper Module HTML _-WORKING DRAFT-_
+How to buid or update the dynamic paper module.
+
+[dynamic-paper-mod.md](https://github.com/agency-quill/agency-project-files/blob/master/documentation/web/dynamic-paper-mod.md)
+
 ### Page ID _-WORKING DRAFT-_
 Page IDs are needed for any new ADCore/CMS-driven landing page. This document walks through the steps necessary to request one.
 

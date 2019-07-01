@@ -267,6 +267,28 @@
 		font-style: italic;
 	}
 
+	.flag {
+
+		&--hotbuy {
+			background-color: $orange;
+		}
+
+		&--hotbuy, 
+		&--sale {
+			@include font($white, #{$em * 1.25}, 300);
+		    font-size: $px * 1.4;
+		    padding-bottom: 0;
+			padding-left: $px * .4;
+			padding-right: 0;
+			padding-top: $px * .4;
+		    width: $px * 7;
+		}
+
+		&--sale {
+		    background-color: $red;
+		}
+	}
+
 	.h1 {
 
 		@media #{$tabLandMax} {
