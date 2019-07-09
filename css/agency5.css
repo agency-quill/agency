@@ -755,6 +755,32 @@
 .agency .em {
   font-style: italic;
 }
+#agency .flag--hotbuy,
+.agency .flag--hotbuy {
+  background-color: #f69036;
+}
+#agency .flag--hotbuy, #agency .flag--sale,
+.agency .flag--hotbuy,
+.agency .flag--sale {
+  color: #fff;
+  fill: #fff;
+  font-family: helveticaNeue, arial, sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 1.25em;
+  font-size: 14px;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 0;
+  padding-top: 4px;
+  width: 70px;
+}
+#agency .flag--sale,
+.agency .flag--sale {
+  background-color: #e4002b;
+}
 @media (max-width: 1280px) {
   #agency .h1,
   .agency .h1 {
@@ -1255,7 +1281,7 @@
 }
 #agency .p--grey,
 .agency .p--grey {
-  color: #bcbcbc;
+  color: #eb7722;
 }
 #agency .p--jump,
 .agency .p--jump {
@@ -1304,36 +1330,26 @@
   color: #0079c2 !important;
   fill: #0079c2;
 }
-#agency .quillBlue--light,
-.agency .quillBlue--light {
-  color: #d6e9f6 !important;
-  fill: #d6e9f6;
-}
-#agency .quillGold,
-.agency .quillGold {
-  color: #ca9d2c !important;
-  fill: #ca9d2c;
+#agency .quillCoral,
+.agency .quillCoral {
+  color: #fff !important;
+  fill: #fff;
 }
 #agency .quillGray, #agency .quillGrey,
 .agency .quillGray,
 .agency .quillGrey {
-  color: #bcbcbc !important;
-  fill: #bcbcbc;
+  color: #eb7722 !important;
+  fill: #eb7722;
 }
-#agency .quillOrange,
-.agency .quillOrange {
-  color: #f69036 !important;
-  fill: #f69036;
+#agency .quillMint,
+.agency .quillMint {
+  color: #fff !important;
+  fill: #fff;
 }
-#agency .quillPlum,
-.agency .quillPlum {
-  color: #a20067 !important;
-  fill: #a20067;
-}
-#agency .quillRed,
-.agency .quillRed {
-  color: #e4002b !important;
-  fill: #e4002b;
+#agency .quillSky,
+.agency .quillSky {
+  color: #fff !important;
+  fill: #fff;
 }
 #agency .quillWhite,
 .agency .quillWhite {
@@ -1602,7 +1618,7 @@
 }
 #agency .disclaimer--ol__li, #agency .disclaimer--ul__li {
   background-image: none;
-  color: #bcbcbc;
+  color: #eb7722;
   padding: 0;
 }
 @media (max-width: 1280px) {
@@ -2917,32 +2933,6 @@
   fill: #0079c2;
   stroke: none;
 }
-#agency .flag--hotbuy,
-.agency .flag--hotbuy {
-  background-color: #f69036;
-}
-#agency .flag--hotbuy, #agency .flag--sale,
-.agency .flag--hotbuy,
-.agency .flag--sale {
-  color: #fff;
-  fill: #fff;
-  font-family: helveticaNeue, arial, sans-serif;
-  font-stretch: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  line-height: 1.25em;
-  font-size: 14px;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 0;
-  padding-top: 4px;
-  width: 70px;
-}
-#agency .flag--sale,
-.agency .flag--sale {
-  background-color: #e4002b;
-}
 #agency .flag--sale,
 #agency .p--paper,
 .agency .flag--sale,
@@ -3045,6 +3035,10 @@
   left: 40%;
   position: absolute;
   width: 152px;
+}
+#agency .webModPaper,
+.agency .webModPaper {
+  display: flex;
 }
 
 #agency .div--qpBenefits, .agency .div--qpBenefits {
@@ -5422,6 +5416,26 @@
   float: left;
   margin-left: 0;
   margin-right: 2%;
+}
+#agency .quillBlue--light, .agency .quillBlue--light {
+  color: #d6e9f6 !important;
+  fill: #d6e9f6;
+}
+#agency .quillGold, .agency .quillGold {
+  color: #ca9d2c !important;
+  fill: #ca9d2c;
+}
+#agency .quillOrange, .agency .quillOrange {
+  color: #f69036 !important;
+  fill: #f69036;
+}
+#agency .quillPlum, .agency .quillPlum {
+  color: #a20067 !important;
+  fill: #a20067;
+}
+#agency .quillRed, .agency .quillRed {
+  color: #e4002b !important;
+  fill: #e4002b;
 }
 #agency .right__align, #agency.right__align, .agency .right__align, .agency.right__align {
   text-align: right;
