@@ -40,7 +40,7 @@ This flag is used when the offer is being presented to an active customer (i.e. 
 ```
 
 ## Dynamic Price Code
-The code that makes these offers work is the `GetSkuPrice()` function written by SDS. Placing it in your code will dynamically insert the price of any item on the site in raw text form. To use it, send the function an array of two values: effort number and item, or find, number. The example below will pull the price for a case of [Quill Brand Copy Paper](https://www.quill.com/quill-brand-copy-paper-8-1-2-x-11-92-bright-20-lb-10-reams-500-sheets-720222/cbs/200885.html?Effort_Code=499&Find_Number=720222CT) (item 720222CT) for effort 499 (this effort may be expired at this time). This script is server-based and runs before the page loads. ___The space after `<$=` and before `$>` are necessary for the script to function.___
+The code that makes these offers work is the `GetSkuPrice()` function written by SDS. Placing it in your code will dynamically insert the price of any item on the site in raw text form. To use it, send the function an array of two values: effort number and item, or find, number. The example below will pull the price for a case of [Quill Brand Copy Paper](https://www.quill.com/quill-brand-copy-paper-8-1-2-x-11-92-bright-20-lb-10-reams-500-sheets-720222/cbs/200885.html?Effort_Code=499&Find_Number=720222CT) (item 720222CT) for effort 499 (this effort may be expired at this time). This script is server-based and runs before the page loads. _The space after `<$=` and before `$>` are necessary for the script to function._
 
 ##### Example
 ```javascript
