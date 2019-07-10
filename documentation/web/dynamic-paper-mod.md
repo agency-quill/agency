@@ -1,7 +1,7 @@
-# Dynamic Paper Module HTML
+# Dynamic Paper Module `html`
 _Last updated 7/10/19_
 
-To improve turn-around times and eliminate the need to update paper module images whenever there is a price change on the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page, SDS and the Agency have developed some new scripts, styles and `HTML` code. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images. It does this by pulling item prices from the back-end dynamically.
+To improve turn-around times and eliminate the need to update paper module images whenever there is a price change on the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page, SDS and the Agency have developed some new scripts, styles and `html` code. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images. It does this by pulling item prices from the back-end dynamically.
 
 The new code is designed to work with the existing `2018-half-mod` web ad module. The new code is populated into the `u_ad_html_text` field.
 
