@@ -1,5 +1,5 @@
 var docRef = app.activeDocument,
-    savedRuler= app.preferences.rulerUnits,
+    savedRuler = app.preferences.rulerUnits,
     w = docRef.width,
     h = docRef.height;
 app.backgroundColor = docRef.colorSamplers.add([2,2]).color;
