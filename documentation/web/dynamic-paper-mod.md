@@ -67,7 +67,7 @@ The example below shows the `html` rendering the sale price for a case of Quill 
 <h3 class="h3--paper quillRed"><span class="sup">$</span><span class="isPrice"><$= GetSkuPrice(['499','720222CT']) $></span></h3>
 ```
 
-## Information/Marketing Overlay
+## Information/Promotional Overlay
 At the bottom of the module, roughly in the middle, is an optional overlay.  At this time we have two options.
 
 The standard is the information overlay.  It is a rectangle that holds the number of reams, brightness, and paper weight info separated by vertical bars or pipes.
@@ -81,6 +81,7 @@ The standard is the information overlay.  It is a rectangle that holds the numbe
 
 The second option is a half-circle that contains promotional language like "One-time offer." This option is a little more complicated to code as it uses include the `svg`, `ellipse`, and `text` elements.
 
+##### Example
 ```html
 <svg class="svg--paper" xmlns="http://www.w3.org/2000/svg">
     <ellipse class="ellipse--paper" cx="76" cy="76" rx="76" ry="76"/>
