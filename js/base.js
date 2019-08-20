@@ -124,6 +124,7 @@ function calcSavePrice(str){
 	}
 	savePrice = parseFloat(Math.round((priceArray[0] - priceArray[1]) * 100) / 100).toFixed(2);
 	str = str.replace(/\{\{savings\}\}/g, savePrice);
+	console.log('str: '+str);
 	return str;
 }
 function classSplitter(node){

@@ -99,6 +99,26 @@
 					width: $pct * 100;
 				}
 			}
+
+			&--75 {
+				width: $pct * 155;
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 150;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 119;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
 			
 			&--100 {
 				width: $pct * 159.325;
