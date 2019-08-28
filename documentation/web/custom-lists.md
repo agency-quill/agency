@@ -9,32 +9,34 @@ The `CarouselDynTemplate()` script is the tool we use to grab dynamic data from 
 ### Elements
 In the 
 
+<$= CarouselDynTemplate(['$%dynamic_list_id%$','$%custom_list_data_type%$','$%custom_list_numb_items%$','$%custom_list_display_type%$','$%custom_list_numb_items_max%$','','$%custom_list_sort_option%$','$%custom_list_accordion%$']) $>
+
 ```javascript
-CarouselDynTemplate(['1','2','3','4','5','6','7','8','9'])
+CarouselDynTemplate(['Element 1','Element 2','Element 3','Element 4','Element 5','Element 6','Element 7','Element 8','Element 9'])
 ```
 
-#### 1. Dynamic List Name or ID
-Unique value which defines what it will render
+#### Element 1 &ndash; Dynamic List Name or ID
+Unique value which defines what it will render. This is left blank. The custom list that `CarouselDynTemplate()` renders is assigned in CMS by the Web Specialist.
 
-#### 2. Data Type
+#### Element 2 &ndash; Data Type
 Data type (always 0)
 
-#### 3. Number of Items
+#### Element 3 &ndash; Number of Items
 items displayed per pane
 
-#### 4. Display Type
+#### Element 4 &ndash; Display Type
 0 = carousel, 1 = carousel with pictures only, 3 = inline list, 9 = hot deals page
 
-#### 5. Maximum Number of Items
+#### Element 5 &ndash; Maximum Number of Items
 maximum items to be displayed (optional), if you want to restrict the number of items returned by the list.
 
-#### 6. ?
+#### Element 6 &ndash; ?
 
-#### 7. Sort Option
+#### Element 7 &ndash; Sort Option
 display sorting dropdown (0 = no dropdown, 1 = display dropdown)
 
-#### 8. Accordion Collapse
+#### Element 8 &ndash; Accordion Collapse
 accordion open default (0 = list open, 1 = only first row visible)
 
-#### 9. Enable Accordion
+#### Element 9 &ndash; Enable Accordion
 enable accordion default (0 = no accordion, 1 = display accordion)

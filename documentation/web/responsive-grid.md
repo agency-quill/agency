@@ -1,5 +1,5 @@
 # Responsive grid
-_Last updated 12/12/18_
+_Last updated 8/28/18_
 
 Welcome to the world of responsive design!  You are now the proud owner of a reposnsive design grid. Your new responsive grid is made up of HTML and CSS code that works seamlessly on devices from mobile phones to large desktop monitors without the need to write HTML for each. That's right!  You only need to use a single block of code. For a quick introduction to the responsive grid, check out the two examples below. 
 
@@ -205,7 +205,7 @@ This is a third-width unit. It can be used with two other third-width units or o
 This is a quarter-width unit. It can be used with three other quarter-width units or one quarter-width unit and a half-width (`grid__unit--50`) unit.
 
 #### `grid__unit--12-5`
-This is an eighth-width unit. It can only be used other eighth-width units.
+This is an eighth-width unit. It can only be used with other eighth-width units.
 
 #### .webModInner
 Inside the grid unit element is an element with a class of `webModInner` that serves as the wrapper for any content within it. The `webModInner` class fills all of the horizontal and vertical space.
