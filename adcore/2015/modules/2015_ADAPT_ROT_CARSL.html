@@ -1,221 +1,294 @@
 <!-- 2015_ADAPT_ROT_CARSL -->
 <style type="text/css">
-    .carouselPh {position:relative;}
-    .carouselSupercat {padding:0;margin:auto;}
-    .carouselSupercat .scLeft, .carouselSupercat .scRight {z-index:10;top:120px}
-
-    .carouselSupercat .carouselWrap, .res1024 .adaptivePage .carouselSupercat .carouselWrap {width: 960px;} 
-    .res1280 .adaptivePage .carouselSupercat .carouselWrap {width: 1205px;} 
-    .res1450 .adaptivePage .carouselSupercat .carouselWrap {width: 1450px;} 
-    
-    .carouselSupercat li.itemb, .res1024 .adaptivePage .carouselSupercat li.itemb{width: 960px;}
-    .res1280 .adaptivePage .carouselSupercat li.itemb{width: 1205px;}
-    .res1450 .adaptivePage .carouselSupercat li.itemb{width: 1450px;}
-    .fixedImg{position:absolute;left:0;top:0;z-index:9;height:auto;}
-    .bg-image{float:right;}
-    .carouselSupercat .adpt_dsclmr{position:absolute;bottom:$%u_ad_01_view_disc_bottom%$px;left:$%u_ad_01_view_disc_left%$px;text-decoration:underline;color:$%u_ad_01_view_disc_color%$;z-index:100;}
-    .coupon-code{position:absolute;width:200px;padding:10px;text-align:left;color:#000;z-index:10;}
-	
-    .mobilePage #adaptiveCarousel .carouselWrap, .mobilePage #adaptiveCarousel li.itemb {width: auto;} 
-    .mobilePage .carouselSupercat .adpt_dsclmr {position:static;bottom:0px;right:0;text-decoration:none;color:$%u_ad_01_view_disc_color%$;z-index:100;background:#e7e7e7;padding:5px;text-align:center;display:block;line-height:1.2;}
-    #mobileItem {position:relative;}
-    #mobileCarousel .mobileImg{padding:0 0 10px 0;}
-    .mobilePage #adaptiveCarousel .carouselInner{width:auto !important}
-    .mobilePage #adaptiveCarousel{height:auto !important}
+    .carouselPh {
+    	position: relative;
+    }
+    .carouselSupercat {
+    	padding: 0;
+    	margin: auto;
+    }
+    .carouselSupercat .scLeft,
+    .carouselSupercat .scRight {
+    	z-index: 10;
+    	top: 120px;
+    }
+    .carouselSupercat .carouselWrap,
+    .res1024 .adaptivePage .carouselSupercat .carouselWrap {
+    	width: 960px;
+    } 
+    .res1280 .adaptivePage .carouselSupercat .carouselWrap {
+    	width: 1205px;
+    } 
+    .res1450 .adaptivePage .carouselSupercat .carouselWrap {
+    	width: 1450px;
+    } 
+    .carouselSupercat li.itemb,
+    .res1024 .adaptivePage .carouselSupercat li.itemb {
+    	width: 960px;
+    }
+    .res1280 .adaptivePage .carouselSupercat li.itemb {
+    	width: 1205px;
+    }
+    .res1450 .adaptivePage .carouselSupercat li.itemb {
+    	width: 1450px;
+    }
+    .fixedImg {
+    	position: absolute;
+    	left: 0;
+    	top: 0;
+    	z-index: 9;
+    	height: 300px;
+    }
+    .bg-image {
+    	float: right;
+    }
+    .carouselSupercat .adpt_dsclmr {
+    	position: absolute;
+    	bottom: $%u_ad_01_view_disc_bottom%$px;
+    	left: $%u_ad_01_view_disc_left%$px;
+    	text-decoration: underline;
+    	color: $%u_ad_01_view_disc_color%$;
+    	z-index: 100;
+    }
+    .coupon-code {
+    	position: absolute;
+    	width: 200px;
+    	padding: 10px;
+    	text-align: left;
+    	color: #000;
+    	z-index: 10;
+    }
+    .dv-coupon-code {
+	    width: 100%;
+	    color: #333;
+	    float: left;
+	    margin-bottom: 2px;
+	}
+	.icc__div, .icc__p--conditions {
+	    color: #000;
+	    fill: #000;
+		font-family: helveticaNeue,arial,sans-serif;
+	    font-stretch: normal;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: 400;
+	    line-height: 1.125em;
+	    margin: 0;
+	    padding: 0;
+	}
+	.icc__div {
+	    font-size: 12px;
+	}
+	.icc__p--conditions {
+	    font-size: 11px;
+	}
+    .mobilePage #adaptiveCarousel .carouselWrap,
+    .mobilePage #adaptiveCarousel li.itemb {
+    	width: auto;
+    } 
+    .mobilePage .carouselSupercat .adpt_dsclmr {
+    	position: static;
+    	bottom: 0px;
+    	right: 0;
+    	text-decoration: none;
+    	color: $%u_ad_01_view_disc_color%$;
+    	z-index: 100;
+    	background: #e7e7e7;
+    	padding: 5px;
+    	text-align: center;
+    	display: block;
+    	line-height: 1.2;
+    }
+    #mobileItem {
+    	position: relative;
+    }
+    #mobileCarousel .mobileImg {
+    	padding: 0 0 10px 0;
+    }
+    .mobilePage #adaptiveCarousel .carouselInner {
+    	width: auto !important;
+    }
+    .mobilePage #adaptiveCarousel {
+    	height: auto !important;
+    }
+    .panelItem {
+    	height: 300px;
+    	background: #ccc;
+    	padding: 0;
+    	position: relative;
+	}
+	.strong {
+		font-weight: 600;
+	}
 </style>
+<div class="carouselPh" id="CarouselPh"></div>
 <script type="text/javascript">
-	if(typeof AdptIndex != "undefined")
-		AdptIndex = AdptIndex+1;
-	else
-		AdptIndex = 1;
-
-	AdptId= "CarouselPh" + AdptIndex;
-	document.write("<div class=\"carouselPh\" id=\"" + AdptId + "\"></div>")
+	AdptIndex = typeof AdptIndex != 'undefined' ? AdptIndex + 1 : 1;
+	AdptId = 'CarouselPh' + AdptIndex;
+	$('#CarouselPh').attr('id', AdptId);
 </script>
-
-
 <script type="text" id="baseTemplate">
     <div class="carousel carouselSupercat" id="adaptiveCarousel" data-itemclass="itemb" data-itemtag="li" 
     data-type="Horizontal" data-itemsperpage="1" data-showarrows="true" data-autostart="true" 
-    data-autoscroll="true" data-autostarttime="0.5" data-autoscrolltime="5" data-restart="true">	
-	<div class="carouselWrap">
-	    <ul style="width:10000px;" class="carouselInner">
-		{{html}}
-	    </ul>
+    data-autoscroll="true" data-autostarttime="0.5" data-autoscrolltime="5" data-restart="true"	style="height:300px;">	
+		<div class="carouselWrap" style="">
+		    <ul style="width:10000px;" class="carouselInner">
+				{{html}}
+		    </ul>
         </div>
     </div>
 </script>
-
 <script type="text" id="panoramicItem">
-    <li class="a itemb panelItem panoramic" style="background:#ccc;padding:0;position:relative;">
+    <li class="a itemb panelItem panoramic">
         {{linkStart}}
-	    <img class="fixedImg" src="{{fixedImg}}" alt="{{alt}}"/>
-	    <img class="bg-image" src="{{image}}" alt="{{alt}}">
-	{{linkEnd}}	
+		    <img class="fixedImg" src="{{fixedImg}}" alt="{{alt}}" height="300"/>
+		    <img class="bg-image" src="{{image}}" alt="{{alt}}" height="300">
+		{{linkEnd}}	
     </li>
 </script>
-
 <script type="text" id="cropRightItem">
-    <li class="itemb panelItem cropRight" style="background:#ccc;padding:0;position:relative;">
-	{{linkStart}}
-	    <img src="{{image}}" alt="{{alt}}"/>
-	{{linkEnd}}
-	{{disclaimerHTML}}
+    <li class="itemb panelItem cropRight">
+		{{linkStart}}
+		    <img src="{{image}}" alt="{{alt}}"/>
+		{{linkEnd}}
+		{{disclaimerHTML}}
     </li>
 </script>
-
 <script type="text" id="cropBothItem">
-    <li class="itemb panelItem cropBoth" style="background:#ccc;padding:0;position:relative;">
+    <li class="itemb panelItem cropBoth">
         <div class="cropped-image-size">
-	    <div class="cropped-image-center">
-		<span style="display:inline-block;">
-	            {{linkStart}}
-			<img src="{{image}}" alt="{{alt}}">
-		    {{linkEnd}}
-		</span>
-	    </div>
-	</div>
+	    	<div class="cropped-image-center">
+				<span style="display: inline-block;">
+	            	{{linkStart}}
+						<img src="{{image}}" alt="{{alt}}" height="300">
+		    		{{linkEnd}}
+				</span>
+	    	</div>
+		</div>
     </li>
 </script>
-
 <script type="text" id="mobileItem">
-    <li class="itemb panelItem mobileImg" style="height:auto;position:relative;text-align:center;">
+    <li class="itemb panelItem mobileImg" style="height:auto;text-align:center;">
         <a href="{{url}}" title="{{title}}">
-	    <img src="{{mobileImg}}" alt="{{alt}}" height="auto" width="100%">
-	</a>
-	{{disclaimerHTML}}
+		    <img src="{{mobileImg}}" alt="{{alt}}" height="auto" width="100%">
+		</a>
+		{{disclaimerHTML}}
     </li>
 </script>
-
 <script type="text" id="disclaimerText">
-    <span class="adpt_dsclmr link" onclick="$(this).Tooltip('{{disclaimerText}}',300,{hasCloseButton:true})" data-tooltips="">View disclaimer</span>
+    <span class="adpt_dsclmr link" onclick="$(this).Tooltip('{{disclaimerText}}',300, {hasCloseButton: true})" data-tooltips="">View disclaimer</span>
 </script>
-
 <script type="text" id="couponTemplate">
-    <li class="itemb panelItem couponTemplate" style="background:#ccc;padding:0;position:relative;">
-        {{linkStart}}<img src="{{image}}" alt="{{alt}}"/>{{linkEnd}}
-	<div class="coupon-code" style="top:$%u_ad_01_coupon_code_top%$px; left:$%u_ad_01_coupon_code_left%$px;">
-	    <p style="text-align:center;background:#ccc;width:190px;height:24px;padding:0;line-height:24px;">
-	        <span style=" color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; text-decoration: none;">Use Code:</span>
-		<span style="font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000000; text-decoration: none;">{{couponCode}}</span>
-	    </p>
-	    <p style="color:$%u_ad_01_coupon_usage_text_color%$;font-family:Arial, Helvetica, sans-serif;font-size:11px; line-height:12px; text-decoration:none;margin-top:5px;">{{usageText}}</p>
-	</div>
-        {{disclaimerHTML}}
+    <li class="itemb panelItem couponTemplate" style="height:300px;background:#ccc;padding:0;position:relative;">
+    	<img src="{{image}}" alt="{{alt}}">
+        <div class="icc" id="icc-{{couponCode}}" style="top:$%u_ad_01_coupon_code_top%$px;left:$%u_ad_01_coupon_code_left%$px;position:absolute;">
+            <div id="couponWrap_{{couponCode}}" class="cpn-clipper-wrap">
+                <button type="button" id="cpnCode_{{couponCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{couponCode}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button>
+                <a id="unclip_cpn_{{couponCode}}" data-cpncode="{{couponCode}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a>
+            </div>
+            <div class="dv-coupon-code icc__div ST_s" style="color:$%u_ad_01_coupon_usage_text_color%$"><span>Code:</span><strong class="strong">{{couponCode}}</strong></div>
+            <p class="icc__p--conditions" style="color:$%u_ad_01_coupon_usage_text_color%$">{{usageText}}</p>
+            <p class="icc__p--conditions" style="color:$%u_ad_01_coupon_usage_text_color%$">{{expiryText}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{couponCode}}" onclick="$(this).Tooltip('{{disclaimerText}}',400,{hasCloseButton:true})" style="color:$%u_ad_01_coupon_usage_text_color%$">Disclaimer</a></p>
+        </div>
     </li>
 </script>
-
 <script type="text/javascript">
     (function(){
-			  
         function render(html,obj){
-	    for(var k in obj){
-	        html = html.replace("{{" + k + "}}",obj[k]);
-	    }
-	    return html;  
-	}
-
-	var data = [{
-		mode: "$%u_ad_01_img_mode%$",
-		image: "$%u_ad_01_img_src%$",
-		fixedImg: "$%u_ad_01_fixedImg_src%$",
-		largeImage: "$%u_ad_01_largeImg_src%$",
-		alt: "$%u_ad_01_img_alt%$",
-		link: {
-		    url: "$%u_ad_01_link_url%$",
-		    linkStart: "<a href='$%u_ad_01_link_url%$' title='$%u_ad_01_link_title%$'>",
-		    linkEnd: "</a>"
+		    for(var k in obj){
+		        html = html.replace(new RegExp('{{' + k + '}}','g'),obj[k]);
+		    }
+		    return html;  
+		}
+		var data = [ {
+			mode: "$%u_ad_01_img_mode%$",
+			image: "$%u_ad_01_img_src%$",
+			fixedImg: "$%u_ad_01_fixedImg_src%$",
+			largeImage: "$%u_ad_01_largeImg_src%$",
+			alt: "$%u_ad_01_img_alt%$",
+			link: {
+			    url: "$%u_ad_01_link_url%$",
+			    linkStart: "<a href='$%u_ad_01_link_url%$' title='$%u_ad_01_link_title%$'>",
+			    linkEnd: "</a>"
+			},
+			title: "$%u_ad_01_link_title%$",
+			mobileImg: "$%u_ad_01_img_mobile%$",
+			disclaimerText: "$%u_ad_01_disc_text%$"+"$%u_ad_01_disc_text_02%$"+"$%u_ad_01_disc_text_03%$"+"$%u_ad_01_disc_text_04%$",
+			couponCode: "$%u_ad_01_coupon_code%$",
+			usageText: "$%u_ad_01_usage_text%$",
+			expiryText: "$%u_ad_01_expiry_text%$"
 		},
-		title: "$%u_ad_01_link_title%$",
-		mobileImg: "$%u_ad_01_img_mobile%$",
-		disclaimerText: "$%u_ad_01_disc_text%$"+"$%u_ad_01_disc_text_02%$"+"$%u_ad_01_disc_text_03%$"+"$%u_ad_01_disc_text_04%$",
-		couponCode: "$%u_ad_01_coupon_code%$",
-		usageText: "$%u_ad_01_usage_text%$"
-	},
-	{   mode: "$%u_ad_02_img_mode%$",
-	    image: "$%u_ad_02_img_src%$",
-	    fixedImg: "$%u_ad_02_fixedImg_src%$",
-	    largeImage: "$%u_ad_02_largeImg_src%$",
-	    alt: "$%u_ad_02_img_alt%$",
-	    link: {
-	    	url: "$%u_ad_02_link_url%$",
-	    	linkStart: "<a href='$%u_ad_02_link_url%$' title='$%u_ad_02_link_title%$'>",
-	    	linkEnd: "</a>"
-	    },
-	    title: "$%u_ad_02_link_title%$"
-	},
-	{   mode: "$%u_ad_03_img_mode%$",
-	    image: "$%u_ad_03_img_src%$",
-	    fixedImg: "$%u_ad_03_fixedImg_src%$",
-	    largeImage: "$%u_ad_03_largeImg_src%$",
-	    alt: "$%u_ad_03_img_alt%$",
-	    link: {
-	    	url: "$%u_ad_03_link_url%$",
-	    	linkStart: "<a href='$%u_ad_03_link_url%$' title='$%u_ad_03_link_title%$'>",
-	    	linkEnd: "</a>"
-	    },
-	    title: "$%u_ad_03_link_title%$"
-	}];
-
-	var onAdapt = [];
-
-	var html = "";
-	for(var i=0;i<data.length;i++){
-	    if(data[i].image)
-	    {	
-                if(data[i].disclaimerText){
-		    data[i].disclaimerHTML = render($("#disclaimerText").html(),data[i]);
-		}
-     		else {
-		    data[i].disclaimerHTML = "";
-		}
-
-	        if (isMobile){
-		    if(data[i].mobileImg){
-		        html += render($("#mobileItem").html(), data[i]);
-	 	    }
-		}
-		else {
-		    if(data[i].link.url){
-		        data[i].linkStart = data[i].link.linkStart;
-			data[i].linkEnd = data[i].link.linkEnd;
-		    }
-		    else{
-		        data[i].linkStart = "";
-			data[i].linkEnd = "";
-		    }
-
-		    if(data[i].mode == "couponTemplate"){
-		        html += render($("#couponTemplate").html(),data[i]);
-		    }
-		    else if(data[i].mode == "panoramic"){
-		        html += render($("#panoramicItem").html(),data[i]);
-		    }
-		    else if(data[i].mode == "cropRight" || data[i].mode != "panoramic" && data[i].mode != "cropBoth" && data[i].mode != "couponTemplate")
-		    {
-		        html += render($("#cropRightItem").html(),data[i]);                        
-
-			if(typeof Adaptive != "undefined")
-			    {
-				var func = function(size){
-				if(size == 1450 && this.largeImgSrc)                  
-				    {$(this.id).attr("src", this.largeImgSrc);}
-				 else
-				    {$(this.id).attr("src", this.imgSrc);}
-				};
-				func.id = "#" + AdptId + " li:nth-child("+(i+1)+").cropRight img";
-				func.largeImgSrc = data[i].largeImage;
-				func.imgSrc = data[i].image;
-				onAdapt.push(func);			   	   
+		{   mode: "$%u_ad_02_img_mode%$",
+		    image: "$%u_ad_02_img_src%$",
+		    fixedImg: "$%u_ad_02_fixedImg_src%$",
+		    largeImage: "$%u_ad_02_largeImg_src%$",
+		    alt: "$%u_ad_02_img_alt%$",
+		    link: {
+		    	url: "$%u_ad_02_link_url%$",
+		    	linkStart: "<a href='$%u_ad_02_link_url%$' title='$%u_ad_02_link_title%$'>",
+		    	linkEnd: "</a>"
+		    },
+		    title: "$%u_ad_02_link_title%$"
+		},
+		{   mode: "$%u_ad_03_img_mode%$",
+		    image: "$%u_ad_03_img_src%$",
+		    fixedImg: "$%u_ad_03_fixedImg_src%$",
+		    largeImage: "$%u_ad_03_largeImg_src%$",
+		    alt: "$%u_ad_03_img_alt%$",
+		    link: {
+		    	url: "$%u_ad_03_link_url%$",
+		    	linkStart: "<a href='$%u_ad_03_link_url%$' title='$%u_ad_03_link_title%$'>",
+		    	linkEnd: "</a>"
+		    },
+		    title: "$%u_ad_03_link_title%$"
+		}];
+		var onAdapt = [];
+		var html = "";
+		for(var i=0;i<data.length;i++){
+		    if(data[i].image){	
+	            if(data[i].disclaimerText){
+		    		data[i].disclaimerHTML = render($("#disclaimerText").html(),data[i]);
+				}else{
+		    		data[i].disclaimerHTML = "";
 				}
-			    }
-			    else if(data[i].mode == "cropBoth"){
-			        html += render($("#cropBothItem").html(),data[i]);
+				if(isMobile){
+				    if(data[i].mobileImg){
+				        html += render($("#mobileItem").html(), data[i]);
+			 	    }
+				}else{
+			    	if(data[i].link.url){
+			        	data[i].linkStart = data[i].link.linkStart;
+						data[i].linkEnd = data[i].link.linkEnd;
+			    	}else{
+			        	data[i].linkStart = "";
+						data[i].linkEnd = "";
+			    	}
+			    	if(data[i].mode == "couponTemplate"){
+			        	html += render($("#couponTemplate").html(),data[i]);
+			    	}else if(data[i].mode == "panoramic"){
+				        html += render($("#panoramicItem").html(),data[i]);
+				    }else if(data[i].mode == "cropRight" || data[i].mode != "panoramic" && data[i].mode != "cropBoth" && data[i].mode != "couponTemplate"){
+			        	html += render($("#cropRightItem").html(),data[i]);
+						if(typeof Adaptive != "undefined"){
+							var func = function(size){
+								if(size == 1450 && this.largeImgSrc){
+									$(this.id).attr("src", this.largeImgSrc);
+								}else{
+									$(this.id).attr("src", this.imgSrc);
+								}
+							};
+							func.id = "#" + AdptId + " li: nth-child("+(i+1)+").cropRight img";
+							func.largeImgSrc = data[i].largeImage;
+							func.imgSrc = data[i].image;
+							onAdapt.push(func);			   	   
+						}
+				    }else if(data[i].mode == "cropBoth"){
+				        html += render($("#cropBothItem").html(),data[i]);
 					}
-			    }
-		  }
+				}
+			}
 		}
-		$("#" + AdptId).html(render($("#baseTemplate").html(),{html: html}));
+		$("#" + AdptId).html(render($("#baseTemplate").html(), {html: html}));
 		if($("#" + AdptId).Carousel){
 			$("#" + AdptId).Carousel();
 		}
@@ -223,8 +296,5 @@
 		   Adaptive.OnResize(onAdapt[i]);
 		   func.call(onAdapt[i],Adaptive.Size());	
 		}
-		  
 	})();
 </script>
-
-<!-- 2015_ADAPT_ROT_CARSL --><style type="text/css">.carouselPh{position:relative}.carouselSupercat{padding:0;margin:auto}.carouselSupercat .scLeft,.carouselSupercat .scRight{z-index:10;top:120px}.carouselSupercat .carouselWrap,.res1024 .adaptivePage .carouselSupercat .carouselWrap{width:960px}.res1280 .adaptivePage .carouselSupercat .carouselWrap{width:1205px}.res1450 .adaptivePage .carouselSupercat .carouselWrap{width:1450px}.carouselSupercat li.itemb,.res1024 .adaptivePage .carouselSupercat li.itemb{width:960px}.res1280 .adaptivePage .carouselSupercat li.itemb{width:1205px}.res1450 .adaptivePage .carouselSupercat li.itemb{width:1450px}.fixedImg{position:absolute;left:0;top:0;z-index:9;height:auto}.bg-image{float:right}.carouselSupercat .adpt_dsclmr{position:absolute;bottom:$%u_ad_01_view_disc_bottom%$px;left:$%u_ad_01_view_disc_left%$px;text-decoration:underline;color:$%u_ad_01_view_disc_color%$;z-index:100}.coupon-code{position:absolute;width:200px;padding:10px;text-align:left;color:#000;z-index:10}.mobilePage #adaptiveCarousel .carouselWrap,.mobilePage #adaptiveCarousel li.itemb{width:auto}.mobilePage .carouselSupercat .adpt_dsclmr{position:static;bottom:0;right:0;text-decoration:none;color:$%u_ad_01_view_disc_color%$;z-index:100;background:#e7e7e7;padding:5px;text-align:center;display:block;line-height:1.2}#mobileItem{position:relative}#mobileCarousel .mobileImg{padding:0 0 10px 0}.mobilePage #adaptiveCarousel .carouselInner{width:auto!important}.mobilePage #adaptiveCarousel{height:auto!important}</style> <script type="text/javascript">if(typeof AdptIndex!="undefined"){AdptIndex=AdptIndex+1}else{AdptIndex=1}AdptId="CarouselPh"+AdptIndex;document.write('<div class="carouselPh" id="'+AdptId+'"></div>');</script> <script type="text" id="baseTemplate"><div class="carousel carouselSupercat" id="adaptiveCarousel" data-itemclass="itemb" data-itemtag="li" data-type="Horizontal" data-itemsperpage="1" data-showarrows="true" data-autostart="true" data-autoscroll="true" data-autostarttime="0.5" data-autoscrolltime="5" data-restart="true"><div class="carouselWrap"><ul style="width:10000px;" class="carouselInner">{{html}}</ul></div></div></script><script type="text" id="panoramicItem"><li class="a itemb panelItem panoramic" style="background:#ccc;padding:0;position:relative;">{{linkStart}}<img class="fixedImg" src="{{fixedImg}}" alt="{{alt}}"/><img class="bg-image" src="{{image}}" alt="{{alt}}">{{linkEnd}}</li></script><script type="text" id="cropRightItem"><li class="itemb panelItem cropRight" style="background:#ccc;padding:0;position:relative;">{{linkStart}}<img src="{{image}}" alt="{{alt}}"/>{{linkEnd}}{{disclaimerHTML}}</li></script> <script type="text" id="cropBothItem"><li class="itemb panelItem cropBoth" style="background:#ccc;padding:0;position:relative;"><div class="cropped-image-size"><div class="cropped-image-center"><span style="display:inline-block;">{{linkStart}}<img src="{{image}}" alt="{{alt}}">{{linkEnd}}</span></div></div></li></script> <script type="text" id="mobileItem"><li class="itemb panelItem mobileImg" style="height:auto;position:relative;text-align:center;"><a href="{{url}}" title="{{title}}"><img src="{{mobileImg}}" alt="{{alt}}" height="auto" width="100%"></a>{{disclaimerHTML}}</li></script> <script type="text" id="disclaimerText"><span class="adpt_dsclmr link" onclick="$(this).Tooltip('{{disclaimerText}}',300,{hasCloseButton:true})" data-tooltips="">View disclaimer</span></script><script type="text" id="couponTemplate"><li class="itemb panelItem couponTemplate" style="background:#ccc;padding:0;position:relative;">{{linkStart}}<img src="{{image}}" alt="{{alt}}"/>{{linkEnd}}<div class="coupon-code" style="top:$%u_ad_01_coupon_code_top%$px; left:$%u_ad_01_coupon_code_left%$px;"><p style="text-align:center;background:#ccc;width:190px;height:24px;padding:0;line-height:24px;"><span style=" color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; text-decoration: none;">Use Code:</span><span style="font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000000; text-decoration: none;">{{couponCode}}</span></p><p style="color:$%u_ad_01_coupon_usage_text_color%$;font-family:Arial, Helvetica, sans-serif;font-size:11px; line-height:12px; text-decoration:none;margin-top:5px;">{{usageText}}</p></div>{{disclaimerHTML}}</li></script> <script type="text/javascript">(function(){function d(h,i){for(var g in i){h=h.replace("{{"+g+"}}",i[g])}return h}var f=[{mode:"$%u_ad_01_img_mode%$",image:"$%u_ad_01_img_src%$",fixedImg:"$%u_ad_01_fixedImg_src%$",largeImage:"$%u_ad_01_largeImg_src%$",alt:"$%u_ad_01_img_alt%$",link:{url:"$%u_ad_01_link_url%$",linkStart:"<a href='$%u_ad_01_link_url%$' title='$%u_ad_01_link_title%$'>",linkEnd:"</a>"},title:"$%u_ad_01_link_title%$",mobileImg:"$%u_ad_01_img_mobile%$",disclaimerText:"$%u_ad_01_disc_text%$$%u_ad_01_disc_text_02%$$%u_ad_01_disc_text_03%$$%u_ad_01_disc_text_04%$",couponCode:"$%u_ad_01_coupon_code%$",usageText:"$%u_ad_01_usage_text%$"},{mode:"$%u_ad_02_img_mode%$",image:"$%u_ad_02_img_src%$",fixedImg:"$%u_ad_02_fixedImg_src%$",largeImage:"$%u_ad_02_largeImg_src%$",alt:"$%u_ad_02_img_alt%$",link:{url:"$%u_ad_02_link_url%$",linkStart:"<a href='$%u_ad_02_link_url%$' title='$%u_ad_02_link_title%$'>",linkEnd:"</a>"},title:"$%u_ad_02_link_title%$"},{mode:"$%u_ad_03_img_mode%$",image:"$%u_ad_03_img_src%$",fixedImg:"$%u_ad_03_fixedImg_src%$",largeImage:"$%u_ad_03_largeImg_src%$",alt:"$%u_ad_03_img_alt%$",link:{url:"$%u_ad_03_link_url%$",linkStart:"<a href='$%u_ad_03_link_url%$' title='$%u_ad_03_link_title%$'>",linkEnd:"</a>"},title:"$%u_ad_03_link_title%$"}];var c=[];var b="";for(var a=0;a<f.length;a++){if(f[a].image){if(f[a].disclaimerText){f[a].disclaimerHTML=d($("#disclaimerText").html(),f[a])}else{f[a].disclaimerHTML=""}if(isMobile){if(f[a].mobileImg){b+=d($("#mobileItem").html(),f[a])}}else{if(f[a].link.url){f[a].linkStart=f[a].link.linkStart;f[a].linkEnd=f[a].link.linkEnd}else{f[a].linkStart="";f[a].linkEnd=""}if(f[a].mode=="couponTemplate"){b+=d($("#couponTemplate").html(),f[a])}else{if(f[a].mode=="panoramic"){b+=d($("#panoramicItem").html(),f[a])}else{if(f[a].mode=="cropRight"||f[a].mode!="panoramic"&&f[a].mode!="cropBoth"&&f[a].mode!="couponTemplate"){b+=d($("#cropRightItem").html(),f[a]);if(typeof Adaptive!="undefined"){var e=function(g){if(g==1450&&this.largeImgSrc){$(this.id).attr("src",this.largeImgSrc)}else{$(this.id).attr("src",this.imgSrc)}};e.id="#"+AdptId+" li:nth-child("+(a+1)+").cropRight img";e.largeImgSrc=f[a].largeImage;e.imgSrc=f[a].image;c.push(e)}}else{if(f[a].mode=="cropBoth"){b+=d($("#cropBothItem").html(),f[a])}}}}}}}$("#"+AdptId).html(d($("#baseTemplate").html(),{html:b}));if($("#"+AdptId).Carousel){$("#"+AdptId).Carousel()}for(var a=0;a<c.length;a++){Adaptive.OnResize(c[a]);e.call(c[a],Adaptive.Size())}})();</script>

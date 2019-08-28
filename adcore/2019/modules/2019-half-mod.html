@@ -6,7 +6,7 @@
     if(!$('script[src=*"agency3.min.js"]').length){
         $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
     }
-    modIndex = typeof modIndex = 'undefined' ? 1 : modIndex + 1;
+    modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
     $('#webMod').attr('id', 'webMod-' + modIndex);
     var modData = {
         'align': '$%u_ad_align%$',
