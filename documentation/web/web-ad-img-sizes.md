@@ -7,6 +7,19 @@ The __Web ad by viewport__ table lists all of the web ad/banner image size(s) fo
 
 The __Image width and usable space__ table is a detail of image size and usable space, in pixels, by grid unit. The numbers in the desktop column are the pixel widths of the images used for desktop sized viewports. The numbers in the mobile column are the pixel widths of the images used for mobile sized viewports if needed.
 
+## Image width and usable space in pixels
+| module	| grid unit 			| desktop 	| usable	| mobile	| usable	|
+| :---		| :---					| :---:		| :---:		| :---:		| :---:		|
+| eighth	| grid__unit--12-5.card	| 165		| -			| -			| -			|
+| quarter	| grid__unit--25		| 470		| 300		| - 		| - 		|
+| quarter	| grid__unit--25.card	| 355		| - 		| -			| -			|
+| third		| grid__unit--33		| 600		| 395		| 320		| 230		|
+| half		| grid__unit--50		| 1125		| 725		| -			| -			|
+| half		| grid__unit--50.card	| 660		| - 		| -			| -			|
+| two-third	| grid__unit--66		| n/a		| n/a		| n/a		| n/a		|
+| full		| grid__unit--100		| 1860		| 1250		| 970		| 605		|
+| home page	| -						| 1650		| 960		| 960		| 320		|
+
 ## Web ad by viewport
 | viewport width 					| grid__unit--12-5.card	| grid__unit--25 	| grid__unit--25.card	| grid__unit--33	| grid__unit--50	| grid__unit--50.card	| grid__unit--66	| grid__unit--100	|
 | :---								| :---:					| :---:				| :---:					| :---:				| :---:				| :---:					| :---:				| :---:				|
@@ -16,18 +29,6 @@ The __Image width and usable space__ table is a detail of image size and usable 
 | tablet landscape: 1012 - 1279		| 165 					| 470 (300)			| 355 					| 600 (395)			| 1125 (750)		| 660					| n/a				| 1860 (1250)		|
 | laptop: 1280 - 1519				| 165 					| 470 (388)			| 355 					| 600 (500)			| 1125 (945)		| 660					| n/a				| 1860 (1560)		|
 | desktop: 1520 - 1885				| 165 					| 470				| 355 					| 600 				| 1125				| 660					| n/a				| 1860				|
-
-## Image width and usable space
-| grid unit 			| desktop 	| usable	| mobile	| usable	|
-| :---					| :---:		| :---:		| :---:		| :---:		|
-| grid__unit--12-5.card	| 165		| -			| -			| -			|
-| grid__unit--25		| 470		| 300		| - 		| - 		|
-| grid__unit--25.card	| 355		| - 		| -			| -			|
-| grid__unit--33		| 600		| 395		| 320		| 230		|
-| grid__unit--50		| 1125		| 725		| -			| -			|
-| grid__unit--50.card	| 660		| - 		| -			| -			|
-| grid__unit--66		| n/a		| n/a		| n/a		| n/a		|
-| grid__unit--100		| 1860		| 1250		| 970		| 605		|
 
 <!-- ## Usable space - ICC
 | grid unit 					| 1 icc (left/right align)	| 2 icc (left/right align)	| 3 icc (left/right align)	| 1 icc (center align)	| 2 icc (center align)	| 3 icc (center align)	|
