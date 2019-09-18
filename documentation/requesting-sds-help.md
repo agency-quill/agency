@@ -1,5 +1,5 @@
 # How to request assistance from SDS
-_Last updated 2/26/19_
+_Last updated 9/18/19_
 
 ## If the issue is time-sensitive, create an incident ticket:
 * Email [USQC __IT__ (Quill) Problem Tickets](mailto:USQCITQuillProblemTickets@quill.com).
@@ -10,7 +10,7 @@ _Last updated 2/26/19_
 * Include as much information as you can: offer codes, module names, urls, etc.
 * Also include terms that convey urgency: _emergency_, _urgent_ or _time-sensitive_.
 * Write _Forward to App Supt (CMS/ADCore - US.Quill)_ if the issue is about ADCore, CMS or GMP.
-* Write _Forward to Web Team (Web Dev - US.Quill)_ if the issue is about the site.
+* Write _Forward to Web Team (Web Dev - US.Quill)_ if the issue is about the site, preview server, push process or Akamai.
 
 The help desk will create an incident ticket and the system will issue a receipt email. The request will move to SDS to be resolved. __Any communication with SDS about this issue should contain the request number from the receipt email issued by SDS.__
 
