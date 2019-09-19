@@ -668,10 +668,22 @@
 			fill: $coral;
 		}
 
+		&DarkGray,
+		&DarkGrey {
+			color: $darkGray !important;
+			fill: $darkGray;
+		}
+
 		&Gray,
 		&Grey {
 			color: $gray !important;
 			fill: $gray;
+		}
+
+		&LightGray,
+		&LightGrey {
+			color: $lightGray !important;
+			fill: $lightGray;
 		}
 
 		&Mint {

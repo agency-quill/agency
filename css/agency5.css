@@ -1335,11 +1335,23 @@
   color: #ff6d70 !important;
   fill: #ff6d70;
 }
+#agency .quillDarkGray, #agency .quillDarkGrey,
+.agency .quillDarkGray,
+.agency .quillDarkGrey {
+  color: #333 !important;
+  fill: #333;
+}
 #agency .quillGray, #agency .quillGrey,
 .agency .quillGray,
 .agency .quillGrey {
   color: #666 !important;
   fill: #666;
+}
+#agency .quillLightGray, #agency .quillLightGrey,
+.agency .quillLightGray,
+.agency .quillLightGrey {
+  color: #999 !important;
+  fill: #999;
 }
 #agency .quillMint,
 .agency .quillMint {
