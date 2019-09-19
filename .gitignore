@@ -6,7 +6,7 @@
 /landing-pages
 /node_modules
 /sandbox
-/pages⁩/⁨push-test⁩
+pages/push-test/default.adaptive.cshtml
 agency.sublime-project
 agency.sublime-workspace
 Gruntfile.js
