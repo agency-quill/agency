@@ -1,4 +1,4 @@
-@import "base/fonts.scss";	// @font-face rules
+@import "base/fonts.scss";
 #agency {
 	color: $darkGray;
     min-width: $px * 30;
@@ -11,7 +11,7 @@
 	display: block;
 
 	nav {
-		height: 100%;
+		height: $pct * 100;
 	}
 
 	.a,
@@ -51,7 +51,7 @@
 	}
 
 	.accordionDiv {
-		width: 100%;
+		width: $pct * 100;
 	}
 
 	.accordionList {
@@ -73,7 +73,7 @@
 	.border {
 	
 		&__bottom {
-			border-bottom-width: 1px;
+			border-bottom-width: $px * .1;
 			border-bottom-style: solid;
 			border-bottom-color: #ccc;
 		}
@@ -84,7 +84,7 @@
 		}
 		
 		&__top {
-			border-top-width: 1px;
+			border-top-width: $px * .1;
 			border-top-style: solid;
 			border-top-color: #ccc;
 		}		
@@ -111,13 +111,13 @@
 			cursor: pointer;
 			display: inline-block;
 			font-size: $px * 1.5;
-			font-weight: 400;
-			height: 36px;
+			font-weight: 300;
+			height: $px * 3.6;
 			line-height: $px * 3.6;
 			max-width: $px * 20;
 			min-width: $px * 15;
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: $px * 1;
+			padding-right: $px * 1;
 			text-align: center;
 			text-decoration: none;
 			width: auto;
@@ -135,8 +135,8 @@
 			border: none;
 			bottom: $px * 1.5;
 			font-size: $px * 1.2;
-			font-weight: 400;
-			line-height: 1em;
+			font-weight: 300;
+			line-height: $em * 1;
 			text-decoration: underline;
 			position: absolute;
 			right: $px * 1.5;
@@ -234,22 +234,22 @@
 		&--coupon {
 			border-color: #ccc;
 			border-style: dashed;
-			border-width: 2px;
+			border-width: $px * .2;
 			box-sizing: border-box;
-			height: 95%;
+			height: $pct * 95;
 			padding-bottom: $px * 13.5;
 			padding-left: $pct * 5;
 			padding-right: $pct * 5;
 			padding-top: $pct * 5;
 			position: relative;
-			width: 100%;
+			width: $pct * 100;
 		}
 
 		&--popup {
 			background-color: $white;
-			left: 50%;
+			left: $pct * 50;
 			position: absolute;
-			top: 50%;
+			top: $pct * 50;
 			z-index: 101;
 		}
 	}
@@ -275,11 +275,11 @@
 
 		&--hotbuy, 
 		&--sale {
-			@include font($white, #{$em * 1.25}, 300);
+			@include font($white, #{$em * 1}, 300);
 		    font-size: $px * 1.4;
-		    padding-bottom: 0;
+		    padding-bottom: $px * .4;
 			padding-left: $px * .4;
-			padding-right: 0;
+			padding-right: $px * .4;
 			padding-top: $px * .4;
 		    width: $px * 7;
 		}
@@ -307,7 +307,7 @@
 	.h1,
 	.h2,
 	.h2--small {
-		font-weight: 400;
+		font-weight: 300;
 	}
 
 	.h1,
@@ -317,7 +317,7 @@
 	.h4,
 	.h5 {
 		align-items: baseline;
-		line-height: 1.25em;
+		line-height: $em * 1.25;
 		position: relative;
 	}
 
@@ -395,7 +395,6 @@
 	}
 
 	.h3 {
-		font-weight: 500;
 
 		@media #{$tabLandMax} {
 			font-size: $px * 2.2;
@@ -412,34 +411,34 @@
 		&--coupon {
 		    color: #0079c2;
 			font-size: $px * 2.4;
-		    font-weight: 800;
-		    max-height: 2.2em;
+		    font-weight: 700;
+		    max-height: $em * 2.2;
 		}
+	}
+
+	.h3, .h4 {
+		font-weight: 400;
 	}
 
 	.h3--coupon,
 	.p--coupon,
 	.p--exception {
-	    line-height: 1.1em;
+	    line-height: $em * 1.1;
 	    overflow: hidden;
 	}
 	
-	.h4,
-	.h5 {
-		font-weight: 600;
-	}
-
 	.h4 {
 
 		&--title {
 			font-family: #{$fontFamily};
-		    font-size: 14px;
-		    font-weight: 500;
+		    font-size: $px * 1.4;
+		    font-weight: 400;
 		}
 	}
 
 	.h5 {
 		font-style: italic;
+		font-weight: 500;
 	}
 
 	.header {
@@ -448,9 +447,9 @@
 
 	.hn__a,
 	.hn__a--underline {
-		font-weight: 400;
+		font-weight: 300;
 		font-size: $px * 1.6;
-		line-height: 1em;
+		line-height: $em * 1;
 
 		&--right {
 
@@ -467,17 +466,17 @@
     	border-color: #ccc;
 		border-style: solid;
 		border-width: $px * 0.1 0 0;
-		width: 100%;
+		width: $pct * 100;
 	}
 
     .img {
         align-self: flex-start;
-        width: 100%;
+        width: $pct * 100;
 
 		&__flag--coupon {
 		    position: absolute;
-		    width: 90%;
-		    bottom: 10%;
+		    width: $pct * 90;
+		    bottom: $pct * 10;
 		}
     }
 
@@ -491,8 +490,21 @@
 	.select,
 	.textarea,
 	.ul__li {
-		font-weight: 400;
-		line-height: 1.5em;
+		line-height: $em * 1.5;
+	}
+
+	.input,
+	.label,
+	.ol__li,
+	.p,
+	.p--attribution,
+	.p--noMargin,
+	.p--small,
+	.select,
+	.textarea,
+	.ul__li,
+	.ul__li--small {
+		font-weight: 300;
 	}
     
 	.mobileHide {
@@ -564,7 +576,7 @@
 			background-position: left $px * .8;
 			background-repeat: no-repeat;
 			font-size: $px * 1.5;
-			font-weight: 400;
+			font-weight: 300;
 			list-style-type: none;
 		}
 	}
@@ -595,7 +607,7 @@
 
 		&--coupon {
 			font-size: $px * 1.8;
-		    max-height: 3.2em;
+		    max-height: $em * 3.2;
 		}
 
 		&--coupon,
@@ -609,12 +621,12 @@
 
 		&--disclaimer {
 			font-size: $px * 1.1;
-			line-height: 1.125em;
+			line-height: $em * 1.125;
 		}
 
 		&--exception {
 			font-size: $px * 1.2;
-		    max-height: 1.1em;
+		    max-height: $em * 1.1;
 		}
 
 		&--grey {
@@ -624,7 +636,7 @@
 		&--jump {
 		    bottom: 0;
 		    text-align: center;
-		    width: 100%;
+		    width: $pct * 100;
 
 		   	@media #{$mobLandMax} {
 		    	font-size: $px * 1.8;
@@ -703,12 +715,12 @@
 	}
 
 	.reg {
-		font-size: .5em;
-		vertical-align: .8em;
+		font-size: $em * .5;
+		vertical-align: $em * .8;
 
     	&--hn {
-    		font-size: .4em;
-    		vertical-align: 1em;
+    		font-size: $em * .4;
+    		vertical-align: $em *  1;
     	}
 	}
     
@@ -717,13 +729,13 @@
     }
 
 	.strong {
-		font-weight: 600;
+		font-weight: 500;
 	}
 
 	.sup {
-        font-size: .6em;
-        line-height: 1em;
-        vertical-align: .4em;
+        font-size: $em * .6;
+        line-height: $em *  1;
+        vertical-align: $em * .4;
     }
 
 	.textarea {
@@ -739,8 +751,8 @@
 		@media #{$mobLandMin} and #{$laptopMax} {
 			font-size: $vw * 1.6;
 			height: $vw * 17.75;
-			padding: $pct ($pct * 1.5);
-			width: calc(100% - #{$pct * 3 + 2});
+			padding: $pct * 1.5;
+			width: calc(#{$pct * 100} - #{$pct * 3 + 2});
 		}
         
         @media #{$tabPortMax}{
@@ -750,8 +762,8 @@
 		@media #{$desktopMin} {
 			font-size: $px * 1.6;
 			height: $px * 17;
-			padding: $px ($px * 1.5);
-			width: calc(100% - #{$px * 3 + 2});
+			padding: $px * 1.5;
+			width: calc(#{$pct * 100} - #{$px * 3 + 2});
 		}
 	}
 
@@ -760,6 +772,7 @@
 
 		&--small {
 			background-position: left $px * .7;
+			line-height: $em * 1.25;
 		}
 	}
 
