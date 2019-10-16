@@ -1,7 +1,7 @@
 <!-- 2019-quarter-card -->
 <li class="item_ph" id="webMod"></li>
 <script>
-    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
+    if(!$('script[src=*"agency3.min.js"]').length){
         $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
     }
     modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
