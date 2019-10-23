@@ -696,6 +696,7 @@ function buildNavMod(obj, args){
 // function webModJumpNav(mod, obj){
 
 // }
+
 var carouselAttr = [	// array of carousel attributes with default values
 		['data-carousel-rotate-auto','no'],	// does the carousel rotate automatically
 		['data-carousel-rotate-buttons','yes'],	// should the left & right buttons be visible
@@ -739,7 +740,7 @@ var carouselAttr = [	// array of carousel attributes with default values
 	    'heading': '<h{{num}} class="h{{num}} {{class}}" id="{{id}}" {{events}} style="{{css}}">{{heading}}</h{{num}}>',
 	    'hr': '<hr class="{{class}}" style="{{css}}">',
 	    'href': '{{url}}{{mcode}}{{number}}{{tag}}',
-	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code:</span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
+	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code: </span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
 		'img': '<img alt="{{alt}}" class="{{class}}" id="{{id}}" {{events}} src="{{src}}" srcset="{{srcset}}" style="{{css}}" usemap="{{usemap}}">',
 		'li': '<li class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{li}}</li>',
 	    'locator': 'locater="{{locator}}" sctype="{{sctype}}" sku="{{sku}}"',
@@ -802,6 +803,74 @@ function webMod(mod, obj){
         $('#' + mod).remove();
     }
 }
+function webModCard(mod, obj){
+	if(obj.src){
+		if(!obj.span){
+			$('#' + mod).attr('class', $('#' + mod).attr('class') + ' webModCard');
+		}
+		obj.cardHtml = obj.icc ? '<div class="div--coupon ' : '<div class="div--card ';
+		obj.cardHtml += obj.class + '" id="' + obj.id + '" style="' + obj.css + '">';
+		obj.align = 'center';
+		obj.card = '1';
+		obj.css = '';
+		obj.events = '';
+		obj.id = '';
+		obj.usemap = '';
+        obj.cardHtml += webModPicture(obj);
+        if(obj.flagSrc){
+        	obj.alt = obj.flagAlt ? obj.flagAlt : '';
+        	obj.class = obj.flagClass ? obj.flagClass : 'img__flag--card';
+        	obj.src = obj.flagSrc;
+        	obj.cardHtml += render(template.img, obj);
+        }
+        if(obj.heading){
+        	obj.class = 'h3--coupon margin__bottom--12-5';
+        	obj.num = '3';
+        	obj.cardHtml += render(template.heading, obj);
+        }
+        if(obj.subTitle){
+        	obj.p = obj.subTitle;
+        	obj.class = 'margin__bottom--12-5 p--coupon';
+        	obj.cardHtml += render(template.p, obj);
+        }
+        if(obj.details){
+        	obj.p = obj.details;
+        	obj.class = 'icc__p--details';
+        	obj.cardHtml += render(template.p, obj);
+        }
+        if(obj.link){
+        	obj.button = /,/.test(obj.link) ? 'Add to Cart' : 'Shop Now';
+        	obj.class = 'button btn-clip-coupon BtnO';
+        	obj.a = render(template.button, obj);
+        	obj.number = '';
+        	obj.title = obj.button;
+			obj.div = render(template.a, webModLink(obj));
+			if(obj.exception){
+				obj.exception = obj.exception.split(',');
+				obj.a = obj.exception[0] ? obj.exception[0] : 'Disclaimer';
+				obj.text = obj.exception[1] ? obj.exception[1] : 'Text missing';
+				obj.width = 400;
+				obj.events = render(template.event.toolTip, obj);
+				obj.class = 'icc__a';
+				obj.css = 'color:#000;'
+				obj.href = template.void;
+				obj.p = render(template.a, obj);
+				obj.events = '';
+				obj.class = 'icc__p--conditions ST_s';
+				obj.div += render(template.p, obj)
+			}
+        	obj.class = 'icc'
+        	obj.css = obj.exception ? 'bottom:8.875%' : 'bottom:12.5%;';
+        	obj.cardHtml += render(template.div, obj);
+		} else {
+			obj.cardHtml += obj.popup ? webModPopUp(obj) : '';
+			obj.cardHtml += obj.icc ? webModIcc(obj) : '';
+		}
+		return obj.cardHtml + '</div>';
+	}else{
+        $('#' + mod).remove();
+    }
+}
 function webModCarousel(mod, obj){
 	if(obj.div1 || obj.src1){
 		if(obj.src2){
@@ -845,9 +914,9 @@ function webModCoupon(mod, obj){
         	obj.class = 'margin__bottom--12-5 p--coupon';
         	obj.a += render(template.p, obj);
         }
-        if(obj.exception){
-        	obj.p = obj.exception;
-        	obj.class = 'p--exception';
+        if(obj.details){
+        	obj.p = obj.details;
+        	obj.class = 'icc__p--details';
         	obj.a += render(template.p, obj);
         }
 		if(obj.link){
@@ -945,7 +1014,7 @@ function webModIcc(obj){
 		obj.iccMultiple = webModFormat(obj.icc).split('+');
 		for(var i = 0, max = obj.iccMultiple.length; i < max; i++){
 			obj.iccArray = obj.iccMultiple[i].split(',');
-			obj.code = obj.iccArray[0] ? obj.iccArray[0].toUpperCase() : '??ICC!??';
+			obj.code = obj.iccArray[0] ? obj.iccArray[0].toUpperCase() : '??ICC??!';
 			obj.disclaimer = obj.iccArray[1] ? obj.iccArray[1] : 'Disclaimer missing';
 	        obj.expiry = obj.iccArray[2] ? obj.iccArray[2] : 'Offer good through XX/XX/XX.';
 	        obj.usage = obj.iccArray[3] ? obj.iccArray[3] : 'One-time use per customer.';
@@ -953,7 +1022,7 @@ function webModIcc(obj){
 	        obj.color = obj.iccArray[5] ? obj.iccArray[5] : '#000';
 	        obj.gift = webModPopUp(obj);
 	        obj.class = '';
-	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:5%;';
+	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:3%;';
 			obj.iccHtml += render(template.icc, obj);
 		}
 		obj.code = '';
