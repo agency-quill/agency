@@ -1,32 +1,12 @@
-#agency, .agency {
+#agency,
+.agency {
 
 	ul#onPageNav {
 		height: auto !important;
 	}
 
-	.div {
-
-		&__html {
-
-			&--absolute {
-				height: 100%;
-				left: 0;
-			    position: absolute;
-				top: 0;
-			}
-
-			&--static {
-			    position: static;
-			}
-		}
-	}
-
-	.div__html--absolute, .div__html--static {
-		box-sizing: border-box;
-		width: 100%;
-	}
-	
-	.grid, &.grid {
+	.grid,
+	&.grid {
 
 		.webModImg {
 
@@ -183,5 +163,28 @@
 		.webModPicture {
 			display: flex;
 		}
+	}
+
+	.div {
+
+		&__html {
+
+			&--absolute {
+				height: 100%;
+				left: 0;
+			    position: absolute;
+				top: 0;
+			}
+
+			&--static {
+			    position: static;
+			}
+		}
+	}
+
+	.div__html--absolute,
+	.div__html--static {
+		box-sizing: border-box;
+		width: 100%;
 	}
 }

@@ -1,4 +1,4 @@
-@import "base/fonts.scss";
+// @import "base/fonts.scss";
 #agency {
 	color: $darkGray;
     min-width: $px * 30;
@@ -231,10 +231,14 @@
 
 	.div {
 
+		&--card {
+			border-style: solid;
+			border-width: $px * .1;
+		}
+
+		&--card,
 		&--coupon {
 			border-color: #ccc;
-			border-style: dashed;
-			border-width: $px * .2;
 			box-sizing: border-box;
 			height: $pct * 95;
 			padding-bottom: $px * 13.5;
@@ -243,6 +247,11 @@
 			padding-top: $pct * 5;
 			position: relative;
 			width: $pct * 100;
+		}
+
+		&--coupon {
+			border-style: dashed;
+			border-width: $px * .2;
 		}
 
 		&--popup {
@@ -409,9 +418,9 @@
 		}
 		
 		&--coupon {
-		    color: #0079c2;
+		    color: $blue;
 			font-size: $px * 2.4;
-		    font-weight: 700;
+		    font-weight: 400;
 		    max-height: $em * 2.2;
 		}
 	}
@@ -473,10 +482,22 @@
         align-self: flex-start;
         width: $pct * 100;
 
-		&__flag--coupon {
-		    position: absolute;
-		    width: $pct * 90;
-		    bottom: $pct * 10;
+		&__flag {
+
+			&--card {
+			    left: 0;
+			    top: 0;
+			}
+
+			&--card,
+			&--coupon {
+			    position: absolute;
+			}
+
+			&--coupon {
+			    bottom: $pct * 10;
+			    width: $pct * 90;
+			}
 		}
     }
 
@@ -629,7 +650,7 @@
 		    max-height: $em * 1.1;
 		}
 
-		&--grey {
+		&--gray, &--grey {
 			color: $gray;
 		}
 
