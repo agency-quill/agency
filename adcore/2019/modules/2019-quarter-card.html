@@ -1,7 +1,7 @@
 <!-- 2019-quarter-card -->
 <li class="item_ph" id="webMod"></li>
 <script>
-    if(!$('script[src=*"agency3.min.js"]').length){
+    if(!$('script[src="/content/iw/scripts/agency3.min.js"]').length){
         $('head').append('<script src="/content/iw/scripts/agency3.min.js"><\/script>');
     }
     modIndex = typeof modIndex != 'undefined' ? modIndex + 1 : 1;
@@ -11,6 +11,7 @@
         'class': '$%u_ad_class%$',
         'css': '$%u_ad_css%$',
         'dateRange': '$%u_ad_date_range%$',
+        'details': '$%u_ad_details%$',
         'exception': '$%u_ad_exception%$',
         'flagAlt': '$%u_ad_flag_alt%$',
         'flagClass': '$%u_ad_flag_class%$',

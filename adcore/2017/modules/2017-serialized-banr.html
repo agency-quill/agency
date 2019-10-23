@@ -2,22 +2,11 @@
 <link rel="stylesheet" href="/content/iw/styles/agency5.min.css">
 <script src="/content/iw/scripts/disclaimer-text.js"></script>
 <script type="text" id="iccDiv">
-    <div class="agency icc" id="icc-{{iccCode}}" style="bottom:{{iccBottom}}; left:{{iccLeft}};">
-        <div class="cpn_code_ph">
-            <div class="coupon_code">
-                <span>Use Code:</span> <b>{{iccCode}}</b>
-            </div>
-        </div>
-        <div id="couponWrap_{{iccCode}}" class="cpn-clipper-wrap">
-            <div class="coupon_code">
-                <span>Use Code: </span> <b>{{iccCode}}</b>
-                <a id="unclip_cpn_{{iccCode}}" data-cpncode="{{iccCode}}" class="unclip-coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none;"><i class="unclip-icon"></i>Undo</a>
-            </div>
-            <button type="button" id="cpnCode_{{iccCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon" data-cpncode="{{iccCode}}">Save to Clipboard</button>
-            <button type="button" id="shopNowBtn_{{iccCode}}" class="button shopNow-btn" href="{{iccUrl}}" style="display:none;">Shop Now</button>
-        </div>
-        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">One-time use per {{iccUsage}}.</p>
-        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">Offer good through {{iccExpiry}}. <a class="icc__a" href="javascript:void(0)" onclick="$(this).Tooltip('{{iccDisclaimer}}', 400, {hasCloseButton:true})" style="color:{{iccUsageColor}}">Disclaimer.</a></p>
+    <div class="agency icc" style="bottom:{{iccBottom}}; left:{{iccLeft}};">
+        <div class="dv-coupon-code icc__div margin__bottom--12-5" style="color:#000;background:#ccc;font-size:16px;padding:5px;"><span>Code: </span><strong class="strong">{{iccCode}}</strong></div>
+        <p class="p--conditions margin__bottom--25" style="color:{{iccUsageColor}}">Copy code into coupon box at checkout.</p>
+        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">{{iccUsage}}</p>
+        <p class="icc__p--conditions" style="color:{{iccUsageColor}}">{{iccExpiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{iccCode}}" onclick="$(this).Tooltip('{{iccDisclaimer}}',400,{hasCloseButton:true})" style="color:{{iccUsageColor}}">Disclaimer</a></p>
     </div>
 </script>
 <script type="text" id="iccImg">
@@ -57,7 +46,7 @@
                     data.iccExpiry = data['icc' + data.i + 'Code'][4] ? data['icc' + data.i + 'Code'][4] : 'XX/XX/XX';
                     data.iccUsageColor = data['icc' + data.i + 'Code'][5] ? data['icc' + data.i + 'Code'][5] : '#000';
                     data.iccUrl = data['icc' + data.i + 'Code'][6] ? data['icc' + data.i + 'Code'][6] : '/default.aspx';
-                    data.iccDisclaimer = data['icc' + data.i + 'Code'][7] ? disclaimerText[data['icc' + data.i + 'Code'][7]] : disclaimerText['d0'];
+                    data.iccDisclaimer = data['icc' + data.i + 'Code'][7] ? data['icc' + data.i + 'Code'][7] : 'Disclaimer missing';
                     data.iccHtml += render($('#iccDiv').html(), data);
                 } else {
                     break;
@@ -75,5 +64,3 @@
         }
     })();
 </script>
-
-<!-- 2017-serialized-banr --><link rel="stylesheet" href="/content/iw/styles/agency5.min.css"><script src="/content/iw/scripts/disclaimer-text.js"></script><script type="text" id="iccDiv"><div class="agency icc" id="icc-{{iccCode}}" style="bottom:{{iccBottom}}; left:{{iccLeft}};"><div class="cpn_code_ph"><div class="coupon_code"><span>Use Code:</span> <b>{{iccCode}}</b></div></div><div id="couponWrap_{{iccCode}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Use Code: </span> <b>{{iccCode}}</b><a id="unclip_cpn_{{iccCode}}" data-cpncode="{{iccCode}}" class="unclip-coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none;"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{iccCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon" data-cpncode="{{iccCode}}">Save to Clipboard</button><button type="button" id="shopNowBtn_{{iccCode}}" class="button shopNow-btn" href="{{iccUrl}}" style="display:none;">Shop Now</button></div><p class="icc__p--conditions" style="color:{{iccUsageColor}}">One-time use per {{iccUsage}}.</p><p class="icc__p--conditions" style="color:{{iccUsageColor}}">Offer good through {{iccExpiry}}. <a class="icc__a" href="javascript:void(0)" onclick="$(this).Tooltip('{{iccDisclaimer}}', 400, {hasCloseButton:true})" style="color:{{iccUsageColor}}">Disclaimer.</a></p></div></script><script type="text" id="iccImg"><img alt="{{iccImgAlt}}" src="{{iccImgSrc}}"></script><script type="text" id="iccLink"><a href="{{iccImgUrl}}" title="{{iccImgTitle}}" {{iccImgEvents}}>{{a}}</a></script><script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency searchOffer $%u_ad_class%$" id="webAd-'+adIndex+'" style="$%u_ad_css%$"></div>');(function(){var b={i:"1",icc1Code:["$%coupon_code1%$",$%u_ad_icc_01_code%$],icc2Code:["$%coupon_code2%$",$%u_ad_icc_02_code%$],icc3Code:["$%coupon_code3%$",$%u_ad_icc_03_code%$],iccImgAlt:"$%u_ad_img_alt%$",iccImgEvents:"$%u_ad_link_events%$",iccImgSrc:"$%u_ad_img_src%$",iccImgTitle:"$%u_ad_link_title%$",iccImgUrl:"$%u_ad_link_url%$"};if(b.iccImgSrc){if(b.iccImgUrl){b.a=a($("#iccImg").html(),b);b.iccHtml=a($("#iccLink").html(),b)}else{b.iccHtml=a($("#iccImg").html(),b)}for(b.i;b.i<=6;b.i++){if(b["icc"+b.i+"Code"][0]){b.iccCode=b["icc"+b.i+"Code"][0];b.iccBottom=b["icc"+b.i+"Code"][1]?b["icc"+b.i+"Code"][1]:"0";b.iccLeft=b["icc"+b.i+"Code"][2]?b["icc"+b.i+"Code"][2]:"0";b.iccUsage=b["icc"+b.i+"Code"][3]?b["icc"+b.i+"Code"][3]:"customer";b.iccExpiry=b["icc"+b.i+"Code"][4]?b["icc"+b.i+"Code"][4]:"XX/XX/XX";b.iccUsageColor=b["icc"+b.i+"Code"][5]?b["icc"+b.i+"Code"][5]:"#000";b.iccUrl=b["icc"+b.i+"Code"][6]?b["icc"+b.i+"Code"][6]:"/default.aspx";b.iccDisclaimer=b["icc"+b.i+"Code"][7]?disclaimerText[b["icc"+b.i+"Code"][7]]:disclaimerText.d0;b.iccHtml+=a($("#iccDiv").html(),b)}else{break}}$("#webAd-"+adIndex).append(b.iccHtml)}else{$("#webAd-"+adIndex).remove()}function a(d,e){for(var c in e){d=d.replaceAll("{{"+c+"}}",e[c])}return d}})();</script>
