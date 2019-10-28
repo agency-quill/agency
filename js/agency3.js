@@ -782,7 +782,6 @@ function webMod(mod, obj){
     		if(/wasPrice/.test(obj.div) && /savePrice/.test(obj.div) && /\{\{savings\}\}/.test(obj.div)){
 	    		obj.div = calcSavePrice(obj.div);
 	    	}
-	    	console.log('div: '+obj.div);
     		obj.a += render(template.div, obj);
     	}
 		if(obj.link){
@@ -796,7 +795,6 @@ function webMod(mod, obj){
 		}
 		obj.html += webModPopUp(obj);
 		obj.html += webModIcc(obj);
-		console.log('obj.html: '+obj.html+'</div>');
 		return obj.html + '</div>';
 	}else{
 		console.log('removing ' + mod);
