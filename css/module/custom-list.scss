@@ -59,7 +59,8 @@
 
 		&--card,
 		&--coupon {
-			border-color: #ccc;
+			background-color: $white;
+			border-color: #e4e4e4;
 			box-sizing: border-box;
 			height: $pct * 100;
 			padding-bottom: $px * 13.5;

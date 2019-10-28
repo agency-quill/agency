@@ -1271,7 +1271,8 @@
   border-width: 1px;
 }
 .carouselInner .div--card, .carouselInner .div--coupon {
-  border-color: #ccc;
+  background-color: #fff;
+  border-color: #e4e4e4;
   box-sizing: border-box;
   height: 100%;
   padding-bottom: 135px;
