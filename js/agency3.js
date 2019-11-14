@@ -760,11 +760,10 @@ if(typeof navBar === 'undefined'){
 function webMod(mod, obj){
 	console.log(mod);
 	if(obj.src || obj.div){
-		/*for (var prop in obj){	// log all properties of obj
-			console.log(mod+' '+prop+': '+obj[prop]);
-		}*/
+		// for (var prop in obj){console.log(mod+' '+prop+': '+obj[prop]); // log all properties of obj
         loadFiles('/content/iw/styles/agency5.min.css');
-		if(obj.card){
+		if(parseInt(obj.card)){
+			console.log(mod+' obj.card: '+obj.card);
 			$('#' + mod).attr('class', $('#' + mod).attr('class') + ' webModCard');
 		}
 		obj.class = obj.class ? obj.class : '';
@@ -941,68 +940,91 @@ function webModHeader(mod, obj){
 	console.log(mod);
 	if(obj.headingText){
 		loadFiles('/content/iw/styles/agency5.min.css');
-		obj.heading = obj.headingText;
-		if(obj.linkText){
-			obj.a = obj.linkText;
-			obj.class = 'hn__a margin__left--50 ' + obj.linkClass;
-			obj.css = obj.linkCss;
-			obj.events = linkEvents;
-			obj.href = obj.linkHref;
-			obj.title = obj.linkTitle;
-			obj.heading += ' ' + render(template.a, obj);
-		}
-		if(obj.backToTop){
-			obj.a = 'Back to top';
-			obj.class = 'hn__a hn__a--right';
-			obj.css = '';
-			obj.end = '#Body';
-			obj.offset = 0;
-			obj.events = render(template.event.AnimateScroll, obj);
-			obj.href = template.void;
-			obj.title = 'Go back to the top of the page';
-			obj.heading += ' ' + render(template.a, obj);
-		}
-		obj.class = 'agency grid__unit--100 ' + obj.headingClass;
-		obj.css = obj.headingCss;
+		obj.css = '';
 		obj.events = '';
-		obj.id = obj.headingId;
-		obj.num = obj.headingNum;
-		obj.html = render(template.heading, obj);
-		if(obj.paragraphHtml || obj.accordionHtml){
-			obj.divHtml = obj.paragraphHtml ? obj.paragraphHtml : '';
-			if(obj.accordionHtml){
-				obj.class = 'accordion';
-				obj.css = '';
-				obj.id = obj.accordionId;
-				obj.div = obj.accordionHtml;
-				obj.divHtml += render(template.div, obj);
-				obj.a = obj.accordionOpen;
-				obj.class = 'hn__a';
-				obj.close = obj.accordionClose;
-				obj.open = obj.accordionOpen;
-				obj.target = '$(\'#' + obj.accordionId + '\')';
-				obj.events = render(template.event.accordion);
-				obj.events += '';
-				obj.href = template.void;
-				obj.id = '';
-				obj.title = obj.accordionClosed;
-				obj.p = render(template.a, obj);
-				obj.class = 'margin__bottom--50';
-				obj.events = '';
-				obj.divHtml += render(template.p, obj);
-			}
-			obj.class = 'grid__unit--100 margin__bottom--0';
-			obj.css = '';
-			obj.div = obj.divHtml;
-			obj.events = '';
-			obj.id = '';
-			obj.html += render(template.div, obj);
+		obj.id = '';
+		obj.div = obj.paragraphHtml ? obj.paragraphHtml : '';
+		obj.div += obj.accordionHtml ? webModHeaderAccordion(obj.accordionHtml, obj.accordionId) : '';
+		if(obj.accordionHtml && obj.paragraphHtml){
+			obj.p = webModHeaderReadMore(obj.accordionClose, obj.accordionId, obj.accordionOpen, obj.inHeader);
+			obj.class = 'margin__bottom--50';
+			obj.div += render(template.p, obj);
+		}else{
+			obj.inHeader = true;
+			obj.headingText += ' ' + webModHeaderReadMore(obj.accordionClose, obj.accordionId, obj.accordionOpen, obj.inHeader);
 		}
+		obj.headingText += obj.linkText ? ' ' + webModHeaderLink(obj.linkClass, obj.linkCss, obj.linkEvents, obj.linkHref, obj.linkText, obj.linkTitle) : '';
+		obj.headingText += obj.backToTop ? ' ' + webModHeaderBackToTop() : '';
+		obj.html = webModHeaderHeading(obj.headingClass, obj.headingCss, obj.headingId, obj.headingNum, obj.headingText, obj.inHeader);
+		obj.class = 'grid__unit--100 margin__bottom--0';
+		obj.html += render(template.div, obj);
 		return obj.html;
 	}else{
 		console.log('removing '+mod);
         $('#' + mod).remove();
     }
+}
+function webModHeaderAccordion(accordionHtml, accordionId){
+	return render(template.div, {
+		class : 'accordion',
+		css : '',
+		div : accordionHtml,
+		events : '',
+		id : accordionId,
+	});
+}
+function webModHeaderBackToTop(){
+	var scroll = render(template.event.AnimateScroll, {
+			end : '#Body'
+		});
+	return render(template.a, {
+		a : 'Back to top',
+		class : 'hn__a hn_a--right',
+		css : '',
+		events : scroll,
+		href : template.void,
+		id : '',
+		title : ''
+	});
+}
+function webModHeaderHeading(headingClass, headingCss, headingId, headingNum, headingText, inHeader){
+	headingClass += inHeader ? ' margin__bottom--50' : ' margin__bottom--12-5';
+	return render(template.heading, {
+		class : 'agency grid__unit--100 ' + headingClass,
+		css : headingCss,
+		events : '',
+		heading : headingText,
+		id : headingId,
+		num : headingNum
+	});
+}
+function webModHeaderLink(linkClass, linkCss, linkEvents, linkHref, linkText, linkTitle){
+	return render(template.a, {
+		a : linkText,
+		class : 'hn__a margin__left--50 ' + linkClass,
+		css : linkCss,
+		events : linkEvents,
+		href : linkHref,
+		id : '',
+		title : linkTitle
+	});
+}
+function webModHeaderReadMore(accordionClose, accordionId, accordionOpen, inHeader){
+	var readMoreEvents = render(template.event.accordion, {
+			close : accordionClose,
+			open : accordionOpen,
+			target : '$(\'#' + accordionId + '\')'
+		}),
+		readMoreClass = inHeader ? 'hn__a margin__left--50' : 'hn__a';
+	return render(template.a, {
+		a : accordionOpen,
+		class : readMoreClass,
+		css : '',
+		events : readMoreEvents,
+		href : template.void,
+		id : '',
+		title : accordionClose
+	});
 }
 function webModIcc(obj){
 	if(obj.icc){	// if iccs
@@ -1133,8 +1155,8 @@ function webModPicture(obj){
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
-	obj.card && console.log('obj.card: ' + obj.card);
-	obj.class += obj.card ? '__webModCard--' : '--';
+	parseInt(obj.card) && console.log('obj.card: ' + obj.card);
+	obj.class += parseInt(obj.card) ? '__webModCard--' : '--';
 	obj.class += obj.unit;
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
