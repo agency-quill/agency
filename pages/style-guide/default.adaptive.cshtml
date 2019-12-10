@@ -1,0 +1,356 @@
+@{
+	//C# HEADER: v4.12 7/14/17 | TEMPLATE: v2.7 10/17/17
+	var expiry = new DateTime(2049,12,31,23,59,59);	// modify to expire page sooner. Format: YYYY,MM,DD,HH,MM,SS  - only update YYYY (year), MM (month) and DD (day).
+	RequestData.Current.Title = "Style Guide";  // page title
+	RequestData.Current.Description = "xxx_DESCRIPTION_xxx";  // meta description 
+
+	if (Request.QueryString["showspotlight"] != "yes") {string redirectURL = ""; if (DateTime.Now >= expiry.AddMonths(1)) {redirectURL = "/sorry";} else {if (DateTime.Now >= expiry) {redirectURL = "/content/iw/promotion/offers/msg/expired.cshtml";}} if (redirectURL != "") {if (Request.QueryString["cm_sp"] != null || Request.QueryString["cm_mmc"] != null) {Response.RedirectPermanent(redirectURL + "?" + Request.QueryString);} else {Response.RedirectPermanent(redirectURL);}}}
+}
+
+<!-- 
+
+URL: 
+
+Please add the most recent web request number for this file at the bottom of the list below:
+
+WEBREQUESTNUMBER - DATE - DESIGNER
+
+-->
+
+<link href="/content/iw/styles/agency5.min.css" rel="stylesheet">
+<link href="/content/iw/styles/responsive-shim.min.css" rel="stylesheet">
+
+<style type="text/css">
+	#agency .ol,
+	#agency .ul {
+		margin-bottom: 0;
+	}
+</style>
+
+<div class="width--tabLand" id="agency">
+	<header class="grid header margin__bottom--100">
+		<div class="grid__unit--100">
+			<h1 class="h1">Style Guide</h1>
+		</div>
+	</header>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2">Button Classes</h2>
+			<hr class="hr">
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.button--blue</h4>
+			<div class="div grid__unit--100">
+				<button class="button--blue margin__bottom--25">Blue</button>
+			</div>
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.button--gray/.button--gray</h4>
+			<div class="div grid__unit--100">
+				<button class="button--gray margin__bottom--25">Gray/Grey</button>
+			</div>
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.button--standard</h4>
+			<div class="div grid__unit--100">
+				<button class="button--standard margin__bottom--25">Standard</button>
+			</div>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Flag Classes</h2>
+			<hr class="hr">
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.flag--hotbuy</h4>
+			<div class="grid__unit--100">
+				<div class="flag--hotbuy margin__bottom--25">Hot Buy</div>
+			</div>
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.flag--sale</h4>
+			<div class="grid__unit--100">
+				<div class="flag--sale margin__bottom--25">Sale</div>
+			</div>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Form Element Classes</h2>
+			<hr class="hr">
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.input</h4>
+			<input class="input margin__bottom--25" type="text" size="30">
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.label</h4>
+			<label class="label margin__bottom--12-5">Label</label>
+		</div>
+		<div class="div grid__unit--33">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.select</h4>
+			<select class="margin__bottom--25 select">
+				<option value="Option 1">Option 1</option>
+				<option value="Option 2">Option 2</option>
+				<option value="Option 3">Option 3</option>
+			</select>
+		</div>
+		<div class="div grid__unit--100">
+			<h4 class="h4 margin__bottom--25 margin__top--100">.textarea</h4>
+			<textarea class="margin__bottom--25 textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit cupiditate tempore atque debitis minima consequuntur sapiente quasi ipsam provident, ducimus blanditiis dolor quod, delectus repudiandae nesciunt. Ea laudantium, doloremque dolorum.</textarea>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Heading 1 Class</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.h1</h4>
+			<h1 class="h1">Lorem ipsum dolor sit amet</h1>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Heading 2 Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.h2</h4>
+			<h2 class="h2">Lorem ipsum dolor sit amet sed ipsa neque nesciunt</h2>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h2--qpPoints</h4>
+			<h2 class="h2--qpPoints">Lorem ipsum dolor sit amet quis</h2>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h2--small</h4>
+			<h2 class="h2--small">Lorem ipsum dolor sit amet porro suscipit vel sapiente mollitia</h2>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Heading 3 Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.h3</h4>
+			<h3 class="h3">Lorem ipsum dolor sit amet dipisicing elit similique quod</h3>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h3--coupon</h4>
+			<h3 class="h3--coupon">Lorem ipsum dolor sit amet dipisicing elit maxime commodi</h3>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h3--qpBonus</h4>
+			<h3 class="h3--qpBonus">Lorem ipsum dolor sit consectetur</h3>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h3--qpBenefits</h4>
+			<h3 class="h3--qpBenefits">Lorem ipsum dolor sit consectetur adipisicing elit quod architecto hic</h3>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h3--qpJoin</h4>
+			<h3 class="h3--qpJoin">Lorem ipsum dolor sit amet dipisicing elit quis natus dolore minus</h3>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h3--qpPoints</h4>
+			<h3 class="h3--qpPoints">Lorem ipsum dolor sit consectetur adipisicing elit saepe consequuntur nisi</h3>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Heading 4 Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.h4</h4>
+			<h4 class="h4">Lorem ipsum dolor sit amet neque quod perspiciatis reiciendis</h4>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h4--qpBonus</h4>
+			<h4 class="h4--qpBonus">Lorem ipsum dolor sit amet dolore in optio, quidem iste saepe iusto perferendis similique nisi</h4>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h4--qpJoin</h4>
+			<h4 class="h4--qpJoin">Lorem ipsum dolor sit</h4>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h4--qpPoints</h4>
+			<h4 class="h4--qpPoints">Lorem ipsum dolor sit amet rem minima ex voluptatem doloremque quod quas labore tenetur expedita unde nulla sapiente</h4>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.h4--title</h4>
+			<h4 class="h4--title">Lorem ipsum dolor sit amet alias ipsum accusamus delectus provident vitae recusandae magnam laboriosam eaque cumque molestiae sunt numquam expedita alias ad iste aliquam</h4>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Heading 5 Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.h5</h4>
+			<h5 class="h5">Lorem ipsum dolor sit amet ut maxime dolores sequi eos maiores</h5>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Inline Elements</h2>
+			<hr class="hr">
+			<p class="p"><a class="a">This &lt;p&gt; element is an wrapped in an &lt;a&gt; element with a class of .a</a></p>
+			<p class="p"><a class="hn__a">This &lt;p&gt; element is an wrapped in an &lt;a&gt; element with a class of .hn__a</a></p>
+			<p class="p"><a class="hn__a--underline">This &lt;p&gt; element is an wrapped in an &lt;a&gt; element with a class of .hn__a--underline</a></p>
+			<p class="p"><em class="em">This &lt;p&gt; element is an wrapped in an &lt;em&gt; element with a class of .em</em></p>
+			<p class="p">This registered trademark<sup class="reg">&reg;</sup> is wrapped in a &lt;sup&gt; element with a class of .reg</p>
+			<p class="p">This registered trademark<sup class="reg-hn">&reg;</sup> is wrapped in a &lt;sup&gt; element with a class of .reg--hn (a registered trademark in a header element)</p>
+			<p class="p"><span class="span--qpBonus">This &lt;p&gt; element is wrapped in a &lt;span&gt; element with a class of .span--qpBonus</span></p>
+			<p class="p"><span class="span--qpBenefits">This &lt;p&gt; element is wrapped in a &lt;span&gt; element with a class of .span--qpBenefits</span></p>
+			<p class="p"><span class="span--qpJoin">This &lt;p&gt; element is wrapped in a &lt;span&gt; element with a class of .span--qpJoin</span></p>
+			<p class="p"><span class="span--qpPaper">This &lt;p&gt; element is wrapped in a &lt;span&gt; element with a class of .span--qpPaper</span></p>
+			<p class="p"><span class="span--qpPoints">This &lt;p&gt; element is wrapped in a &lt;span&gt; element with a class of .span--qpPoints</span></p>
+			<p class="p"><strong class="strong">This &lt;p&gt; element is wrapped in a &lt;strong&gt; element with a class of .strong</strong></p>
+			<p class="p"><strong class="strong--qpBonus">This &lt;p&gt; element is wrapped in a &lt;strong&gt; element with a class of .strong--qpBonus</strong></p>
+			<p class="p"><strong class="strong--qpBenefits">This &lt;p&gt; element is wrapped in a &lt;strong&gt; element with a class of .strong--qpBenefits</strong></p>
+			<p class="p"><strong class="strong--qpPoints">This &lt;p&gt; element is wrapped in a &lt;strong&gt; element with a class of .strong--qpPoints</strong></p>
+			<p class="p">This numer<sup class="sup">1</sup> is wrapped in a &lt;sup&gt; element with a class of .sup</p>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">List Item Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.ul > .ul__li</h4>
+			<ul class="ul">
+				<li class="ul__li">Lorem ipsum dolor sit amet ex ipsa asperiores commodi voluptatum</li>
+				<li class="ul__li">Lorem ipsum dolor sit amet eius quos quis asperiores est consequatur voluptas saepe laboriosam eveniet</li>
+				<li class="ul__li" style="margin-bottom:0;">Lorem ipsum dolor sit amet nisi iure aliquam quos</li>
+			</ul>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.ul > .ul__li--small</h4>
+			<ul class="ul">
+				<li class="ul__li--small">Lorem ipsum dolor sit amet ex ipsa asperiores commodi voluptatum</li>
+				<li class="ul__li--small">Lorem ipsum dolor sit amet eius quos quis asperiores est consequatur voluptas saepe laboriosam eveniet</li>
+				<li class="ul__li--small" style="margin-bottom:0;">Lorem ipsum dolor sit amet nisi iure aliquam quos</li>
+			</ul>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.ul > .ul__li--small--table</h4>
+			<ul class="ul">
+				<li class="ul__li--small--table">Lorem ipsum dolor sit amet ex ipsa asperiores commodi voluptatum</li>
+				<li class="ul__li--small--table">Lorem ipsum dolor sit amet eius quos quis asperiores est consequatur voluptas saepe laboriosam eveniet</li>
+				<li class="ul__li--small--table" style="margin-bottom:0;">Lorem ipsum dolor sit amet nisi iure aliquam quos</li>
+			</ul>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.ol > .ol__li</h4>
+			<ol class="ol">
+				<li class="ol__li">Lorem ipsum dolor sit amet ex ipsa asperiores commodi voluptatum</li>
+				<li class="ol__li">Lorem ipsum dolor sit amet eius quos quis asperiores est consequatur voluptas saepe laboriosam eveniet</li>
+				<li class="ol__li" style="margin-bottom:0;">Lorem ipsum dolor sit amet nisi iure aliquam quos</li>
+			</ol>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.ol > .ol__li--small</h4>
+			<ol class="ol">
+				<li class="ol__li--small">Lorem ipsum dolor sit amet ex ipsa asperiores commodi voluptatum</li>
+				<li class="ol__li--small">Lorem ipsum dolor sit amet eius quos quis asperiores est consequatur voluptas saepe laboriosam eveniet</li>
+				<li class="ol__li--small" style="margin-bottom:0;">Lorem ipsum dolor sit amet nisi iure aliquam quos</li>
+			</ol>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Paragraph Classes</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.p</h4>
+			<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quis vel consequatur eaque eligendi tempora illum possimus voluptates itaque dignissimos cumque obcaecati tenetur a id, eos fugit, at animi nulla.</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--attribution</h4>
+			<p class="p--attribution">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quidem mollitia ipsa, soluta commodi provident tenetur voluptatem dignissimos optio ipsum eveniet, perspiciatis, magnam unde ducimus maiores quo nihil iure facilis.</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--coupon</h4>
+			<p class="p--coupon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore debitis ea, rerum beatae molestias ipsum, molestiae eaque esse delectus. Magni, debitis, aut. Placeat beatae ab nesciunt, doloremque deserunt ipsa veniam.</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--details</h4>
+			<p class="p--details" style="position:relative;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur blanditiis ut, provident voluptatibus ipsa rem quam quisquam, nam animi, officia laborum. Tenetur sed totam dolor id. A quis reiciendis nostrum!</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--disclaimer</h4>
+			<p class="p--disclaimer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste blanditiis, repellat ab temporibus numquam, quam amet iure reiciendis, laborum cum dolorem? At repellendus delectus fugit dolor reiciendis ipsam accusamus. Maxime.</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--exception</h4>
+			<p class="p--exception">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cupiditate sit doloremque rerum ipsam impedit debitis accusamus asperiores harum voluptate pariatur dolores a vitae, error quasi, facilis suscipit. Quas, impedit!</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--gray/p--grey</h4>
+			<p class="p--gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam voluptas debitis iusto maiores, maxime vitae odio rem est asperiores quia ab cum dignissimos commodi fugiat, fuga, vero excepturi a. Quas?</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--jump</h4>
+			<p class="p--jump" style="text-align:left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur hic, voluptas necessitatibus velit natus nobis doloremque, et cumque qui quibusdam ducimus, ipsum reprehenderit rem. Dignissimos cupiditate, libero. Optio, excepturi, iure?</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpBonus</h4>
+			<p class="p--qpBonus">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur illo incidunt voluptas ratione sequi officiis, laborum qui quos facilis fuga, atque ipsam perspiciatis adipisci odio beatae, sit quo fugiat perferendis?</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpBenefits</h4>
+			<p class="p--qpBenefits">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ab mollitia veniam, commodi neque natus vel. Nobis sint quas obcaecati doloribus porro ullam amet, vel est. Eos expedita, quo quidem?</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpJoin</h4>
+			<p class="p--qpJoin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dicta veniam asperiores, sunt dolorem in dolor commodi, ipsam cupiditate eum, itaque quis alias autem quam consectetur consequatur saepe suscipit numquam.</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpPoints</h4>
+			<p class="p--qpPoints">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit molestiae cum eos rerum beatae voluptate nostrum totam neque sint temporibus. Asperiores ex eius qui totam, doloribus, animi eligendi accusamus perspiciatis!</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpPointsPaper</h4>
+			<p class="p--qpPointsPaper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, odit pariatur rem nihil minus, nemo ipsa enim tempore voluptatibus hic perspiciatis provident fugit aspernatur. Quibusdam necessitatibus, odio eaque veniam ipsa!</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--qpReward</h4>
+			<p class="p--qpReward" style="position:relative;text-align:left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam placeat obcaecati dolores officiis dolor veritatis culpa, eum nihil eos neque architecto accusantium eaque est, esse quae quas. Libero, repellat, adipisci!</p>
+			<h4 class="h4 margin__bottom--25 margin__top--100">.p--small</h4>
+			<h4 class="h4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veniam dolorum quasi uh4 sed nam at ipsum laboriosam maxime incidunt. Sapiente numquam, quis doloribus! Saepe similique in maiores beatae ea.</p>
+		</div>
+	</section>
+	<section class="grid margin__bottom--100 section">
+		<div class="grid__unit--100">
+			<h2 class="h2 margin__top--75">Table Elements</h2>
+			<hr class="hr">
+			<h4 class="h4 margin__bottom--25 margin__top--50">.table</h4>
+			<table class="margin__bottom--100 table">
+				<thead>
+					<tr class="tr">
+						<th class="th--horizontal">.tr > .th--horizontal</th>
+						<th class="th--horizontal">.tr > .th--horizontal</th>
+						<th class="th--horizontal">.tr > .th--horizontal</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="tr">
+						<td class="td">.tr > .td</td>
+						<td class="td">.tr > .td</td>
+						<td class="td">.tr > .td</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr class="tr">
+						<td class="td">.tr > .td</td>
+						<td class="td">.tr > .td</td>
+						<td class="td">.tr > .td</td>
+					</tr>
+				</tfoot>
+			</table>
+			<table class="margin__bottom--100 table">
+				<caption class="margin__bottom--25 caption">.caption</caption>
+				<tbody>
+					<tr class="tr">
+						<th class="th--vertical">.tr > .th--vertical</th>
+						<td class="td">.tr > .td</td>
+					</tr>
+					<tr class="tr">
+						<th class="th--vertical">.tr > .th--vertical</th>
+						<td class="td">.tr > .td</td>
+					</tr>
+					<tr class="tr">
+						<th class="th--vertical">.tr > .th--vertical</th>
+						<td class="td">.tr > .td</td>
+					</tr>
+					<tr class="tr">
+						<th class="th--vertical">.tr > .th--vertical</th>
+						<td class="td">.tr > .td</td>
+					</tr>
+				</tbody>
+			</table>
+			<h4 class="h4 margin__bottom--25 margin__top--50">.table--qpPoints</h4>
+			<table class="margin__bottom--100 table--qpPoints">
+		        <thead>
+		            <tr>
+		                <th class="td--empty"></th>
+		                <th class="th--qpPoints" style="background-color:#0072c6;">&slarr; .td--empty</th>
+		                <th class="th--qpPoints" style="background-color:#0072c6;">&lrarr; .th--qpPoints</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		                <td class="td--qpPaper">.td--qpPaper</td>
+		                <td class="td--qpPoints">
+		                    <span class="quillBlue td--qpPoints__span">.td--qpPoints__span</span>
+		                </td>
+		                <td class="td--qpPoints">.td--qpPoints</td>
+		            </tr>
+		            <tr>
+		                <td class="td--qpPoints"><span class="td--qpPoints__span--sub">.td--qpPoints__span--sub</span></td>
+		                <td class="td--qpPoints">.td--qpPoints</td>
+		                <td class="td--empty">.td--qpPoints</td>
+		            </tr>
+		        </tbody>
+		    </table>
+
+			<table>
+				<tr class="tr">
+					<td class="td--qpBonus">.td--qpBonus</td>
+				</tr>
+				<tr class="tr">
+					<td class="td--qpBenefits">.td--qpBenefits</td>
+				</tr>
+				<tr class="tr">
+					<td class="td--qpJoin">.td--qpJoin</td>
+				</tr>
+				<tr class="tr">
+					<td class="td--qpPointsPaper">.td--qpPointsPaper</td>
+				</tr>
+				<tr class="tr">
+					<td class="td--qpReward">.td--qpReward</td>
+				</tr>
+			</table>
+
+		</div>
+	</section>
+</div>
+
+<script src="/content/iw/scripts/agency3.min.js"></script>
