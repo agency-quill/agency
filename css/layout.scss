@@ -91,11 +91,6 @@
 		flex-flow: column wrap;
     }
 
-	.grid, 
-	&.grid {
-		flex-flow: row wrap;
-	}
-
 	.flex,
 	.grid, 
 	&.grid {
@@ -312,7 +307,12 @@
 				width: $vw * 100;
 			}
 		}
-	}	
+	}
+
+	.grid, 
+	&.grid {
+		flex-flow: row wrap;
+	}
 
 	.grid .margin, 
 	&.grid .margin, 
@@ -821,6 +821,10 @@
 					}
 
 					@media #{$tabPortMin} {
+						width: $column * 4;
+					}
+
+					&.flyUp {
 						width: $column * 4;
 					}
 				}

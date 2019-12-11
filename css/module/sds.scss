@@ -34,6 +34,108 @@
     margin: 0 auto;
 }
 
+// fixes NBSS banner grid issues
+.bundlesList {
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	padding-bottom: 0;
+	
+	.grid__unit--100 {
+		align-self: flex-start;
+		background-image: none;
+		box-sizing: border-box;
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		padding-bottom: 0;
+		padding-top: 0;
+		position: relative;
+		width: $column * 12;
+		
+		@media #{$mobPortMax} {
+			padding-left: $pct * 1;
+			padding-right: $pct * 1;
+		}
+
+		@media #{$mobLandMin} and #{$tabPortMax} {
+			padding-left: $pct * 1.5;
+			padding-right: $pct * 1.5;
+		}
+
+		@media #{$tabLandMin} and #{$tabLandMax} {
+		    padding-left: $pct * 1.25;
+			padding-right: $pct * 1.25;
+		}
+
+		@media #{$laptopMin} and #{$laptopMax} {
+		    padding-left: $pct * 1;
+			padding-right: $pct * 1;
+		}
+
+		@media #{$desktopMin} {
+		    padding-left: $pct * .75;
+			padding-right: $pct * .75;
+		}
+	}
+
+	.webModImg--100 {
+		align-self: flex-end;
+		flex-shrink: 0;
+		position: relative;
+		width: $pct * 159.325;
+
+		@media #{$mobLandMin} and #{$mobLandMax} {
+			width: $pct * 131.4;
+		}
+
+		@media #{$tabPortMin} and #{$tabPortMax} {
+			width: $pct * 100;
+		}
+
+		@media #{$tabLandMin} and #{$tabLandMax} {
+			width: $pct * 149;
+		}
+
+		@media #{$laptopMin} and #{$laptopMax} {
+			width: $pct * 119;
+		}
+
+		@media #{$desktopMin} {
+			width: $pct * 100;
+		}
+	}
+
+	.webModInner {
+		box-sizing: border-box;
+		// display: flex;
+		height: 100%;
+		overflow: hidden;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		position: relative;
+		width: $pct * 100;
+
+		@media #{$mobLandMax} {
+			margin-bottom: $vw * 5;
+		}
+		
+		@media #{$tabPortMin} {
+			margin-bottom: $px * 2;
+		}
+
+		.a {
+			width: $pct * 100;
+		}
+	}
+
+	.webModPicture {
+		display: flex;
+	}
+}
+
 .carouselPh {
 	overflow: hidden;
 }

@@ -105,6 +105,7 @@
 
 		&--blue,
 		&--gray,
+		&--grey,
 		&--standard {
 			border: none;
 			border-radius: 0;
@@ -126,6 +127,7 @@
 		&--blue,
 		&--close,
 		&--gray,
+		&--grey,
 		&--standard {
 			outline: 0;
 		}
@@ -147,11 +149,13 @@
 			cursor: pointer;
 		}
 
-		&--gray {
+		&--gray,
+		&--grey {
 			background-color: #e2e2e2;
 		}
 
 		&--gray,
+		&--grey,
 		&--standard {
 			color: #000;
 		}
@@ -168,6 +172,7 @@
 
 	.button--close,
 	.button--gray,
+	.button--grey,
 	.button--standard,
 	.caption--qpPoints,
 	.h1,
@@ -282,7 +287,8 @@
 			background-color: $orange;
 		}
 
-		&--hotbuy, 
+		&--hotbuy,
+		&--qplus,
 		&--sale {
 			@include font($white, #{$em * 1}, 300);
 		    font-size: $px * 1.4;
@@ -291,6 +297,10 @@
 			padding-right: $px * .4;
 			padding-top: $px * .4;
 		    width: $px * 7;
+		}
+
+		&--qplus {
+			background-color: $plum;
 		}
 
 		&--sale {
@@ -472,10 +482,18 @@
 	}
 
 	.hr {
-    	border-color: #ccc;
 		border-style: solid;
 		border-width: $px * 0.1 0 0;
-		width: $pct * 100;
+
+		&--double {
+	    	border-style: double;
+			border-width: $px * 0.4 0 0;
+		}
+
+		&, &--double {
+	    	border-color: #ccc;
+			width: $pct * 100;
+		}
 	}
 
     .img {
@@ -499,6 +517,13 @@
 			    width: $pct * 90;
 			}
 		}
+    }
+
+    .input {
+    	padding-bottom: $px * .2;
+    	padding-left: $px * .4;
+    	padding-right: $px * .4;
+    	padding-top: $px * .2;
     }
 
 	.input,
@@ -650,7 +675,8 @@
 		    max-height: $em * 1.1;
 		}
 
-		&--gray, &--grey {
+		&--gray,
+		&--grey {
 			color: $gray;
 		}
 

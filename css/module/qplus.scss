@@ -1,4 +1,5 @@
-#agency, .agency {
+#agency,
+.agency {
 	
 	.div {
 
@@ -10,7 +11,8 @@
 		    display: inline-block;
 		}
 
-		&--qpPoints, &--qpPointsPaper {
+		&--qpPoints,
+		&--qpPointsPaper {
 		    vertical-align: middle;
 		    width: $pct * 100;
 
@@ -45,21 +47,39 @@
 		}
 	}
 	
-	.h2, .h3, .h4 {
+	.h2,
+	.h3,
+	.h4 {
 
-		&--qpBenefits, &--qpPoints, &--qpReward {
+		&--qpBenefits,
+		&--qpPoints,
+		&--qpReward {
 			line-height: 1.25em;
 		}
 
-		&--qpBonus, &--qpBenefits, &--qpJoin, &--qpPoints, &--qpReward {
+		&--qpBonus,
+		&--qpBenefits,
+		&--qpJoin,
+		&--qpPoints,
+		&--qpReward {
 		    align-items: baseline;
 			position: relative;
 		}
 	}
 
-	.h2, .h3, .h4, .p, .td, .th {
+	.h2,
+	.h3,
+	.h4,
+	.p,
+	.td,
+	.th {
 
-		&--qpBonus, &--qpBenefits, &--qpJoin, &--qpPoints, &--qpPointsPaper, &--qpReward {
+		&--qpBonus,
+		&--qpBenefits,
+		&--qpJoin,
+		&--qpPoints,
+		&--qpPointsPaper,
+		&--qpReward {
 		    font-family: #{$fontFamily};
 		}
 
@@ -153,7 +173,9 @@
         }
 	}
 
-	.h3, .h4, .p {
+	.h3,
+	.h4,
+	.p {
 		
 		&--qpBenefits {}
 
@@ -462,7 +484,8 @@
 		}
 	}
 
-	.td, .th {
+	.td,
+	.th {
 
         &--qpJoin{
             font-size: $vw * 1.3;
@@ -516,7 +539,8 @@
 			}
 		}
 
-		&--qpPaper, &--qpPoints {
+		&--qpPaper,
+		&--qpPoints {
 			font-size: $vw * 5;
 			padding-bottom: $pct * 1;
 			padding-left: $pct * 2;

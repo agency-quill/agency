@@ -138,7 +138,7 @@
 		.webModInner {
 			box-sizing: border-box;
 			// display: flex;
-			height: 100%;
+			height: $pct * 100;
 			overflow: hidden;
 			padding-bottom: 0;
 			padding-left: 0;
@@ -163,6 +163,17 @@
 		.webModPicture {
 			display: flex;
 		}
+		
+		.flyUp {
+
+			.webModImg {
+
+				&--33 {
+					width: $pct * 100;
+				}
+			}
+		}
+
 	}
 
 	.div {
@@ -170,7 +181,7 @@
 		&__html {
 
 			&--absolute {
-				height: 100%;
+				height: $pct * 100;
 				left: 0;
 			    position: absolute;
 				top: 0;
@@ -185,6 +196,6 @@
 	.div__html--absolute,
 	.div__html--static {
 		box-sizing: border-box;
-		width: 100%;
+		width: $pct * 100;
 	}
 }
