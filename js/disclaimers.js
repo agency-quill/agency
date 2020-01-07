@@ -139,7 +139,7 @@
 
 	"d22a": "Quill.com covers shipping carrier fees on every order. On orders under $25&#044; a small order handling fee of $4.99 will be applied.",
 
-	"d22b": "Quill.com covers shipping carrier fees on every order. On orders under $45&#044; a small order handling fee of $9.99 will be applied.",
+	"d22b": "Fast&#044; Free Shipping: All orders $45+ are delivered free. Orders under $45 will have a $9.99 handling fee applied. All ink &amp; toner cartridges ship free regardless of order size. Visit Quill.com/freeshipping",
 
 	"d23": "Delivery is free on all orders that ship standard delivery within the 48 contiguous United States. Furniture is shipped free via tailgate delivery. For more information&#044; please visit www.quill.com/deliverypolicy.",
 
@@ -253,5 +253,5 @@
 
     "d62":"QPoints balance shown reflects your total at the time of e-mail delivery. Any pending QPoints or recent deductions are not shown. QPoints earned are available once your order has been invoiced.",
 
-    "d63": "The technology discount does not apply to the following technology product categories: e-readers&#044; computers and computing products (tablets&#044; notebooks&#044; and desktops)&#044; electronic machines (copiers&#044; fax machines)&#044; and vending and gumball machines&#044; refurbished and closeout merchandise&#044; taxes or freight charges. Sale prices&#044; free offer deals&#044; Top Seller/Best Price items&#044; special order items and items beginning with the prefix &ldquo;SPW&rdquo; or &ldquo;UNI&rdquo;&#044; or indicated as an &ldquo;extended assortment&rdquo; item are also excluded from this discount offer. We reserve the right to change our programs and their benefits&#044; including shipping charges."
+    "d63": "The technology discount does not apply to the following technology product categories: e-readers&#044; computers and computing products (tablets&#044; notebooks&#044; and desktops)&#044; electronic machines (copiers&#044; fax machines)&#044; Apple&reg; products&#044; and vending and gumball machines&#044; refurbished and closeout merchandise&#044; taxes or freight charges. Sale prices&#044; free offer deals&#044; Top Seller/Best Price items&#044; special order items and items beginning with the prefix &ldquo;SPW&rdquo; or &ldquo;UNI&rdquo;&#044; or indicated as an &ldquo;extended assortment&rdquo; item are also excluded from this discount offer. We reserve the right to change our programs and their benefits&#044; including shipping charges."
 }
