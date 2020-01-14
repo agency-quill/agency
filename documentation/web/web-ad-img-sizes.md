@@ -14,11 +14,14 @@ The __Web ad by viewport__ table lists all of the web ad/banner image size(s) fo
 | quarter			| grid__unit--25		| 470		| 300		| - 		| - 		|
 | quarter (card)	| grid__unit--25.card	| 355		| - 		| -			| -			|
 | third				| grid__unit--33		| 600		| 395		| 320		| 230		|
+| third	(flyup)*	| -						| 300		| -			| -			| -			|
 | half				| grid__unit--50		| 1125		| 725		| -			| -			|
 | half (card)		| grid__unit--50.card	| 660		| - 		| -			| -			|
 | two-third			| grid__unit--66		| n/a		| n/a		| n/a		| n/a		|
 | full				| grid__unit--100		| 1860		| 1250		| 970		| 605		|
 | home page			| -						| 1650		| 960		| 960		| 320		|
+
+\* Flyup ads are 300px wide x 150px tall.
 
 ## Web ad by viewport
 | viewport width 					| grid__unit--12-5.card	| grid__unit--25 	| grid__unit--25.card	| grid__unit--33	| grid__unit--50	| grid__unit--50.card	| grid__unit--66	| grid__unit--100	|
