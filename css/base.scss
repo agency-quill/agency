@@ -292,11 +292,13 @@
 		&--sale {
 			@include font($white, #{$em * 1}, 300);
 		    font-size: $px * 1.4;
+			max-width: $px * 12;
+		    min-width: $px * 5;
 		    padding-bottom: $px * .4;
 			padding-left: $px * .4;
 			padding-right: $px * .4;
 			padding-top: $px * .4;
-		    width: $px * 7;
+		    width: fit-content;
 		}
 
 		&--qplus {

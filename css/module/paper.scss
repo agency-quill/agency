@@ -25,7 +25,7 @@
 			}
 
 			@media #{$tabLandMin} and #{$tabLandMax} {
-			    width: $pct * 24;
+			    width: $pct * 29;
 			}
 
 			@media #{$laptopMin} and #{$laptopMax} {
@@ -55,7 +55,7 @@
 			}
 
 			@media #{$tabLandMin} and #{$tabLandMax} {
-			    width: $pct * 75;
+			    width: $pct * 70;
 			}
 
 			@media #{$laptopMin} and #{$laptopMax} {

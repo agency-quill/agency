@@ -354,11 +354,13 @@
   font-weight: 300;
   line-height: 1em;
   font-size: 14px;
+  max-width: 120px;
+  min-width: 50px;
   padding-bottom: 4px;
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 4px;
-  width: 70px;
+  width: fit-content;
 }
 #agency .flag--qplus,
 .agency .flag--qplus {
@@ -3131,7 +3133,7 @@
 @media (min-width: 1012px) and (max-width: 1280px) {
   #agency .div__content--paper,
   .agency .div__content--paper {
-    width: 24%;
+    width: 29%;
   }
 }
 @media (min-width: 1280px) and (max-width: 1520px) {
@@ -3171,7 +3173,7 @@
 @media (min-width: 1012px) and (max-width: 1280px) {
   #agency .div__img--paper,
   .agency .div__img--paper {
-    width: 75%;
+    width: 70%;
   }
 }
 @media (min-width: 1280px) and (max-width: 1520px) {
