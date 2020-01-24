@@ -696,20 +696,21 @@ function buildNavMod(obj, args){
 // function webModJumpNav(mod, obj){
 
 // }
-
-var carouselAttr = [	// array of carousel attributes with default values
-		['data-carousel-rotate-auto','no'],	// does the carousel rotate automatically
-		['data-carousel-rotate-buttons','yes'],	// should the left & right buttons be visible
-		['data-carousel-rotate-click-stop','yes'],	// should the carousel stop when contents have been clicked
-		['data-carousel-rotate-direction','right'],	// what direction should the carousel automatically rotate
-		['data-carousel-rotate-indicator','no'],	// should a rotation idicator be visible
+var carouselAttr = [ // array of carousel attributes with default values
+		['data-carousel-rotate-auto','no'], // does the carousel rotate automatically
+		['data-carousel-rotate-buttons','yes'], // should the left & right buttons be visible
+		['data-carousel-rotate-click-stop','yes'], // should the carousel stop when contents have been clicked
+		['data-carousel-rotate-direction','right'], // what direction should the carousel automatically rotate
+		['data-carousel-rotate-indicator','no'], // should a rotation idicator be visible
 		['data-carousel-rotate-interval','3000']
-	],	// how long should the carousel pause between automatic rotations
-	carouselStopObj = new Object(),	// object of clearInterval variables
-	/*errorMsgs = [	// array of error messages
-		'data-rotate-direction must be "left" or "right"'	// direction value missing or misspelled
+	], // how long should the carousel pause between automatic rotations
+	carouselStopObj = new Object(), // object of clearInterval variables
+	/*errorMsgs = [ // array of error messages
+		'data-rotate-direction must be "left" or "right"' // direction value missing or misspelled
 	],*/
-	objBank = [],	// array of loaded objects
+	cB = {hasCloseButton:true}, // close button object for Tooltip()
+	objBank = [], // array of loaded objects
+	pP = '<img src=\'/content/iw/adv/sandbox/images/promise-badge.png\' style=\'float:left;margin_bottom:5px;margin-right:10px;width:120px\'><p class=\'p\' style=\'font-size:14px;font-weight:100;line-height:1.5em;\'>If you find a lower, publicly available price on a competitor\'s* website on a comparable copy paper than paper marked with our Paper Price Promise badge, contact us and we\'ll adjust 2 cartons of our Paper Price Promise paper so that it\'s 50 cents lower than the competitor\'s price. You must be able to verify the price at the time of your call.</p><p class=\'p\' style=\'font-size:14px;font-weight:100;line-height:1.5em;\'>If you\'ve found a lower qualifying price, contact us at 800-982-3400.</p><p class=\'p\' style=\'font-size:10px;font-weight:100;line-height:1.5em;\'>*Applies to lower prices found on Staples.com, Amazon.com (shipped &amp; sold by Amazon), Officedepot.com, Costco.com, Samsclub.com. Delivered product only, not in-store price.</p>', // paper promise string for Tooltip()
 	size = {
 		'mobPort': '499',
 		'mobLand': '765',
@@ -717,7 +718,7 @@ var carouselAttr = [	// array of carousel attributes with default values
 		'tabLand': '1279',
 		'laptop': '1519'
 	},
-	template = {	// object of html templates for render()
+	template = { // object of html templates for render()
 	    'a': '<a class="{{class}}" href="{{href}}" id="{{id}}" {{events}} style="{{css}}" title="{{title}}">{{a}}</a>',
 	    'area': '<area class="{{class}}" coords="{{coords}}" href="{{href}}" id="{{id}}" {{events}} shape="{{shape}}" style="{{css}}" title="{{title}}">',
 	    'button': '<button class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{button}}</button>',
