@@ -3133,7 +3133,7 @@
 @media (min-width: 1012px) and (max-width: 1280px) {
   #agency .div__content--paper,
   .agency .div__content--paper {
-    width: 29%;
+    width: 25%;
   }
 }
 @media (min-width: 1280px) and (max-width: 1520px) {
@@ -3173,7 +3173,7 @@
 @media (min-width: 1012px) and (max-width: 1280px) {
   #agency .div__img--paper,
   .agency .div__img--paper {
-    width: 70%;
+    width: 74%;
   }
 }
 @media (min-width: 1280px) and (max-width: 1520px) {
