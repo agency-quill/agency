@@ -7,10 +7,10 @@ If you push a file to production larger that the threshold set by the system an 
 
 |	File Type	|	Size	|
 |	---------	|	----	|
-|	JPG			|	300k	|
-|	PNG			|	244k	|
-|	GIF			|	100k	|
-|	SVG			|	101k	|
-|	JS			|	10k		|
 |	CSS			|	10k		|
+|	GIF			|	100k	|
+|	JPG			|	300k	|
+|	JS			|	10k		|
 |	PDF			|	1m		| 
+|	PNG			|	244k	|
+|	SVG			|	101k	|
