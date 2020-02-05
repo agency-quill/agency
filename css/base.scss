@@ -288,6 +288,7 @@
 		}
 
 		&--hotbuy,
+		&--promise,
 		&--qplus,
 		&--sale {
 			@include font($white, #{$em * 1}, 300);
@@ -299,6 +300,10 @@
 			padding-right: $px * .4;
 			padding-top: $px * .4;
 		    width: fit-content;
+		}
+
+		&--promise {
+			background-color: $coral;
 		}
 
 		&--qplus {

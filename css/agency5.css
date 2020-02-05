@@ -341,8 +341,9 @@
 .agency .flag--hotbuy {
   background-color: #f46036;
 }
-#agency .flag--hotbuy, #agency .flag--qplus, #agency .flag--sale,
+#agency .flag--hotbuy, #agency .flag--promise, #agency .flag--qplus, #agency .flag--sale,
 .agency .flag--hotbuy,
+.agency .flag--promise,
 .agency .flag--qplus,
 .agency .flag--sale {
   color: #fff;
@@ -361,6 +362,10 @@
   padding-right: 4px;
   padding-top: 4px;
   width: fit-content;
+}
+#agency .flag--promise,
+.agency .flag--promise {
+  background-color: #ff6d70;
 }
 #agency .flag--qplus,
 .agency .flag--qplus {
