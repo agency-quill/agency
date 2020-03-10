@@ -1,5 +1,5 @@
 # Flag Push Process
-_Last updated 12/10/19_
+_Last updated 3/10/20_
 
 Flags are pushed to one folder with a specific name. We overwrite these flags on a regular basis and its important to not push a flag too early. 
 
@@ -31,4 +31,4 @@ Rename the .gif file to the appropriate name below.
 | 319 		  |	2daySale.gif   |
 
 ## Step 3: 
-Push the updated file name to the `/iw/images/flags/` folder.  
+Push the updated file to the `/iw/images/flags/` folder.  

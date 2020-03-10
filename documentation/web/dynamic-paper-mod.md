@@ -1,7 +1,7 @@
-# Dynamic Paper Module `html`
-_Last updated 7/29/19_
+# Dynamic Paper Module `HTML`
+_Last updated 3/10/20_
 
-There is a new paper module for the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page. It uses new scripts, styles, and `html` code. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images. It does this by pulling item prices from the back-end dynamically.
+There is a new paper module for the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page. It uses new scripts, styles, and `HTML` code. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images. It does this by pulling item prices from the back-end dynamically.
 
 The new code is designed to work with the existing `2018-half-mod` web ad module. It is populated into the `u_ad_html_text` field.
 
@@ -17,7 +17,7 @@ The module includes a product image. The image should be a merchbase image, save
 ## Flags
 Not all offers have a flag. At this point, we support two: 'Hot Buy' and 'Sale.' This list may grow with the needs of the business.
 
-The flag is html-based and is part of the `html` in the `u_ad_html_text` field.
+The flag is html-based and is part of the `HTML` in the `u_ad_html_text` field.
 
 ### Hot Buy
 ![alt text](https://www.quill.com/content/iw/images/documentation/hot-buy.png "Hot Buy flag screen shot")
@@ -27,6 +27,16 @@ Use this flag for inactive customers (i.e., a customer that hasn't made a paper 
 ##### Example
 ```html
 <div class="flag--hotbuy">Hot Buy</div>
+```
+
+### Paper Price Promise
+![alt text](https://www.quill.com/content/iw/images/documentation/price-promise.png "Paper Price Promise flag screen shot")
+
+Use this flag for Paper Price Promise SKUs.
+
+##### Example
+```html
+<div class="flag--promise">Price Promise</div>
 ```
 
 ### Sale
@@ -58,7 +68,7 @@ The script does the following:
 
 The `wasPrice` should be set to effort 901 unless otherwise directed.
 
-The example below shows the `html` rendering the sale price for a case of Quill Brand Copy Paper (effort: 499 / item: 720222CT), the regular price (effort: 901) and the amount of savings.
+The example below shows the `HTML` rendering the sale price for a case of Quill Brand Copy Paper (effort: 499 / item: 720222CT), the regular price (effort: 901) and the amount of savings.
 
 ##### Example
 ```html
@@ -79,7 +89,7 @@ The standard is the information overlay.  It is a rectangle that holds the numbe
 </div>
 ```
 
-The second option is a half-circle that contains promotional language like "One-time offer." This option is a little more complicated to code as it uses include the `svg`, `ellipse`, and `text` elements.
+The second option is a half-circle that contains promotional language like "One-time offer." This option is a little more complicated to code as it uses include the `SVG`, `ellipse`, and `text` elements.
 
 ##### Example
 ```html
@@ -89,7 +99,7 @@ The second option is a half-circle that contains promotional language like "One-
 </svg>
 ```
 
-Only the text needs to be modified.  Copy the bulk of the `html` as-is.
+Only the text needs to be modified.  Copy the bulk of the `HTML` as-is.
 
 ## Classes
 There are a few new classes that have been added to the `agency5.css` style sheet to handle these modules.
