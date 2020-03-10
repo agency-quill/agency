@@ -11,6 +11,32 @@
 			padding-top: $pct * 2;
 		}
 
+		&__content--full {
+		    text-align: left;
+		    vertical-align: top;
+		    width: $pct * 40;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 30;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 25;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 25;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 23;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 28;
+			}
+		}
+
 		&__content--paper {
 		    text-align: left;
 		    vertical-align: top;
@@ -36,10 +62,40 @@
 				width: $pct * 44;
 			}
 		}
-
+		
+		&__content--full, 
 		&__content--paper, 
+		&__img--full,
 		&__img--paper {
 			display: inline-block;
+		}
+
+		&__img--full {
+			vertical-align: bottom;
+		    width: $pct * 55;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 66;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 73;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+				text-align: left;
+			    width: $pct * 70;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				text-align: left;
+				width: $pct * 74;
+			}
+
+			@media #{$desktopMin} {
+				text-align: left;
+				width: $pct * 68;
+			}
 		}
 
 		&__img--paper {
@@ -115,6 +171,29 @@
 	}
 
 	.img {
+
+		&--full {
+			bottom: $px * -1;
+			position: relative;
+			width: $pct * 120;
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 90;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 50;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 44;
+				// width: $pct * 82.375;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 60;
+			}
+		}
 
 		&--paper {
 			bottom: $px * -1;

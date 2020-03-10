@@ -14,7 +14,7 @@
 	}
 
 	.td {
-		background-color: #f2f2f2;
+		background-color: $tableGray;
 		font-size: $px * 1.5;
 		font-weight: 400;
 		padding-left: $px;
@@ -52,7 +52,7 @@
 	.th {
 
 		&--horizontal {
-			background-color: #0072c6;
+			background-color: $blue;
 			color: $white;
 			font-size: $px * 1.5;
 			font-weight: 400;
@@ -67,7 +67,7 @@
 		}
 
 		&--vertical {
-			background-color: #e4e4e4;
+			background-color: $tableDarkGray;
 			font-size: $px * 1.5;
 			font-weight: 600;
 			width: calc(40% - #{$px * 0.1});
