@@ -170,4 +170,33 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 ```
 
 ## Proofing
-In order to proof the offer codes we need to populate test ones. The spotlight page  
+Due to their complexity, and reliance on scripts to pull in back-end pricing, the dynamic paper offer codes need to be tested in production.
+
+Unfortunately the `GetSkuPrice()` script doesn't work in Lago or the [Offer Code Preview](https://www.quill.com/csr/offercode?offercode=), so test offer codes need to be used. We have created 16 offer codes, named W19_10_000_PPRMOD01 through W19_10_000_PPRMOD16 which need to be populated with the module code.
+
+There are also 16 offer codes named W19_10_000_PPRLBL01 through W19_10_000_PPRLBL16 which contain a text string of the offer code number (i.e. "W20_02_043_DIGLC0450").
+
+The test offer codes are programmed in CMS to appear on a test spotlight page ([https://www.quill.com/x/cbx/379.html](https://www.quill.com/x/cbx/379.html)) for review. The page is laid out like this:
+
+|   Content             |   Label               |
+|   -------             |   -----               |
+|   W19_10_000_PPRMOD01 |   W19_10_000_PPRLBL01 |
+|   W19_10_000_PPRMOD02 |   W19_10_000_PPRLBL02 |
+|   W19_10_000_PPRMOD03 |   W19_10_000_PPRLBL03 |
+|   W19_10_000_PPRMOD04 |   W19_10_000_PPRLBL04 |
+|   W19_10_000_PPRMOD05 |   W19_10_000_PPRLBL05 | 
+|   W19_10_000_PPRMOD06 |   W19_10_000_PPRLBL06 |
+|   W19_10_000_PPRMOD07 |   W19_10_000_PPRLBL07 |
+|   W19_10_000_PPRMOD08 |   W19_10_000_PPRLBL08 |
+|   W19_10_000_PPRMOD09 |   W19_10_000_PPRLBL09 |
+|   W19_10_000_PPRMOD10 |   W19_10_000_PPRLBL10 |
+|   W19_10_000_PPRMOD11 |   W19_10_000_PPRLBL11 |
+|   W19_10_000_PPRMOD12 |   W19_10_000_PPRLBL12 |
+|   W19_10_000_PPRMOD13 |   W19_10_000_PPRLBL13 |
+|   W19_10_000_PPRMOD14 |   W19_10_000_PPRLBL14 |
+|   W19_10_000_PPRMOD15 |   W19_10_000_PPRLBL15 |
+|   W19_10_000_PPRMOD16 |   W19_10_000_PPRLBL16 |
+
+When an offer code is finished the designer picks one of the test offer codes from the __Content__ column and places the `HTML` from the finished offer code in it. Then the offer code number is placed in the corresponding offer code from the __Label__ column.
+
+Once the test offer codes are live the test page is sent out for review. _Any edits need to be made to both the web request offer code and the test offer code._
