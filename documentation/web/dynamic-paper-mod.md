@@ -130,7 +130,7 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 ![alt text](https://www.quill.com/content/iw/images/documentation/W19_06_040_4PLSP0550.png "W19_06_040_4PLSP0550 screen shot")
 
 ```html
-<div class="webModPicture">
+<div class="cursor--pointer pfm scTrack webModPicture" locater="carousel_1" onclick="showPriceInCart(this,\'200885\',\'510\',\'720222CT\')" sctype="pfm" sku="200885" title="Add to cart">
 
     <div class="align--center div__background--paper webModImg--50">
 
@@ -146,7 +146,7 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 
             <p class="p--paper">Limit 3.</p>
 
-            <button class="button--standard margin__bottom--12-5 margin__top--50 pfm scTrack" locater="carousel_1" onclick="showPriceInCart(this,\'200885\',\'510\',\'720222CT\')" sctype="pfm" sku="200885" title="Add to cart">Add to Cart</button>
+            <button class="button--standard margin__bottom--12-5 margin__top--50">Add to Cart</button>
 
             <p class="icc__p--conditions quillOrange margin__bottom--12-5" style="width:175px">No further discounts can be applied to the $<$= GetSkuPrice(['510','720222CT']) $> paper price.</p>
 
@@ -168,3 +168,6 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 
 </div>
 ```
+
+## Proofing
+In order to proof the offer codes we need to populate test ones. The spotlight page  
