@@ -1,9 +1,9 @@
 # Dynamic Paper Module `HTML`
-_Last updated 3/10/20_
+_Last updated 3/13/20_
 
-There is a new paper module for the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page. It uses new scripts, styles, and `HTML` code. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images. It does this by pulling item prices from the back-end dynamically.
+The dynamic paper module for the [Hot Deals](https://www.quill.com/daily-deals/cbx/35.html) page uses scripts, styles, and `HTML` code to pull in SKU prices dynamically. The code allows Product Specialists to update paper prices on the fly without requesting any updates to offer codes or images.
 
-The new code is designed to work with the existing `2018-half-mod` web ad module. It is populated into the `u_ad_html_text` field.
+The code is designed to work with the existing `2018-half-mod` web ad module. It is populated into the `u_ad_html_text` field.
 
 Below is everything you need to use the dynamic paper module including product images, flags, the `GetSkuPrice()` script, and more.
 
@@ -12,7 +12,24 @@ If you want to jump right into the code, there is an example at the end of this 
 __Reminder: Apostrophes/single quotes in the `u_ad_html_text` field need to be preceded by a backslash (e.g. `\'`). Also, positioning using `px` can pose an issue for responsive design.__
 
 ## Product Image
-The module includes a product image. The image should be a merchbase image, saved at 480px wide by 290px tall. Keep in mind that the bottom 10px of the image is cut off. Save the file in the `.png` format, with a transparent background.
+The module includes a product image. The image should be a merchbase image, saved at 480px wide by 290px tall. Keep in mind that the bottom 10px of the image is cut off. Save the file in the `.png` format, with a transparent background. The file name should be the find number of the SKU.
+
+##### Example
+```html
+/content/iw/adv/2019/06/040/720222CT.png
+```
+
+### Paper Price Promise
+SKUs that are part of the Paper Price Promise campaign should have the paper price promise badge in the upper left-hand corner of the image (see example below). 
+
+![alt text](https://www.quill.com/content/iw/images/documentation/price-promise.png "Paper Price Promise flag screen shot")
+
+The file name should be the find number of the SKU plus '-pp'.
+
+##### Example
+```html
+/content/iw/adv/2020/03/042/VK811CT-pp.png
+```
 
 ## Flags
 Not all offers have a flag. At this point, we support two: 'Hot Buy' and 'Sale.' This list may grow with the needs of the business.
@@ -50,7 +67,7 @@ Use this flag for active customers (i.e., a customer that has made a paper purch
 ```
 
 ## Dynamic Price Code
-The code that makes these offers work is the `GetSkuPrice()` function written by SDS. Placing it in your code inserts the price of any item on the site in raw text form. To use it, send the function an array of two values: effort number and item, or find, number. The example below pulls the price for a case of [Quill Brand Copy Paper](https://www.quill.com/quill-brand-copy-paper-8-1-2-x-11-92-bright-20-lb-10-reams-500-sheets-720222/cbs/200885.html?Effort_Code=499&Find_Number=720222CT) (item 720222CT) for effort 499. If the effort hasn't been built or has expired, the script substitutes effort 901.  This script is server-based and runs before the page loads. _The space after `<$=` and before `$>` are necessary for the script to function._
+The code that makes these offers work is the `GetSkuPrice()` function written by SDS. Placing it in your code inserts the price of any item on the site in raw text form. To use it, send the function an array of two values: effort number and item/find number. The example below pulls the price for a case of [Quill Brand Copy Paper](https://www.quill.com/quill-brand-copy-paper-8-1-2-x-11-92-bright-20-lb-10-reams-500-sheets-720222/cbs/200885.html?Effort_Code=499&Find_Number=720222CT) (item 720222CT) for effort 499. If the effort hasn't been built or has expired, the script substitutes effort 901.  This script is server-based and runs before the page loads. _The space after `<$=` and before `$>` are necessary for the script to function._
 
 ##### Example
 ```javascript
@@ -170,15 +187,15 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 ```
 
 ## Proofing
-Due to their complexity, and reliance on scripts to pull in back-end pricing, the dynamic paper offer codes need to be tested in production.
+Due to their complexity, and reliance on scripts, the dynamic paper offer codes need to be tested in production.
 
-Unfortunately the `GetSkuPrice()` script doesn't work in Lago or the [Offer Code Preview](https://www.quill.com/csr/offercode?offercode=), so test offer codes need to be used. We have created 16 offer codes, named W19_10_000_PPRMOD01 through W19_10_000_PPRMOD16 which need to be populated with the module code.
+Unfortunately the `GetSkuPrice()` script doesn't work in Lago or the [Offer Code Preview](https://www.quill.com/csr/offercode?offercode=), so test offer codes need to be used. We have created 16 offer codes, named W19_10_000_PPRMOD01 through W19_10_000_PPRMOD16 which can be populated with the module code.
 
-There are also 16 offer codes named W19_10_000_PPRLBL01 through W19_10_000_PPRLBL16 which contain a text string of the offer code number (i.e. "W20_02_043_DIGLC0450").
+There are also 16 offer codes named W19_10_000_PPRLBL01 through W19_10_000_PPRLBL16 to contain a text string of the offer code number to serve as the label of the module offer code to its left. For these offer codes place the offer code number (i.e. "W20_02_043_DIGLC0450") in the `u_ad_html_text` field.
 
-The test offer codes are programmed in CMS to appear on a test spotlight page ([https://www.quill.com/x/cbx/379.html](https://www.quill.com/x/cbx/379.html)) for review. The page is laid out like this:
+The module and label test offer codes are programmed in CMS to appear on a test spotlight page ([https://www.quill.com/x/cbx/379.html](https://www.quill.com/x/cbx/379.html)) for review. The page is laid out like this:
 
-|   Content             |   Label               |
+|   Modules             |   Labels              |
 |   -------             |   -----               |
 |   W19_10_000_PPRMOD01 |   W19_10_000_PPRLBL01 |
 |   W19_10_000_PPRMOD02 |   W19_10_000_PPRLBL02 |
@@ -197,6 +214,6 @@ The test offer codes are programmed in CMS to appear on a test spotlight page ([
 |   W19_10_000_PPRMOD15 |   W19_10_000_PPRLBL15 |
 |   W19_10_000_PPRMOD16 |   W19_10_000_PPRLBL16 |
 
-When an offer code is finished the designer picks one of the test offer codes from the __Content__ column and places the `HTML` from the finished offer code in it. Then the offer code number is placed in the corresponding offer code from the __Label__ column.
+When an offer code is finished, the designer picks one of the test offer codes from the __Modules__ column and places the `HTML` from the finished offer code in it. Then the offer code number is placed in the corresponding offer code from the __Labels__ column.
 
-Once the test offer codes are live the test page is sent out for review. _Any edits need to be made to both the web request offer code and the test offer code._
+Once the test offer codes are live the test page is sent out for review. ___Any edits need to be made to both the web request offer code and the test offer code.___
