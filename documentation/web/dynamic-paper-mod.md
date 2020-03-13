@@ -12,7 +12,7 @@ If you want to jump right into the code, there is an example at the end of this 
 __Reminder: Apostrophes/single quotes in the `u_ad_html_text` field need to be preceded by a backslash (e.g. `\'`). Also, positioning using `px` can pose an issue for responsive design.__
 
 ## Product Image
-The module includes a product image. The image should be a merchbase image, saved at 480px wide by 290px tall. Keep in mind that the bottom 10px of the image is cut off. Save the file in the `.png` format, with a transparent background. The file name should be the find number of the SKU.
+The module includes a product image. The image should be a merchbase image, saved at 480px wide by 290px tall. Keep in mind that the bottom 10px of the image is cut off. Save the file in the `.png` format, with a transparent background. The file name should be the item/find number of the SKU.
 
 ##### Example
 ```html
