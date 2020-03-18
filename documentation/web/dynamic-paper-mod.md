@@ -94,6 +94,14 @@ The example below shows the `HTML` rendering the sale price for a case of Quill 
 <h3 class="h3--paper quillRed"><span class="sup">$</span><span class="isPrice"><$= GetSkuPrice(['499','720222CT']) $></span></h3>
 ```
 
+### Low As Text
+Some cases require a line of text prior to the sale price. 
+
+##### Example
+```html
+<p class="p--paper">Low as</p>
+```
+
 ## Information/Promotional Overlay
 At the bottom of the module, roughly in the middle, is an optional overlay.  At this time we have two options.
 
