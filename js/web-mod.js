@@ -274,17 +274,20 @@ function webModIcc(obj){
 	    obj.iccHtml = '';
 		obj.iccMultiple = webModFormat(obj.icc).split('+');
 		for(var i = 0, max = obj.iccMultiple.length; i < max; i++){
-			obj.iccArray = obj.iccMultiple[i].split(',');
-			obj.code = obj.iccArray[0] ? obj.iccArray[0].toUpperCase() : '??ICC??!';
-			obj.disclaimer = obj.iccArray[1] ? obj.iccArray[1] : 'Disclaimer missing';
-	        obj.expiry = obj.iccArray[2] ? obj.iccArray[2] : 'Offer good through XX/XX/XX.';
-	        obj.usage = obj.iccArray[3] ? obj.iccArray[3] : 'One-time use per customer.';
-	        obj.url = obj.iccArray[4] ? obj.iccArray[4] : '/default.aspx';
-	        obj.color = obj.iccArray[5] ? obj.iccArray[5] : '#000';
-	        obj.gift = webModPopUp(obj);
-	        obj.class = '';
-	        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:3%;';
-			obj.iccHtml += render(template.icc, obj);
+			if(obj.iccMultiple[i].length > 1){
+				console.log('obj.iccMultiple[i].length: '+obj.iccMultiple[i].length+' obj.iccMultiple[i]: '+obj.iccMultiple[i]);
+				obj.iccArray = obj.iccMultiple[i].split(',');
+				obj.code = obj.iccArray[0] ? obj.iccArray[0].toUpperCase() : '??ICC??!';
+				obj.disclaimer = obj.iccArray[1] ? obj.iccArray[1] : 'Disclaimer missing';
+		        obj.expiry = obj.iccArray[2] ? obj.iccArray[2] : 'Offer good through XX/XX/XX.';
+		        obj.usage = obj.iccArray[3] ? obj.iccArray[3] : 'One-time use per customer.';
+		        obj.url = obj.iccArray[4] ? obj.iccArray[4] : '/default.aspx';
+		        obj.color = obj.iccArray[5] ? obj.iccArray[5] : '#000';
+		        obj.gift = webModPopUp(obj);
+		        obj.class = '';
+		        obj.css = obj.iccArray[6] ? obj.iccArray[6] : 'bottom:3%;';
+				obj.iccHtml += render(template.icc, obj);
+			}
 		}
 		obj.code = '';
 		obj.css = '';
