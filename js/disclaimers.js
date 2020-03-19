@@ -223,7 +223,7 @@
 
 	"d47": "Your QuillCASH&trade; will be available for 90 days. We reserve the right to change our programs and their benefits&#044; including shipping charges.",
 
-	"d48": "QuillCASH&trade; amount may change depending on available bonus offer and/or your use of coupons. QuillCASH&trade; earned will take up to 2 business days to be credited to your account.  Redeem your QuillCASH&trade; at checkout on your next order when your merchandise total is $100 or more ($75 for QuillPLUS members) after discounts are applied. QuillCASH&trade; must be redeemed within 90 days unless otherwise noted.",
+	"d48": "QuillCASH&trade; amount may change depending on available bonus offer and/or your use of coupons. QuillCASH&trade; earned will take up to 2 business days to be credited to your account.  Redeem your QuillCASH&trade; at checkout on your next order. QuillCASH&trade; must be redeemed within 90 days unless otherwise noted.",
 
 	"d49": "Your 10% discount does not apply to cartridges beginning with the prefix &rdquo;SPW&ldquo; or &rdquo;UNI&ldquo;. Excludes HP and Epson&reg;. Cartridges not currently available in our online assortment are also excluded.",
 
