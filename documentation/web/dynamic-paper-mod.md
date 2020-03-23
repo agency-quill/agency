@@ -94,7 +94,7 @@ The example below shows the `HTML` rendering the sale price for a case of Quill 
 <h3 class="h3--paper quillRed"><span class="sup">&#36;</span><span class="isPrice"><$= GetSkuPrice(['499','720222CT']) $></span></h3>
 ```
 
-### Use &amp;&num;36&semi NOT $ (Dollar Signs)
+### Use &amp;&num;36&semi; NOT $ (Dollar Signs)
 Because of a bug in Apple Safari $ (dollar signs) cause an issue with the script that builds the offer code `HTML`. Because of that, any dollar signs __OTHER THAN__ the ones in the __Dynamic Price Code__ will cause the module to render incorrectly for iPhones and other devices that use Safari.  If you replace the dollar sings in the __Dynamic Price Code__ it will cause the script to break.
 
 ### Low As Text
