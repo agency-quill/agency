@@ -761,7 +761,7 @@ if(typeof navBar === 'undefined'){
 function webMod(mod, obj){
 	console.log(mod);
 	if(obj.src || obj.div){
-		// for (var prop in obj){console.log(mod+' '+prop+': '+obj[prop]); // log all properties of obj
+		/* for (var prop in obj){console.log(mod+' '+prop+': '+obj[prop])}; // log all properties of obj */
         loadFiles('/content/iw/styles/agency5.min.css');
 		if(parseInt(obj.card)){
 			console.log(mod+' obj.card: '+obj.card);

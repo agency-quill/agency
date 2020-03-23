@@ -89,10 +89,13 @@ The example below shows the `HTML` rendering the sale price for a case of Quill 
 
 ##### Example
 ```html
-<p class="p--paper">Was <span class="strike">$<span class="wasPrice"><$= GetSkuPrice(['901','720222CT']) $></span></span> Save $<span class="savePrice">{{savings}}</span></p>
+<p class="p--paper">Was <span class="strike">&#36;<span class="wasPrice"><$= GetSkuPrice(['901','720222CT']) $></span></span> Save &#36;<span class="savePrice">{{savings}}</span></p>
 
-<h3 class="h3--paper quillRed"><span class="sup">$</span><span class="isPrice"><$= GetSkuPrice(['499','720222CT']) $></span></h3>
+<h3 class="h3--paper quillRed"><span class="sup">&#36;</span><span class="isPrice"><$= GetSkuPrice(['499','720222CT']) $></span></h3>
 ```
+
+### Use &amp;&num;36&semi NOT $ (Dollar Signs)
+Because of a bug in Apple Safari $ (dollar signs) cause an issue with the script that builds the offer code `HTML`. Because of that, any dollar signs __OTHER THAN__ the ones in the __Dynamic Price Code__ will cause the module to render incorrectly for iPhones and other devices that use Safari.  If you replace the dollar sings in the __Dynamic Price Code__ it will cause the script to break.
 
 ### Low As Text
 Some cases require a line of text prior to the sale price. 
@@ -165,9 +168,9 @@ Below is the code populated in the `u_ad_html_text` field of the `2018-half-mod`
 
             <h2 class="h2--paper">Quill Brand Copy Paper</h2>
 
-            <p class="p--paper">Was <span class="strike">$<span class="wasPrice"><$= GetSkuPrice(['901','720222CT']) $></span></span> Save $<span class="savePrice">{{savings}}</span></p>
+            <p class="p--paper">Was <span class="strike">&#36;<span class="wasPrice"><$= GetSkuPrice(['901','720222CT']) $></span></span> Save &#36;<span class="savePrice">{{savings}}</span></p>
 
-            <h3 class="h3--paper quillRed"><span class="sup">$</span><span class="isPrice"><$= GetSkuPrice(['510','720222CT']) $></span></h3>
+            <h3 class="h3--paper quillRed"><span class="sup">&#36;</span><span class="isPrice"><$= GetSkuPrice(['510','720222CT']) $></span></h3>
 
             <p class="p--paper">Limit 3.</p>
 

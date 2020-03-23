@@ -287,9 +287,9 @@ $("#agency #agency p").not("#agency p.openDisclaimer, #agency div.bizCard p.bizT
 /* RENDER */
 function render(html,obj){
     for(var k in obj){
-        html = html.replace(new RegExp('{{'+k+'}}','g'),obj[k]);
+        html = html.replace(new RegExp('{{' + k + '}}','g'),obj[k]);
     }
-    return html;  
+    return html;
 }
 
 /* SELECTED MENU ITEM FORMATTING
