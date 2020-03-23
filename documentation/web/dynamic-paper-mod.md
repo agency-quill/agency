@@ -95,7 +95,7 @@ The example below shows the `HTML` rendering the sale price for a case of Quill 
 ```
 
 ### Use &amp;&num;36&semi; NOT $ (Dollar Signs)
-Because of a bug in Apple Safari $ (dollar signs) cause an issue with the script that builds the offer code `HTML`. Because of that, any dollar signs __OTHER THAN__ the ones in the __Dynamic Price Code__ will cause the module to render incorrectly for iPhones and other devices that use Safari.  If you replace the dollar sings in the __Dynamic Price Code__ it will cause the script to break.
+Because of a bug in Apple Safari, dollar signs ($) cause an issue with the script that builds the offer code `HTML`. Any dollar signs __OTHER THAN__ the ones in the __Dynamic Price Code__ will cause the module to render incorrectly for iPhones and other devices that use Safari.  If you replace the dollar sings in the __Dynamic Price Code__ with &amp;&num;36&semi; it will cause the script to break.
 
 ### Low As Text
 Some cases require a line of text prior to the sale price. 
