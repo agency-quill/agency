@@ -1,9 +1,9 @@
 # Web ad image sizes
 _Last updated 9/4/19_
 
-The __Image width and usable space__ and __Web ad by viewport__ tables define the width of, and usable space within, the web ad/banners of each responsive grid units.
+The __Image width and usable space__ and __Web ad by viewport__ tables define the width of, and usable space within, the web ad/banners of each responsive grid unit.
 
-The __Image width and usable space__ table is a detail of image size and usable space, in pixels, by module type. The numbers in the desktop column are the pixel widths of the images used for desktop sized viewports. The numbers in the mobile column are the pixel widths of the images used for mobile sized viewports _if needed_. Dashes in the __usable__ column mean that the image doesn't crop and all of the space is usable. Dashes in the __mobile__ column mean that there is no mobile sized image needed.
+The __Image width and usable space__ table defines the image size and usable space, in pixels, of each module type. The numbers in the desktop column are the pixel widths of the images used for desktop sized viewports. The numbers in the mobile column are the pixel widths of the images used for mobile sized viewports _if needed_. A dash in the __usable__ column means that the image doesn't crop and all of the space is usable. A dash in the __mobile__ column means that no mobile sized image is needed.
 
 The __Web ad by viewport__ table lists all of the web ad/banner image size(s) for each grid unit. The numbers in parenthesis mark the space within the image that can contain text or critical visual elements. For example, a `grid__unit--100` uses a `970px`-wide image for viewport widths of `0px` - `1011px` and a `1860px`-wide image for `1012px` - `1885px`. From `0px` - `499px` the `970px`-wide image is cropped to `605px`; from `500px` - `765px` the `970px`-wide image is cropped to `735px`; and from `766px` - `1011px` the `970px`-wide image is not cropped. So, for viewport widths of `0px` - `1011px`, text or critical visual elements should be kept within `605px`.
 
