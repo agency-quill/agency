@@ -21,7 +21,7 @@ The __Web ad by viewport__ table lists all of the web ad/banner image size(s) fo
 | three-quarter			| grid__unit--75		| 1475		| 975		| 470		| 300		|
 | full					| grid__unit--100		| 1860		| 1250		| 970		| 605		|
 | home page				| -						| 1650		| 960		| 960		| 320		|
-| rotating banner		| -						| 1450		| 960		| 500		| 500		|
+| rotating banner		| -						| 1450		| 960		| 500		| -			|
 
 \* Flyup ads are not responsive.  They are 300px wide x 150px tall.
 
