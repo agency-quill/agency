@@ -903,7 +903,7 @@ function webModCoupon(mod, obj){
 		obj.usemap = '';
         obj.a = webModPicture(obj);
         if(obj.heading){
-        	obj.class = 'h3--coupon margin__bottom--12-5';
+        	obj.class = 'h3--coupon margin__bottom--12-5 margin__top--25';
         	obj.num = '3';
         	obj.a += render(template.heading, obj);
         }
