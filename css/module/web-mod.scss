@@ -6,11 +6,18 @@
 	}
 
 	.grid,
-	&.grid {
+	&.grid,
+	&.grid__unit--100 {
 
 		.webModImg {
 
-			&--12-5, &--25, &--33, &--50, &--66, &--75, &--100 {
+			&--12-5,
+			&--25,
+			&--33,
+			&--50,
+			&--66,
+			&--75,
+			&--100 {
 				align-self: flex-end;
 				flex-shrink: 0;
 				position: relative;
@@ -80,8 +87,12 @@
 				}
 			}
 
-			&--75 {
-				width: $pct * 155;
+			&--66 {
+				width: $pct * 100;
+				
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 140;
+				}
 
 				@media #{$tabPortMin} and #{$tabPortMax} {
 					width: $pct * 100;
@@ -92,7 +103,31 @@
 				}
 
 				@media #{$laptopMin} and #{$laptopMax} {
-					width: $pct * 119;
+					width: $pct * 120;
+				}
+
+				@media #{$desktopMin} {
+					width: $pct * 100;
+				}
+			}
+
+			&--75 {
+				width: $pct * 155;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					width: $pct * 132;
+				}
+
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					width: $pct * 100;
+				}
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					width: $pct * 151;
+				}
+
+				@media #{$laptopMin} and #{$laptopMax} {
+					width: $pct * 120;
 				}
 
 				@media #{$desktopMin} {
@@ -158,11 +193,12 @@
 			.a {
 				width: $pct * 100;
 			}
+			
+			.webModPicture {
+				display: flex;
+			}
 		}
 
-		.webModPicture {
-			display: flex;
-		}
 		
 		.flyUp {
 

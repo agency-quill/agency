@@ -91,6 +91,66 @@
 	
 	}
 
+	.background--coral {
+		background-color: $coral;
+	}
+
+	.background--darkGray {
+		background-color: $darkGray;
+	}
+
+	.background--gray {
+		background-color: $gray;
+	}
+
+	.background--lightGray {
+		background-color: $lightGray;
+	}
+
+	.background--mint {
+		background-color: $mint;
+	}
+
+	.background--orange {
+		background-color: $orange;
+	}
+
+	.background--sky {
+		background-color: $sky;
+	}
+
+	.background--tableDarkGray {
+		background-color: $tableDarkGray;
+	}
+
+	.background--tableGray {
+		background-color: $tableGray;
+	}
+
+	.background--white {
+		background-color: $white;
+	}
+
+	.background--blue {
+		background-color: $blue;
+	}
+
+	.background--gold {
+		background-color: $gold;
+	}
+
+	.background--lightBlue {
+		background-color: $lightBlue;
+	}
+
+	.background--plum {
+		background-color: $plum;
+	}
+
+	.background--red {
+		background-color: $red;
+	}
+
 	.button {
 
 		&--blue {
@@ -294,6 +354,7 @@
 		&--hotbuy,
 		&--promise,
 		&--qplus,
+		&--qpoints,
 		&--sale {
 			@include font($white, #{$em * 1}, 300);
 		    font-size: $px * 1.4;
@@ -311,6 +372,10 @@
 		}
 
 		&--qplus {
+			background-color: $blue;
+		}
+
+		&--qpoints {
 			background-color: $plum;
 		}
 

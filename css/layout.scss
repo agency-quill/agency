@@ -297,8 +297,13 @@
 			}
 
 			&--75 {
+				width: $column * 6;
 
-				@media #{$desktopMin} {
+				@media #{$tabPortMax} {
+					width: $column * 6;
+				}
+
+				@media #{$tabLandMin} {
 					width: $column * 9;
 				}
 			}
