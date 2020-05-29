@@ -759,13 +759,15 @@ if(typeof navBar === 'undefined'){
 	navBar = {};
 }
 function webMod(mod, obj){
-	console.log(mod);
+	// console.log(mod);
 	if(obj.src || obj.div){
 		/* for (var prop in obj){console.log(mod+' '+prop+': '+obj[prop])}; // log all properties of obj */
         loadFiles('/content/iw/styles/agency5.min.css');
 		if(parseInt(obj.card)){
-			console.log(mod+' obj.card: '+obj.card);
+			// console.log(mod+' obj.card: '+obj.card);
 			$('#' + mod).attr('class', $('#' + mod).attr('class') + ' webModCard');
+		} else if(parseInt(obj.home)){
+			$('#' + mod).attr('class', $('#' + mod).attr('class') + ' webModHome');
 		}
 		obj.class = obj.class ? obj.class : '';
 		obj.html = '<div class="webModInner ' + obj.class + '" id="' + obj.id + '" style="' + obj.css + '">';
@@ -797,7 +799,7 @@ function webMod(mod, obj){
 		obj.html += webModIcc(obj);
 		return obj.html + '</div>';
 	}else{
-		console.log('removing ' + mod);
+		// console.log('removing ' + mod);
         $('#' + mod).remove();
     }
 }
@@ -1142,16 +1144,10 @@ function webModPicture(obj){
 	if(obj.srcArray.length > 1){
 		obj.srcset = obj.srcArray[1];
 		obj.media = '(max-width: ';
-		switch(obj.unit){
-			case '33':
-				obj.media += size.tabPort + 'px) and (min-width: ' + size.mobPort;
-				break;
-			case '66':
-				obj.media += size.tabPort;
-				break;
-			case '100':
-				obj.media += size.tabPort;
-				break;
+		if(obj.unit == '33'){
+			obj.media += size.tabPort + 'px) and (min-width: ' + size.mobPort;
+		} else {
+			obj.media += size.tabPort;
 		}
 		obj.media += 'px)';
 		obj.picture = render(template.source, obj);
@@ -1159,8 +1155,13 @@ function webModPicture(obj){
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
-	parseInt(obj.card) && console.log('obj.card: ' + obj.card);
-	obj.class += parseInt(obj.card) ? '__webModCard--' : '--';
+	if(parseInt(obj.card)){
+		obj.class += '__webModCard--';
+	} else if(parseInt(obj.home)){
+		obj.class += '__webModHome--';
+	} else {
+		obj.class += '--';
+	}
 	obj.class += obj.unit;
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
