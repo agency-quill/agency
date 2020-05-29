@@ -205,6 +205,14 @@
 						width: $column * 2;
 					}
 				}
+
+				&.webModHome {
+					
+					@media #{$tabPortMax} {
+						display: none;
+					}
+					
+				}
 			}
 
 			&--33, 
@@ -234,6 +242,13 @@
 
 					@media #{$desktopMin} {
 						width: $column * 2.4;
+					}
+				}
+
+				&.webModHome {
+					
+					@media #{$tabPortMax} {
+						display: none;
 					}
 				}
 			}
@@ -294,6 +309,14 @@
 						width: $column * 9.6;
 					}
 				}
+
+				&.webModHome {
+					width: $column * 12;
+				
+					@media #{$tabLandMin} {
+						width: $column * 8;
+					}
+				}
 			}
 
 			&--75 {
@@ -305,6 +328,14 @@
 
 				@media #{$tabLandMin} {
 					width: $column * 9;
+				}
+
+				&.webModHome {
+					width: $column * 12;
+				
+					@media #{$tabLandMin} {
+						width: $column * 9;
+					}
 				}
 			}
 

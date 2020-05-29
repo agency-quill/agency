@@ -161,11 +161,65 @@
 
 			&__webModCard {
 
-				&--12-5, &--25, &--33, &--50 {
+				&--12-5,
+				&--25,
+				&--33,
+				&--50 {
 					align-self: flex-end;
 					flex-shrink: 0;
 					position: relative;
 					width: $pct * 100;
+				}
+			}
+
+			&__webModHome {
+
+				&--66 {
+					width: $pct * 159.325;
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						width: $pct * 131.4;
+					}
+
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						width: $pct * 100;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						width: $pct * 150;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						width: $pct * 120;
+					}
+
+					@media #{$desktopMin} {
+						width: $pct * 100;
+					}
+				}
+				
+				&--75 {
+					width: $pct * 159.325;
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						width: $pct * 131.4;
+					}
+
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						width: $pct * 100;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						width: $pct * 151;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						width: $pct * 120;
+					}
+
+					@media #{$desktopMin} {
+						width: $pct * 100;
+					}
 				}
 			}
 		}

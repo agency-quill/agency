@@ -25,7 +25,12 @@
 		}
 
 		&--noHighlight {
-			color: $darkGray;						
+			color: $darkGray;
+
+			&:hover,
+			&:active {
+				text-decoration: none;
+			}				
 		}
 
 		&--underline {
@@ -657,12 +662,14 @@
 	}
 	
 	.ol__li,
+	.ol__li--alpha,
 	.ol__li--small {
 		display: list-item;
-		list-style-position: inside;
+		list-style-position: outside;
 	}
 
 	.ol__li,
+	.ol__li--alpha,
 	.p,
 	.ul__li {
 		
@@ -672,6 +679,7 @@
 	}
 
 	.ol__li,
+	.ol__li--alpha,
 	.ol__li--small,
 	.ul__li,
 	.ul__li--small {
@@ -701,6 +709,10 @@
 			font-weight: 300;
 			list-style-type: none;
 		}
+	}
+
+	.ol__li--alpha {
+		list-style-type: upper-alpha;
 	}
 
 	.outOfStock .icc,
