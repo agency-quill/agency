@@ -5,7 +5,7 @@ The new Dynamic Dynamic Alley ADCore module allows us to update the content in r
 
 To update the dynamic dynamic alley in real-time, ADCore needs to be updated as described below. After that, the offer code needs to be pushed to production using the GMP. The following sections cover each in that order.
 
-##ADCore
+## ADCore
 
 [ADCore](http://adcore.quillcorp.com/AdCoreCalendar.aspx) is the system that houses all of the snippets of `CSS`, `HTML` and `JavaScript` code managed by the content management system.
 
