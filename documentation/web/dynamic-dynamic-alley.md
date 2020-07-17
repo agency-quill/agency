@@ -1,17 +1,17 @@
 # Dynamic Dynamic Alley HTML
 _Last updated 7/17/20_
 
-The new Dynamic Dynamic Alley ADCore module allows us to update dynamic alley content quickly to respond to rapidly changing customer needs. The module accepts raw `HTML`, allowing it to generate nearly anything we want. This document contains the `HTML` currently used to promote high-demand products.
+The new Dynamic Dynamic Alley ADCore module allows us to respond to rapidly to changing customer needs. The module accepts raw `HTML`, allowing it to generate nearly anything we want.
 
-To update the dynamic dynamic alley on demand, ADCore needs to be updated as described below. After that, the offer code needs to be pushed to production using the GMP. The following sections cover each in order.
+Instructions on how to make real-time changes to the live offer code, as well as the code currently in place to promote high-demand products are below.
 
 ## ADCore
 
-[ADCore](http://adcore.quillcorp.com/AdCoreCalendar.aspx) is the system that houses all of the snippets of `CSS`, `HTML`, and `JavaScript` code managed by the content management system.
+[ADCore](http://adcore.quillcorp.com/AdCoreCalendar.aspx) is the system that houses snippets of `CSS`, `HTML`, and `JavaScript` code managed by the content management system.
 
 ### Module
 
-The ADCore module `2020-html-block-full` accepts raw `HTML`. It has five empty fields in a row with no spaces. The five fields separate the `HTML` to avoid individual field character limits and improve readability.
+The ADCore module `2020-html-block-full` accepts raw `HTML`. It has five empty fields in a row with no spaces. The fields separate the `HTML` to circumvent character limits and improve readability.
 
 ```html
 $%u_ad_html_01%$$%u_ad_html_02%$$%u_ad_html_03%$$%u_ad_html_04%$$%u_ad_html_05%$
@@ -19,13 +19,15 @@ $%u_ad_html_01%$$%u_ad_html_02%$$%u_ad_html_03%$$%u_ad_html_04%$$%u_ad_html_05%$
 
 ### Offer Code
 
-The offer code currently programmed in the dynamic alley position is __W20_06_980_DYNTST0H__. To update the ad, we need to overwrite its contents. _To remove the ad we need to remove all of the content from the offer code._
+The offer code currently programmed in the dynamic alley position is __W20_06_980_DYNTST0H__. To update it, we need to overwrite its contents in ADCore. _If we wish to remove the ad, we need to remove all of the content from the offer code._
 
 ### Data
 
-For the __Dymanic Dynamic Alley__, the `HTML` is one block of code. However, the offer code breaks that code across five fields to improve readability and make editing easier. For the ad to display correctly, populate the five fields of the offer code as outlined below. Only the `u_ad_html_02` and `u_ad_html_04` fields should be customized. The other three do not change.
+The __Dymanic Dynamic Alley__ is a single block of `HTML` and `CSS`. Even though we could put it all in one field, breaking it up across all five improves readability and makes editing easier.
 
-___To hide the ad from users, all of the fields in the offer code must be empty.___
+For the ad to display correctly, populate the five fields of the offer code as outlined below. Only the `u_ad_html_02` and `u_ad_html_04` fields should be customized. ___Do not change the other three___.
+
+__To hide the ad from users, all of the fields in the offer code must be empty.__
 
 #### u_ad_html_01
 
@@ -34,6 +36,8 @@ This code contains the HTML and CSS necessary for the ad to render on the site. 
 ```html
 <style type="text/css">.agency.grid__unit--100 {align-self: stretch;background-image: none;box-sizing: border-box;display: flex;flex-wrap: wrap;overflow: hidden;padding-bottom: 0;padding-top: 0;position: relative;padding-left: 1%;padding-right: 1%;width: 98%;}.agency .webModInner {box-sizing: border-box;height: 100%;overflow: hidden;padding-bottom: 0;padding-left: 0;padding-right: 0;padding-top: 0;position: relative;width: 100%;}.agency .div__html--static {box-sizing: border-box;position: static;width: 100%;}.agency .align--center {justify-content: center; margin-left: auto; margin-right: auto; text-align: center;}.agency .a--noHighlight:hover,.agency .a--noHighlight:active {text-decoration: none;}.agency .p--small {font-family: neue-haas-unica, helvetica, arial, sans-serif;font-size: 18px;font-stretch: normal; font-style: normal;font-variant: normal;line-height:1.5em;}</style><div class="agency grid__unit--100 searchOffer"><div class="webModInner" style="margin-bottom:0;"><div class="div__html--static" style="background-color:#fff;"><div style="padding:1px 0;"><a href="
 ```
+###### Triple-click the code to select it all for Copy and Paste purposes.
+
 #### u_ad_html_02
 
 This field contains the `href` attribute, Omniture tag, and the `title` attribute for the anchor tag. These values change depending on the offer.
@@ -41,6 +45,7 @@ This field contains the `href` attribute, Omniture tag, and the `title` attribut
 ```html
 xxxx_LINK_URL_xxxx?cm_sp=xxxx_OMNITURE_TAG_xxxx" title="Shop our selection of xxxx_ITEM_NAME_xxxx
 ```
+###### Triple-click the code to select it all for Copy and Paste purposes.
 
 ##### Example
 ```html
@@ -54,6 +59,7 @@ This field has more of the `HTML` necessary for the ad to render correctly. __Do
 ```html
 " class="a--noHighlight"><div class="align--center" style="width:80%;"><p class="p--small" style="color:#e4002b;font-weight:500;margin:10px 0;padding-bottom:0;">
 ```
+###### Triple-click the code to select it all for Copy and Paste purposes.
 
 #### u_ad_html_04
 This field holds the offer text for the ad. Update the item name based on the current offer.
@@ -61,6 +67,7 @@ This field holds the offer text for the ad. Update the item name based on the cu
 ```html
 xxxx_ITEM_NAME_xxxx now available.
 ```
+###### Triple-click the code to select it all for Copy and Paste purposes.
 
 ##### Example
 ```html
@@ -74,6 +81,7 @@ The final field finishes off the `HTML` of the dynamic dynamic alley. __Do not m
 ```html
 <span style="color:#333;margin-left:10px;text-decoration:underline;">Shop Now</span></p></div></a></div></div></div></div>
 ```
+###### Triple-click the code to select it all for Copy and Paste purposes.
 
 ## GMP (Genesis Management Portal)
 
