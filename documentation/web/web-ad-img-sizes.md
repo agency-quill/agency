@@ -1,5 +1,5 @@
 # Web ad image sizes
-_Last updated 9/4/19_
+_Last updated 8/27/20_
 
 The __Image width and usable space__ and __Web ad by viewport__ tables define the width of, and usable space within, the web ad/banners of each responsive grid unit.
 
