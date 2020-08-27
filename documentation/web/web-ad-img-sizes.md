@@ -10,21 +10,21 @@ Most of the images crop at certain viewport sizes (see the __Web ad visible widt
 The __Web ad visible width by viewport__ table lists all of the web ad/banner image size(s) for each grid unit. The numbers in parenthesis mark the space within the image that can contain text or critical visual elements. For example, a `grid__unit--100` uses a `970px`-wide image for viewport widths of `0px` - `1011px` and a `1860px`-wide image for `1012px` - `1885px`. From `0px` - `499px` the `970px`-wide image is cropped to `605px`; from `500px` - `765px` the `970px`-wide image is cropped to `735px`; and from `766px` - `1011px` the `970px`-wide image is not cropped. So, for viewport widths of `0px` - `1011px`, text or critical visual elements should be kept within `605px`.
 
 ## Image width, height and usable space in pixels
-| module				| grid unit 			| desktop<br>width	| mobile<br>width	| desktop<br>height	| mobile<br>height	|
+| module				| grid unit 			| desktop<br>width	| desktop<br>height	| mobile<br>width	| mobile<br>height	|
 | :---					| :---					| :---:				| :---:				| :---:				| :---:				|
-| eighth				| grid__unit--12-5.card	| 165				| -					| 165				| -					|
-| quarter				| grid__unit--25		| 470 (300)			| -			 		| 300				| - 				|
-| quarter (card)		| grid__unit--25.card	| 355 				| -					| 300				| -					|
-| quarter (homepage)	| grid__unit--25.webMod	| 470 (285)			| - 				| 300				| -					|
-| third					| grid__unit--33		| 600 (395)			| 320 (230)			| 300				| 300				|
-| third	(homepage)		| grid__unit--33.webMod	| 600 (395)			| 320 (300)			| 300				| 300				|
-| third	(flyup)*		| -						| 300				| -					| 150				| -					|
-| half					| grid__unit--50		| 1125 (725)		| -					| 300				| -					|
-| half (homepage)		| grid__unit--50.webMod	| 1000 (600)		| -					| 300				| -					|
-| two-third				| grid__unit--66		| 1230 (820)		| 670 (480)			| 300				| 300				|
-| three-quarter			| grid__unit--75		| 1475 (975)		| 470 (300)			| 300				| 300				|
-| full					| grid__unit--100		| 1860 (1250)		| 970 (600)			| 300				| 500				|
-| rotating banner		| -						| 1450 (960)		| 500				| 300				| 300				|
+| eighth				| grid__unit--12-5.card	| 165				| 165				| -					| -					|
+| quarter				| grid__unit--25		| 470 (300)			| 300				| -			 		| - 				|
+| quarter (card)		| grid__unit--25.card	| 355 				| 300				| -					| -					|
+| quarter (homepage)	| grid__unit--25.webMod	| 470 (285)			| 300				| - 				| -					|
+| third					| grid__unit--33		| 600 (395)			| 300				| 320 (230)			| 300				|
+| third	(homepage)		| grid__unit--33.webMod	| 600 (395)			| 300				| 320 (300)			| 300				|
+| third	(flyup)*		| -						| 300				| 150				| -					| -					|
+| half					| grid__unit--50		| 1125 (725)		| 300				| -					| -					|
+| half (homepage)		| grid__unit--50.webMod	| 1000 (600)		| 300				| -					| -					|
+| two-third				| grid__unit--66		| 1230 (820)		| 300				| 670 (480)			| 300				|
+| three-quarter			| grid__unit--75		| 1475 (975)		| 300				| 470 (300)			| 300				|
+| full					| grid__unit--100		| 1860 (1250)		| 300				| 970 (600)			| 500				|
+| rotating banner		| -						| 1450 (960)		| 300				| 500				| 300				|
 
 <!-- | half (card)			| grid__unit--50.card	| 660				| -					| 300		| -					| -->
 
