@@ -12,7 +12,7 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 ## Image width, height and usable space in pixels
 | module				| grid unit 			| width<br>desktop (usable)	| width<br>mobile (usable)	| height<br>desktop	| height<br>mobile	|
 | :---					| :---					| :---:						| :---:						| :---:				| :---:				|
-| eighth				| grid__unit--12-5.card	| 165						| -							| ?					| -					|
+| eighth				| grid__unit--12-5.card	| 165						| -							| 165				| -					|
 | quarter				| grid__unit--25		| 470 (300)					| -			 				| 300				| - 				|
 | quarter (card)		| grid__unit--25.card	| 355 						| -							| 300				| -					|
 | quarter (homepage)	| grid__unit--25.webMod	| 470 (285)					| - 						| 300				| -					|
