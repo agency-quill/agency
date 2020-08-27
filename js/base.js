@@ -143,13 +143,18 @@ function defaultAttr(node, attrArray){
 }
 function disclaimerInsert(disclaimer){
 	return /[dD]\d+[a-zA-Z]*/.test(disclaimer) ? disclaimer.replace(/[dD]\d+[a-zA-Z]*/g, function(match){
-			return disclaimers[match.toLowerCase()];
+			// return disclaimers[match.toLowerCase()];
+			return cpnDisclaimers[match.toLowerCase()];
 		}) : disclaimer;
 }
 function disclaimerLoad(){
 	var toolTipElements = $('.icc a[onclick*="Tooltip"]');
 	if(toolTipElements.length){
-		if(typeof disclaimers === 'undefined'){
+		toolTipElements.each(function(){
+        	$(this).attr('onclick', disclaimerInsert($(this).attr('onclick')));
+        });
+	}
+		/* if(typeof disclaimers === 'undefined'){
 			$.ajax({
 	    		dataType: 'json',
 	    		error: function(jqXHR, status, error) {
@@ -168,7 +173,7 @@ function disclaimerLoad(){
             	$(this).attr('onclick', disclaimerInsert($(this).attr('onclick')));
             });
 		}
-	}
+	} */
 }
 function dropDown(target, action){
 	if(action === 'open'){

@@ -23,7 +23,7 @@ $(window).on('load', function(){
 	$('#agency .outOfStock').length && addFlag('outOfStock');
 	$('#agency .soldOut').length && addFlag('soldOut');
 	$('.accordionDiv').length && accordionSet($('.accordionDiv'));
-	disclaimerLoad();
+	// disclaimerLoad();
 	mobileLayout($(window).width());
 });
 // on resize

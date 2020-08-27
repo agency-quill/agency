@@ -143,13 +143,18 @@ function defaultAttr(node, attrArray){
 }
 function disclaimerInsert(disclaimer){
 	return /[dD]\d+[a-zA-Z]*/.test(disclaimer) ? disclaimer.replace(/[dD]\d+[a-zA-Z]*/g, function(match){
-			return disclaimers[match.toLowerCase()];
+			// return disclaimers[match.toLowerCase()];
+			return cpnDisclaimers[match.toLowerCase()];
 		}) : disclaimer;
 }
 function disclaimerLoad(){
 	var toolTipElements = $('.icc a[onclick*="Tooltip"]');
 	if(toolTipElements.length){
-		if(typeof disclaimers === 'undefined'){
+		toolTipElements.each(function(){
+        	$(this).attr('onclick', disclaimerInsert($(this).attr('onclick')));
+        });
+	}
+		/* if(typeof disclaimers === 'undefined'){
 			$.ajax({
 	    		dataType: 'json',
 	    		error: function(jqXHR, status, error) {
@@ -168,7 +173,7 @@ function disclaimerLoad(){
             	$(this).attr('onclick', disclaimerInsert($(this).attr('onclick')));
             });
 		}
-	}
+	} */
 }
 function dropDown(target, action){
 	if(action === 'open'){
@@ -553,7 +558,7 @@ $(window).on('load', function(){
 	$('#agency .outOfStock').length && addFlag('outOfStock');
 	$('#agency .soldOut').length && addFlag('soldOut');
 	$('.accordionDiv').length && accordionSet($('.accordionDiv'));
-	disclaimerLoad();
+	// disclaimerLoad();
 	mobileLayout($(window).width());
 });
 // on resize
@@ -729,6 +734,7 @@ var carouselAttr = [ // array of carousel attributes with default values
 	    	'addToCart': 'bindtype="dom" ctatype="addtocart" data-effortcode="{{effort}}" data-findnumber="{{item}}" data-pagetype="Content" data-promocode="989989999" data-sku="{{sku}}" itemindex="0" onclick="$(this).AddItemsToCart({mode: \'qviewatc\', skuid: \'{{sku}}\'})" rel="QViewAddToCart_{{sku}}" tabindex="1"',
 	    	'AnimateScroll': 'onClick="AnimateScroll(\'{{end}}\')"',
 	    	'carousel': 'onClick="carouselRotate($(this).parent(\'{{carousel}}\'),\'{{direction}}\')"',
+	    	'disclaimer': 'onclick="$(this).Tooltip(disclaimerInsert(\'{{text}}\'),{{width}},{hasCloseButton:true})"',
 	    	'dropDown': 'onmouseenter="dropDown({{target}},\'open\')" onmouseleave="dropDown({{target}},\'close\')"',
 	    	'popup': 'onclick="popupToggle($(\'{{popup}}\'))"',
 	    	'qView': 'onclick="showPriceInCart(this, \'{{sku}}\', \'{{effort}}\', \'{{item}}\')"',
@@ -741,7 +747,7 @@ var carouselAttr = [ // array of carousel attributes with default values
 	    'heading': '<h{{num}} class="h{{num}} {{class}}" id="{{id}}" {{events}} style="{{css}}">{{heading}}</h{{num}}>',
 	    'hr': '<hr class="{{class}}" style="{{css}}">',
 	    'href': '{{url}}{{mcode}}{{number}}{{tag}}',
-	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code: </span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(\'{{disclaimer}}\',400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
+	    'icc': '<div class="icc {{class}}" id="icc-{{code}}" {{events}} style="{{css}}">{{gift}}<div id="couponWrap_{{code}}" class="cpn-clipper-wrap"><button type="button" id="cpnCode_{{code}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" data-cpncode="{{code}}" sctype="cta" ctatype="savetoclipboard" locater="featured">Save to Clipboard</button><a id="unclip_cpn_{{code}}" data-cpncode="{{code}}" class="button shopNow-btn scTrack" sctype="cta" ctatype="removefromclipboard" locater="Un-Clip-Coupon" onclick="CouponClipper.removeCoupon($(this))" style="display:none">Unclip Coupon</a></div><div class="dv-coupon-code icc__div ST_s" style="color:{{color}}"><span>Code: </span><strong class="strong">{{code}}</strong></div><p class="icc__p--conditions" style="color:{{color}}">{{usage}}</p><p class="icc__p--conditions" style="color:{{color}}">{{expiry}} <a class="icc__a" data-tooltips="" href="javascript:void(0)" id="disclaimer-{{code}}" onclick="$(this).Tooltip(disclaimerInsert(\'{{disclaimer}}\'),400,{hasCloseButton:true})" style="color:{{color}}">Disclaimer</a></p></div>',
 		'img': '<img alt="{{alt}}" class="{{class}}" id="{{id}}" {{events}} src="{{src}}" srcset="{{srcset}}" style="{{css}}" usemap="{{usemap}}">',
 		'li': '<li class="{{class}}" id="{{id}}" {{events}} style="{{css}}">{{li}}</li>',
 	    'locator': 'locater="{{locator}}" sctype="{{sctype}}" sku="{{sku}}"',
