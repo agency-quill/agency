@@ -11,6 +11,7 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 
 ## Image width, height and usable space in pixels
 | module				| grid unit 			| <td colspan=2>width</td>			  	| <td clospan=2>height</td>		|
+| :---					| :---					| :---:				| :---:				| :---:		| :---:				|
 | 						| 			 			| desktop (usable) 	| mobile (usable)	| desktop 	| mobile			|
 | :---					| :---					| :---:				| :---:				| :---:		| :---:				|
 | eighth				| grid__unit--12-5.card	| 165				| -					| ?			| -					|
@@ -21,13 +22,14 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 | third	(homepage)		| grid__unit--33.webMod	| 600 (395)			| 320 (300)			| 300		| 300				|
 | third	(flyup)*		| -						| 300				| -					| 150		| -					|
 | half					| grid__unit--50		| 1125 (725)		| -					| 300		| -					|
-<!-- | half (card)			| grid__unit--50.card	| 660				| -					| 300		| -					| -->
 | half (homepage)		| grid__unit--50.webMod	| 1000 (600)		| -					| 300		| -					|
 | two-third				| grid__unit--66		| 1230 (820)		| 670 (480)			| 300		| 300				|
 | three-quarter			| grid__unit--75		| 1475 (975)		| 470 (300)			| 300		| 300				|
 | full					| grid__unit--100		| 1860 (1250)		| 970 (600)			| 300		| 500				|
 | home page				| -						| 1650 (960)		| 960 (320)			| 300		| 300				|
 | rotating banner		| -						| 1450 (960)		| 500				| 300		| 300				|
+
+<!-- | half (card)			| grid__unit--50.card	| 660				| -					| 300		| -					| -->
 
 \* Flyup ads are not responsive.  They are 300px wide x 150px tall.
 
