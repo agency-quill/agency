@@ -1,9 +1,11 @@
 # Web ad image sizes
 _Last updated 8/27/20_
 
-The __Image width and usable space__ and __Web ad by viewport__ tables define the width of, and usable space within, the web ad/banners of each responsive grid unit.
+The __Image width and usable space__, __Image height__ and __Web ad by viewport__ tables define the dimensions of, and usable space within, the web ad/banners of each responsive grid unit.
 
 The __Image width and usable space__ table defines the image size and usable space, in pixels, of each module type. The numbers in the desktop column are the pixel widths of the images used for desktop sized viewports. The numbers in the mobile column are the pixel widths of the images used for mobile sized viewports _if needed_. A dash in the __usable__ column means that the image doesn't crop and all of the space is usable. A dash in the __mobile__ column means that no mobile sized image is needed.
+
+The __Image height__ table lists the heights of each module type.
 
 The __Web ad by viewport__ table lists all of the web ad/banner image size(s) for each grid unit. The numbers in parenthesis mark the space within the image that can contain text or critical visual elements. For example, a `grid__unit--100` uses a `970px`-wide image for viewport widths of `0px` - `1011px` and a `1860px`-wide image for `1012px` - `1885px`. From `0px` - `499px` the `970px`-wide image is cropped to `605px`; from `500px` - `765px` the `970px`-wide image is cropped to `735px`; and from `766px` - `1011px` the `970px`-wide image is not cropped. So, for viewport widths of `0px` - `1011px`, text or critical visual elements should be kept within `605px`.
 
@@ -27,7 +29,20 @@ The __Web ad by viewport__ table lists all of the web ad/banner image size(s) fo
 | rotating banner		| -						| 1450		| 960		| 500		| -			|
 
 \* Flyup ads are not responsive.  They are 300px wide x 150px tall.
-\** 
+
+## Image height in pixels
+| module				| grid unit 			| desktop 	| mobile	|
+| :---					| :---					| :---:		| :---:		|
+| eighth				| grid__unit--12-5.card	| ?			| -			|
+| quarter				| grid__unit--25		| 300		| - 		|
+| third					| grid__unit--33		| 300		| 300		|
+| third	(flyup)*		| -						| 150		| -			|
+| half					| grid__unit--50		| 300		| -			|
+| two-third				| grid__unit--66		| 300		| 300		|
+| three-quarter			| grid__unit--75		| 300		| 300		|
+| full					| grid__unit--100		| 300		| 500		|
+| home page				| -						| 300		| 300		|
+| rotating banner		| -						| 300		| 300		|
 
 ## Web ad by viewport
 | viewport width 					| grid__unit--12-5.card	| grid__unit--25 	| grid__unit--25.card	| grid__unit--33	| grid__unit--50	| grid__unit--50.card	| grid__unit--66	| grid__unit--75	| grid__unit--100	|
