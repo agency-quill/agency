@@ -1,7 +1,7 @@
 # Dynamic Dynamic Alley HTML
 _Last updated 7/17/20_
 
-The new Dynamic Dynamic Alley ADCore module allows us to respond to rapidly to changing customer needs. The module accepts raw `HTML`, allowing it to generate nearly anything we want.
+The new Dynamic Dynamic Alley ADCore module allows us to respond rapidly to changing customer needs. The module accepts raw `HTML`, allowing it to generate nearly anything we want.
 
 Instructions on how to make real-time changes to the live offer code, as well as the code currently in place to promote high-demand products are below.
 
@@ -19,7 +19,7 @@ $%u_ad_html_01%$$%u_ad_html_02%$$%u_ad_html_03%$$%u_ad_html_04%$$%u_ad_html_05%$
 
 ### Offer Code
 
-The offer code currently programmed in the dynamic alley position is __W20_06_980_DYNTST0H__. To update it, we need to overwrite its contents in ADCore. _If we wish to remove the ad, we need to remove all of the content from the offer code._
+The offer code currently programmed in the dynamic alley position is __W20_06_980_DYNTST0H__. To update it, overwrite its contents in ADCore. _To remove the ad remove all of the content from the offer code._
 
 ### Data
 
