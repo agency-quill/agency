@@ -305,6 +305,29 @@
 
 	.div {
 
+		&__content {
+
+			&--featured {
+				width: 50%;
+			}
+		}
+
+		&__img {
+
+			&--featured {
+				width: 49%;
+			}
+		}
+
+		&__content,
+		&__img {
+
+			&--featured {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
 		&--card {
 			border-style: solid;
 			border-width: $px * .1;
@@ -514,6 +537,11 @@
 		    font-weight: 400;
 		    max-height: $em * 2.2;
 		}
+		
+		&--featured {
+			font-size: $px * 2.2;
+			font-weight: 400;
+		}
 	}
 
 	.h3, .h4 {
@@ -580,7 +608,7 @@
     .img {
         align-self: flex-start;
         width: $pct * 100;
-
+		
 		&__flag {
 
 			&--card {
@@ -597,6 +625,11 @@
 			    bottom: $pct * 10;
 			    width: $pct * 90;
 			}
+		}
+
+		&--featured {
+			height: 100%;
+			width: 100%;
 		}
     }
 
@@ -625,6 +658,7 @@
 	.ol__li,
 	.p,
 	.p--attribution,
+	.p--coupon,
 	.p--noMargin,
 	.p--small,
 	.select,
@@ -635,6 +669,13 @@
 	}
     
 	.mobileHide {
+
+		@media #{$mobPortMax} {
+			display: none;
+		}
+	}
+
+	.mobileShow {
 
 		@media #{$mobPortMax} {
 			display: none;
@@ -749,7 +790,7 @@
 		    color: $darkGray;
 		}
 
-		&--details {
+		&--x {
 			position: absolute;
 		}
 
@@ -789,6 +830,14 @@
 		    @media #{$tabLandMin} {
 		    	font-size: $px * 1.2;
 		    }
+		}
+	}
+
+	.p, .ul__li {
+
+		&--featured {
+			font-size: $px * 1.6;
+			line-height: $em * 1.75;
 		}
 	}
 
@@ -904,6 +953,12 @@
 
 	.ul__li {
 		background-position: left $px * 1.3;
+		
+		&--featured {
+			background: none;
+			list-style: none;
+			padding: 0;
+		}
 
 		&--small {
 			background-position: left $px * .7;

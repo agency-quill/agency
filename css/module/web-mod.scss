@@ -10,6 +10,7 @@
 	&.grid__unit--100 {
 
 		.webModImg {
+			width: auto;
 
 			&--12-5,
 			&--25,
@@ -172,9 +173,11 @@
 				}
 			}
 
-			&__webModHome {
+		 	&__webModHome {
 
 				&--66 {
+
+					height: 300px;
 					width: $pct * 159.325;
 
 					@media #{$mobLandMin} and #{$mobLandMax} {
@@ -221,7 +224,7 @@
 						width: $pct * 100;
 					}
 				}
-			}
+			} 
 		}
 
 		.webModInner {

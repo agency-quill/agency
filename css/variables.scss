@@ -1,5 +1,5 @@
 //colors
-// $blue: #005eb8;
+$blue: #005eb8;
 $coral: #ff6d70;
 $darkGray: #333;
 $gray: #666;
@@ -12,7 +12,7 @@ $tableGray: #f2f2f2;
 $white: #fff;
 
 //old palette
-$blue: #0079c2;
+// $blue: #0079c2;
 $gold: #ca9d2c;
 $lightBlue: #d6e9f6;
 // $orange: #f69036;
@@ -36,15 +36,15 @@ $fontFamily: 'neue-haas-unica, helvetica, arial, sans-serif';
 $ie11: 'screen and (-ms-high-contrast: active), (-ms-high-contrast: none)';
 
 // responsive grid
-$mobPortMax: '(max-width: 500px)';
+$mobPortMax: '(max-width: 499px)';
 $mobLandMin: '(min-width: 500px)';
-$mobLandMax: '(max-width: 766px)';
+$mobLandMax: '(max-width: 765px)';
 $tabPortMin: '(min-width: 766px)';
-$tabPortMax: '(max-width: 1012px)';
+$tabPortMax: '(max-width: 1011px)';
 $tabLandMin: '(min-width: 1012px)';
-$tabLandMax: '(max-width: 1280px)';
+$tabLandMax: '(max-width: 1279px)';
 $laptopMin: '(min-width: 1280px)';
-$laptopMax: '(max-width: 1520px)';
+$laptopMax: '(max-width: 1519px)';
 $desktopMin: '(min-width: 1520px)';
 
 

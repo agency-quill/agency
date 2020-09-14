@@ -1,14 +1,27 @@
 #agency, 
 .agency {
 
+	.circle,
+	.elipse {
+
+		&--paper {
+			fill: $blue;
+			stroke: none;
+		}
+	}
+
 	.div {
 
 		&__background--paper {
 			background-color: $lightBlue;
-			padding-bottom: 0;
+			padding-bottom: $pct * 2;
 			padding-left: $pct * 2;
 			padding-right: $pct * 2;
 			padding-top: $pct * 2;
+
+			@media #{$mobLandMin} {
+				padding-bottom: 0;
+			}
 		}
 
 		&__content--full {
@@ -40,10 +53,10 @@
 		&__content--paper {
 		    text-align: left;
 		    vertical-align: top;
-		    width: $pct * 32;
+		    width: $pct * 35;
 
 			@media #{$mobLandMin} and #{$mobLandMax} {
-			    width: $pct * 14;
+			    width: $pct * 24;
 			}
 
 			@media #{$tabPortMin} and #{$tabPortMax} {
@@ -68,6 +81,7 @@
 		&__img--full,
 		&__img--paper {
 			display: inline-block;
+			overflow: hidden;
 		}
 
 		&__img--full {
@@ -100,10 +114,10 @@
 
 		&__img--paper {
 			vertical-align: bottom;
-		    width: $pct * 67;
+		    width: $pct * 65;
 
 			@media #{$mobLandMin} and #{$mobLandMax} {
-			    width: $pct * 85;
+			    width: $pct * 75;
 			}
 
 			@media #{$tabPortMin} and #{$tabPortMax} {
@@ -126,21 +140,14 @@
 		&__info--paper {
 			background-color: $blue;
 			bottom: 0;
-			left: 40%;
+			left: $pct * 40;
 			padding: $px * .5 $px * .5 $px * .3;
 			position: absolute;
 		}
 	}
 
-	.ellipse {
-
-		&--paper {
-			fill: $blue;
-			stroke: none;
-		}
-	}
-
-	.flag--hotbuy, .flag--sale, 
+	.flag--hotbuy,
+	.flag--sale, 
 	.p--paper {
 		margin-bottom: $px * .2;
 	}
@@ -150,7 +157,7 @@
 		&--paper {
 			@include font($darkGray, #{$em * 1.25}, 400);
 		    font-size: $px * 2.2;
-		    margin-bottom: $px * .6;
+		    // margin-bottom: $px * .5;
 		}
 	}
 
@@ -167,6 +174,7 @@
 			@include font($darkGray, #{$em * 1}, 400);
 		    font-size: $px * 3.6;
 		    line-height: $em * 1;
+		    margin-bottom: $px * .5;
 		}
 	}
 
@@ -227,6 +235,13 @@
 		}
 	}
 
+	.strong {
+
+		&--paper {
+			font-size: 1.3em;
+		}
+	}
+
 	.svg {
 
 		&__text {
@@ -239,10 +254,26 @@
 
 		&--paper {
 			bottom: 0;
-			height: 76px;
-			left: 40%;
+			height: $px * 8;
 			position: absolute;
-			width: 152px;
+			right: $pct * 2.5;
+			top: $pct * 7.5;
+			width: $px * 8;
+		}
+	}
+
+	.text {
+
+		&--count {
+			font-size: $px * 4.4;
+		}
+
+		&--count, &--ream {
+			@include font($white, #{$em * 1.25}, 400);
+		}
+
+		&--ream {
+			font-size: $px * 1.8;
 		}
 	}
 
