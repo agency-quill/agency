@@ -1161,14 +1161,26 @@ function webModPicture(obj){
 		obj.picture = '';
 	}
 	obj.class = 'webModImg';
-	if(parseInt(obj.card)){
+
+
+	if(!parseInt(obj.home)){
+		if(parseInt(obj.card)){
+			obj.class += '__webModCard--';
+		} else {
+			obj.class += '--';
+		}
+		obj.class += obj.unit;
+	}
+
+
+	/*if(parseInt(obj.card)){
 		obj.class += '__webModCard--';
 	} else if(parseInt(obj.home)){
 		obj.class += '__webModHome--';
 	} else {
 		obj.class += '--';
 	}
-	obj.class += obj.unit;
+	obj.class += obj.unit;*/
 	obj.srcset = '';
 	obj.picture += render(template.img, obj);
 	obj.class = 'webModPicture';
