@@ -1,4 +1,5 @@
 var cpnDisclaimers = {
+	
 	"d0": "Disclaimer missing",
 
 	"d1": "Instant coupon code discount may not be used with other discount coupons&#044; sales&#044; closeout merchandise or free offer deals and is not valid on QuillSUBSCRIBE orders&#044; prior purchases or payments. Brewer bundles&#044; vending and gumball machines&#044; refurbished and special order items beginning with the prefix &ldquo;SPW&rdquo; or &ldquo;UNI&rdquo; are also excluded from this discount offer. Excludes HP&#044; Samsung and Epson&reg;. Taxes&#044; freight charges&#044; and furniture assembly are not included in minimum purchase or discount. Coupon is non-transferable. Quill.com may refuse to redeem any instant coupon which it believes in good faith to be fraudulently or improperly obtained.",
