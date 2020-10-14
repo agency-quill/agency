@@ -15,7 +15,6 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 | eighth				| grid__unit--12-5.card	| 165				| 165				| -					| -					|
 | quarter				| grid__unit--25		| 470 (300)			| 300				| -			 		| - 				|
 | quarter (card)		| grid__unit--25.card	| 355 				| 300				| -					| -					|
-| quarter (homepage)	| grid__unit--25.webMod	| 470 (285)			| 300				| - 				| -					|
 | third					| grid__unit--33		| 600 (395)			| 300				| 320 (230)			| 300				|
 | third	(homepage)		| grid__unit--33.webMod	| 600 (395)			| 300				| 320 (300)			| 300				|
 | third	(flyup)*		| -						| 300				| 150				| -					| -					|
@@ -27,7 +26,8 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 | full					| grid__unit--100		| 1860 (1250)		| 300				| 970 (600)			| 500				|
 | rotating banner		| -						| 1450 (960)		| 300				| 500				| 300				|
 
-<!-- | half (card)			| grid__unit--50.card	| 660				| -					| 300		| -					| -->
+<!-- | quarter (homepage)	| grid__unit--25.webMod	| 470 (285)			| 300				| - 				| -					| 
+ | half (card)			| grid__unit--50.card	| 660				| -					| 300				| -					| -->
 
 \* Flyup ads are not responsive.  They are 300px wide x 150px tall.
 
