@@ -1,6 +1,6 @@
 <!-- 2017-300x225 -->
 <link rel="stylesheet" href="/content/iw/styles/agency5.min.css">
-<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script src="/content/iw/scripts/disclaimers.js"></script>
 <script type="text" id="aTag">
     <a href="{{href}}" title="{{title}}">{{imageTag}}</a>
 </script>
@@ -52,7 +52,7 @@
                 data.iccExpiry = data.iccArray[4] ? data.iccArray[4] : 'XX/XX/XX';
                 data.iccUsageColor = data.iccArray[5] ? data.iccArray[5] : '#000';
                 data.iccUrl = data.iccArray[6] ? data.iccArray[6] : '/default.aspx';
-                data.iccDisclaimer = data.iccArray[7] ? disclaimerText[data.iccArray[7]] : disclaimerText['d0'];
+                data.iccDisclaimer = data.iccArray[7] ? cpnDisclaimers[data.iccArray[7]] : cpnDisclaimers['d0'];
                 data.iccHtml += render($("#iccMod").html(), data);
             }
             $("#webAd-" + adIndex).html(data.iccHtml);
@@ -67,5 +67,3 @@
         }
     })();
 </script>
-
-<!-- 2017-300x225 --><link rel="stylesheet" href="/content/iw/styles/agency5.min.css"> <script src="/content/iw/scripts/disclaimer-text.js"></script> <script type="text" id="aTag"><a href="{{href}}" title="{{title}}">{{imageTag}}</a></script> <script type="text" id="imageTag"><img src="{{src}}" alt="{{alt}}"></script> <script type="text" id="iccMod"><div class="agency icc" id="icc-{{iccCode}}" style="bottom:{{iccBottom}};left:{{iccLeft}};"><div class="cpn_code_ph"><div class="coupon_code"><span>Use Code:</span> <b>{{iccCode}}</b></div></div><div id="couponWrap_{{iccCode}}" class="cpn-clipper-wrap"><div class="coupon_code"><span>Use Code:</span> <b>{{iccCode}}</b><a id="unclip_cpn_{{iccCode}}" data-cpncode="{{iccCode}}" class="unclip-coupon scTrack" scType="cta" ctaType="removefromclipboard" locater="undo" onclick="CouponClipper.removeCoupon($(this))" style="display:none;"><i class="unclip-icon"></i>Undo</a></div><button type="button" id="cpnCode_{{iccCode}}" class="button BtnO js-clipCpnBtn btn-clip-coupon scTrack" scType="cta" ctaType="savetoclipboard" data-cpncode="{{iccCode}}">Save to Clipboard</button><a class="button shopNow-btn scTrack" scType="scLink" scValue="shopnow:{{iccCode}}" href="{{iccUrl}}" id="shopNowBtn_{{iccCode}}" style="display:none">Shop Now</a></div><p class="icc__p--conditions" style="color:{{iccUsageColor}}">One-time use per {{iccUsage}}.</p><p class="icc__p--conditions" style="color:{{iccUsageColor}}">Offer good through {{iccExpiry}}. <a class="icc__a" href="javascript:void(0)" onclick="$(this).Tooltip('{{iccDisclaimer}}', 400, {hasCloseButton:true})">Disclaimer.</a></p></div></script> <script>adIndex=typeof adIndex!="undefined"?adIndex+1:1;document.write('<div class="agency searchOffer $%u_ad_class%$" id="webAd-'+adIndex+'" style="$%u_ad_css%$"></div>');(function(){var b={href:"$%u_ad_link_url%$",title:"$%u_ad_link_title%$",src:"$%u_ad_img_src%$",alt:"$%u_ad_img_alt%$",iccArray:[$%u_ad_icc_code%$]};if(b.src){if(b.href){b.imageTag=a($("#imageTag").html(),b);b.iccHtml=a($("#aTag").html(),b)}else{b.iccHtml=a($("#imageTag").html(),b)}if(b.iccArray[0]){b.iccCode=b.iccArray[0];b.iccBottom=b.iccArray[1]?b.iccArray[1]:"0";b.iccLeft=b.iccArray[2]?b.iccArray[2]:"0";b.iccUsage=b.iccArray[3]?b.iccArray[3]:"customer";b.iccExpiry=b.iccArray[4]?b.iccArray[4]:"XX/XX/XX";b.iccUsageColor=b.iccArray[5]?b.iccArray[5]:"#000";b.iccUrl=b.iccArray[6]?b.iccArray[6]:"/default.aspx";b.iccDisclaimer=b.iccArray[7]?disclaimerText[b.iccArray[7]]:disclaimerText.d0;b.iccHtml+=a($("#iccMod").html(),b)}$("#webAd-"+adIndex).html(b.iccHtml)}else{$("#webAd-"+adIndex).remove()}function a(d,e){for(var c in e){d=d.replaceAll("{{"+c+"}}",e[c])}return d}})();</script>

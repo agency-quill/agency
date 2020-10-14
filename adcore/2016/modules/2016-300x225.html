@@ -36,7 +36,7 @@
 <script type="text" id="iccDisclaimer">
 	<p class="iccDisclaimer" onclick="$(this).Tooltip('{{disclaimerText}}',400,{hasCloseButton:true})" style="color: {{disclaimerColor}}; left: {{disclaimerLeft}}px; top: {{disclaimerTop}}px;">View Disclaimer</p>
 </script>
-<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script src="/content/iw/scripts/disclaimers.js"></script>
 <script>
 	(function(){
 		function render(html,obj){
@@ -83,7 +83,7 @@
 				data.htmlCode += data.iccHtml;
 			}
 			if(data.iccDisclaimerArray[0]) {
-				data.disclaimerText = disclaimerText[data.iccDisclaimerArray[0]];
+				data.disclaimerText = cpnDisclaimers[data.iccDisclaimerArray[0]];
 				data.disclaimerLeft = data.iccDisclaimerArray[1];
 				data.disclaimerTop = data.iccDisclaimerArray[2];
 				data.disclaimerColor = data.iccDisclaimerArray[3];

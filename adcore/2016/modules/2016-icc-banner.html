@@ -30,7 +30,7 @@
 <script type="text" id="iccImg">
 	<img src="{{iccSrc}}" alt="{{iccAlt}}">
 </script>
-<script src="/content/iw/scripts/disclaimer-text.js"></script>
+<script src="/content/iw/scripts/disclaimers.js"></script>
 <script>
 	(function(){
 		function render(html,obj){
@@ -79,7 +79,7 @@
 				$("#webAd-" + adIndex).append(data.iccHtml);
 				if(data["iccDisclaimer-"+data.i][0]) {
 					data.iccDisclaimer = data["iccDisclaimer-"+data.i][0];
-					data.disclaimerText = disclaimerText[data.iccDisclaimer];
+					data.disclaimerText = cpnDisclaimers[data.iccDisclaimer];
 					data.disclaimerLeft = data["iccDisclaimer-"+data.i][1];
 					data.disclaimerTop = data["iccDisclaimer-"+data.i][2];
 					data.disclaimerColor = data["iccDisclaimer-"+data.i][3];
