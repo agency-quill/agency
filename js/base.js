@@ -182,9 +182,14 @@ function dropDown(target, action){
 		target.fadeOut(100);
 	}
 }
-function fixDynPrice(node, price){
+function fixDynPrice(node, price, defPrice){
 	if(price && /{{dynPrice}}/.test(node.html())){
 		node.html(node.html().replace(/{{dynPrice}}/, price));
+	}
+	if(defPrice && /{{defaultPrice}}/.test(node.html())){
+		node.html(node.html().replace(/{{defaultPrice}}/, defPrice));
+	} else if (/{{defaultPrice}}/.test(node.html())) {
+		node.html(node.html().replace(/{{defaultPrice}}/, ''));
 	}
 }
 function getParamVal(string, param){
