@@ -30,3 +30,5 @@ Specifically, never copy ?cm_sp=W19_09_003_CPBN (where W19_09_003_CPBN is any of
 Links should also not include https://www.quill.com in them.  This causes issues with cart contents.  Let me know if you want more information on this.
  
 Hope that helps.  Let me know if you have any questions.
+
+
