@@ -428,8 +428,9 @@
 .agency .flag--hotbuy {
   background-color: #f46036;
 }
-#agency .flag--hotbuy, #agency .flag--promise, #agency .flag--qplus, #agency .flag--qpoints, #agency .flag--sale,
+#agency .flag--hotbuy, #agency .flag--penny, #agency .flag--promise, #agency .flag--qplus, #agency .flag--qpoints, #agency .flag--sale,
 .agency .flag--hotbuy,
+.agency .flag--penny,
 .agency .flag--promise,
 .agency .flag--qplus,
 .agency .flag--qpoints,
@@ -451,7 +452,8 @@
   padding-top: 4px;
   width: fit-content;
 }
-#agency .flag--promise,
+#agency .flag--penny, #agency .flag--promise,
+.agency .flag--penny,
 .agency .flag--promise {
   background-color: #ff6d70;
 }
@@ -1157,7 +1159,7 @@
 }
 #agency .strong,
 .agency .strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 #agency .sup,
 .agency .sup {
@@ -5592,6 +5594,15 @@
 .agency .grid > .grid__unit--33.webModCard,
 .agency.grid > .grid__unit--33.webModCard {
     width: 19.9999992%;
+  }
+}
+@media (min-width: 500px) {
+  #agency .flex > .grid__unit--33.webModCard.notCard,
+#agency .grid > .grid__unit--33.webModCard.notCard, #agency.grid > .grid__unit--33.webModCard.notCard,
+.agency .flex > .grid__unit--33.webModCard.notCard,
+.agency .grid > .grid__unit--33.webModCard.notCard,
+.agency.grid > .grid__unit--33.webModCard.notCard {
+    width: 33.333332%;
   }
 }
 #agency .flex > .grid__unit--40,

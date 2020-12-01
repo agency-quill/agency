@@ -239,6 +239,13 @@
 					@media #{$desktopMin} {
 						width: $column * 2.4;
 					}
+
+					&.notCard {
+						
+						@media #{$mobLandMin} {
+							width: $column * 4;
+						}
+					}
 				}
 			}
 

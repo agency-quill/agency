@@ -380,6 +380,7 @@
 		}
 
 		&--hotbuy,
+		&--penny,
 		&--promise,
 		&--qplus,
 		&--qpoints,
@@ -395,6 +396,7 @@
 		    width: fit-content;
 		}
 
+		&--penny,
 		&--promise {
 			background-color: $coral;
 		}
@@ -913,7 +915,7 @@
     }
 
 	.strong {
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	.sup {

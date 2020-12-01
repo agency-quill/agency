@@ -274,7 +274,6 @@
 		&__html {
 
 			&--absolute {
-				height: $pct * 100;
 				left: 0;
 			    position: absolute;
 				top: 0;
@@ -289,6 +288,7 @@
 	.div__html--absolute,
 	.div__html--static {
 		box-sizing: border-box;
+		height: $pct * 100;
 		width: $pct * 100;
 	}
 }
