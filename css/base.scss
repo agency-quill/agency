@@ -784,7 +784,15 @@
 
 		&--coupon {
 			font-size: $px * 1.8;
-		    max-height: $em * 3.2;
+			max-height: $em * 4.3;
+
+			@media #{$tabLandMin} and #{$laptopMax} {
+				font-size: $px * 1.5;
+			}
+
+			@media #{$desktopMin} {
+			    max-height: $em * 3.2;
+			}
 		}
 
 		&--coupon,

@@ -1026,7 +1026,19 @@
 #agency .p--coupon,
 .agency .p--coupon {
   font-size: 18px;
-  max-height: 3.2em;
+  max-height: 4.3em;
+}
+@media (min-width: 1012px) and (max-width: 1519px) {
+  #agency .p--coupon,
+.agency .p--coupon {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1520px) {
+  #agency .p--coupon,
+.agency .p--coupon {
+    max-height: 3.2em;
+  }
 }
 #agency .p--coupon, #agency .p--exception,
 .agency .p--coupon,
@@ -5027,7 +5039,6 @@
 }
 #agency .div__html--absolute,
 .agency .div__html--absolute {
-  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
@@ -5041,6 +5052,7 @@
 .agency .div__html--absolute,
 .agency .div__html--static {
   box-sizing: border-box;
+  height: 100%;
   width: 100%;
 }
 
