@@ -33,6 +33,15 @@
 			}				
 		}
 
+		&--noUnderline {
+			
+			&:hover,
+			&:active {
+				color: unset;
+				text-decoration: none;
+			}
+		}
+
 		&--underline {
 			text-decoration: underline;
 
