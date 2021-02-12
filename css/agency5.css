@@ -388,6 +388,7 @@
 .agency .div__content--featured,
 .agency .div__img--featured {
   display: inline-block;
+  text-align: left;
   vertical-align: top;
 }
 #agency .div--card,
