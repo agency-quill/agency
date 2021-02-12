@@ -1,0 +1,30 @@
+<div class="cursor--pointer pfm scTrack webModPicture" locater="carousel_1" onclick="showPriceInCart(this,\'xxxx_SKU_xxxx\',\'xxxx_EFFORT_xxxx\',\'xxxx_ITEM_NUMBER_xxxx\')" sctype="pfm" sku="xxxx_SKU_xxxx" title="Get Deal">
+	<div class="align--center div__background--paper webModImg--50">
+		<div class="div__content--paper">
+			<div class="flag--hotbuy">Hot Buy</div>
+			<!-- <div class="flag--penny">Penny Deals</div> -->
+			<!-- <div class="flag--promise">Price Promise</div> -->
+			<!-- <div class="flag--qplus" style="max-width:132px;">Quill<strong style="font-weight:800">PLUS</strong> Exclusive</div> -->
+			<!-- <div class="flag--sale">Sale</div> -->
+			<h2 class="h2--paper">xxxx_PRODUCT_NAME_xxxx</h2>
+			<h3 class="h3--paper quillRed"><sup class="sup">&#36;</sup>
+			<span class="isPrice"><$= GetSkuPrice(['xxxx_EFFORT_xxxx','xxxx_ITEM_NUMBER_xxxx']) $></span></h3>
+			<p class="p--paper"><strong class="quillBlue strong--paper">xxxx_REAM_COUNT_xxxx-Reams</strong> | xxxx_BRIGHTNESS_xxxx bright | xxxx_WEIGHT_xxxx lb</p>
+			<p class="p--paper">xxxx_LIMIT_xxxx</p>
+			<button class="button--standard margin__bottom--12-5 margin__top--25">Get Deal</button>
+		</div>
+		<div class="div__img--paper">
+			<picture>
+				<source media="(max-width: 500px)" srcset="/content/iw/images/dynamic-paper/xxxx_ITEM_NUMBER_xxxx-pp-mobile.png">
+				<img class="img--paper" src="/content/iw/images/dynamic-paper/xxxx_ITEM_NUMBER_xxxx-pp.png" alt="xxxx_PRODUCT_NAME_xxxx">
+			</picture>
+		</div>
+	</div>
+	<svg class="svg--paper">
+		<circle class="circle--paper" cx="40" cy="40" r="50%"/>
+		<text class="text--count" x="14" y="45">10</text>
+		<!-- <text class="text--count" x="27" y="45">1 5 8</text> -->
+		<text class="text--ream" x="11" y="62">Reams</text>
+		<!-- <text class="text--ream" x="16" y="62">Ream</text> -->
+	</svg>
+</div>
