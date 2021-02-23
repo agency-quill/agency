@@ -14,6 +14,12 @@
         	font-size: $vw * 3.5;
         }
     }
+
+    .carousel-title {
+		font-size: 28px !important;
+		font-family: $fontFamily;
+		font-weight: 300;
+	}
     
 	.unclip-coupon {
 
@@ -43,7 +49,6 @@
 	
 	.grid__unit--100 {
 		align-self: flex-start;
-		poop: yum;
 		background-image: none;
 		box-sizing: border-box;
 		display: flex;
