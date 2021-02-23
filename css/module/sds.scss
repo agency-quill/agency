@@ -16,9 +16,29 @@
     }
 
     .carousel-title {
-		font-size: 28px !important;
-		font-family: $fontFamily;
+		font-family: #{$fontFamily};
 		font-weight: 300;
+		padding-bottom: 0;
+
+		@media #{$tabLandMax} {
+			font-size: $px * 2.8 !important;
+		}
+
+		@media #{$laptopMin} and #{$laptopMax} {
+			font-size: $vw * 2.4 !important;
+		}
+		
+		@media #{$desktopMin} {
+			font-size: $px * 3.6 !important;
+		}
+
+		@media #{$mobLandMax} {
+			margin-bottom: $pct * 2 !important;
+		}
+		
+		@media #{$tabPortMin} {
+			margin-bottom: $px * 2 !important;
+		}
 	}
     
 	.unclip-coupon {

@@ -4409,6 +4409,36 @@
     font-size: 3.5vw;
   }
 }
+#agency .carousel-title, .agency .carousel-title {
+  font-family: neue-haas-unica, helvetica, arial, sans-serif;
+  font-weight: 300;
+  padding-bottom: 0;
+}
+@media (max-width: 1279px) {
+  #agency .carousel-title, .agency .carousel-title {
+    font-size: 28px !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1519px) {
+  #agency .carousel-title, .agency .carousel-title {
+    font-size: 2.4vw !important;
+  }
+}
+@media (min-width: 1520px) {
+  #agency .carousel-title, .agency .carousel-title {
+    font-size: 36px !important;
+  }
+}
+@media (max-width: 765px) {
+  #agency .carousel-title, .agency .carousel-title {
+    margin-bottom: 2% !important;
+  }
+}
+@media (min-width: 766px) {
+  #agency .carousel-title, .agency .carousel-title {
+    margin-bottom: 20px !important;
+  }
+}
 @media (min-width: 0) and (max-width: 499px) {
   #agency .unclip-coupon, .agency .unclip-coupon {
     font-size: 2.75vw;
@@ -4433,7 +4463,6 @@
 }
 .bundlesList .grid__unit--100 {
   align-self: flex-start;
-  poop: yum;
   background-image: none;
   box-sizing: border-box;
   display: flex;
