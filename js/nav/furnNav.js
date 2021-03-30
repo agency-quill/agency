@@ -34,11 +34,11 @@ var navBar = {
 			"menuTabUrl" : "/content/index/furniture/office-furniture-installation-assembly/",
 			"menuDropDown" : ""
 		},
-		{
-			"menuTabText" : "Monthly Specials",
-			"menuTabUrl" : "/daily-deals/cbx/35.html?cm_sp=W16_07_009_FRNMSNAV-_-2#furniture01",
-			"menuDropDown" : ""
-		},
+		/* {
+		 	"menuTabText" : "Monthly Specials",
+		 	"menuTabUrl" : "/daily-deals/cbx/35.html?cm_sp=W16_07_009_FRNMSNAV-_-2#furniture01",
+		 	"menuDropDown" : ""
+		},*/
 		{
 			"menuTabText" : "Furniture Resource Center",
 			"menuTabUrl" : "",
