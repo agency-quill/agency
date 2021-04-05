@@ -24,6 +24,7 @@ The __Web ad visible width by viewport__ table lists all of the web ad/banner im
 | two-third	(homepage)	| grid__unit--66.webMod	| 1230 (820)		| 300				| 970 (600)			| 500				|
 | three-quarter			| grid__unit--75		| 1475 (975)		| 300				| 470 (300)			| 300				|
 | full					| grid__unit--100		| 1860 (1250)		| 300				| 970 (600)			| 500				|
+| full (short)			| grid__unit--100		| 1860 (1250)		| 150				| 970 (600)			| 300				|
 | rotating banner		| -						| 1450 (960)		| 300				| 500				| 300				|
 
 <!-- | quarter (homepage)	| grid__unit--25.webMod	| 470 (285)			| 300				| - 				| -					| 
