@@ -925,7 +925,31 @@
 .agency .ol__li--alpha--small,
 .agency .p--small,
 .agency .ul__li--small {
-  font-size: 18px;
+  font-size: 12px;
+}
+@media (min-width: 1280px) and (max-width: 1519px) {
+  #agency .ol__li--small,
+#agency .ol__li--alpha--small,
+#agency .p--small,
+#agency .ul__li--small,
+.agency .ol__li--small,
+.agency .ol__li--alpha--small,
+.agency .p--small,
+.agency .ul__li--small {
+    font-size: 1vw;
+  }
+}
+@media (min-width: 1520px) {
+  #agency .ol__li--small,
+#agency .ol__li--alpha--small,
+#agency .p--small,
+#agency .ul__li--small,
+.agency .ol__li--small,
+.agency .ol__li--alpha--small,
+.agency .p--small,
+.agency .ul__li--small {
+    font-size: 18px;
+  }
 }
 #agency .ol__li,
 #agency .ol__li--alpha,

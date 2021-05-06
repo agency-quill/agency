@@ -727,7 +727,15 @@
 	.ul__li {
 		
 		&--small {
-			font-size: $px * 1.8;
+			font-size: $px * 1.2;
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				font-size: $vw * 1;
+			}
+			
+			@media #{$desktopMin} {
+				font-size: $px * 1.8;
+			}
 		}
 	}
 
