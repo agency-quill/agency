@@ -201,6 +201,9 @@ function getParamVal(string, param){
     }
     return false;
 }
+function htmlUrlEncode(url){
+	return url.replace(/\//g, '%2F').replace(/\?/g, '%3F').replace(/&/g, '%26').replace(/#/g, '%23').replace(/\./g, '%2E').replace(/=/g, '%3D');
+}
 function initObj(obj){
 	for(var prop in obj){
     	obj[prop] = '';
@@ -239,6 +242,12 @@ function loadFiles(fileArray){
 	        }
     	}
     }
+}
+function loginTest(){
+	return /cd_user_id/.test(document.cookie) ? 1 : 0;
+}
+function loginRedirect(url){
+	!loginTest() && window.location.replace('https://www.quill.com/Account/Login?returnurl='+htmlUrlEncode(url));
 }
 function mobileLayout(screenWidth){
 	if(screenWidth <= 552){
