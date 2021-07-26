@@ -271,7 +271,7 @@ function webModHeaderReadMore(accordionClose, accordionId, accordionOpen, inHead
 }
 function webModIcc(obj){
 	if(obj.icc){	// if iccs
-       	loadFiles('/content/iw/styles/agency5.min.css');
+       	loadFiles('/content/iw/styles/agency5.min.css','/content/iw/scripts/disclaimers.js');
 		obj.class = '';
 	    obj.iccHtml = '';
 		obj.iccMultiple = webModFormat(obj.icc).split('+');
