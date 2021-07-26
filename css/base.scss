@@ -585,6 +585,20 @@
 		margin-bottom: 0;
 	}
 
+	.hideForMobile {
+
+		@media #{$mobPortMax} {
+			display: none !important;
+		}
+	}
+
+	.hideForDesktop {
+
+		@media #{$mobLandMin} {
+			display: none !important;
+		}
+	}
+
 	.hn__a,
 	.hn__a--underline {
 		font-weight: 300;
@@ -642,6 +656,12 @@
 		&--featured {
 			height: 100%;
 			width: 100%;
+		}
+
+		&--maintenance {
+			display: block;
+			margin: auto;
+			width: 50%;
 		}
     }
 
@@ -727,12 +747,16 @@
 	.ul__li {
 		
 		&--small {
-			font-size: $px * 1.2;
+			font-size: $px * 1.4;
 
-			@media #{$laptopMin} and #{$laptopMax} {
-				font-size: $vw * 1;
+			@media #{$tabLandMin} and #{$tabLandMax} {
+				font-size: $vw * 1.5;
 			}
 			
+			@media #{$laptopMin} and #{$laptopMax} {
+				font-size: $vw * 1.2;
+			}
+
 			@media #{$desktopMin} {
 				font-size: $px * 1.8;
 			}
@@ -934,6 +958,51 @@
     		font-size: $em * .4;
     		vertical-align: $em *  1;
     	}
+	}
+
+	.section {
+
+		&__border {
+
+			&--maintenance {
+				border: $px * .1 solid $blue;
+				border-radius: $vw * 1;
+				margin: auto;
+				padding: $vw * 2;
+				width: $pct * 90;
+
+				@media #{$mobLandMin} and #{$mobLandMax} {
+					& {
+						padding: $vw * 1 $vw * 2;
+						width: $pct * 75;
+					}
+				}
+				@media #{$tabPortMin} and #{$tabPortMax} {
+					& {
+						padding: 0 $vw * 1.5;
+						width: $pct * 60;
+					}
+				}
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					& {
+						padding: 0 $vw * 1.25;
+						width: $pct * 50;
+					}
+				}
+				@media #{$laptopMin} and #{$laptopMax} {
+					& {
+						padding: 0 $vw * 1;
+						width: $pct * 40;
+					}
+				}
+				@media #{$desktopMin} {
+					& {
+						padding: 0 $vw * .75;
+						width: $pct * 30;
+					}
+				}
+			}
+		}
 	}
     
     .strike {

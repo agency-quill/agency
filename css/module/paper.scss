@@ -146,16 +146,20 @@
 		}
 	}
 
-	.flag--hotbuy,
-	.flag--sale, 
-	.p--paper {
-		margin-bottom: $px * .2;
+	.flag {
+		&--hotbuy,
+		&--penny,
+		&--promise,
+		&--qplus,
+		&--sale {
+			margin-bottom: $px * .5;
+		}
 	}
 
 	.h2 {
 
 		&--paper {
-			@include font($darkGray, #{$em * 1.25}, 400);
+			@include font($darkGray, #{$em * 1}, 400);
 		    font-size: $px * 2.2;
 		    // margin-bottom: $px * .5;
 		}
@@ -230,6 +234,7 @@
 	.p {
 
 		&--paper {
+			display: inline-flex;
 			@include font($darkGray, #{$em * 1.25}, 400);
 			font-size: $px * 1.2;
 		}

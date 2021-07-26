@@ -9,44 +9,44 @@
 	.align {
 
         &--bottom {
-        	align-self: flex-end;
-        	vertical-align: bottom; 
+        	align-self: flex-end !important;
+        	vertical-align: bottom !important; 
         }
 
         &--center {
-            justify-content: center;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+            justify-content: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center !important;
         }
 
         &--justify {
-            justify-content: space-evenly;
-            text-align: justify;
+            justify-content: space-evenly !important;
+            text-align: justify !important;
         }
 
         &--left {
-            justify-content: flex-start;
-            text-align: left;
+            justify-content: flex-start !important;
+            text-align: left !important;
         }
 
         &--middle {
-        	align-self: center;
-        	vertical-align: middle;
+        	align-self: center !important;
+        	vertical-align: middle !important;
         }
 
         &--right {
-            justify-content: flex-end;
-            text-align: right;
+            justify-content: flex-end !important;
+            text-align: right !important;
         }
 
         &--stretch {
-        	align-self: stretch;
+        	align-self: stretch !important;
         }
 
         &--top {
-        	align-self: flex-start;
-        	vertical-align: top; 
+        	align-self: flex-start !important;
+        	vertical-align: top !important; 
         }
     }
 
@@ -103,9 +103,12 @@
 		& .grid__unit {
 
 			&--12-5, 
+			&--15, 
 			&--25, 
 			&--33, 
+			&--40, 
 			&--50, 
+			&--60, 
 			&--66, 
 			&--75, 
 			&--100 {
@@ -182,8 +185,28 @@
 				}
 			}
 
-			&--25 {
+			&--15,
+			&--20,
+			&--25,
+			&--30 {
 				width: $column * 6;
+			}
+
+			&--15 {
+					
+				@media #{$mobLandMin} {
+					width: $column * 1.8;
+				}
+			}
+
+			&--20 {
+
+				@media #{$mobLandMin} {
+					width: $column * 2.4;
+				}
+			}
+
+			&--25 {
 					
 				@media #{$tabLandMin} {
 					width: $column * 3;
@@ -209,8 +232,16 @@
 				}
 			}
 
+			&--30 {
+
+				@media #{$mobLandMin} {
+					width: $column * 3.6;
+				}
+			}
+
 			&--33, 
 			&--50, 
+			&--60, 
 			&--66, 
 			&--66.webModHome,
 			&--75, 
@@ -281,7 +312,9 @@
 			}
 
 			&--60 {
-				width: $column * 7.2;
+				@media #{$mobLandMin} {
+					width: $column * 7.2;
+				}
 			}
 
 			&--66 {
