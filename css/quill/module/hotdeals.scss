@@ -1,0 +1,115 @@
+#agency,
+.agency {
+
+	.div {
+
+		&__badge {
+
+			&--pp {
+				padding: 0 1.5%;
+				position: relative;
+				text-align: center;
+				width: $pct * 100;
+
+				@media #{$mobLandMin} {
+					padding: 0;
+					position: absolute;
+					right: 1.5%;
+					top: 0;
+					width: 210px;
+				}
+			}
+		}
+
+		&__button {
+
+			&--pp {
+				display: inline-block;
+			}
+		}
+
+		&--border {
+			border: $px * .1 solid $blue;
+
+			@media #{$mobLandMax} {
+				margin-bottom: $pct * 4 !important;
+			}
+			
+			@media #{$tabPortMin} {
+				margin-bottom: $px * 2 !important;
+			}
+		}
+
+		&--hotdeals {
+			min-height: 80px;
+			padding-left: 10px;
+			padding-right: 10px;
+
+			& .button--standard {
+
+				@media #{$tabLandMin} and #{$tabLandMax} {
+					min-width: 100px;
+				}
+			}
+		}
+	}
+
+	.h4 {
+
+
+		&--pp {
+			
+			@media #{$mobPortMax} {
+				display: inline-block;
+			}
+
+			@include font($darkGray, #{$em * 1}, 300);
+			font-size: $px * 1.8;
+			padding: 0;
+		}
+	}
+
+	.img {
+
+		&--badge {
+			display: inline-block;
+			width: 30px;
+
+			@media #{$mobLandMin} {
+				width: 50px;
+			}
+
+		}
+
+		&--none {
+			display: none;
+		}
+
+		&--pp {
+			display: block;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 35%;
+		}
+	}
+
+	.p {
+
+		&--pp {
+
+			@media #{$mobPortMax} {
+				display: inline-block;
+				margin-left: 10px;
+			}
+
+			@include font($darkGray, #{$em * 2}, 300);
+			font-size: $px * 1.2;
+		}
+
+		&--sale {
+			@include font($blue, #{$em * 2}, 300);
+			font-size: $px * 1.4;
+		}
+	}
+}

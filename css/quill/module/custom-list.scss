@@ -1,0 +1,695 @@
+.carouselInner {
+	align-items: stretch;
+	display: flex;
+	// margin: 0 auto;
+	// overflow: hidden;
+	padding-bottom: 0;
+	flex-flow: row wrap;
+
+	.align {
+
+        &--bottom {
+        	align-self: flex-end;
+        	vertical-align: bottom; 
+        }
+
+        &--center {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        &--justify {
+            justify-content: space-evenly;
+            text-align: justify;
+        }
+
+        &--left {
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        &--middle {
+        	align-self: center;
+        	vertical-align: middle;
+        }
+
+        &--right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        &--stretch {
+        	align-self: stretch;
+        }
+
+        &--top {
+        	align-self: flex-start;
+        	vertical-align: top; 
+        }
+    }
+
+	.div {
+
+		&--card {
+			border-style: solid;
+			border-width: $px * .1;
+		}
+
+		&--card,
+		&--coupon {
+			background-color: $white;
+			border-color: #e4e4e4;
+			box-sizing: border-box;
+			height: $pct * 100;
+			padding-bottom: $px * 13.5;
+			padding-left: $pct * 5;
+			padding-right: $pct * 5;
+			padding-top: $pct * 5;
+			position: relative;
+			width: $pct * 100;
+		}
+
+		&--coupon {
+			border-style: dashed;
+			border-width: $px * .2;
+		}
+	}
+
+	.h3--coupon {
+	    color: #0079c2;
+		font-size: $px * 2.4;
+	    font-weight: 400;
+	    max-height: $em * 2.4;
+	}
+
+	.h3--coupon, 
+	.p--coupon {
+	    line-height: $em * 1.2;
+	    overflow: hidden;
+	    padding: 0;
+	}
+
+	.icc {
+		box-sizing: border-box;
+		color: #000;
+	    left: 0;
+		// max-width: $px * 22.5;
+	    max-width: 100%;
+		overflow: hidden;
+	    padding-left: 5%;
+	    padding-right: 5%;
+		position: absolute;
+		text-align: left;
+	    width: 100%;
+		z-index: 1;
+
+		&__a {
+			color: #000;
+			text-decoration: none;
+
+			&:hover, 
+			&:active {
+				color: $orange;
+				text-decoration: underline;
+			}
+		}
+
+		&__div {
+			@include font(#000, 1.125em, 400);
+			font-size: $px * 1.2;
+		}
+
+		&__h2 {
+			@include font($darkGray, 1.25em, 300);
+			font-size: $vw * 4;
+			padding: 0;
+
+			&--headline {
+				@include font($darkGray, 1.25em, 300);
+				display: block;
+				font-size: $vw * 5.5;
+			}
+		}
+
+		&__p {
+			@include font(#000, 1.125em, 400);
+			background-color: #ccc;
+			font-size: $px * 1.2;
+			padding: $px * .5;
+			text-align: center;	
+
+			&--conditions {
+				@include font(#000, 1.125em, 400);
+				font-size: $px * 1.1;
+				margin: 0;
+				padding: 0 !important;
+
+				@media #{$mobLandMin} {
+					font-size: $px * 1.0;
+				}
+			}
+
+			&--details {
+				@include font(#000, 1.34em, 400);
+				font-size: $px * 1.2;
+			}
+			
+			&--strong {
+				color: #000; 
+				font-size: $px * 1.6;
+				font-weight: 800;
+				line-height: $em * 1.125;
+			}
+		}
+	}
+
+    .img__flag--card {
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	}
+
+	.margin {
+
+		&__all {
+
+			&--0 {
+				margin: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin: $pct * 8;
+				}
+				
+				@media #{$tabPortMin} {
+					margin: $px * 4;
+				}
+			}
+		}
+
+		&__bottom {
+
+			&--0 {
+				margin-bottom: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 4;
+				}
+			}
+		}
+
+		&__horizontal {
+
+			&--0 {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 0.5;
+					margin-right: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $pct * 0.5;
+					margin-right: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 1;
+					margin-right: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 1;
+					margin-right: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 2;
+					margin-right: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 2;
+					margin-right: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 3;
+					margin-right: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 3;
+					margin-right: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 4;
+					margin-right: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 4;
+					margin-right: $px * 4;
+				}
+			}
+		}
+
+		&__left {
+
+			&--0 {
+				margin-left: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-left: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-left: $px * 4;
+				}
+			}
+		}
+
+		&__right {
+
+			&--0 {
+				margin-right: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-right: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-right: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-right: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-right: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-right: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-right: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-right: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-right: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-right: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-right: $px * 4;
+				}
+			}
+		}
+
+		&__top {
+
+			&--0 {
+				margin-top: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-top: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-top: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-top: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-top: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-top: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-top: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-top: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-top: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-top: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-top: $px * 4;
+				}
+			}
+		}
+
+		&__vertical {
+
+			&--0 {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+
+			&--12-5 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 0.5;
+					margin-top: $pct * 0.5;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 0.5;
+					margin-top: $px * 0.5;
+				}
+			}
+			
+			&--25 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 1;
+					margin-top: $pct * 1;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 1;
+					margin-top: $px * 1;
+				}
+			}
+			
+			&--50 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 2;
+					margin-top: $pct * 2;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 2;
+					margin-top: $px * 2;
+				}
+			}
+			
+			&--75 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 3;
+					margin-top: $pct * 3;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 3;
+					margin-top: $px * 3;
+				}
+			}
+
+			&--100 {
+
+				@media #{$mobLandMax} {
+					margin-bottom: $pct * 4;
+					margin-top: $pct * 4;
+				}
+				
+				@media #{$tabPortMin} {
+					margin-bottom: $px * 4;
+					margin-top: $px * 4;
+				}
+			}
+		}
+	}
+
+	.p--coupon {
+		color: $darkGray;
+		font-size: $px * 1.8;
+	    max-height: $em * 3.6;
+	}
+
+	.strong {
+		font-weight: 500;
+	}
+
+	.webMod__icc--picture {
+
+		&.webModPicture {
+			display: none;
+
+			@media #{$mobLandMin} {
+				display: flex;
+			}
+
+			@media #{$ie11} and #{$mobLandMin} and #{$tabPortMax} {  
+			    display: none;
+			}
+		}
+	}
+
+	.webModImg__webModCard--25 {
+		align-self: flex-end;
+		flex-shrink: 0;
+    	margin-bottom: $pct * 5;
+    	margin-top: $pct * 8;
+		position: relative;
+		width: $pct * 80;
+	}
+
+	.webModInner {
+		box-sizing: border-box;
+		// display: flex;
+		height: 100%;
+		overflow: hidden;
+		padding-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 0;
+		position: relative;
+		width: $pct * 100;
+
+		@media #{$mobLandMax} {
+			margin-bottom: $vw * 5;
+		}
+		
+		@media #{$tabPortMin} {
+			margin-bottom: $px * 2;
+		}
+
+		.a {
+			width: $pct * 100;
+		}
+	}
+
+	.webModPicture {
+		display: flex;
+	}
+}

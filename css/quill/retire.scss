@@ -1,0 +1,251 @@
+#agency, .agency {
+
+	sup {
+	    font-size: .6em;
+	    line-height: 1em;
+	    vertical-align: .6em;
+    }
+
+	.center, &.center {
+
+		&__align {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+	}
+
+	.htmlText {
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.img {
+
+		&--308 {
+			width: $px * 30.8;
+		}
+	}
+
+	.left, &.left {
+
+		&__align {
+			text-align: left;
+		}
+
+		&__float {
+			float: left;
+			margin-left: 0;
+			margin-right: $pct * 2;
+		}
+	}
+
+	.quill {
+
+		&Blue {
+			
+			&--light {
+				color: $lightBlue !important;
+				fill: $lightBlue;
+			}
+		}
+
+		&Gold {
+			color: $gold !important;
+			fill: $gold;
+		}
+
+		&Orange {
+			color: $orange !important;
+			fill: $orange;
+		}
+
+		&Plum {
+			color: $plum !important;
+			fill: $plum;
+		}
+
+		&Red {
+			color: $red !important;
+			fill: $red;
+		}
+	}
+
+	.right, &.right {
+
+		&__align {
+			text-align: right;
+		}
+
+		&__float {
+			float: right;
+			margin-left: $pct * 2;
+			margin-right: 0;
+		}
+	}
+
+	.table {
+		
+		&__caption {
+			font-size: $px * 1.4;
+			font-weight: 400;
+			text-align: left;
+		}
+
+		&__td {
+			background-color: #f2f2f2;
+			font-size: $px * 1.5;
+			font-weight: 400;
+			padding-left: $px;
+			text-align: left;
+		}
+
+        &__td, &__th--vertical {
+			
+			@media #{$mobPortMax}{            
+                display: block;
+            }
+        }
+
+		&__td, &__th--horizontal, &__th--vertical {
+			border-bottom: $px * .1 solid $white;
+			border-right: $px * .1 solid $white;
+			padding: $px * 1.5;
+
+			@media #{$mobPortMax}{
+                text-align: left;
+			}
+		}
+
+        &__td:before, &__th--vertical:before {
+			
+			@media #{$mobPortMax}{            
+              content: attr(data-th) ": ";
+              font-weight: bold;
+              width: $pct * 50;
+              display: inline-block;
+			}
+        }
+
+		&__th {
+
+			&--horizontal {
+				background-color: #0072c6;
+				color: $white;
+				font-size: $px * 1.5;
+				font-weight: 400;
+
+				@media #{$mobPortMax}{
+					display: none;
+				}
+			}
+
+			&--horizontal, &--vertical {
+				text-align: center;
+			}
+
+			&--vertical {
+				background-color: #e4e4e4;
+				font-size: $px * 1.5;
+				font-weight: 600;
+				width: calc(40% - #{$px * 0.1});
+
+				@media #{$mobPortMax}{
+					background-color:#0072c6; 
+	                color:$white;
+	                width:auto;
+	            }
+			}
+		}
+
+		&--card {
+			table-layout: auto;
+		}
+    }
+
+	.width--960, &.width--960, .width--1205, &.width--1205 {
+		overflow: hidden;
+	}
+
+	.width--960, &.width--960 {
+		max-width: 960px;
+
+		.grid {
+
+			&__unit {
+
+				&--33 {
+
+					@media #{$mobPortMax} {
+						width: $column * 12;
+					}
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						// max-width: $column * 6;
+						width: $column * 6;
+					}
+
+					@media #{$tabPortMin} {
+						// max-width: $column * 6;
+						width: $column * 4;
+					}
+				}
+
+				&--50 {
+
+					@media #{$mobPortMax} {
+						width: $column * 12;
+					}
+
+					@media #{$mobLandMin} {
+						// max-width: $column * 6;
+						width: $column * 6;
+					}
+				}
+			}
+		}
+	}
+
+	.width--1205, &.width--1205 {
+		max-width: 1205px;
+
+		.grid {
+
+			&__unit {
+
+				&--33 {
+					@media #{$mobPortMax} {
+						width: $column * 12;
+					}
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						// max-width: $column * 6;
+						width: $column * 6;
+					}
+
+					@media #{$tabPortMin} {
+						// max-width: $column * 6;
+						width: $column * 4;
+					}
+				}
+
+				&--50 {
+					@media #{$mobPortMax} {
+						width: $column * 12;
+					}
+
+					@media #{$mobLandMin} {
+						// max-width: $column * 6;
+						width: $column * 6;
+					}
+				}
+			}
+		}
+	}
+
+	.width--1450, &.width--1450 {
+		max-width: 1450px;
+	}
+}

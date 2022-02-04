@@ -1,0 +1,924 @@
+#agency, 
+.agency {
+
+	.grid, 
+	&.grid {
+
+		.webMod__icc--picture {
+
+			&.webModPicture {
+				display: none;
+
+				@media #{$mobLandMin} {
+					display: flex;
+				}
+
+				@media #{$ie11} and #{$mobLandMin} and #{$tabPortMax} {  
+				    display: none;
+				}
+			}
+		}
+	}
+
+	.div {
+
+		&__icc {
+
+			&--absolute {
+			    left: 0;
+			    position: relative;
+			    top: 0;
+
+				@media #{$mobLandMin} {
+				    position: absolute;
+				}
+
+				@media #{$ie11} and #{$mobLandMin} and #{$tabPortMax} {  
+					position: relative;
+				}
+			}
+
+			&--absolute,
+			&--static {
+				box-sizing: border-box;
+				height: 100%;
+			    padding:  $pct * .5;
+				width: 100%;
+			}
+
+			&--static {
+			    position: relative;
+			}
+		}
+	}
+
+	.grid__unit, 
+	&.grid__unit {
+
+		&--25 {
+
+			.icc {
+				bottom: $pct * 2;
+				left: 0;
+				max-width: 100%;
+				padding-left: $pct * 5;
+			    padding-right: $pct * 5;
+				width: 100%;
+			}
+		}
+	}
+
+	.icc, 
+	&.icc {
+		box-sizing: border-box;
+		color: #000;
+		max-width: $px * 22.5;
+		overflow: hidden;
+		position: absolute;
+		text-align: left;
+		z-index: 1;
+
+		&__a {
+			color: #000;
+			text-decoration: none;
+
+			&:hover, 
+			&:active {
+				color: $orange;
+				text-decoration: underline;
+			}
+		}
+
+		&__div {
+			@include font(#000, 1.125em, 400);
+			font-size: $px * 1.2;
+		}
+
+		&__h2 {
+			@include font($darkGray, 1.25em, 300);
+			font-size: $vw * 4;
+			padding: 0;
+
+			&--headline {
+				@include font($darkGray, 1.25em, 300);
+				display: block;
+				font-size: $vw * 5.5;
+			}
+		}
+
+		&__p {
+			@include font(#000, 1.125em, 400);
+			background-color: #ccc;
+			font-size: $px * 1.2;
+			padding: $px * .5;
+			text-align: center;	
+
+			&--conditions {
+				@include font(#000, 1.125em, 400);
+				font-size: $px * 1.1;
+				line-height: $em * 1.125;
+				margin: 0;
+				// padding: 0 !important;
+
+				@media #{$mobLandMin} {
+					font-size: $px * 1.0;
+				}
+			}
+
+			&--details {
+				font-size: $px * 1.2;
+				line-height: $em * 1.34;
+			}
+			
+			&--strong {
+				color: #000; 
+				font-size: $px * 1.6;
+				font-weight: 800;
+				line-height: $em * 1.125;
+			}
+		}
+	}
+
+	.svg {
+
+		&__circle {
+
+			&--or {
+				fill: $white;
+			}
+		}
+
+		&--or, 
+		&--or--left {
+			position: absolute;
+			z-index: 10;
+		}
+
+		&__text {
+
+			&--or {
+				@include font;
+			}
+		}
+	}
+
+	.webMod__icc {
+		border: dashed $px * .1 $darkGray; // move?
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0;
+		padding: $vw * 2.5;
+		position: relative;
+		width: 100%;
+
+		@media #{$mobLandMin} and #{$tabPortMax} {
+		    min-height: $px * 20;
+		    padding: $vw * 1.5;
+		}
+
+		&--25 {
+
+			&.webMod__icc {
+				
+				&--1up {}
+			}
+		}
+
+		&--33 {
+
+			&.webMod__icc {
+				
+				&--1up {}
+			}
+		}
+
+		&--50 {
+
+			&.webMod__icc {
+				
+				&--1up {}
+
+				&--2up {}
+			}
+		}
+
+		&--66 {
+			&.webMod__icc {
+				
+				&--1up {}
+
+				&--2up {}
+			}
+		}
+
+		&--100 {
+
+			&.webMod__icc {
+				padding: $vw * 1.5;
+				
+				&--1up {
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						margin-bottom: $vw * 1;
+						max-width: $pct * 84;
+					}
+
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						max-width: $pct * 64;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						max-width: $pct * 48;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						max-width:  $pct * 38.225;
+					}
+
+					@media #{$desktopMin} {
+						max-width: $pct * 32;
+					}
+
+					.grid__unit {
+
+						&--100 {
+							height: 100%;
+						}
+					}
+
+					.icc {
+
+						&__h2 {
+						
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								font-size: $vw * 3;
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								font-size: $vw * 2.1;
+							}
+
+							@media #{$tabLandMin} and #{$tabLandMax} {
+								font-size: $vw * 1.5;
+							}
+
+							@media #{$laptopMin} and #{$laptopMax} {
+								font-size: $vw * 1.25;
+							}
+
+							@media #{$desktopMin} {
+								font-size: $vw * .95;
+							}
+
+							&--headline {
+								
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 4.5;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 3.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * 2.45;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * 2;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * 1.6;
+								}
+							}
+						}
+
+						&__p {
+
+							&--exception {
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 1.875;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 1.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * .85;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * .7;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * .6;
+								}
+							}
+						}
+					}
+
+					.webMod__icc {
+
+						@media #{$tabLandMin} {
+							padding: $vw * .95;
+						}
+
+						&--img {
+
+							@media #{ie11} and #{$mobLandMin} and #{$mobLandMax} {
+								height: $vw * 20;
+		    					width: $vw * 25;
+		    				}
+
+		    				@media #{ie11} and #{$tabPortMin} and #{$tabPortMax} {
+								height: $vw * 14;
+	    						width: $vw * 17.5;
+	    					}
+		    			}
+					}
+				}
+
+				&--2up {
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						margin-bottom: $vw * 1;
+						max-width: $pct * 84;
+					}
+
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						margin-bottom: $vw * 1;
+						max-width: $pct * 64;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						max-width: $pct * 96;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						max-width:  $pct * 76.45;
+					}
+
+					@media #{$desktopMin} {
+						max-width: $pct * 64;
+					}
+
+					.grid__unit {
+
+						&--50 {
+							height: auto;
+
+							@media #{$mobLandMin} and #{$tabPortMax} {
+								height: calc(#{$pct * 50} - #{$vw * .5});
+							}
+
+							@media #{$tabLandMin} {
+								height: 100%;
+							}
+						}
+					}
+
+					.icc {
+
+						&__h2 {
+
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								font-size: $vw * 3;
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								font-size: $vw * 2.1;
+							}
+
+							@media #{$tabLandMin} and #{$tabLandMax} {
+								font-size: $vw * 1.5;
+							}
+
+							@media #{$laptopMin} and #{$laptopMax} {
+								font-size: $vw * 1.25;
+							}
+
+							@media #{$desktopMin} {
+								font-size: $vw * .95;
+							}
+
+							&--headline {
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 4.5;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 3.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * 2.45;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * 2;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * 1.6;
+								}
+							}
+						}
+
+						&__p {
+
+							&--exception {
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 1.875;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 1.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * .85;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * .7;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * .6;
+								}
+							}
+						}
+					}
+
+					.svg {
+
+						&--or {
+							@include svg--or(
+								$vw * -3.5, 
+								$vw * 6, 
+								calc(#{$pct * 50} - #{$vw * 3}));
+
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								@include svg--or(
+									$vw * -2.75, 
+									$vw * 4.5, 
+									calc(#{$pct * 50} - #{$vw * 2.25}));
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								@include svg--or(
+									$vw * -2.375, 
+									$vw * 3.75, 
+									calc(#{$pct * 50} - #{$vw * 1.875}));
+							}
+
+							@media #{$tabLandMin} and #{$tabLandMax} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.875}), 
+									$vw * 3.75, 
+									$vw * -1.875);
+							}
+
+							@media #{$laptopMin} and #{$laptopMax} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.5}), 
+									$vw * 3, 
+									$vw * -1.5);
+							}
+
+							@media #{$desktopMin} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.25}), 
+									$vw * 2.5, 
+									$vw * -1.25);
+							}
+						}
+
+						&__text {
+
+							&--or {
+								font-size: $vw * 3.75;
+								
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 2.875;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 2.5;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * 2.5;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * 1.875;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * 1.65;
+								}
+							}
+						}
+					}
+
+					.webMod__icc {
+
+						@media #{$tabLandMin} {
+							padding: $vw * .95;
+						}
+
+						&--img {
+
+							@media #{ie11} and #{$mobLandMin} and #{$mobLandMax} {
+								height: $vw * 20;
+		    					width: $vw * 25;
+		    				}
+
+		    				@media #{$tabPortMin} and #{$tabPortMax} {
+		    					height: $vw * 22;
+								width: $vw * 27.5;
+							}
+
+							@media #{ie11} and #{$tabPortMin} and #{$tabPortMax} {
+								height: $vw * 14;
+	    						width: $vw * 17.5;
+	    					}
+		    			}
+					}
+				}
+
+				&--3up {
+					max-width: 100%;
+
+					@media #{$mobLandMin} and #{$mobLandMax} {
+						margin-bottom: $vw * 2.5;
+					}
+
+					@media #{$tabPortMin} and #{$tabPortMax} {
+						margin-bottom: $vw * 3;
+					}
+
+					@media #{$tabLandMin} and #{$tabLandMax} {
+						max-width: $pct * 96;
+					}
+
+					@media #{$laptopMin} and #{$laptopMax} {
+						max-width:  $pct * 76.45;
+					}
+
+					@media #{$desktopMin} {
+						max-width: $pct * 64;
+					}
+
+					&.align--center {
+						justify-content: left;
+					}
+
+					.grid__unit {
+
+						&--33 {
+							height: auto;
+
+							@media #{$mobLandMin} and #{$tabPortMax} {
+								height: calc(#{$pct * 50} - #{$vw * 1.5});
+							}
+
+							@media #{$tabLandMin} {
+								height: 100%;
+							}
+						}
+					}
+
+					.icc {
+
+						&__h2 {
+
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								font-size: $vw * 2.75;
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								font-size: $vw * 2.1;
+							}
+
+							@media #{$tabLandMin} and #{$tabLandMax} {
+								font-size: $vw * 1.325;
+							}
+
+							@media #{$laptopMin} and #{$laptopMax} {
+								font-size: $vw * 1.185;
+							}
+
+							@media #{$desktopMin} {
+								font-size: $vw * .875;
+							}
+
+							&--headline {
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 3.875;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 3.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * 2.125;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * 1.65;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * 1.35;
+								}
+							}
+						}
+
+						&__p {
+
+							&--exception {
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 1.75;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 1.25;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * .85;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * .7;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * .55;
+								}
+							}
+						}
+					}
+
+					.grid__unit--33 {
+						
+						@media #{$mobLandMin} and #{$tabPortMax} {
+							width: $pct * 50;
+						}
+					}
+
+					.svg {
+
+						&--or {
+							@include svg--or(
+								$vw * -3.5, 
+								$vw * 6, 
+								calc(#{$pct * 50} - #{$vw * 3}));
+
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								@include svg--or(
+									$vw * -3.75, 
+									$vw * 4.5, 
+									calc(#{$pct * 50} - #{$vw * 2.25}));
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								@include svg--or(
+									$vw * -3.75, 
+									$vw * 4.5, 
+									calc(#{$pct * 50} - #{$vw * 2.25}));
+							}
+
+							@media #{$tabLandMin} and #{$tabLandMax} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.875}), 
+									$vw * 3.75, 
+									$vw * -1.875);
+								}
+
+							@media #{$laptopMin} and #{$laptopMax} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.5}), 
+									$vw * 3, 
+									$vw * -1.5);	
+							}
+
+							@media #{$desktopMin} {
+								@include svg--or(
+									calc(#{$pct * 50} - #{$vw * 1.25}), 
+									$vw * 2.5, 
+									$vw * -1.25);
+							}
+
+							&--left {
+								@include svg--or(
+									$vw * -3.5, 
+									$vw * 6, 
+									calc(#{$pct * 50} - #{$vw * 3}));
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									@include svg--or(
+										calc(#{$pct * 50} - #{$vw * 2.25}), 
+										$vw * 4.5, 
+										calc(#{$pct * 100} - #{$vw * 2.25}));
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									@include svg--or(
+										calc(#{$pct * 50} - #{$vw * 2.25}), 
+										$vw * 4.5, 
+										calc(#{$pct * 100} - #{$vw * 2.25}));
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									@include svg--or(
+										calc(#{$pct * 50} - #{$vw * 1.875}), 
+										$vw * 3.75, 
+										$vw * -1.875);
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									@include svg--or(
+										calc(#{$pct * 50} - #{$vw * 1.5}), 
+										$vw * 3, 
+										$vw * -1.5);	
+								}
+
+								@media #{$desktopMin} {
+									@include svg--or(
+										calc(#{$pct * 50} - #{$vw * 1.25}), 
+										$vw * 2.5, 
+										$vw * -1.25);
+								}
+							}
+						}
+
+						&__text {
+
+							&--or {
+								font-size: $vw * 3.75;
+
+								@media #{$mobLandMin} and #{$mobLandMax} {
+									font-size: $vw * 2.875;
+								}
+
+								@media #{$tabPortMin} and #{$tabPortMax} {
+									font-size: $vw * 2.875;
+								}
+
+								@media #{$tabLandMin} and #{$tabLandMax} {
+									font-size: $vw * 2.5;
+								}
+
+								@media #{$laptopMin} and #{$laptopMax} {
+									font-size: $vw * 1.875;
+								}
+
+								@media #{$desktopMin} {
+									font-size: $vw * 1.65;
+								}
+							}
+						}
+					}
+
+					.webMod__icc {
+
+						@media #{$tabLandMin} {
+							padding: $vw * .5 $vw * 1;
+						}
+
+						&--header {
+							width: 60%;
+
+							@media #{$tabLandMin} {
+								width: 100%;
+							}
+						}
+
+						&--img {
+
+							@media #{$mobLandMin} and #{$mobLandMax} {
+								display: none;
+							}
+
+							@media #{$tabPortMin} and #{$tabPortMax} {
+								height: $vw * 18;
+								width: $vw * 22.5;
+							}
+
+							@media #{ie11} and #{$tabPortMin} and #{$tabPortMax} {
+								height: $vw * 16;
+	    						width: $vw * 20;
+	    					}
+
+	    					@media #{$tabLandMin} {
+								display: none;
+	    					}
+						}
+					}
+				}
+			}
+		}
+
+		&--header {
+			text-align: left;
+		}
+
+		&--img {
+			bottom: 0;
+			display: none;
+			height: $vw * 28;
+			position: absolute;
+			right: 0;
+			width: $vw * 35;
+
+			@media #{$mobLandMin} {
+				display: block;
+			}
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+				height: $vw * 26;
+				width: $vw * 32.5;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+				height: $vw * 22;
+				width: $vw * 27.5;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+				height: $vw * 14;
+				width: $vw * 17.5;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				height: $vw * 11;
+				width: $vw * 13.75;
+			}
+
+			@media #{$desktopMin} {
+				height: $vw * 9;
+				width: $vw * 11.25;
+			}
+		}
+
+		&--wrapper {
+			align-items: stretch;
+			height: 100%;
+			max-width: 100%;
+			position: relative;
+
+			&.grid {
+
+				> div {
+					margin-bottom: $vw * 1;
+					overflow: visible;
+
+					@media #{$tabLandMin} {
+						margin-bottom: 0;
+					}
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				} 
+
+				&.webMod__icc--3up {
+					
+					> div {
+						margin-bottom: $vw * 1;
+
+						@media #{$mobLandMin} and #{$tabPortMax} {
+							margin-bottom: $vw * 3;
+						}
+
+						@media #{$tabLandMin} {
+							margin-bottom: 0;
+						}
+
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.icc {
+			position: relative;
+		}
+	}
+	/* see sds.scss for css that modifies sds-managed elements */
+}

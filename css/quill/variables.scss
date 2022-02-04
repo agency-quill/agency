@@ -1,0 +1,68 @@
+//colors
+$blue: #005eb8;
+$coral: #ff6d70;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #999;
+$mint: #35bdb4;
+$orange: #f46036;
+$sky: #15bef0;
+$tableDarkGray: #e4e4e4;
+$tableGray: #f2f2f2;
+$white: #fff;
+
+//old palette
+// $blue: #0079c2;
+$gold: #ca9d2c;
+$lightBlue: #d6e9f6;
+// $orange: #f69036;
+$plum: #a20067;
+$red: #e4002b;
+
+// units
+$em: 1em;
+$pct: 1%;
+$px: 10px;
+$vw: 1vw;
+
+// variables
+$column: 8.333333%;
+// $fontFamily: 'helveticaNeue, arial, sans-serif';
+$fontFamily: 'neue-haas-unica, helvetica, arial, sans-serif';
+
+
+// media queries 
+//device
+$ie11: 'screen and (-ms-high-contrast: active), (-ms-high-contrast: none)';
+
+// responsive grid
+$mobPortMax: '(max-width: 499px)';
+$mobLandMin: '(min-width: 500px)';
+$mobLandMax: '(max-width: 765px)';
+$tabPortMin: '(min-width: 766px)';
+$tabPortMax: '(max-width: 1011px)';
+$tabLandMin: '(min-width: 1012px)';
+$tabLandMax: '(max-width: 1279px)';
+$laptopMin: '(min-width: 1280px)';
+$laptopMax: '(max-width: 1519px)';
+$desktopMin: '(min-width: 1520px)';
+
+
+// mixins
+@mixin font($color: #333, $height: 1em, $weight: 400) {
+	color: $color;
+	fill: $color;
+	font-family: #{$fontFamily};
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: $weight;
+    line-height: $height;
+}
+@mixin svg--or($bottom, $diameter, $right) {
+    bottom: $bottom;
+	height: $diameter;
+	right: $right;
+	width: $diameter;
+}
+

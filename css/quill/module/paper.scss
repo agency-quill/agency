@@ -1,0 +1,288 @@
+#agency, 
+.agency {
+
+	.circle,
+	.elipse {
+
+		&--paper {
+			fill: $blue;
+			stroke: none;
+		}
+	}
+
+	.div {
+
+		&__background--paper {
+			background-color: $lightBlue;
+			padding-bottom: $pct * 2;
+			padding-left: $pct * 2;
+			padding-right: $pct * 2;
+			padding-top: $pct * 2;
+
+			@media #{$mobLandMin} {
+				padding-bottom: 0;
+			}
+		}
+
+		&__content--full {
+		    text-align: left;
+		    vertical-align: top;
+		    width: $pct * 40;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 30;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 25;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 25;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 23;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 28;
+			}
+		}
+
+		&__content--paper {
+		    text-align: left;
+		    vertical-align: top;
+		    width: $pct * 35;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 24;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 44;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 25;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 46;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 44;
+			}
+		}
+		
+		&__content--full, 
+		&__content--paper, 
+		&__img--full,
+		&__img--paper {
+			display: inline-block;
+			overflow: hidden;
+		}
+
+		&__img--full {
+			vertical-align: bottom;
+		    width: $pct * 55;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 66;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 73;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+				text-align: left;
+			    width: $pct * 70;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				text-align: left;
+				width: $pct * 74;
+			}
+
+			@media #{$desktopMin} {
+				text-align: left;
+				width: $pct * 68;
+			}
+		}
+
+		&__img--paper {
+			vertical-align: bottom;
+		    width: $pct * 65;
+
+			@media #{$mobLandMin} and #{$mobLandMax} {
+			    width: $pct * 75;
+			}
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 55;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 74;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 53;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 55;
+			}
+		}
+
+		&__info--paper {
+			background-color: $blue;
+			bottom: 0;
+			left: $pct * 40;
+			padding: $px * .5 $px * .5 $px * .3;
+			position: absolute;
+		}
+	}
+
+	.flag {
+		&--hotbuy,
+		&--penny,
+		&--promise,
+		&--qplus,
+		&--sale {
+			margin-bottom: $px * .5;
+		}
+	}
+
+	.h2 {
+
+		&--paper {
+			@include font($darkGray, #{$em * 1}, 400);
+		    font-size: $px * 2.2;
+		    // margin-bottom: $px * .5;
+		}
+	}
+
+	.h2--paper, 
+	.h3--paper, 
+	.p--paper {
+	    padding: 0;
+	    width: 100%;
+	}
+
+	.h3 {
+
+		&--paper {
+			@include font($darkGray, #{$em * 1}, 400);
+		    font-size: $px * 3.6;
+		    line-height: $em * 1;
+		    margin-bottom: $px * .5;
+		}
+	}
+
+	.img {
+
+		&--full {
+			bottom: $px * -1;
+			position: relative;
+			width: $pct * 120;
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 90;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 50;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 44;
+				// width: $pct * 82.375;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 60;
+			}
+		}
+
+		&--paper {
+			bottom: $px * -1;
+			position: relative;
+			width: $pct * 80;
+
+			@media #{$tabPortMin} and #{$tabPortMax} {
+			    width: $pct * 90.35;
+			}
+
+			@media #{$tabLandMin} and #{$tabLandMax} {
+			    width: $pct * 67.875;
+			}
+
+			@media #{$laptopMin} and #{$laptopMax} {
+				width: $pct * 94;
+				// width: $pct * 82.375;
+			}
+
+			@media #{$desktopMin} {
+				width: $pct * 90.35;
+			}
+		}
+	}
+
+	.p {
+
+		&--paper {
+			display: inline-flex;
+			@include font($darkGray, #{$em * 1.25}, 400);
+			font-size: $px * 1.2;
+		}
+	}
+
+	.strong {
+
+		&--paper {
+			font-size: 1.3em;
+		}
+	}
+
+	.svg {
+
+		&__text {
+
+			&--paper {
+				@include font($white, #{$em * 1.25}, 400);
+				font-size: $px * 1.8;
+			}
+		}
+
+		&--paper {
+			bottom: 0;
+			height: $px * 8;
+			position: absolute;
+			right: $pct * 2.5;
+			top: $pct * 7.5;
+			width: $px * 8;
+		}
+	}
+
+	.text {
+
+		&--count {
+			font-size: $px * 4.4;
+		}
+
+		&--count, &--ream {
+			@include font($white, #{$em * 1.25}, 400);
+		}
+
+		&--ream {
+			font-size: $px * 1.8;
+		}
+	}
+
+	.webModPaper {
+		display: flex;
+	}
+}
